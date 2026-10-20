@@ -652,6 +652,17 @@ def main():
         fil = Path(__file__).with_name("omx30_skanning.html")
     mk = marknad()
     spara_html(rader, fil, mk)
+    try:
+        Path("results").mkdir(exist_ok=True)
+        (Path("results") / "skanning.json").write_text(json.dumps({
+            "tid": datetime.now().isoformat(timespec="minutes"), "bolag_med_data": len(rader),
+            "saknas": [n for n in BOLAG if n not in {r["Bolag"] for r in rader}],
+            "marknad": mk["lage"] if mk else None,
+            "rader": [{"Bolag": r["Bolag"], "Status": r["Status"], "Kurs": r["Kurs"], "RSI": r["RSI"],
+                       "Datum": r.get("_datum")} for r in rader],
+        }, ensure_ascii=False, indent=1), encoding="utf-8")
+    except Exception as e:
+        print(f"Kunde inte spara skanning.json: {e}")
     print(f"\nSparat: {fil}")
     notis_for_signaler(rader, mk)
     if not i_molnet:
