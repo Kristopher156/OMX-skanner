@@ -398,24 +398,31 @@ def skicka_notis(titel: str, text: str, prio: int = 3):
     """Skickar en pushnotis via ntfy om NTFY_TOPIC är satt (i GitHub: ett secret)."""
     topic = os.environ.get("NTFY_TOPIC", "").strip()
     if not topic:
+        print("Ingen NTFY_TOPIC – hoppar över notis.")
+        Path("notis_status.txt").write_text("ingen kanal", encoding="utf-8")
         return
     data = {"topic": topic, "title": titel, "message": text, "priority": prio, "tags": ["chart_with_upwards_trend"]}
     sida = os.environ.get("SIDA_URL", "").strip()
     if sida:
-        data["click"] = sida
+        data["click"] = sida.lower()
     try:
         req = urlrequest.Request("https://ntfy.sh/", data=json.dumps(data).encode("utf-8"),
-                                 headers={"Content-Type": "application/json"}, method="POST")
-        urlrequest.urlopen(req, timeout=15).read()
-        print("Notis skickad.")
+                                 headers={"Content-Type": "application/json", "User-Agent": "omx-skanner/1.0"},
+                                 method="POST")
+        svar = urlrequest.urlopen(req, timeout=15).read().decode("utf-8", "replace")
+        print(f"Notis skickad: {svar[:200]}")
+        Path("notis_status.txt").write_text("skickad", encoding="utf-8")
     except Exception as e:
         print(f"Kunde inte skicka notis: {e}")
+        Path("notis_status.txt").write_text(f"fel: {e}", encoding="utf-8")
 
 
 def notis_for_signaler(rader: list):
     signaler = [r for r in rader if r["Status"] in (TIDIG, KORS)]
     pa_vag = [r for r in rader if r["Status"] == OVERSALD and r["MACD-hist"] == "stiger"]
     if not signaler and not pa_vag:
+        if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch":
+            skicka_notis("OMXS30: testkörning klar", "Inga signaler just nu. Notiserna fungerar.", prio=2)
         return  # tyst dag – ingen notis
     rader_txt = []
     for r in signaler:
