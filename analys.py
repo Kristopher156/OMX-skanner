@@ -279,5 +279,154 @@ th{{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.0
     fil.write_text(html, encoding="utf-8")
 
 
+
+
+# ---------------------------------------------------------------------------
+# Max en ny trade i veckan, och granskning av enskilda bolag och datum
+# ---------------------------------------------------------------------------
+def sim_en(b, t, stop0, mal_abs, utgang):
+    """En enda trade från signaldag t. Utgång 'halv' = hälften säljs vid +2R, resten med släpande stop."""
+    o, h, l, c = b["o"], b["h"], b["l"], b["c"]
+    linje, sign, datum = b["linje"], b["signal"], b["datum"]
+    n = len(c)
+    if t >= n - 1:
+        return None
+    entry = o[t + 1]
+    if not (entry > stop0 > 0):
+        return None
+    risk = entry - stop0
+    mal = {"2R": entry + 2 * risk, "3R": entry + 3 * risk, "motstand": mal_abs}.get(utgang)
+    if utgang == "motstand" and (mal is None or mal <= entry):
+        return None
+    stop, hogsta, delvis = stop0, entry, None
+    for d in range(t + 1, min(n, t + 1 + MAXDAGAR)):
+        if l[d] <= stop:
+            pris = o[d] if o[d] < stop else stop
+            r = (pris - entry) / risk
+            r = 0.5 * delvis + 0.5 * r if delvis is not None else r
+            return {"Köpdag": datum[t + 1], "Säljdag": datum[d], "R": r, "Dagar": d - t}
+        if mal is not None and h[d] >= mal:
+            pris = o[d] if o[d] > mal else mal
+            return {"Köpdag": datum[t + 1], "Säljdag": datum[d], "R": (pris - entry) / risk, "Dagar": d - t}
+        if utgang == "halv" and delvis is None and h[d] >= entry + 2 * risk:
+            delvis = 2.0
+        if utgang == "macd" and d > t + 1 and linje[d] < sign[d] and linje[d - 1] >= sign[d - 1]:
+            return {"Köpdag": datum[t + 1], "Säljdag": datum[d], "R": (c[d] - entry) / risk, "Dagar": d - t}
+        hogsta = max(hogsta, h[d])
+        if utgang in ("trail", "macd", "halv") and hogsta >= entry + risk:
+            stop = max(stop, entry)
+            if utgang in ("trail", "halv"):
+                stop = max(stop, hogsta - risk)
+    if t + MAXDAGAR > n - 1:
+        return None
+    d = t + MAXDAGAR
+    r = (c[d] - entry) / risk
+    r = 0.5 * delvis + 0.5 * r if delvis is not None else r
+    return {"Köpdag": datum[t + 1], "Säljdag": datum[d], "R": r, "Dagar": d - t}
+
+
+def planerad_rr(b, t, stop):
+    _, mot = stod_motstand(b, t)
+    c = b["c"][t]
+    if mot is None or c <= stop:
+        return None
+    return (mot - c) / (c - stop)
+
+
+VECKA = [
+    ("Nuvarande skanner", lambda b: s_nuvarande(b), "macd"),
+    ("Strikt dyk, mål +2R", s_strikt, "2R"),
+    ("Strikt dyk, halva vid +2R, resten släpande", s_strikt, "halv"),
+    ("Stöd/motstånd R/R ≥ 2, mål vid motståndet", lambda b: s_stod(b, 2.0), "motstand"),
+    ("Stöd/motstånd R/R ≥ 2, halva vid +2R, resten släpande", lambda b: s_stod(b, 2.0), "halv"),
+    ("Stöd/motstånd R/R ≥ 3, mål vid motståndet", lambda b: s_stod(b, 3.0), "motstand"),
+]
+
+
+def en_i_veckan(data, start, grans):
+    """Välj högst EN ny trade per vecka: den signal som har högst planerad R/R till närmaste motstånd."""
+    ut = []
+    for namn, fn, utgang in VECKA:
+        kandidater = []
+        for bolag, b in data.items():
+            for t, stop, mal in fn(b):
+                if t >= len(b["c"]) - 1 or b["datum"][t] < start:
+                    continue
+                rr = planerad_rr(b, t, stop)
+                kandidater.append((b["datum"][t], bolag, t, stop, mal, rr if rr is not None else -1))
+        veckor = {}
+        for k in kandidater:
+            nyckel = k[0].isocalendar()[:2]
+            if nyckel not in veckor or k[5] > veckor[nyckel][5]:
+                veckor[nyckel] = k
+        trades = []
+        for dag, bolag, t, stop, mal, rr in sorted(veckor.values()):
+            tr = sim_en(data[bolag], t, stop, mal, utgang)
+            if tr:
+                tr["Bolag"] = bolag
+                tr["Planerad RR"] = rr
+                trades.append(tr)
+        tr_d = [x for x in trades if x["Köpdag"] < grans]
+        te_d = [x for x in trades if x["Köpdag"] >= grans]
+        ut.append({"namn": namn, "alla": matt(trades, AR), "traning": matt(tr_d, TRANING_AR),
+                   "test": matt(te_d, AR - TRANING_AR),
+                   "senaste": [{k: (str(v.date()) if hasattr(v, "date") else v) for k, v in x.items()} for x in trades[-8:]]})
+    return ut
+
+
+GRANSKA = {
+    "Nordea": ("2026-10-06", None),
+    "Addtech B": ("2026-10-01", "2026-10-14"),
+    "EQT": ("2026-09-24", "2026-10-07"),
+}
+
+
+def granska(data):
+    ut = {}
+    for bolag, (fran, till) in GRANSKA.items():
+        b = data.get(bolag)
+        if b is None:
+            continue
+        rader = []
+        for t, d in enumerate(b["datum"]):
+            if d < pd.Timestamp(fran) or (till and d > pd.Timestamp(till)):
+                continue
+            stod, mot = stod_motstand(b, t)
+            c = float(b["c"][t])
+            stop_sr = stod * (1 - sk.STOP_MARGINAL) if stod else None
+            rr = (mot - c) / (c - stop_sr) if (stod and mot and c > stop_sr) else None
+            vand, kraft = bool(b["vand"].iloc[t]), bool(b["kraft"].iloc[t])
+            rsi5, dyk = float(b["rsi_min5"].iloc[t]), float(b["dyk"].iloc[t])
+            rader.append({
+                "datum": str(d.date()), "kurs": round(c, 2), "rsi_min5": round(rsi5, 1), "dyk_%": round(dyk, 1),
+                "macd_vander": vand, "kraftig": kraft, "skannern": b["status"].iloc[t],
+                "stod": round(stod, 2) if stod else None, "motstand": round(mot, 2) if mot else None,
+                "rr_till_motstand": round(rr, 2) if rr else None,
+                "nara_stod": bool(stod and (c - stod) / c * 100 <= NARA_STOD),
+                "strikt_dyk": bool(vand and rsi5 < 30 and dyk <= -8 and kraft),
+                "sr_rr2": bool(vand and rsi5 < 35 and stod and (c - stod) / c * 100 <= NARA_STOD and rr and rr >= 2),
+            })
+        ut[bolag] = rader
+    return ut
+
+
+def main_extra():
+    idag = date.today()
+    start = pd.Timestamp(idag - timedelta(days=365 * AR))
+    grans = pd.Timestamp(idag - timedelta(days=365 * (AR - TRANING_AR)))
+    data = {}
+    for namn, ticker in sk.BOLAG.items():
+        try:
+            df = bt.ladda(ticker)
+            if df is not None:
+                data[namn] = forbered(df)
+        except Exception as e:
+            print(f"  Fel för {namn}: {e}")
+    bt.spara_json("vecka.json", en_i_veckan(data, start, grans))
+    bt.spara_json("granskning.json", granska(data))
+    print("Sparat vecka.json och granskning.json")
+
+
 if __name__ == "__main__":
     main()
+    main_extra()
