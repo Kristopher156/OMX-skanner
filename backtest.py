@@ -160,10 +160,11 @@ def sektion(titel, forklaring, tr):
   <div class="tile"><span class="lbl">Trades</span><span class="big">{s['antal']}</span></div>
   <div class="tile"><span class="lbl">Träffprocent</span><span class="big">{_f(s['traff'], 0)} %</span></div>
   <div class="tile"><span class="lbl">Snitt per trade</span><span class="big {klass}">{_r(s['snitt'])}</span></div>
-  <div class="tile"><span class="lbl">Totalt</span><span class="big {klass}">{_r(s['summa'])}</span></div>
+  <div class="tile"><span class="lbl">Trades per år</span><span class="big">{_f(s['antal'] / AR, 0)}</span></div>
   <div class="tile"><span class="lbl">Profit factor</span><span class="big">{_f(s['pf'])}</span></div>
   <div class="tile"><span class="lbl">Snitt dagar</span><span class="big">{_f(s['dagar'], 0)}</span></div>
-</div>"""
+</div>
+<p class="explain">{forklara(s)}</p>"""
     senaste = sorted(tr, key=lambda t: t["Köpdag"], reverse=True)[:12]
     lista = "".join(
         f"<tr><td>{t['Köpdag']}</td><td>{escape(t['Bolag'])}</td><td>{t['Signal']}</td><td>{_f(t['Köp'])}</td>"
@@ -176,6 +177,17 @@ def sektion(titel, forklaring, tr):
 <details><summary>Senaste 12 trades</summary><div class="tablewrap"><table>
 <tr><th>Köpdag</th><th>Bolag</th><th>Signal</th><th>Köp</th><th>Sälj</th><th>R</th><th>Orsak</th></tr>{lista}</table></div></details>
 </section>"""
+
+
+def forklara(s):
+    """Översätter R till något begripligt."""
+    per_ar = s["antal"] / AR
+    kanske = min(per_ar, 40)          # realistiskt antal trades per år för en person med ett litet konto
+    return (f"<b>Snitt per trade är siffran att titta på.</b> Om du hade tagit alla {s['antal']} signaler hade det blivit "
+            f"{_r(s['summa'])} sammanlagt ({_r(s['snitt'])} × {s['antal']}), men det hade aldrig gått i verkligheten – "
+            f"det är {_f(per_ar, 0)} trades per år, många samtidigt. Säg att du tar ungefär {_f(kanske, 0)} trades per år med "
+            f"2 % risk var: då ger {_r(s['snitt'])} per trade ungefär {_f(kanske * s['snitt'] * 2, 0)} % per år på tradingkontot, "
+            f"grovt räknat och före courtage.")
 
 
 def bedomning(tr_b):
@@ -221,6 +233,7 @@ table{{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:t
 th,td{{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}}
 th{{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}}
 details{{margin-top:12px}}summary{{cursor:pointer;font-weight:600}}
+.explain{{margin:0 0 14px;font-size:14px;max-width:75ch}}
 ul{{margin:0;padding-left:20px;color:var(--muted);font-size:14px}}
 </style></head><body><div class="wrap">
 <header><a href="index.html">← Till skanningen</a>

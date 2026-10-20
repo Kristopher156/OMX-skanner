@@ -253,7 +253,9 @@ def analysera(namn: str, ticker: str):
         "R/R": round(rr, 2) if rr == rr else None,
         "R/R ≥ min": "ja" if rr == rr and rr >= MIN_RR else "nej",
         "_ticker": ticker,
-        "_spark": [round(float(x), 2) for x in close.iloc[-60:]],
+        "_spark": [round(float(x), 2) for x in close.iloc[-126:]],
+        "_spark_datum": [d.strftime("%Y-%m-%d") for d in close.index[-126:]],
+        "_spark_hog": [round(float(x), 2) for x in high.iloc[-126:]],
         "_datum": close.index[-1].strftime("%Y-%m-%d"),
         "_namn_sok": namn,
     }
@@ -295,6 +297,54 @@ def _spark_svg(punkter, stop):
             f'<line x1="0" x2="{w}" y1="{ys:.1f}" y2="{ys:.1f}" class="spark-stop"></line></svg>')
 
 
+MANADER = ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+
+
+def _graf_6m(punkter, datum, stop, mal):
+    """6-månadersgraf i Avanza-stil: yta, prisskala till höger, månader under, stop och mål inritade."""
+    if not punkter or len(punkter) < 2:
+        return ""
+    w, h = 600, 200
+    lo = min(min(punkter), stop if stop == stop else min(punkter))
+    hi = max(max(punkter), mal if mal == mal else max(punkter))
+    pad = (hi - lo) * 0.06 or 1
+    lo, hi = lo - pad, hi + pad
+    yp = lambda v: (hi - v) / (hi - lo) * 100            # procent uppifrån
+    steg = w / (len(punkter) - 1)
+    linje = " ".join(f"{'M' if i == 0 else 'L'}{i * steg:.1f} {yp(v) * h / 100:.1f}" for i, v in enumerate(punkter))
+    yta = f"{linje} L{w} {h} L0 {h} Z"
+    upp = punkter[-1] >= punkter[0]
+    andring = (punkter[-1] / punkter[0] - 1) * 100
+    # rutnät + prisetiketter (4 nivåer)
+    nivaer = [v for v in (lo + (hi - lo) * k / 4 for k in range(1, 4)) if abs(yp(v) - yp(punkter[-1])) > 8]
+    rutnat = "".join(f'<line x1="0" x2="{w}" y1="{yp(v) * h / 100:.1f}" y2="{yp(v) * h / 100:.1f}" class="g-grid"></line>' for v in nivaer)
+    etiketter = "".join(f'<span class="g-y" style="top:{yp(v):.1f}%">{_tal(v, 0 if v >= 100 else 1)}</span>' for v in nivaer)
+    # månadsetiketter
+    manader, forra = [], None
+    for i, d in enumerate(datum):
+        m = d[5:7]
+        if forra is not None and m != forra:
+            manader.append(f'<span class="g-x" style="left:{i / (len(datum) - 1) * 100:.1f}%">{MANADER[int(m) - 1]}</span>')
+        forra = m
+    linjer = ""
+    extra = ""
+    if stop == stop:
+        linjer += f'<line x1="0" x2="{w}" y1="{yp(stop) * h / 100:.1f}" y2="{yp(stop) * h / 100:.1f}" class="g-stop"></line>'
+        extra += f'<span class="g-tag stop" style="top:{yp(stop):.1f}%">Stop {_tal(stop, 1)}</span>'
+    if mal == mal:
+        linjer += f'<line x1="0" x2="{w}" y1="{yp(mal) * h / 100:.1f}" y2="{yp(mal) * h / 100:.1f}" class="g-mal"></line>'
+        extra += f'<span class="g-tag mal" style="top:{yp(mal):.1f}%">Mål {_tal(mal, 1)}</span>'
+    extra += f'<span class="g-tag nu {"up" if upp else "down"}" style="top:{yp(punkter[-1]):.1f}%">{_tal(punkter[-1], 1)}</span>'
+    return f"""<div class="g">
+  <div class="g-head"><span>6 mån</span><span class="{'up' if upp else 'down'}">{'+' if andring >= 0 else '−'}{_tal(abs(andring), 1)} %</span></div>
+  <div class="g-plot">
+    <svg viewBox="0 0 {w} {h}" preserveAspectRatio="none" aria-hidden="true">{rutnat}<path d="{yta}" class="g-area {'up' if upp else 'down'}"></path>{linjer}<path d="{linje}" class="g-line {'up' if upp else 'down'}"></path></svg>
+    {etiketter}{extra}
+  </div>
+  <div class="g-xaxis">{''.join(manader)}</div>
+</div>"""
+
+
 def _kort(r, klass):
     namn = escape(str(r["Bolag"]))
     tv = str(r.get("_ticker", "")).replace(".ST", "").replace("-", "_")
@@ -308,7 +358,7 @@ def _kort(r, klass):
     <div><h3>{namn}</h3><span class="ticker">{escape(str(r.get('_ticker', '')))}</span></div>
     <div class="price">{_tal(r['Kurs'])} <small>kr</small></div>
   </div>
-  {_spark_svg(r.get('_spark') or [], r['Stop (under botten)'])}
+  {_graf_6m(r.get('_spark') or [], r.get('_spark_datum') or [], r['Stop (under botten)'], r['Mål (senaste topp)'])}
   <div class="stats">
     <div class="stat"><span class="lbl">RSI</span><span class="val">{_tal(r['RSI'], 1)}</span>
       <span class="bar"><i style="width:{max(0, min(100, rsi_v)):.0f}%"></i><b style="left:{RSI_OVERSALD}%"></b></span></div>
@@ -320,7 +370,6 @@ def _kort(r, klass):
   </div>
   {_rapport_rad(r)}
   {_lank(r, tv)}
-  <details class="more" data-tv="OMXSTO:{escape(tv)}"><summary>Visa graf med RSI och MACD</summary><div class="tvbox"></div></details>
 </article>"""
 
 
@@ -363,32 +412,7 @@ def _marknad_html(mk):
 </section>"""
 
 
-GRAF_JS = """<script>
-document.querySelectorAll('details.more').forEach(function (d) {
-  d.addEventListener('toggle', function () {
-    var kort = d.closest('.card');
-    if (kort) kort.classList.toggle('wide', d.open);
-    if (!d.open || d.dataset.loaded) return;
-    d.dataset.loaded = '1';
-    var box = d.querySelector('.tvbox');
-    box.className = 'tvbox tradingview-widget-container';
-    var inner = document.createElement('div');
-    inner.className = 'tradingview-widget-container__widget';
-    inner.style.height = '100%';
-    box.appendChild(inner);
-    var s = document.createElement('script');
-    s.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
-    s.async = true;
-    s.text = JSON.stringify({
-      symbol: d.dataset.tv, interval: 'D', locale: 'sv_SE', autosize: true,
-      theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
-      style: '1', hide_side_toolbar: true, allow_symbol_change: false, withdateranges: true,
-      studies: ['STD;RSI', 'STD;MACD']
-    });
-    box.appendChild(s);
-  });
-});
-</script>"""
+GRAF_JS = ""
 
 
 def _rapport_rad(r):
@@ -484,6 +508,24 @@ table{{border-collapse:collapse;width:100%;margin-top:12px;font-size:14px;font-v
 th,td{{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}}
 th{{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}}
 footer{{color:var(--muted);font-size:13px}}
+.g{{display:flex;flex-direction:column;gap:4px}}
+.g-head{{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}}
+.g-head .up{{color:var(--up);font-weight:600}}.g-head .down{{color:var(--down);font-weight:600}}
+.g-plot{{position:relative;height:150px;margin-right:46px}}
+.g-plot svg{{position:absolute;inset:0;width:100%;height:100%;overflow:visible}}
+.g-grid{{stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}}
+.g-line{{fill:none;stroke-width:2;vector-effect:non-scaling-stroke}}
+.g-line.up{{stroke:var(--up)}}.g-line.down{{stroke:var(--down)}}
+.g-area{{stroke:none;opacity:.12}}.g-area.up{{fill:var(--up)}}.g-area.down{{fill:var(--down)}}
+.g-stop{{stroke:var(--down);stroke-width:1;stroke-dasharray:4 4;vector-effect:non-scaling-stroke}}
+.g-mal{{stroke:var(--up);stroke-width:1;stroke-dasharray:2 4;vector-effect:non-scaling-stroke}}
+.g-y{{position:absolute;right:-46px;transform:translateY(-50%);font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}}
+.g-tag{{position:absolute;right:-46px;transform:translateY(-50%);font-size:10px;font-weight:700;padding:1px 4px;border-radius:4px;white-space:nowrap;font-variant-numeric:tabular-nums}}
+.g-tag.nu.up{{background:var(--up);color:var(--card)}}.g-tag.nu.down{{background:var(--down);color:var(--card)}}
+.g-tag.stop{{right:4px;color:var(--down);background:var(--card);opacity:.9}}
+.g-tag.mal{{right:4px;color:var(--up);background:var(--card);opacity:.9}}
+.g-xaxis{{position:relative;height:14px;margin-right:46px}}
+.g-x{{position:absolute;transform:translateX(-50%);font-size:10px;color:var(--muted)}}
 .toplink{{align-self:flex-start;color:var(--kors);font-weight:600;font-size:14px;text-decoration:none}}
 .toplink:hover{{text-decoration:underline}}
 .market{{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;gap:12px}}
@@ -497,10 +539,6 @@ footer{{color:var(--muted);font-size:13px}}
 .idx-line{{fill:none;stroke:var(--fg);stroke-width:2;vector-effect:non-scaling-stroke}}
 .ma-line{{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:5 5;vector-effect:non-scaling-stroke}}
 .legend{{font-size:12px!important}}
-.card details.more{{background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:10px 0 0}}
-.card details.more summary{{font-size:14px;color:var(--kors)}}
-.tvbox{{height:460px;margin-top:10px;border-radius:12px;overflow:hidden}}
-.card.wide{{grid-column:1/-1}}
 </style></head>
 <body><div class="wrap">
 <header>
