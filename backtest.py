@@ -14,6 +14,7 @@ Två sätt att sälja testas, med samma köpsignaler som skannern
 
 Köp sker på öppningskursen dagen efter signalen. Ett innehav åt gången per bolag.
 """
+import json
 import os
 from datetime import date, datetime, timedelta
 from html import escape
@@ -30,7 +31,14 @@ MAX_DAGAR_B = 40       # tidsstopp för variant B
 KOPSIGNALER = (sk.TIDIG, sk.KORS)
 
 
+CACHE = Path("cache")
+
+
 def ladda(ticker: str):
+    """Hämtar kurshistorik. Sparas i cache/ samma dag, så att flera analyser inte laddar ner allt igen."""
+    fil = CACHE / (ticker.replace("^", "_") + ".pkl")
+    if fil.exists() and date.fromtimestamp(fil.stat().st_mtime) == date.today():
+        return pd.read_pickle(fil)
     df = yf.download(ticker, period=f"{AR + 1}y", interval="1d", progress=False, auto_adjust=False)
     if df is None or df.empty:
         return None
@@ -38,7 +46,17 @@ def ladda(ticker: str):
     ut.index = pd.to_datetime(ut.index)
     if ut.index.tz is not None:
         ut.index = ut.index.tz_localize(None)
-    return ut if len(ut) > 300 else None
+    if len(ut) <= 300:
+        return None
+    CACHE.mkdir(exist_ok=True)
+    ut.to_pickle(fil)
+    return ut
+
+
+def spara_json(namn: str, data):
+    """Sparar resultat som JSON i results/ (skickas till grenen 'resultat' så att de kan läsas i efterhand)."""
+    Path("results").mkdir(exist_ok=True)
+    (Path("results") / namn).write_text(json.dumps(data, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
 
 
 def index_upptrend():
@@ -291,6 +309,18 @@ def main():
     else:
         fil = Path(__file__).with_name("backtest.html")
     spara(tr_a, tr_b, period, bh_index, fil)
+    def grupper(tr):
+        klar = [t for t in tr if t["Orsak"] != "öppen"]
+        return {
+            "alla": statistik(klar),
+            "rr_minst_2": statistik([t for t in klar if t["RR vid signal"] == t["RR vid signal"] and t["RR vid signal"] >= sk.MIN_RR]),
+            "upptrend": statistik([t for t in klar if t["Marknad"] == "upp"]),
+            "nedtrend": statistik([t for t in klar if t["Marknad"] == "ned"]),
+            "tidig": statistik([t for t in klar if t["Signal"] == "Tidig vändning"]),
+            "kors": statistik([t for t in klar if t["Signal"] == "MACD-korsning"]),
+            "orsaker": pd.Series([t["Orsak"] for t in klar]).value_counts().to_dict() if klar else {},
+        }
+    spara_json("backtest.json", {"period": period, "index": bh_index, "A_mal_eller_stop": grupper(tr_a), "B_macd_utgang": grupper(tr_b)})
     print(f"Sparat: {fil}")
 
 

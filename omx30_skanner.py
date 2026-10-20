@@ -89,6 +89,7 @@ TIDIG = "1. MACD vänder upp (tidigt)"
 KORS = "2. MACD-korsning"
 OVERSALD = "3. Översålda – bevaka"
 PRIO = {TIDIG: 0, KORS: 1, OVERSALD: 2, "": 9}
+MIN_BOLAG_DATA = 20    # färre bolag med data än så = något är fel, behåll förra sidan
 
 
 def rsi(close: pd.Series, n: int = 14) -> pd.Series:
@@ -543,11 +544,12 @@ footer{{color:var(--muted);font-size:13px}}
 </style></head>
 <body><div class="wrap">
 <header>
-  <span class="eyebrow">Stängningskurser {datum} · skannat {nu:%H:%M}</span>
+  <span class="eyebrow">Stängningskurser {datum} · {len(rader)} av {len(BOLAG)} bolag · skannat {nu:%H:%M}</span>
   <h1>OMXS30-skanning</h1>
   <div class="chips">{''.join(chips)}</div>
   <div class="links"><a class="toplink" href="backtest.html">Så har strategin fungerat de senaste 3 åren →</a>
-  <a class="toplink" href="optimering.html">Så kan strategin bli bättre →</a></div>
+  <a class="toplink" href="optimering.html">Så kan strategin bli bättre →</a>
+  <a class="toplink" href="analys.html">Djupanalys: stöd, motstånd och R/R →</a></div>
 </header>
 {_marknad_html(mk)}
 {''.join(sektioner)}
@@ -619,9 +621,10 @@ def main():
         except Exception as e:  # ett bolag som strular ska inte stoppa resten
             print(f"  Fel för {namn}: {e}")
 
-    if not resultat:
-        skicka_notis("OMXS30-skanningen misslyckades", "Fick ingen kursdata i dag. Försök igen senare eller kör den på datorn.", prio=2)
-        sys.exit("Fick ingen data alls. Kolla internetanslutningen.")
+    if len(resultat) < MIN_BOLAG_DATA:
+        skicka_notis("OMXS30-skanningen misslyckades",
+                     f"Fick bara data för {len(resultat)} av {len(BOLAG)} bolag (Yahoo strulade). Sidan behåller gårdagens resultat.", prio=2)
+        sys.exit(f"Fick bara data för {len(resultat)} bolag – sidan uppdateras inte.")
 
     tabell = pd.DataFrame(resultat)
     tabell["_prio"] = tabell["Status"].map(PRIO)

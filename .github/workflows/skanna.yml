@@ -7,7 +7,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -45,6 +45,10 @@ jobs:
         continue-on-error: true
         run: python optimera.py
 
+      - name: Kör djupanalys
+        continue-on-error: true
+        run: python analys.py
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
@@ -57,3 +61,16 @@ jobs:
           echo "Notisstatus: $(cat notis_status.txt 2>/dev/null || echo 'ingen notis behövdes')"
           if grep -q '^fel' notis_status.txt 2>/dev/null; then exit 1; fi
           if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && ! grep -q '^skickad' notis_status.txt 2>/dev/null; then exit 1; fi
+
+      - name: Spara resultat i grenen resultat
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          [ -d results ] || exit 0
+          mkdir -p /tmp/res && cp results/*.json /tmp/res/
+          cd /tmp/res
+          git init -q && git checkout -q -b resultat
+          git config user.name "github-actions" && git config user.email "github-actions@users.noreply.github.com"
+          git add -A && git commit -q -m "Resultat $(date +%F)"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" resultat

@@ -186,6 +186,12 @@ def main():
     fil = Path("site") / "optimering.html" if os.environ.get("GITHUB_ACTIONS") == "true" else Path(__file__).with_name("optimering.html")
     fil.parent.mkdir(exist_ok=True)
     spara(fil, bast, topp, effekter, stat(bas_tr), stat(bas_te), start, gräns, idag, len(data))
+    bt.spara_json("optimering.json", {
+        "bast": {"regler": beskriv(bast), "traning": bast["tr"], "test": bast["te"]} if bast else None,
+        "topp10": [{"regler": beskriv(r), "traning": r["tr"], "test": r["te"]} for r in topp],
+        "effekter": [[{"val": e, "median_R": v, "per_ar": a} for e, v, a in rader] for rader in effekter],
+        "nuvarande": {"traning": stat(bas_tr), "test": stat(bas_te)},
+    })
     print(f"Sparat: {fil}")
     if bast:
         print(f"Bäst: {beskriv(bast)} | träning {bast['tr']['snitt']:+.2f}R ({bast['tr']['antal']}), test {bast['te']['snitt']:+.2f}R ({bast['te']['antal']})")
