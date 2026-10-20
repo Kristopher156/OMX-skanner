@@ -218,15 +218,19 @@ def signalserie(close: pd.Series, low: pd.Series, high: pd.Series) -> pd.DataFra
     status[(r < RSI_OVERSALD)] = OVERSALD
     status[hist_vander & (rsi_min5 < RSI_LAG) & (r >= r.shift(1))] = TIDIG
     status[kors_upp & (rsi_min5 < RSI_LAG + 10)] = KORS
-    return pd.DataFrame({"rsi": r, "rsi_min5": rsi_min5, "linje": linje, "signal": signal, "hist": hist,
-                         "status": status, "stop": stop, "topp": topp, "rr": rr})
+    ut = pd.DataFrame({"rsi": r, "rsi_min5": rsi_min5, "linje": linje, "signal": signal, "hist": hist,
+                       "status": status, "stop": stop, "topp": topp, "rr": rr}).reindex(close.index)
+    ut["status"] = ut["status"].fillna("")
+    return ut
 
 
 def analysera(namn: str, ticker: str):
     df = yf.download(ticker, period="9mo", interval="1d", progress=False, auto_adjust=False)
     if df is None or df.empty:
         return None
-    close, low, high = kolumn(df, "Close"), kolumn(df, "Low"), kolumn(df, "High")
+    # Ta bara dagar där alla tre värden finns (Yahoo kan ge en halvfärdig rad för i dag)
+    rena = pd.DataFrame({"Close": kolumn(df, "Close"), "Low": kolumn(df, "Low"), "High": kolumn(df, "High")}).dropna()
+    close, low, high = rena["Close"], rena["Low"], rena["High"]
     if len(close) < 60:
         return None
 
@@ -239,7 +243,7 @@ def analysera(namn: str, ticker: str):
     stop = float(s["stop"].iloc[-1])
     topp = float(s["topp"].iloc[-1])
     rr = float(s["rr"].iloc[-1]) if s["rr"].iloc[-1] == s["rr"].iloc[-1] else float("nan")
-    status = s["status"].iloc[-1]
+    status = s["status"].iloc[-1] if isinstance(s["status"].iloc[-1], str) else ""
 
     return {
         "Bolag": namn,
