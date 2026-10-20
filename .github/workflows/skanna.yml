@@ -43,3 +43,8 @@ jobs:
 
       - id: deploy
         uses: actions/deploy-pages@v4
+
+      - name: Kontrollera notis
+        run: |
+          echo "Notisstatus: $(cat notis_status.txt 2>/dev/null || echo 'ingen notis behövdes')"
+          if grep -q '^fel' notis_status.txt 2>/dev/null; then exit 1; fi
