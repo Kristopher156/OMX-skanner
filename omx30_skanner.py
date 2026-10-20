@@ -20,7 +20,7 @@ import sys
 import webbrowser
 from html import escape
 from urllib import request as urlrequest
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 try:
@@ -77,6 +77,12 @@ DAGAR_BOTTEN = 20      # senaste bottnen (för stop-loss) letas inom så många 
 DAGAR_TOPP = 40        # senaste toppen (som mål) letas inom så många dagar
 STOP_MARGINAL = 0.01   # stop läggs 1 % under bottnen
 MIN_RR = 2.0           # ditt minimum för R/R
+MIN_DAGAR_RAPPORT = 15 # din regel: minst så många dagar kvar till rapport vid köp
+
+# Rapportdatum som du vet själv (vinner över det Yahoo säger). Format "ÅÅÅÅ-MM-DD".
+RAPPORTDATUM = {
+    "Addtech B": "2026-10-22",
+}
 
 # Kategorier, i den ordning de visas
 TIDIG = "1. MACD vänder upp (tidigt)"
@@ -106,6 +112,57 @@ def kolumn(df: pd.DataFrame, namn: str) -> pd.Series:
     if isinstance(s, pd.DataFrame):  # nyare yfinance kan ge flernivåkolumner
         s = s.iloc[:, 0]
     return s.dropna()
+
+
+def nasta_rapport(namn: str, ticker: str):
+    """Nästa rapportdatum: först din egen lista, annars Yahoo. None om okänt."""
+    idag = date.today()
+    if namn in RAPPORTDATUM:
+        try:
+            d = datetime.strptime(RAPPORTDATUM[namn], "%Y-%m-%d").date()
+            if d >= idag:
+                return d
+        except ValueError:
+            pass
+    try:
+        cal = yf.Ticker(ticker).calendar
+        datum = None
+        if isinstance(cal, dict):
+            datum = cal.get("Earnings Date")
+        elif hasattr(cal, "loc"):
+            datum = list(cal.loc["Earnings Date"])
+        if datum is None:
+            return None
+        if not isinstance(datum, (list, tuple)):
+            datum = [datum]
+        framtida = []
+        for x in datum:
+            x = x.date() if hasattr(x, "date") and callable(x.date) else x
+            if isinstance(x, date) and x >= idag:
+                framtida.append(x)
+        return min(framtida) if framtida else None
+    except Exception:
+        return None
+
+
+def avanza_lank(namn: str):
+    """Letar upp bolagets sida på Avanza. None om det inte går (då används TradingView)."""
+    try:
+        body = json.dumps({"query": namn, "searchFilter": {"types": ["STOCK"]},
+                           "pagination": {"from": 0, "size": 8}}).encode("utf-8")
+        req = urlrequest.Request("https://www.avanza.se/_api/search/filtered-search", data=body,
+                                 headers={"Content-Type": "application/json", "User-Agent": "Mozilla/5.0"},
+                                 method="POST")
+        svar = json.loads(urlrequest.urlopen(req, timeout=10).read().decode("utf-8"))
+        for hit in svar.get("hits", []):
+            oid = hit.get("orderBookId")
+            plats = str(hit.get("marketPlaceName") or "")
+            if oid and ("Stockholm" in plats or not plats):
+                slug = hit.get("urlSlugName") or "aktie"
+                return f"https://www.avanza.se/aktier/om-aktien.html/{oid}/{slug}"
+    except Exception:
+        pass
+    return None
 
 
 def analysera(namn: str, ticker: str):
@@ -159,6 +216,7 @@ def analysera(namn: str, ticker: str):
         "_ticker": ticker,
         "_spark": [round(float(x), 2) for x in close.iloc[-60:]],
         "_datum": close.index[-1].strftime("%Y-%m-%d"),
+        "_namn_sok": namn,
     }
 
 
@@ -221,8 +279,26 @@ def _kort(r, klass):
     <div class="stat"><span class="lbl">Mål</span><span class="val">{_tal(r['Mål (senaste topp)'])}</span></div>
     <div class="stat"><span class="lbl">R/R</span><span class="val rr {'ok' if rr_ok else 'low'}">{_tal(rr)}</span></div>
   </div>
-  <a class="chart" href="https://www.tradingview.com/chart/?symbol=OMXSTO:{escape(tv)}" target="_blank" rel="noopener">Öppna graf →</a>
+  {_rapport_rad(r)}
+  {_lank(r, tv)}
 </article>"""
+
+
+def _rapport_rad(r):
+    dagar, datum = r.get("_rapport_dagar"), r.get("_rapport_datum")
+    if dagar is None:
+        return '<div class="report unknown">Rapportdatum okänt – kolla själv innan köp</div>'
+    if dagar < MIN_DAGAR_RAPPORT:
+        return (f'<div class="report warn">⚠ Rapport om {dagar} {"dag" if dagar == 1 else "dagar"} ({datum}) '
+                f'– för nära, din regel är minst {MIN_DAGAR_RAPPORT}</div>')
+    return f'<div class="report ok">Rapport om {dagar} dagar ({datum})</div>'
+
+
+def _lank(r, tv):
+    if r.get("_avanza"):
+        return f'<a class="chart" href="{escape(r["_avanza"])}" target="_blank" rel="noopener">Öppna i Avanza →</a>'
+    return (f'<a class="chart" href="https://www.tradingview.com/chart/?symbol=OMXSTO:{escape(tv)}" '
+            f'target="_blank" rel="noopener">Öppna graf (TradingView) →</a>')
 
 
 def spara_html(rader: list, fil: Path):
@@ -289,6 +365,10 @@ section{{display:flex;flex-direction:column;gap:14px}}
 .bar b{{position:absolute;top:-3px;width:2px;height:12px;background:var(--down)}}
 .chart{{align-self:flex-start;color:var(--kors);font-weight:600;font-size:14px;text-decoration:none}}
 .chart:hover{{text-decoration:underline}}
+.report{{font-size:13px;padding:8px 10px;border-radius:10px}}
+.report.ok{{background:var(--bg);color:var(--muted)}}
+.report.warn{{background:var(--oversald-bg);color:var(--down);font-weight:600}}
+.report.unknown{{background:var(--bg);color:var(--muted);font-style:italic}}
 .empty{{margin:0;color:var(--muted);font-size:14px;padding:14px 16px;border:1px dashed var(--line);border-radius:14px}}
 details{{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 18px}}
 summary{{cursor:pointer;font-weight:600}}
@@ -342,7 +422,9 @@ def notis_for_signaler(rader: list):
         ikon = "🟢" if r["Status"] == TIDIG else "🔵"
         typ = "MACD vänder upp" if r["Status"] == TIDIG else "MACD-korsning"
         rr = f"R/R {_tal(r['R/R'], 1)}" if r["R/R"] is not None else ""
-        rader_txt.append(f"{ikon} {r['Bolag']}: {typ} · RSI {r['RSI']:.0f} · {rr}")
+        d = r.get("_rapport_dagar")
+        rapport = f" · ⚠ rapport om {d} d" if d is not None and d < MIN_DAGAR_RAPPORT else ""
+        rader_txt.append(f"{ikon} {r['Bolag']}: {typ} · RSI {r['RSI']:.0f} · {rr}{rapport}")
     for r in pa_vag:
         rader_txt.append(f"🟡 {r['Bolag']}: översåld, histogrammet börjar vända · RSI {r['RSI']:.0f}")
     titel = f"OMXS30: {len(signaler)} signaler, {len(pa_vag)} på väg" if signaler else f"OMXS30: {len(pa_vag)} på väg att vända"
@@ -375,6 +457,14 @@ def main():
     print(tabell.drop(columns=[c for c in tabell.columns if c.startswith("_")]).to_string(index=False))
 
     rader = tabell.to_dict("records")
+    # Rapportdatum och Avanza-länk hämtas bara för bolagen som syns som kort
+    for r in rader:
+        if not r["Status"]:
+            continue
+        d = nasta_rapport(r["_namn_sok"], r["_ticker"])
+        r["_rapport_datum"] = d.isoformat() if d else None
+        r["_rapport_dagar"] = (d - date.today()).days if d else None
+        r["_avanza"] = avanza_lank(r["_namn_sok"])
     i_molnet = os.environ.get("GITHUB_ACTIONS") == "true"
     if i_molnet:
         mapp = Path("site")
