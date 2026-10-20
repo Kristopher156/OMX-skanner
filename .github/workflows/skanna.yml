@@ -37,6 +37,10 @@ jobs:
           SIDA_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python omx30_skanner.py
 
+      - name: Kör backtest
+        continue-on-error: true
+        run: python backtest.py
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

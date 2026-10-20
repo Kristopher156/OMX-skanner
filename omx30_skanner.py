@@ -114,6 +114,38 @@ def kolumn(df: pd.DataFrame, namn: str) -> pd.Series:
     return s.dropna()
 
 
+INDEX_TICKER = "^OMX"   # OMX Stockholm 30 på Yahoo
+
+
+def marknad():
+    """Läget för OMXS30-indexet: upp-, ned- eller sidledes trend."""
+    try:
+        df = yf.download(INDEX_TICKER, period="2y", interval="1d", progress=False, auto_adjust=False)
+        if df is None or df.empty:
+            return None
+        close = kolumn(df, "Close")
+        if len(close) < 210:
+            return None
+        ma50, ma200 = close.rolling(50).mean(), close.rolling(200).mean()
+        kurs, m50, m200 = float(close.iloc[-1]), float(ma50.iloc[-1]), float(ma200.iloc[-1])
+        if kurs > m200 and m50 > m200:
+            lage = "upp"
+        elif kurs < m200 and m50 < m200:
+            lage = "ned"
+        else:
+            lage = "sidled"
+        return {
+            "kurs": kurs, "ma50": m50, "ma200": m200, "lage": lage,
+            "manad": (kurs / float(close.iloc[-22]) - 1) * 100,
+            "rsi": float(rsi(close).iloc[-1]),
+            "spark": [float(x) for x in close.iloc[-126:]],
+            "ma200_spark": [float(x) for x in ma200.iloc[-126:]],
+        }
+    except Exception as e:
+        print(f"Kunde inte hämta indexet: {e}")
+        return None
+
+
 def nasta_rapport(namn: str, ticker: str):
     """Nästa rapportdatum: först din egen lista, annars Yahoo. None om okänt."""
     idag = date.today()
@@ -165,6 +197,30 @@ def avanza_lank(namn: str):
     return None
 
 
+def signalserie(close: pd.Series, low: pd.Series, high: pd.Series) -> pd.DataFrame:
+    """Signalerna för varje dag i historiken – samma regler som i dagens skanning.
+    Varje rad bygger bara på data fram till och med den dagen (används även av backtest.py)."""
+    r = rsi(close)
+    linje, signal, hist = macd(close)
+    rsi_min5 = r.rolling(5).min()
+    hist_vander = (hist < 0) & (hist > hist.shift(1)) & (hist.shift(1) > hist.shift(2))
+    kors = (linje > signal) & (linje.shift(1) <= signal.shift(1))
+    kors_upp = kors.copy()
+    for i in range(1, KORS_DAGAR):
+        kors_upp = kors_upp | kors.shift(i, fill_value=False)
+    stop = low.rolling(DAGAR_BOTTEN).min() * (1 - STOP_MARGINAL)
+    topp = high.rolling(DAGAR_TOPP).max()
+    risk = close - stop
+    rr = (topp - close) / risk.where(risk > 0)
+
+    status = pd.Series("", index=close.index, dtype=object)
+    status[(r < RSI_OVERSALD)] = OVERSALD
+    status[hist_vander & (rsi_min5 < RSI_LAG) & (r >= r.shift(1))] = TIDIG
+    status[kors_upp & (rsi_min5 < RSI_LAG + 10)] = KORS
+    return pd.DataFrame({"rsi": r, "rsi_min5": rsi_min5, "linje": linje, "signal": signal, "hist": hist,
+                         "status": status, "stop": stop, "topp": topp, "rr": rr})
+
+
 def analysera(namn: str, ticker: str):
     df = yf.download(ticker, period="9mo", interval="1d", progress=False, auto_adjust=False)
     if df is None or df.empty:
@@ -173,33 +229,16 @@ def analysera(namn: str, ticker: str):
     if len(close) < 60:
         return None
 
-    r = rsi(close)
-    linje, signal, hist = macd(close)
-
+    s = signalserie(close, low, high)
+    linje, hist = s["linje"], s["hist"]
     kurs = float(close.iloc[-1])
-    rsi_nu, rsi_igar = float(r.iloc[-1]), float(r.iloc[-2])
-    rsi_min5 = float(r.iloc[-5:].min())
-    h0, h1, h2 = float(hist.iloc[-1]), float(hist.iloc[-2]), float(hist.iloc[-3])
-    hist_vander = h0 < 0 and h0 > h1 > h2           # under noll men stiger två dagar i rad
-    kors_upp = any(
-        linje.iloc[-i] > signal.iloc[-i] and linje.iloc[-i - 1] <= signal.iloc[-i - 1]
-        for i in range(1, KORS_DAGAR + 1)
-    )
-
-    botten = float(low.iloc[-DAGAR_BOTTEN:].min())
-    topp = float(high.iloc[-DAGAR_TOPP:].max())
-    stop = botten * (1 - STOP_MARGINAL)
-    risk = kurs - stop
-    rr = (topp - kurs) / risk if risk > 0 else float("nan")
-
-    if kors_upp and rsi_min5 < RSI_LAG + 10:
-        status = KORS
-    elif hist_vander and rsi_min5 < RSI_LAG and rsi_nu >= rsi_igar:
-        status = TIDIG
-    elif rsi_nu < RSI_OVERSALD:
-        status = OVERSALD
-    else:
-        status = ""
+    rsi_nu = float(s["rsi"].iloc[-1])
+    rsi_min5 = float(s["rsi_min5"].iloc[-1])
+    h0, h1 = float(hist.iloc[-1]), float(hist.iloc[-2])
+    stop = float(s["stop"].iloc[-1])
+    topp = float(s["topp"].iloc[-1])
+    rr = float(s["rr"].iloc[-1]) if s["rr"].iloc[-1] == s["rr"].iloc[-1] else float("nan")
+    status = s["status"].iloc[-1]
 
     return {
         "Bolag": namn,
@@ -281,7 +320,75 @@ def _kort(r, klass):
   </div>
   {_rapport_rad(r)}
   {_lank(r, tv)}
+  <details class="more" data-tv="OMXSTO:{escape(tv)}"><summary>Visa graf med RSI och MACD</summary><div class="tvbox"></div></details>
 </article>"""
+
+
+LAGE_TEXT = {
+    "upp": ("Upptrend", "Medvind för dina köp. Dippköp i en marknad som trendar uppåt brukar fungera bäst."),
+    "ned": ("Nedtrend", "Motvind. Fler signaler misslyckas när hela marknaden faller – ta mindre positioner och håll hårt på 2R och stop."),
+    "sidled": ("Sidled / osäker", "Ingen tydlig trend. Följ reglerna och var noga med stop."),
+}
+
+
+def _marknad_html(mk):
+    if not mk:
+        return '<section class="market"><p class="empty">Kunde inte hämta OMXS30-indexet i dag.</p></section>'
+    rubrik, text = LAGE_TEXT[mk["lage"]]
+    pts, ma = mk["spark"], mk["ma200_spark"]
+    w, h, pad = 600, 90, 6
+    alla = [v for v in pts + ma if v == v]
+    lo, hi = min(alla), max(alla)
+    span = (hi - lo) or 1
+    y = lambda v: h - pad - (v - lo) / span * (h - 2 * pad)
+    steg = w / (len(pts) - 1)
+    linje = " ".join(f"{'M' if i == 0 else 'L'}{i * steg:.1f} {y(v):.1f}" for i, v in enumerate(pts))
+    ma_pts = [(i, v) for i, v in enumerate(ma) if v == v]
+    ma_linje = " ".join(f"{'M' if j == 0 else 'L'}{i * steg:.1f} {y(v):.1f}" for j, (i, v) in enumerate(ma_pts))
+    mot_ma = (mk["kurs"] / mk["ma200"] - 1) * 100
+    tecken = lambda v: ("+" if v >= 0 else "−") + _tal(abs(v), 1) + " %"
+    return f"""<section class="market lage-{mk['lage']}">
+  <div class="market-top">
+    <div><span class="lbl">Marknaden just nu · OMXS30</span><h2>{rubrik}</h2><p>{text}</p></div>
+    <div class="market-nums">
+      <div class="stat"><span class="lbl">Index</span><span class="val">{_tal(mk['kurs'], 0)}</span></div>
+      <div class="stat"><span class="lbl">1 månad</span><span class="val {'up' if mk['manad'] >= 0 else 'down'}">{tecken(mk['manad'])}</span></div>
+      <div class="stat"><span class="lbl">Mot 200-dagars</span><span class="val {'up' if mot_ma >= 0 else 'down'}">{tecken(mot_ma)}</span></div>
+      <div class="stat"><span class="lbl">RSI</span><span class="val">{_tal(mk['rsi'], 0)}</span></div>
+    </div>
+  </div>
+  <svg class="market-spark" viewBox="0 0 {w} {h}" preserveAspectRatio="none" aria-hidden="true">
+    <path d="{ma_linje}" class="ma-line"></path><path d="{linje}" class="idx-line"></path></svg>
+  <p class="legend">Senaste 6 månaderna. Heldragen linje = index, streckad = 200-dagars medelvärde. Ligger index över den streckade linjen räknas det som upptrend.</p>
+</section>"""
+
+
+GRAF_JS = """<script>
+document.querySelectorAll('details.more').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    var kort = d.closest('.card');
+    if (kort) kort.classList.toggle('wide', d.open);
+    if (!d.open || d.dataset.loaded) return;
+    d.dataset.loaded = '1';
+    var box = d.querySelector('.tvbox');
+    box.className = 'tvbox tradingview-widget-container';
+    var inner = document.createElement('div');
+    inner.className = 'tradingview-widget-container__widget';
+    inner.style.height = '100%';
+    box.appendChild(inner);
+    var s = document.createElement('script');
+    s.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
+    s.async = true;
+    s.text = JSON.stringify({
+      symbol: d.dataset.tv, interval: 'D', locale: 'sv_SE', autosize: true,
+      theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
+      style: '1', hide_side_toolbar: true, allow_symbol_change: false, withdateranges: true,
+      studies: ['STD;RSI', 'STD;MACD']
+    });
+    box.appendChild(s);
+  });
+});
+</script>"""
 
 
 def _rapport_rad(r):
@@ -301,7 +408,7 @@ def _lank(r, tv):
             f'target="_blank" rel="noopener">Öppna graf (TradingView) →</a>')
 
 
-def spara_html(rader: list, fil: Path):
+def spara_html(rader: list, fil: Path, mk=None):
     nu = datetime.now()
     datum = next((r.get("_datum") for r in rader if r.get("_datum")), f"{nu:%Y-%m-%d}")
     sektioner, chips = [], []
@@ -377,20 +484,39 @@ table{{border-collapse:collapse;width:100%;margin-top:12px;font-size:14px;font-v
 th,td{{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}}
 th{{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}}
 footer{{color:var(--muted);font-size:13px}}
+.toplink{{align-self:flex-start;color:var(--kors);font-weight:600;font-size:14px;text-decoration:none}}
+.toplink:hover{{text-decoration:underline}}
+.market{{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;gap:12px}}
+.market-top{{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}}
+.market-top > div:first-child{{flex:1 1 320px;min-width:0}}
+.market h2{{margin:4px 0 4px;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:34px;line-height:1.05}}
+.market p{{margin:0;color:var(--muted);font-size:14px;max-width:60ch}}
+.lage-upp h2{{color:var(--up)}}.lage-ned h2{{color:var(--down)}}.lage-sidled h2{{color:var(--oversald)}}
+.market-nums{{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;align-content:start}}
+.market-spark{{width:100%;height:90px;display:block}}
+.idx-line{{fill:none;stroke:var(--fg);stroke-width:2;vector-effect:non-scaling-stroke}}
+.ma-line{{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:5 5;vector-effect:non-scaling-stroke}}
+.legend{{font-size:12px!important}}
+.card details.more{{background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:10px 0 0}}
+.card details.more summary{{font-size:14px;color:var(--kors)}}
+.tvbox{{height:460px;margin-top:10px;border-radius:12px;overflow:hidden}}
+.card.wide{{grid-column:1/-1}}
 </style></head>
 <body><div class="wrap">
 <header>
   <span class="eyebrow">Stängningskurser {datum} · skannat {nu:%H:%M}</span>
   <h1>OMXS30-skanning</h1>
   <div class="chips">{''.join(chips)}</div>
+  <a class="toplink" href="backtest.html">Så har strategin fungerat de senaste 3 åren →</a>
 </header>
+{_marknad_html(mk)}
 {''.join(sektioner)}
 <details><summary>Övriga bolag ({len(ovriga)})</summary>
 <div class="tablewrap"><table><tr><th>Bolag</th><th>Kurs</th><th>RSI</th><th>MACD-hist</th><th>R/R</th></tr>{ovr_rader}</table></div></details>
 <footer>Histogram = avståndet mellan MACD-linjen och signallinjen. Det kan stiga medan MACD-linjen fortfarande faller – då faller kursen långsammare, och det är just den tidiga vändningen.<br>
 Röd streckad linje i grafen = föreslagen stop (1 % under senaste bottnen). R/R räknas mot senaste toppen; grönt betyder minst {_tal(MIN_RR, 1)}.
 Ett verktyg för att hitta kandidater, inte köpråd. Kolla alltid grafen och rapportdatum innan du köper.</footer>
-</div></body></html>"""
+</div>{GRAF_JS}</body></html>"""
     fil.write_text(html, encoding="utf-8")
 
 
@@ -417,7 +543,7 @@ def skicka_notis(titel: str, text: str, prio: int = 3):
         Path("notis_status.txt").write_text(f"fel: {e}", encoding="utf-8")
 
 
-def notis_for_signaler(rader: list):
+def notis_for_signaler(rader: list, mk=None):
     signaler = [r for r in rader if r["Status"] in (TIDIG, KORS)]
     pa_vag = [r for r in rader if r["Status"] == OVERSALD and r["MACD-hist"] == "stiger"]
     if not signaler and not pa_vag:
@@ -435,6 +561,8 @@ def notis_for_signaler(rader: list):
     for r in pa_vag:
         rader_txt.append(f"🟡 {r['Bolag']}: översåld, histogrammet börjar vända · RSI {r['RSI']:.0f}")
     titel = f"OMXS30: {len(signaler)} signaler, {len(pa_vag)} på väg" if signaler else f"OMXS30: {len(pa_vag)} på väg att vända"
+    if mk:
+        rader_txt.append(f"Marknaden: {LAGE_TEXT[mk['lage']][0].lower()}")
     skicka_notis(titel, "\n".join(rader_txt), prio=4 if signaler else 3)
 
 
@@ -479,9 +607,10 @@ def main():
         fil = mapp / "index.html"
     else:
         fil = Path(__file__).with_name("omx30_skanning.html")
-    spara_html(rader, fil)
+    mk = marknad()
+    spara_html(rader, fil, mk)
     print(f"\nSparat: {fil}")
-    notis_for_signaler(rader)
+    notis_for_signaler(rader, mk)
     if not i_molnet:
         try:
             webbrowser.open(fil.resolve().as_uri())
