@@ -236,7 +236,7 @@ details{{margin-top:12px}}summary{{cursor:pointer;font-weight:600}}
 .explain{{margin:0 0 14px;font-size:14px;max-width:75ch}}
 ul{{margin:0;padding-left:20px;color:var(--muted);font-size:14px}}
 </style></head><body><div class="wrap">
-<header><a href="index.html">← Till skanningen</a>
+<header><a href="index.html">← Till skanningen</a> · <a href="optimering.html">Optimering</a>
 <h1>Backtest av din strategi</h1>
 <p class="muted">{period} · {len(sk.BOLAG)} bolag · uppdaterad {nu:%Y-%m-%d}. OMXS30-indexet gick {bh_index} under samma period.</p></header>
 <div class="verdict"><b>Bedömning:</b> {bedomning(tr_b)}</div>

@@ -526,6 +526,7 @@ footer{{color:var(--muted);font-size:13px}}
 .g-tag.mal{{right:4px;color:var(--up);background:var(--card);opacity:.9}}
 .g-xaxis{{position:relative;height:14px;margin-right:46px}}
 .g-x{{position:absolute;transform:translateX(-50%);font-size:10px;color:var(--muted)}}
+.links{{display:flex;flex-wrap:wrap;gap:6px 18px}}
 .toplink{{align-self:flex-start;color:var(--kors);font-weight:600;font-size:14px;text-decoration:none}}
 .toplink:hover{{text-decoration:underline}}
 .market{{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;gap:12px}}
@@ -545,7 +546,8 @@ footer{{color:var(--muted);font-size:13px}}
   <span class="eyebrow">Stängningskurser {datum} · skannat {nu:%H:%M}</span>
   <h1>OMXS30-skanning</h1>
   <div class="chips">{''.join(chips)}</div>
-  <a class="toplink" href="backtest.html">Så har strategin fungerat de senaste 3 åren →</a>
+  <div class="links"><a class="toplink" href="backtest.html">Så har strategin fungerat de senaste 3 åren →</a>
+  <a class="toplink" href="optimering.html">Så kan strategin bli bättre →</a></div>
 </header>
 {_marknad_html(mk)}
 {''.join(sektioner)}

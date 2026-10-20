@@ -41,6 +41,10 @@ jobs:
         continue-on-error: true
         run: python backtest.py
 
+      - name: Kör optimering
+        continue-on-error: true
+        run: python optimera.py
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
@@ -52,3 +56,4 @@ jobs:
         run: |
           echo "Notisstatus: $(cat notis_status.txt 2>/dev/null || echo 'ingen notis behövdes')"
           if grep -q '^fel' notis_status.txt 2>/dev/null; then exit 1; fi
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && ! grep -q '^skickad' notis_status.txt 2>/dev/null; then exit 1; fi
