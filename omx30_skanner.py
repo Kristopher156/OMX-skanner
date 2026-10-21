@@ -261,6 +261,10 @@ def analysera(namn: str, ticker: str):
         "_spark": [round(float(x), 2) for x in close.iloc[-126:]],
         "_spark_datum": [d.strftime("%Y-%m-%d") for d in close.index[-126:]],
         "_spark_hog": [round(float(x), 2) for x in high.iloc[-126:]],
+        "_rsi_serie": [round(float(x), 2) for x in s["rsi"].iloc[-126:]],
+        "_macd_linje": [round(float(x), 4) for x in s["linje"].iloc[-126:]],
+        "_macd_signal": [round(float(x), 4) for x in s["signal"].iloc[-126:]],
+        "_macd_hist": [round(float(x), 4) for x in s["hist"].iloc[-126:]],
         "_datum": close.index[-1].strftime("%Y-%m-%d"),
         "_namn_sok": namn,
     }
@@ -350,6 +354,58 @@ def _graf_6m(punkter, datum, stop, mal):
 </div>"""
 
 
+def _panel_rsi(v):
+    """RSI(14) under kursgrafen, med 30- och 70-linjer som i Avanza."""
+    v = [x for x in v if x == x]
+    if len(v) < 2:
+        return ""
+    w, h = 600, 60
+    y = lambda x: (100 - x) / 100 * h
+    steg = w / (len(v) - 1)
+    linje = " ".join(f"{'M' if i == 0 else 'L'}{i * steg:.1f} {y(x):.1f}" for i, x in enumerate(v))
+    nu = v[-1]
+    klass = "low" if nu < 30 else "high" if nu > 70 else ""
+    return f"""<div class="p">
+  <div class="p-head"><span>RSI (14)</span></div>
+  <div class="p-plot" style="height:62px">
+    <svg viewBox="0 0 {w} {h}" preserveAspectRatio="none" aria-hidden="true">
+      <rect x="0" y="{y(70):.1f}" width="{w}" height="{y(30) - y(70):.1f}" class="p-band"></rect>
+      <line x1="0" x2="{w}" y1="{y(70):.1f}" y2="{y(70):.1f}" class="p-ref"></line>
+      <line x1="0" x2="{w}" y1="{y(30):.1f}" y2="{y(30):.1f}" class="p-ref"></line>
+      <path d="{linje}" class="p-rsi"></path></svg>
+    <span class="g-y" style="top:30%">70</span><span class="g-y" style="top:70%">30</span>
+    <span class="g-tag p-nu {klass}" style="top:{max(8, min(92, 100 - nu)):.1f}%">{_tal(nu, 1)}</span>
+  </div>
+</div>"""
+
+
+def _panel_macd(lin, sig, hist):
+    """MACD (12, 26, 9): MACD-linje, signallinje och histogram, som i Avanza."""
+    n = min(len(lin), len(sig), len(hist))
+    if n < 2:
+        return ""
+    lin, sig, hist = lin[-n:], sig[-n:], hist[-n:]
+    w, h = 600, 70
+    m = max(abs(x) for x in lin + sig + hist if x == x) or 1
+    y = lambda x: h / 2 - x / m * (h / 2 - 3)
+    steg = w / (n - 1)
+    bred = max(1.0, steg * 0.6)
+    staplar = "".join(
+        f'<rect x="{i * steg - bred / 2:.1f}" y="{min(y(0), y(x)):.1f}" width="{bred:.1f}" height="{abs(y(x) - y(0)):.1f}" '
+        f'class="p-bar {"pos" if x >= 0 else "neg"}{" svag" if i and abs(x) < abs(hist[i - 1]) else ""}"></rect>'
+        for i, x in enumerate(hist) if x == x)
+    vag = lambda serie: " ".join(f"{'M' if i == 0 else 'L'}{i * steg:.1f} {y(x):.1f}" for i, x in enumerate(serie) if x == x)
+    return f"""<div class="p">
+  <div class="p-head"><span>MACD (12, 26, 9)</span><span class="p-legend"><i class="l-macd"></i>MACD <i class="l-sig"></i>Signal</span></div>
+  <div class="p-plot" style="height:72px">
+    <svg viewBox="0 0 {w} {h}" preserveAspectRatio="none" aria-hidden="true">
+      <line x1="0" x2="{w}" y1="{y(0):.1f}" y2="{y(0):.1f}" class="p-ref"></line>
+      {staplar}<path d="{vag(sig)}" class="p-sig"></path><path d="{vag(lin)}" class="p-macd"></path></svg>
+    <span class="g-y" style="top:50%">0</span>
+  </div>
+</div>"""
+
+
 def _kort(r, klass):
     namn = escape(str(r["Bolag"]))
     tv = str(r.get("_ticker", "")).replace(".ST", "").replace("-", "_")
@@ -364,6 +420,8 @@ def _kort(r, klass):
     <div class="price">{_tal(r['Kurs'])} <small>kr</small></div>
   </div>
   {_graf_6m(r.get('_spark') or [], r.get('_spark_datum') or [], r['Stop (under botten)'], r['Mål (senaste topp)'])}
+  {_panel_rsi(r.get('_rsi_serie') or [])}
+  {_panel_macd(r.get('_macd_linje') or [], r.get('_macd_signal') or [], r.get('_macd_hist') or [])}
   <div class="stats">
     <div class="stat"><span class="lbl">RSI</span><span class="val">{_tal(r['RSI'], 1)}</span>
       <span class="bar"><i style="width:{max(0, min(100, rsi_v)):.0f}%"></i><b style="left:{RSI_OVERSALD}%"></b></span></div>
@@ -532,6 +590,21 @@ footer{{color:var(--muted);font-size:13px}}
 .g-xaxis{{position:relative;height:14px;margin-right:46px}}
 .g-x{{position:absolute;transform:translateX(-50%);font-size:10px;color:var(--muted)}}
 .links{{display:flex;flex-wrap:wrap;gap:6px 18px}}
+.p{{display:flex;flex-direction:column;gap:2px;margin-top:-4px}}
+.p-head{{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--muted);margin-right:46px}}
+.p-legend{{display:flex;align-items:center;gap:6px}}
+.p-legend i{{display:inline-block;width:12px;height:2px}}
+.l-macd{{background:var(--kors)}}.l-sig{{background:#E07B00}}
+.p-plot{{position:relative;margin-right:46px;border-top:1px solid var(--line)}}
+.p-plot svg{{position:absolute;inset:0;width:100%;height:100%;overflow:visible}}
+.p-band{{fill:var(--kors);opacity:.06}}
+.p-ref{{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 4;opacity:.6;vector-effect:non-scaling-stroke}}
+.p-rsi{{fill:none;stroke:#8B5CF6;stroke-width:1.6;vector-effect:non-scaling-stroke}}
+.p-macd{{fill:none;stroke:var(--kors);stroke-width:1.6;vector-effect:non-scaling-stroke}}
+.p-sig{{fill:none;stroke:#E07B00;stroke-width:1.4;vector-effect:non-scaling-stroke}}
+.p-bar.pos{{fill:var(--up);opacity:.75}}.p-bar.neg{{fill:var(--down);opacity:.75}}
+.p-bar.svag{{opacity:.35}}
+.p-nu{{background:#8B5CF6;color:#fff}}.p-nu.low{{background:var(--down)}}.p-nu.high{{background:var(--up)}}
 .toplink{{align-self:flex-start;color:var(--kors);font-weight:600;font-size:14px;text-decoration:none}}
 .toplink:hover{{text-decoration:underline}}
 .market{{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;gap:12px}}
