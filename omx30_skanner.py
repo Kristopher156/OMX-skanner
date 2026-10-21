@@ -551,9 +551,6 @@ footer{{color:var(--muted);font-size:13px}}
   <span class="eyebrow">Stängningskurser {datum} · {len(rader)} av {len(BOLAG)} bolag · skannat {nu:%H:%M}</span>
   <h1>OMXS30-skanning</h1>
   <div class="chips">{''.join(chips)}</div>
-  <div class="links"><a class="toplink" href="backtest.html">Så har strategin fungerat de senaste 3 åren →</a>
-  <a class="toplink" href="optimering.html">Så kan strategin bli bättre →</a>
-  <a class="toplink" href="analys.html">Djupanalys: stöd, motstånd och R/R →</a></div>
 </header>
 {_marknad_html(mk)}
 {''.join(sektioner)}
