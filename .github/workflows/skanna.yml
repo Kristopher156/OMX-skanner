@@ -37,6 +37,11 @@ jobs:
           SIDA_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python omx30_skanner.py
 
+      - name: Liknande lägen (bara vid manuell körning)
+        if: github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: python analoger.py
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
