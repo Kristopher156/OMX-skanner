@@ -1,0 +1,225 @@
+{
+ "tid": "2026-11-06T21:46",
+ "bolag_med_data": 31,
+ "saknas": [],
+ "marknad": "upp",
+ "rader": [
+  {
+   "Bolag": "Epiroc A",
+   "Status": "1. MACD vänder upp (tidigt)",
+   "Kurs": 243.4,
+   "RSI": 41.1,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "ABB",
+   "Status": "3. Översålda – bevaka",
+   "Kurs": 808.2,
+   "RSI": 32.2,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Alfa Laval",
+   "Status": "",
+   "Kurs": 532.0,
+   "RSI": 35.1,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Atlas Copco B",
+   "Status": "",
+   "Kurs": 160.4,
+   "RSI": 37.6,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Lifco B",
+   "Status": "",
+   "Kurs": 283.2,
+   "RSI": 37.6,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Saab B",
+   "Status": "",
+   "Kurs": 605.0,
+   "RSI": 39.8,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Atlas Copco A",
+   "Status": "",
+   "Kurs": 184.1,
+   "RSI": 39.9,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Addtech B",
+   "Status": "",
+   "Kurs": 314.2,
+   "RSI": 44.2,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Volvo B",
+   "Status": "",
+   "Kurs": 312.8,
+   "RSI": 45.4,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Boliden",
+   "Status": "",
+   "Kurs": 503.4,
+   "RSI": 46.4,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Sandvik",
+   "Status": "",
+   "Kurs": 357.4,
+   "RSI": 47.6,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Ericsson B",
+   "Status": "",
+   "Kurs": 102.2,
+   "RSI": 47.7,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "SEB A",
+   "Status": "",
+   "Kurs": 214.8,
+   "RSI": 48.0,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "SKF B",
+   "Status": "",
+   "Kurs": 271.2,
+   "RSI": 48.2,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Nordea",
+   "Status": "",
+   "Kurs": 180.3,
+   "RSI": 49.2,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Nibe B",
+   "Status": "",
+   "Kurs": 44.94,
+   "RSI": 50.6,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "SCA B",
+   "Status": "",
+   "Kurs": 122.75,
+   "RSI": 51.3,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Tele2 B",
+   "Status": "",
+   "Kurs": 160.9,
+   "RSI": 51.5,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "EQT",
+   "Status": "",
+   "Kurs": 306.9,
+   "RSI": 53.4,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Swedbank A",
+   "Status": "",
+   "Kurs": 401.8,
+   "RSI": 55.7,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Hexagon B",
+   "Status": "",
+   "Kurs": 107.3,
+   "RSI": 56.6,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Investor B",
+   "Status": "",
+   "Kurs": 428.15,
+   "RSI": 58.8,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Evolution",
+   "Status": "",
+   "Kurs": 847.6,
+   "RSI": 59.5,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "H&M B",
+   "Status": "",
+   "Kurs": 178.75,
+   "RSI": 62.0,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Telia",
+   "Status": "",
+   "Kurs": 49.1,
+   "RSI": 63.5,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Handelsbanken A",
+   "Status": "",
+   "Kurs": 159.8,
+   "RSI": 64.5,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Skanska B",
+   "Status": "",
+   "Kurs": 288.5,
+   "RSI": 66.3,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Getinge B",
+   "Status": "",
+   "Kurs": 277.8,
+   "RSI": 68.5,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Assa Abloy B",
+   "Status": "",
+   "Kurs": 394.6,
+   "RSI": 69.1,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "AstraZeneca",
+   "Status": "",
+   "Kurs": 1838.5,
+   "RSI": 70.9,
+   "Datum": "2026-11-06"
+  },
+  {
+   "Bolag": "Essity B",
+   "Status": "",
+   "Kurs": 289.8,
+   "RSI": 74.4,
+   "Datum": "2026-11-06"
+  }
+ ]
+}
