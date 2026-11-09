@@ -204,6 +204,29 @@ METODER = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Kräsna urvalet: bara signaler som klarar alla krav, och bara så många du hinner handla.
+# ---------------------------------------------------------------------------
+# Vilka metoder som används i vilket marknadsläge (OMXS30). Bygger på backtesten:
+# utbrott funkar i upptrend, dippköp när index går sidled eller ner, vecko-MACD efter nedgång.
+LAGE_METODER = {
+    "upp": ["darvas", "bas"],
+    "sidled": ["dipp", "bas", "darvas"],
+    "ned": ["dipp", "bas", "macd_vecka"],
+}
+KRASEN = {
+    "min_rr": (2.0, "R/R mot närmaste motstånd ska vara minst så här (aktier på nya toppar saknar motstånd och godkänns)"),
+    "min_volym": (1.0, "volymen på signaldagen minst så många gånger snittet (någon köper på riktigt)"),
+    "rapport_dagar": (15, "ingen rapport inom så många dagar (bara i dag – historiska rapportdatum saknas)"),
+    "max_oppna": (2, "max antal öppna trades samtidigt"),
+    "max_per_vecka": (1, "max nya trades per vecka – den med bäst R/R väljs"),
+}
+
+
+def K(namn):
+    return KRASEN[namn][0]
+
+
 def P(metod):
     return {k: v[0] for k, v in METODER[metod]["p"].items()}
 
@@ -375,6 +398,8 @@ def simulera(namn, metod, d, idx_close, idx_trend, fro=0):
     st = stop.to_numpy(dtype=float)
     ex = exitv.fillna(False).to_numpy(dtype=bool) if exitv is not None else None
     O, H, L, C = (d[k].to_numpy(dtype=float) for k in ["Open", "High", "Low", "Close"])
+    V = d["vol_x"].to_numpy(dtype=float)
+    piv = pivottoppar(H)
     dagar = d.index
     mal_R = p.get("mal_R")
     max_d = int(p["max_dagar"])
@@ -409,6 +434,7 @@ def simulera(namn, metod, d, idx_close, idx_trend, fro=0):
             continue  # traden pågår fortfarande – räknas inte
         fri_fran = j + 1
         R = (ut - e) / risk - (e + ut) * k / risk
+        mot = motstand_vid(H, piv, t, e)
         d0, d1 = dagar[t], dagar[j]
         i0 = idx_close.asof(d0)
         i1 = idx_close.asof(d1)
@@ -417,12 +443,70 @@ def simulera(namn, metod, d, idx_close, idx_trend, fro=0):
             "kop": round(float(e), 2), "stop": round(float(s), 2), "salj": round(float(ut), 2),
             "R": round(float(R), 3), "dagar": int(j - t), "orsak": orsak,
             "risk_pct": round(float(risk / e * 100), 2),
+            "rr_mot": round(float((mot - e) / risk), 2) if mot else None,
+            "vol_x": round(float(V[t]), 2) if np.isfinite(V[t]) else None,
             "index_lage": idx_trend.asof(d0) if idx_trend is not None else None,
             "aktie_trend": d["trend"].iloc[t],
             "index_utv": round(float((i1 / i0 - 1) * 100), 2) if i0 and i1 and i0 == i0 and i1 == i1 else None,
             "test": str(d0.date()) >= TEST_FRAN,
         })
     return trades
+
+
+PIVOT_K = 3          # en topp = högst av 3 dagar före och efter
+MOTSTAND_BAKAT = 180  # motstånd letas så många dagar bakåt
+
+
+def pivottoppar(H, k=PIVOT_K):
+    """True där dagens högsta är högst i fönstret k dagar före och efter (bekräftas först k dagar senare)."""
+    s = pd.Series(H)
+    return (s == s.rolling(2 * k + 1, center=True).max()).to_numpy()
+
+
+def motstand_vid(H, piv, t, kurs, k=PIVOT_K):
+    """Närmaste motstånd ovanför kursen som var känt dag t. None = ingen topp ovanför (nya toppar)."""
+    a, b = max(0, t - MOTSTAND_BAKAT), t - k + 1
+    if b <= a:
+        return None
+    h = H[a:b][piv[a:b]]
+    h = h[h > kurs * 1.005]
+    return float(h.min()) if h.size else None
+
+
+def klarar(x, lage=None):
+    """Vilka krav en signal inte klarar (tom lista = kräsen signal)."""
+    fel = []
+    lage = lage if lage is not None else x["index_lage"]
+    if x["metod"] not in LAGE_METODER.get(lage, []):
+        fel.append(f"fel metod när index är i {LAGE_NAMN.get(lage, '–').lower()}")
+    if x.get("rr_mot") is not None and x["rr_mot"] < K("min_rr"):
+        fel.append(f"R/R mot motstånd {_f(x['rr_mot'], 1)} (under {_f(K('min_rr'), 1)})")
+    if x.get("vol_x") is not None and x["vol_x"] < K("min_volym"):
+        fel.append(f"låg volym ({_f(x['vol_x'], 1)}×)")
+    return fel
+
+
+def rang(x):
+    return x["rr_mot"] if x.get("rr_mot") is not None else 3.0
+
+
+def portfolj(trades, max_oppna, max_per_vecka):
+    """Det du faktiskt hinner handla: max X öppna samtidigt och max Y nya per vecka, bästa R/R först."""
+    valda = []
+    veckor = {}
+    for x in trades:
+        veckor.setdefault(pd.Timestamp(x["datum"]).strftime("%G-%V"), []).append(x)
+    for v in sorted(veckor):
+        nya = 0
+        for x in sorted(veckor[v], key=lambda x: (-rang(x), x["datum"])):
+            if max_per_vecka and nya >= max_per_vecka:
+                break
+            oppna = [o for o in valda if o["datum"] <= x["datum"] < o["ut_datum"]]
+            if len(oppna) >= max_oppna or any(o["bolag"] == x["bolag"] for o in oppna):
+                continue
+            valda.append(x)
+            nya += 1
+    return valda
 
 
 def statistik(lista, ar=None):
@@ -525,6 +609,22 @@ def _e_cell(s):
     return f'<td class="{klass}"><b>{_f(e, 2, True)}</b><small>{n} st</small></td>'
 
 
+def _krav(x):
+    if x.get("krasen"):
+        return '<p class="ok">✓ Klarar alla krav – kräsen signal</p>'
+    fel = x.get("fel") or []
+    return f'<p class="nej">Inte kräsen: {escape(", ".join(fel))}</p>' if fel else ""
+
+
+def _rad(x, extra=""):
+    a, t = x["alla"], x["test"]
+    if not a.get("n"):
+        return f'<tr><td class="mn">{escape(x["namn"])}</td><td colspan="7" class="na">Inga trades</td></tr>'
+    pct = f'<td><b>{_f(x["procent_per_ar"], 0, True)} %</b></td>' if x.get("handelbar") else '<td class="na">–</td>'
+    return (f'<tr><td class="mn">{escape(x["namn"])}</td><td>{_f(a["per_ar"], 0)}</td><td>{_f(a["traff"], 0)} %</td>'
+            f'{_e_cell(a)}{_e_cell(t)}{pct}{extra}</tr>')
+
+
 def _taggar(lista):
     return "".join(f'<i class="{c}">{escape(t)}</i>' for c, t in lista)
 
@@ -564,7 +664,8 @@ def bygg_sida(res, fil):
                 f'<span>Närmaste motstånd <b>{_f(x["motstand"]) if x["motstand"] else "–"}</b>'
                 f'{" · R/R " + _f(x["rr_mot"], 1) if x["rr_mot"] else ""}</span>'
                 f'<span>Antal för 2 %: <b class="antal">–</b></span></div>'
-                f'<div class="tags">{_taggar(x["taggar"])}</div></div>'
+                f'<div class="tags">{_taggar(x["taggar"])}</div>'
+                f'{_krav(x)}</div>'
                 for x in lista)
         else:
             inner = '<p class="empty">Ingen signal i dag.</p>'
@@ -602,6 +703,19 @@ def bygg_sida(res, fil):
         f'<td>{x["rapport"] or "okänt"}</td><td>{escape(", ".join(METODER[m]["namn"].split(":")[0] for m in x["metoder"])) or "–"}</td></tr>'
         for x in idag["bolag"])
 
+    kr = res.get("krasna_idag", [])
+    krasna_html = "".join(
+        f'<div class="card"><div class="sig-top"><b>{escape(x["bolag"])}</b><span>{_f(x["kurs"])} kr</span></div>'
+        f'<p class="muted">{escape(METODER[x["metod"]]["namn"])}</p>'
+        f'<div class="sig" data-kurs="{x["kurs"]}" data-stop="{x["stop"]}"><div class="sig-nums">'
+        f'<span>Stop <b>{_f(x["stop"])}</b> ({_f(-x["risk_pct"], 1)} %)</span><span>Mål 2R <b>{_f(x["mal"])}</b></span>'
+        f'<span>Motstånd <b>{_f(x["motstand"]) if x["motstand"] else "inget (ny topp)"}</b>{" · R/R " + _f(x["rr_mot"], 1) if x["rr_mot"] else ""}</span>'
+        f'<span>Antal för 2 %: <b class="antal">–</b></span></div><div class="tags">{_taggar(x["taggar"])}</div></div></div>'
+        for x in kr) or '<p class="empty">Ingen kräsen signal i dag. Vänta – det är så metoden ska fungera.</p>'
+    tratt_html = "".join(_rad(x) for x in res["tratt"])
+    takt_html = "".join(_rad(x) for x in res["takt"])
+    sista = res["tratt"][-1].get("per_kalenderar", {})
+    per_ar_html = " · ".join(f"{y}: {_f(v, 1, True)}R" for y, v in sista.items()) or "–"
     lage = mk["lage"]
     html = f"""<!doctype html>
 <html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -653,6 +767,10 @@ code{{font-size:13px;background:var(--bg);padding:1px 5px;border-radius:5px}}
 .legend{{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--muted)}}
 .legend span{{display:inline-flex;align-items:center;gap:6px}}
 .legend i{{display:inline-block;width:14px;height:14px;border-radius:4px}}
+.intro{{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}}
+.intro p{{margin:6px 0;max-width:80ch}}
+p.ok{{margin:0;font-size:13px;color:var(--up);font-weight:600}}
+p.nej{{margin:0;font-size:13px;color:var(--muted)}}
 footer{{color:var(--muted);font-size:13px;max-width:80ch}}
 </style></head>
 <body><div class="wrap">
@@ -661,6 +779,34 @@ footer{{color:var(--muted);font-size:13px;max-width:80ch}}
   <h1>Metoder och marknad</h1>
   <p class="lead">Marknad → sektor → aktie. Först vilket läge börsen är i, sedan vilka branscher som är starka, sedan vilka aktier som ger signal – och hur varje metod faktiskt har gått historiskt. <a href="./">← Tillbaka till skanningen</a></p>
 </header>
+
+<section class="intro">
+<h2>Så läser du siffrorna</h2>
+<p><b>R = det du riskerar i en trade.</b> Med 10 000 kr och 2 % risk är 1R = 200 kr (avståndet ner till stoppen × antal aktier).</p>
+<p><b>Snitt-R +0,20</b> betyder att du i snitt tjänar 0,2 × 200 kr = <b>40 kr per trade</b> efter courtage. Vissa trades ger +2R (400 kr), andra −1R (−200 kr) – snittet över många trades blir +0,2R.
+Gör du 25 sådana trades per år blir det 25 × 0,2 = 5R = <b>ungefär +10 % på kontot</b> (5 × 2 %).</p>
+<p><b>±-siffran</b> är osäkerheten. +0,20 ±0,30 kan lika gärna vara noll – det har inte hänt tillräckligt många gånger för att veta. Grön bakgrund = plus även med osäkerheten räknad.</p>
+</section>
+
+<section>
+<h2>Kräsna signaler i dag</h2>
+<p class="muted">Bara signaler som klarar alla krav: rätt metod för marknadsläget, R/R minst {_f(K("min_rr"), 1)} mot närmaste motstånd, volym minst {_f(K("min_volym"), 1)}× snittet och ingen rapport inom {int(K("rapport_dagar"))} dagar.
+Historiskt kommer ungefär {_f(res["tratt"][3]["alla"].get("per_ar"), 0)} sådana per år – oftast är svaret "ingen i dag", och det är meningen.</p>
+<div class="grid">{krasna_html}</div>
+</section>
+
+<section>
+<h2>Från alla signaler till kräsna</h2>
+<p class="muted">Varje rad lägger till ett krav. Så ser du vad varje krav gör med resultatet. Sista raden är det du faktiskt hinner handla, och bara där går det att räkna procent per år (vid 2 % risk per trade, utan ränta-på-ränta).</p>
+<div class="tablewrap"><table><tr><th>Steg</th><th>Trades<br>per år</th><th>Träff</th><th>Snitt-R</th><th>Test<br>{TEST_FRAN[:4]}–</th><th>≈ % per år</th></tr>{tratt_html}</table></div>
+<p class="muted">År för år (sista raden, summa R): {per_ar_html}</p>
+</section>
+
+<section>
+<h2>Hur ofta ska du handla?</h2>
+<p class="muted">Samma kräsna signaler, olika takt. Max {int(K("max_oppna"))} öppna samtidigt i alla rader.</p>
+<div class="tablewrap"><table><tr><th>Takt</th><th>Trades<br>per år</th><th>Träff</th><th>Snitt-R</th><th>Test<br>{TEST_FRAN[:4]}–</th><th>≈ % per år</th></tr>{takt_html}</table></div>
+</section>
 
 <section>
 <h2>1. Marknaden</h2>
@@ -773,6 +919,40 @@ def main():
                         if any(x["orsak"] == o for x in t)},
         }
 
+    # --- Kräsna urvalet: steg för steg från alla signaler till det du faktiskt handlar
+    riktiga = sorted([x for x in alla_trades if x["metod"] != "slump"], key=lambda x: x["datum"])
+    s1 = [x for x in riktiga if x["metod"] in LAGE_METODER.get(x["index_lage"], [])]
+    s2 = [x for x in s1 if x["rr_mot"] is None or x["rr_mot"] >= K("min_rr")]
+    s3 = [x for x in s2 if x["vol_x"] is None or x["vol_x"] >= K("min_volym")]
+    s4 = portfolj(s3, int(K("max_oppna")), int(K("max_per_vecka")))
+
+    def steg(namn, lista, handelbar=False):
+        a = statistik(lista, ar)
+        out = {"namn": namn, "alla": a, "trana": statistik([x for x in lista if not x["test"]]),
+               "test": statistik([x for x in lista if x["test"]], test_ar), "handelbar": handelbar}
+        if handelbar and a.get("n"):
+            out["R_per_ar"] = round(a["summa_R"] / ar, 1)
+            out["procent_per_ar"] = round(a["summa_R"] / ar * 2, 1)
+            out["test_R_per_ar"] = round(out["test"].get("summa_R", 0) / test_ar, 1) if out["test"].get("n") else None
+            per_ar = {}
+            for x in lista:
+                per_ar.setdefault(x["datum"][:4], []).append(x["R"])
+            out["per_kalenderar"] = {y: round(sum(v), 1) for y, v in sorted(per_ar.items())}
+        return out
+
+    tratt = [
+        steg("Alla signaler från alla metoder", riktiga),
+        steg("+ bara metoden som passar marknadsläget", s1),
+        steg(f"+ R/R mot motstånd minst {_f(K('min_rr'), 1)}", s2),
+        steg(f"+ volym minst {_f(K('min_volym'), 1)}× snittet", s3),
+        steg(f"+ max {int(K('max_oppna'))} öppna, {int(K('max_per_vecka'))} ny per vecka (det du hinner handla)", s4, True),
+    ]
+    takt = [steg(t, portfolj(s3, int(K("max_oppna")), v), True) for t, v in
+            [("Max 1 ny trade per vecka", 1), ("Max 2 nya per vecka", 2), ("Ingen veckogräns (bara max 2 öppna)", 0)]]
+    takt.append(steg("Jämförelse: alla signaler, max 1 per vecka, inga krav", portfolj(riktiga, int(K("max_oppna")), 1), True))
+    takt.append(steg("Jämförelse: slumpköp, max 1 per vecka", portfolj(
+        sorted([x for x in alla_trades if x["metod"] == "slump"], key=lambda x: x["datum"]), int(K("max_oppna")), 1), True))
+
     # --- Marknaden och bolagen i dag
     betas, korrs, upp = [], [], 0
     for namn, d in data.items():
@@ -819,11 +999,18 @@ def main():
                 taggar.append(("", "Rapportdatum okänt – kolla"))
             if exdiv:
                 taggar.append(("varn", f"Utdelning (x-dag) {exdiv:%d/%m}"))
-            idag_sig[m].append({
-                "bolag": namn, "kurs": round(kurs, 2), "stop": round(s, 2), "risk_pct": round(risk / kurs * 100, 1),
+            post = {
+                "metod": m, "bolag": namn, "kurs": round(kurs, 2), "stop": round(s, 2), "risk_pct": round(risk / kurs * 100, 1),
                 "mal": round(kurs + 2 * risk, 2), "motstand": round(mot, 2) if mot else None,
                 "rr_mot": round((mot - kurs) / risk, 1) if mot and risk > 0 else None, "taggar": taggar,
-            })
+                "vol_x": rad["vol_x"],
+            }
+            fel = klarar(post, idx_trend.iloc[-1])
+            if rapport and (rapport - date.today()).days <= K("rapport_dagar"):
+                fel.append(f"rapport om {(rapport - date.today()).days} dagar")
+            post["fel"] = fel
+            post["krasen"] = not fel
+            idag_sig[m].append(post)
 
     ik = float(idx_close.iloc[-1])
     k2 = [k for k in korrs if k is not None]
@@ -852,6 +1039,8 @@ def main():
         "datum": f"{slut:%Y-%m-%d}", "period": f"{start + pd.Timedelta(days=365):%Y}–{slut:%Y}", "antal_bolag": len(data),
         "marknad": mk, "stat": stat, "idag": {"signaler": idag_sig, "bolag": idag_bolag, "sektorer": sektorer},
         "parametrar": {m: P(m) for m in METODER},
+        "tratt": tratt, "takt": takt,
+        "krasna_idag": sorted([x for l in idag_sig.values() for x in l if x["krasen"]], key=lambda x: -(x["rr_mot"] or 3)),
     }
     Path("results").mkdir(exist_ok=True)
     (Path("results") / "metoder.json").write_text(json.dumps(res, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
@@ -862,6 +1051,10 @@ def main():
     bygg_sida(res, mapp / "metoder.html")
 
     print(f"{len(alla_trades)} trades totalt. Index: {mk['lage']}.")
+    for x in tratt + takt:
+        a, t = x["alla"], x["test"]
+        print(f"  {x['namn'][:60]:60} n={a.get('n',0):5} E={a.get('E',0):+.2f} ±{a.get('osakerhet') or 0:.2f} "
+              f"test E={t.get('E',0):+.2f} (n={t.get('n',0)}) %/år={x.get('procent_per_ar')} {x.get('per_kalenderar','')}")
     for m in METODER:
         a, t = stat[m]["alla"], stat[m]["test"]
         print(f"  {m:11} n={a.get('n',0):5}  E={a.get('E',0):+.2f}R ±{a.get('osakerhet') or 0:.2f}  "
