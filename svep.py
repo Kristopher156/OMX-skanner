@@ -16,7 +16,7 @@ import omx30_skanner as sk
 
 PER_METOD = 100
 FORE = 120     # dagar före signalen som visas
-EFTER = 60     # max dagar efter som visas när svaret avslöjas
+EFTER = 80     # dagar efter signalen som kan spelas upp
 FRO = 2026
 
 
@@ -64,7 +64,7 @@ def main():
             fall.append({
                 "m": x["metod"], "b": x["bolag"], "dt": x["datum"], "ut": x["ut_datum"], "R": x["R"],
                 "orsak": x["orsak"], "dagar": x["dagar"], "lage": x["index_lage"], "trend": x["aktie_trend"],
-                "rr": x.get("rr_mot"), "risk": x["risk_pct"],
+                "rr": x.get("rr_mot"), "risk": x["risk_pct"], "fas2": x.get("fas2"), "fas2plus": x.get("fas2plus"),
                 "stop": round(x["stop"] / bas * 100, 2), "kop": round(x["kop"] / bas * 100, 2),
                 "salj": round(x["salj"] / bas * 100, 2),
                 "mal": round((x["kop"] + mal_R * risk) / bas * 100, 2) if mal_R else None,
