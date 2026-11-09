@@ -15,7 +15,7 @@ import metoder as M
 import omx30_skanner as sk
 
 PER_METOD = 100
-FORE = 120     # dagar före signalen som visas
+FORE = 260     # dagar före signalen (ett år, så att 1-årsvy och veckograf fungerar)
 EFTER = 80     # dagar efter signalen som kan spelas upp
 FRO = 2026
 
@@ -40,6 +40,7 @@ def main():
 
     rng = random.Random(FRO)
     fall = []
+    bolag_nr = {n: i for i, n in enumerate(sk.BOLAG)}
     for m in M.METODER:
         t = [x for x in trades if x["metod"] == m]
         rng.shuffle(t)
@@ -61,7 +62,10 @@ def main():
             ib = float(ic.iloc[pos])
             mal_R = M.P(x["metod"]).get("mal_R")
             risk = x["kop"] - x["stop"]
+            wk = d.index[a:b].isocalendar()
             fall.append({
+                "id": f"{bolag_nr[x['bolag']]:02d}{x['datum'].replace('-', '')}",
+                "w": [int(y) * 100 + int(v) for y, v in zip(wk["year"], wk["week"])],
                 "m": x["metod"], "b": x["bolag"], "dt": x["datum"], "ut": x["ut_datum"], "R": x["R"],
                 "orsak": x["orsak"], "dagar": x["dagar"], "lage": x["index_lage"], "trend": x["aktie_trend"],
                 "rr": x.get("rr_mot"), "risk": x["risk_pct"], "fas2": x.get("fas2"), "fas2plus": x.get("fas2plus"),
@@ -78,14 +82,21 @@ def main():
                 "ix": r2(ic.iloc[a:b].to_numpy() / ib * 100, 1),
             })
     rng.shuffle(fall)
-    for i, f in enumerate(fall):
-        f["id"] = i
     M.Path("results").mkdir(exist_ok=True)
-    (M.Path("results") / "svep.json").write_text(json.dumps({
-        "metoder": {m: {"namn": M.METODER[m]["namn"], "kort": M.METODER[m]["kort"]} for m in M.METODER},
-        "fall": fall,
-    }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    print(f"{len(fall)} fall sparade.")
+    metoder = {m: {"namn": M.METODER[m]["namn"], "kort": M.METODER[m]["kort"]} for m in M.METODER}
+
+    def skriv(namn, lista):
+        (M.Path("results") / namn).write_text(json.dumps({"metoder": metoder, "fall": lista},
+                                                        ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+    for m in M.METODER:
+        skriv(f"svep_{m}.json", [f for f in fall if f["m"] == m])
+    blandat = []
+    for m in M.METODER:
+        blandat += [f for f in fall if f["m"] == m][:25]
+    rng.shuffle(blandat)
+    skriv("svep_blandat.json", blandat)
+    print(f"{len(fall)} fall sparade, {len(blandat)} i blandat.")
 
 
 if __name__ == "__main__":
