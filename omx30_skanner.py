@@ -623,6 +623,7 @@ footer{{color:var(--muted);font-size:13px}}
 <header>
   <span class="eyebrow">Stängningskurser {datum} · {len(rader)} av {len(BOLAG)} bolag · skannat {nu:%H:%M}</span>
   <h1>OMXS30-skanning</h1>
+  <a class="toplink" href="metoder.html">Metoder och marknad: sektorer, signaler per metod och backtest →</a>
   <div class="chips">{''.join(chips)}</div>
 </header>
 {_marknad_html(mk)}
