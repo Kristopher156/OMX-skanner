@@ -274,7 +274,10 @@ def forbered(df):
     c = d["Close"]
     d["rsi"] = sk.rsi(c)
     d["macd"], d["macd_sig"], d["hist"] = sk.macd(c)
-    d["ma50"], d["ma200"] = c.rolling(50).mean(), c.rolling(200).mean()
+    d["ma20"], d["ma50"], d["ma200"] = c.rolling(20).mean(), c.rolling(50).mean(), c.rolling(200).mean()
+    # "Fas 2" (stabil upptrend): kurs över 20-dagars och 20-dagars över 50-dagars. "Fas 2+" = även 50 över 200.
+    d["fas2"] = (c > d["ma20"]) & (d["ma20"] > d["ma50"])
+    d["fas2plus"] = d["fas2"] & (d["ma50"] > d["ma200"])
     d["vol50"] = d["Volume"].rolling(50).mean().shift(1)
     d["vol_x"] = d["Volume"] / d["vol50"]
     tr = pd.concat([d["High"] - d["Low"], (d["High"] - c.shift()).abs(), (d["Low"] - c.shift()).abs()], axis=1).max(axis=1)
@@ -447,6 +450,7 @@ def simulera(namn, metod, d, idx_close, idx_trend, fro=0):
             "vol_x": round(float(V[t]), 2) if np.isfinite(V[t]) else None,
             "index_lage": idx_trend.asof(d0) if idx_trend is not None else None,
             "aktie_trend": d["trend"].iloc[t],
+            "fas2": bool(d["fas2"].iloc[t]), "fas2plus": bool(d["fas2plus"].iloc[t]),
             "index_utv": round(float((i1 / i0 - 1) * 100), 2) if i0 and i1 and i0 == i0 and i1 == i1 else None,
             "test": str(d0.date()) >= TEST_FRAN,
         })
@@ -913,6 +917,8 @@ def main():
             "test": statistik([x for x in t if x["test"]], test_ar),
             "lage": {l: statistik([x for x in t if x["index_lage"] == l]) for l in ["upp", "sidled", "ned"]},
             "aktie_trend": {l: statistik([x for x in t if x["aktie_trend"] == l]) for l in ["upp", "sidled", "ned"]},
+            "fas2": {"ja": statistik([x for x in t if x["fas2"]]), "nej": statistik([x for x in t if not x["fas2"]]),
+                     "plus": statistik([x for x in t if x["fas2plus"]])},
             "index_upp": statistik([x for x in t if (x["index_utv"] or 0) > 0]),
             "index_ner": statistik([x for x in t if (x["index_utv"] or 0) <= 0]),
             "orsaker": {o: round(sum(1 for x in t if x["orsak"] == o) / n * 100) for o in ["mål", "stop", "sälj-signal", "tid"]
