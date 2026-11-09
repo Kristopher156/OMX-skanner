@@ -53,6 +53,11 @@ jobs:
         continue-on-error: true
         run: python bigtech.py
 
+      - name: Vad skiljer vinnare från förlorare (bara vid manuell körning)
+        if: github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: python faktorer.py
+
       - name: Liknande lägen (bara vid manuell körning)
         if: github.event_name == 'workflow_dispatch'
         continue-on-error: true
