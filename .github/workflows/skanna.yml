@@ -43,6 +43,11 @@ jobs:
           ALLA_RAPPORTER: "1"
         run: python metoder.py
 
+      - name: Svep-fall (bara vid manuell körning)
+        if: github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: python svep.py
+
       - name: Liknande lägen (bara vid manuell körning)
         if: github.event_name == 'workflow_dispatch'
         continue-on-error: true
