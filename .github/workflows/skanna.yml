@@ -48,6 +48,11 @@ jobs:
         continue-on-error: true
         run: python svep.py
 
+      - name: Storbolag och dippköp (bara vid manuell körning)
+        if: github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: python bigtech.py
+
       - name: Liknande lägen (bara vid manuell körning)
         if: github.event_name == 'workflow_dispatch'
         continue-on-error: true
