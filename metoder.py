@@ -249,6 +249,29 @@ METODER = {
             "max_dagar": (15, "längsta tid i traden"),
         },
     },
+    "price_action": {
+        "namn": "Price action vid stöd",
+        "kort": "Efter ett fall, nära ett tidigare stöd, kommer en vändningscandle: engulfing, hammare, morgonstjärna eller doji som bekräftas dagen efter.",
+        "typ": "Candlestick-vändning vid stöd",
+        "bast": "Efter en nedgång, nära en tidigare botten",
+        "regler": [
+            "Kursen har fallit minst {fall_min} % de senaste {fall_dagar} dagarna, eller RSI är under {rsi_max}.",
+            "Dagens lägsta ligger högst {stod_narhet} % från lägsta kursen de senaste {stod_dagar} dagarna (tidigare stöd).",
+            "I dag finns en vändningscandle: bullish engulfing, hammare, morgonstjärna eller en doji i går som följs av en grön dag i dag.",
+            "Volymen är minst {vol_faktor} gånger normal. Stop {stop_marginal} % under mönstrets lägsta. Sälj vid {mal_R} R, stoppen eller efter {max_dagar} dagar.",
+        ],
+        "p": {
+            "fall_min": (5, "fallet innan, i procent"),
+            "fall_dagar": (10, "fallet mäts över så många dagar"),
+            "rsi_max": (40, "eller RSI under detta"),
+            "stod_dagar": (60, "stödet letas så många dagar bakåt"),
+            "stod_narhet": (3, "hur nära stödet, i procent"),
+            "vol_faktor": (1.0, "volym i dag jämfört med 50-dagars snitt"),
+            "stop_marginal": (1.0, "procent under mönstrets lägsta"),
+            "mal_R": (2.0, "vinstmål i R"),
+            "max_dagar": (20, "längsta tid i traden"),
+        },
+    },
     "slump": {
         "namn": "Kontroll: slumpmässiga köp",
         "kort": "Köper på slumpade dagar med samma sorts stop och mål. En metod som inte slår denna tillför inget.",
@@ -347,6 +370,7 @@ def forbered(df):
     tr = pd.concat([d["High"] - d["Low"], (d["High"] - c.shift()).abs(), (d["Low"] - c.shift()).abs()], axis=1).max(axis=1)
     d["atr"] = tr.ewm(alpha=1 / 14, adjust=False, min_periods=14).mean()
     d["trend"] = trend(c)
+    d["bear"] = bearish_monster(d).fillna(False)
     return d
 
 
@@ -426,6 +450,54 @@ def sig_rekyl(d, p):
     return sig, stop, None
 
 
+def _delar(d, sh=0):
+    o, h, l, c = (d[k].shift(sh) for k in ["Open", "High", "Low", "Close"])
+    kropp = (c - o).abs()
+    spann = (h - l).replace(0, np.nan)
+    return o, h, l, c, kropp, spann, np.maximum(o, c), np.minimum(o, c)
+
+
+def doji(d, sh=0):
+    o, h, l, c, kropp, spann, topp, botten = _delar(d, sh)
+    return kropp <= 0.1 * spann
+
+
+def hammare(d):
+    """Liten kropp högt upp, lång nedre skugga (minst 2 gånger kroppen), nästan ingen övre."""
+    o, h, l, c, kropp, spann, topp, botten = _delar(d)
+    return (botten - l >= 2 * kropp) & (h - topp <= 0.3 * spann) & (kropp >= 0.05 * spann)
+
+
+def morgonstjarna(d):
+    """Stor röd, liten kropp, sedan stor grön som stänger över mitten av den röda."""
+    o2, h2, l2, c2, k2, s2, _, _ = _delar(d, 2)
+    o1, h1, l1, c1, k1, s1, _, _ = _delar(d, 1)
+    o, h, l, c, k, s, _, _ = _delar(d)
+    return (c2 < o2) & (k2 >= 0.5 * s2) & (k1 <= 0.3 * s1) & (c > o) & (c > (o2 + c2) / 2)
+
+
+def doji_bekraftad(d):
+    return doji(d, 1) & (d["Close"] > d["Open"]) & (d["Close"] > d["High"].shift(1))
+
+
+def bullish_monster(d):
+    return engulfing(d) | hammare(d) | morgonstjarna(d) | doji_bekraftad(d)
+
+
+def bearish_monster(d):
+    """Säljmönster: bearish engulfing, skjutande stjärna, gravsten-doji, kvällsstjärna."""
+    o, h, l, c, kropp, spann, topp, botten = _delar(d)
+    o1, c1 = d["Open"].shift(1), d["Close"].shift(1)
+    b_eng = (c1 > o1) & (c < o) & (o >= c1) & (c <= o1) & ((o - c) > (c1 - o1))
+    stjarna = (h - topp >= 2 * kropp) & (botten - l <= 0.3 * spann) & (kropp >= 0.05 * spann)
+    gravsten = doji(d) & (h - topp >= 0.7 * spann)
+    o2, c2 = d["Open"].shift(2), d["Close"].shift(2)
+    k2 = (c2 - o2).abs()
+    kvall = (c2 > o2) & (k2 >= 0.5 * (d["High"].shift(2) - d["Low"].shift(2))) & \
+        ((c1 - o1).abs() <= 0.3 * (d["High"].shift(1) - d["Low"].shift(1))) & (c < o) & (c < (o2 + c2) / 2)
+    return b_eng | stjarna | gravsten | kvall
+
+
 def engulfing(d):
     o, c, o1, c1 = d["Open"], d["Close"], d["Open"].shift(1), d["Close"].shift(1)
     return (c1 < o1) & (c > o) & (o <= c1) & (c >= o1) & ((c - o) > (o1 - c1))
@@ -438,6 +510,16 @@ def sig_engulfing(d, p):
     return sig, stop, None
 
 
+def sig_price_action(d, p):
+    fall = (1 - d["Close"] / d["Close"].shift(int(p["fall_dagar"]))) * 100 >= p["fall_min"]
+    svag = fall | (d["rsi"] < p["rsi_max"])
+    stod = d["Low"].shift(5).rolling(int(p["stod_dagar"])).min()
+    nara = (d["Low"] <= stod * (1 + p["stod_narhet"] / 100)) & (d["Low"] >= stod * (1 - p["stod_narhet"] / 100))
+    sig = svag & nara & bullish_monster(d) & (d["vol_x"].fillna(1) >= p["vol_faktor"])
+    lagst = pd.concat([d["Low"], d["Low"].shift(1), d["Low"].shift(2)], axis=1).min(axis=1)
+    return sig, lagst * (1 - p["stop_marginal"] / 100), None
+
+
 def sig_slump(d, p, fro):
     rng = np.random.default_rng(fro)
     sig = pd.Series(rng.random(len(d)) < 1 / p["var_n"], index=d.index) & d["atr"].notna()
@@ -445,7 +527,7 @@ def sig_slump(d, p, fro):
 
 
 DETEKTOR = {"dipp": sig_dipp, "macd_vecka": sig_macd_vecka, "darvas": sig_darvas, "bas": sig_bas,
-            "rekyl": sig_rekyl, "engulfing": sig_engulfing}
+            "rekyl": sig_rekyl, "engulfing": sig_engulfing, "price_action": sig_price_action}
 
 
 def signaler(metod, d, fro=0):
@@ -458,9 +540,22 @@ def signaler(metod, d, fro=0):
 # ---------------------------------------------------------------------------
 # Simulering
 # ---------------------------------------------------------------------------
-def simulera(namn, metod, d, idx_close, idx_trend, fro=0):
+EXITS = {
+    None: "Fast mål 2R (standard)",
+    "trail": "Släpande stop 3 × ATR under högsta stängning",
+    "halv_trail": "Sälj halva vid 2R, resten med släpande stop",
+    "macd_ner": "Sälj när MACD vänder ner (histogrammet under noll)",
+    "under_ma20": "Sälj när kursen stänger under 20-dagars",
+    "candle_ner": "Sälj vid säljcandle (bearish engulfing, stjärna, gravsten)",
+    "be_trail": "Stop till köpkurs vid +1R, sedan släpande stop",
+}
+
+
+def simulera(namn, metod, d, idx_close, idx_trend, fro=0, exit_typ=None, max_dagar_trend=120):
     p = P(metod)
     sig, stop, exitv = signaler(metod, d, fro)
+    if exit_typ is not None:
+        exitv = None
     sig = sig.fillna(False).to_numpy(dtype=bool)
     st = stop.to_numpy(dtype=float)
     ex = exitv.fillna(False).to_numpy(dtype=bool) if exitv is not None else None
@@ -470,6 +565,17 @@ def simulera(namn, metod, d, idx_close, idx_trend, fro=0):
     dagar = d.index
     mal_R = p.get("mal_R")
     max_d = int(p["max_dagar"])
+    ATR = d["atr"].to_numpy(dtype=float)
+    if exit_typ is not None:
+        mal_R = 2.0 if exit_typ == "halv_trail" else None
+        max_d = max(max_d, max_dagar_trend)
+        if exit_typ == "macd_ner":
+            hh = d["hist"].to_numpy(dtype=float)
+            ex = (hh < 0) & (np.roll(hh, 1) >= 0)
+        elif exit_typ == "under_ma20":
+            ex = (C < d["ma20"].to_numpy(dtype=float))
+        elif exit_typ == "candle_ner":
+            ex = d["bear"].to_numpy(dtype=bool)
     k = KOSTNAD_PROCENT / 100
     trades, fri_fran = [], 0
     for t in np.flatnonzero(sig):
@@ -482,13 +588,29 @@ def simulera(namn, metod, d, idx_close, idx_trend, fro=0):
         risk = e - s
         mal = e + mal_R * risk if mal_R else None
         ut, orsak, j = None, None, t + 1
+        halv = None          # pris för första halvan (halv_trail)
+        hogst = e
+        mfe = 0.0
         while j < len(C):
             if L[j] <= s:
                 ut, orsak = min(O[j], s) if j > t + 1 else s, "stop"
                 break
+            mfe = max(mfe, (H[j] - e) / risk)
             if mal is not None and H[j] >= mal:
-                ut, orsak = max(O[j], mal) if j > t + 1 else mal, "mål"
-                break
+                if exit_typ == "halv_trail" and halv is None:
+                    halv = max(O[j], mal) if j > t + 1 else mal
+                    mal = None
+                    s = max(s, e)
+                else:
+                    ut, orsak = max(O[j], mal) if j > t + 1 else mal, "mål"
+                    break
+            if exit_typ in ("trail", "halv_trail", "be_trail"):
+                hogst = max(hogst, C[j])
+                if exit_typ != "be_trail" or hogst >= e + risk:
+                    if exit_typ == "be_trail":
+                        s = max(s, e)
+                    if np.isfinite(ATR[j]):
+                        s = max(s, hogst - 3 * ATR[j])
             if ex is not None and ex[j] and j + 1 < len(C):
                 j += 1
                 ut, orsak = O[j], "sälj-signal"
@@ -501,6 +623,8 @@ def simulera(namn, metod, d, idx_close, idx_trend, fro=0):
             continue  # traden pågår fortfarande – räknas inte
         fri_fran = j + 1
         R = (ut - e) / risk - (e + ut) * k / risk
+        if halv is not None:
+            R = 0.5 * ((halv - e) / risk - (e + halv) * k / risk) + 0.5 * R
         mot = motstand_vid(H, piv, t, e)
         d0, d1 = dagar[t], dagar[j]
         i0 = idx_close.asof(d0)
@@ -508,7 +632,7 @@ def simulera(namn, metod, d, idx_close, idx_trend, fro=0):
         trades.append({
             "metod": metod, "bolag": namn, "datum": str(d0.date()), "ut_datum": str(d1.date()),
             "kop": round(float(e), 2), "stop": round(float(s), 2), "salj": round(float(ut), 2),
-            "R": round(float(R), 3), "dagar": int(j - t), "orsak": orsak,
+            "R": round(float(R), 3), "dagar": int(j - t), "orsak": orsak, "mfe": round(float(mfe), 2),
             "risk_pct": round(float(risk / e * 100), 2),
             "rr_mot": round(float((mot - e) / risk), 2) if mot else None,
             "vol_x": round(float(V[t]), 2) if np.isfinite(V[t]) else None,
