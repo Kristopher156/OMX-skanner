@@ -33,7 +33,7 @@ except ImportError:
 # OMXS30-bolagen (Yahoo-tickers). Listan ändras två gånger per år –
 # kolla aktuell lista på Nasdaqs sida och lägg till eller ta bort här.
 # ---------------------------------------------------------------------------
-BOLAG = {
+OMXS30 = {
     "ABB": "ABB.ST",
     "Addtech B": "ADDT-B.ST",
     "Alfa Laval": "ALFA.ST",
@@ -67,6 +67,76 @@ BOLAG = {
     "Volvo B": "VOLV-B.ST",
 }
 
+# Övriga bolag på Stockholmsbörsens Large Cap (fler bolag = fler lägen att välja bland)
+LARGE_CAP = {
+    "AAK": "AAK.ST",
+    "Addnode B": "ANOD-B.ST",
+    "AFRY": "AFRY.ST",
+    "Alleima": "ALLEI.ST",
+    "Arjo B": "ARJO-B.ST",
+    "Avanza": "AZA.ST",
+    "Axfood": "AXFO.ST",
+    "Balder B": "BALD-B.ST",
+    "Beijer Ref B": "BEIJ-B.ST",
+    "Bilia A": "BILI-A.ST",
+    "Billerud": "BILL.ST",
+    "Bravida": "BRAV.ST",
+    "Bure": "BURE.ST",
+    "Camurus": "CAMX.ST",
+    "Castellum": "CAST.ST",
+    "Dometic": "DOM.ST",
+    "Electrolux B": "ELUX-B.ST",
+    "Electrolux Professional B": "EPRO-B.ST",
+    "Elekta B": "EKTA-B.ST",
+    "Embracer B": "EMBRAC-B.ST",
+    "Fabege": "FABG.ST",
+    "Fortnox": "FNOX.ST",
+    "Hemnet": "HEM.ST",
+    "Hexpol B": "HPOL-B.ST",
+    "Holmen B": "HOLM-B.ST",
+    "Hufvudstaden A": "HUFV-A.ST",
+    "Husqvarna B": "HUSQ-B.ST",
+    "Industrivärden C": "INDU-C.ST",
+    "Indutrade": "INDT.ST",
+    "Instalco": "INSTAL.ST",
+    "JM": "JM.ST",
+    "Kinnevik B": "KINV-B.ST",
+    "Lagercrantz B": "LAGR-B.ST",
+    "Latour B": "LATO-B.ST",
+    "Lindab": "LIAB.ST",
+    "Loomis": "LOOMIS.ST",
+    "Lundbergföretagen B": "LUND-B.ST",
+    "Lundin Mining": "LUMI.ST",
+    "Medicover B": "MCOV-B.ST",
+    "Munters": "MTRS.ST",
+    "Mycronic": "MYCR.ST",
+    "NCC B": "NCC-B.ST",
+    "Nolato B": "NOLA-B.ST",
+    "Nordnet": "SAVE.ST",
+    "Nyfosa": "NYF.ST",
+    "Pandox B": "PNDX-B.ST",
+    "Peab B": "PEAB-B.ST",
+    "Ratos B": "RATO-B.ST",
+    "Sagax B": "SAGA-B.ST",
+    "Sectra B": "SECT-B.ST",
+    "Securitas B": "SECU-B.ST",
+    "Sinch": "SINCH.ST",
+    "SOBI": "SOBI.ST",
+    "SSAB B": "SSAB-B.ST",
+    "Stora Enso R": "STE-R.ST",
+    "Sweco B": "SWEC-B.ST",
+    "Systemair": "SYSR.ST",
+    "Thule": "THULE.ST",
+    "Trelleborg B": "TREL-B.ST",
+    "Truecaller B": "TRUE-B.ST",
+    "Vitrolife": "VITR.ST",
+    "Volvo Car B": "VOLCAR-B.ST",
+    "Wallenstam B": "WALL-B.ST",
+    "Wihlborgs": "WIHL.ST",
+}
+
+BOLAG = {**OMXS30, **LARGE_CAP}
+
 # ---------------------------------------------------------------------------
 # Dina regler – ändra fritt
 # ---------------------------------------------------------------------------
@@ -89,7 +159,7 @@ TIDIG = "1. MACD vänder upp (tidigt)"
 KORS = "2. MACD-korsning"
 OVERSALD = "3. Översålda – bevaka"
 PRIO = {TIDIG: 0, KORS: 1, OVERSALD: 2, "": 9}
-MIN_BOLAG_DATA = 20    # färre bolag med data än så = något är fel, behåll förra sidan
+MIN_BOLAG_DATA = 60    # färre bolag med data än så = något är fel, behåll förra sidan
 
 
 def rsi(close: pd.Series, n: int = 14) -> pd.Series:
@@ -511,7 +581,7 @@ def spara_html(rader: list, fil: Path, mk=None):
         f"<td>{r['MACD-hist']}</td><td>{_tal(r['R/R'])}</td></tr>" for r in ovriga)
     html = f"""<!doctype html>
 <html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OMXS30-skanning {datum}</title>
+<title>Large Cap-skanning {datum}</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Instrument+Serif&display=swap">
 <style>
 :root{{--bg:#F4F1EA;--card:#FFFFFF;--fg:#1B1A17;--muted:#6B665C;--line:#E2DDD2;
@@ -622,7 +692,7 @@ footer{{color:var(--muted);font-size:13px}}
 <body><div class="wrap">
 <header>
   <span class="eyebrow">Stängningskurser {datum} · {len(rader)} av {len(BOLAG)} bolag · skannat {nu:%H:%M}</span>
-  <h1>OMXS30-skanning</h1>
+  <h1>Large Cap-skanning</h1>
   <a class="toplink" href="metoder.html">Metoder och marknad: sektorer, signaler per metod och backtest →</a>
   <div class="chips">{''.join(chips)}</div>
 </header>
