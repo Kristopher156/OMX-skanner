@@ -73,6 +73,11 @@ jobs:
         continue-on-error: true
         run: python nowick.py
 
+      - name: No wick daytrading (bara vid manuell körning)
+        if: github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: python nowick_intra.py
+
       - name: Liknande lägen (bara vid manuell körning)
         if: github.event_name == 'workflow_dispatch'
         continue-on-error: true
