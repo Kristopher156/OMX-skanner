@@ -1,9 +1,9 @@
 name: OMXS30-skanning
 
 on:
-  schedule:
-    # Vardagar 16:45 UTC = 17:45 svensk vintertid (18:45 sommartid)
-    - cron: "45 16 * * 1-5"
+  # Daglig körning avstängd nov 2026. För att slå på igen, lägg tillbaka:
+  # schedule:
+  #   - cron: "45 16 * * 1-5"
   workflow_dispatch: {}
 
 permissions:
