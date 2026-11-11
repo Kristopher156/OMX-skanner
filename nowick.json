@@ -1,0 +1,1034 @@
+[
+ {
+  "sida": "lang",
+  "stop_atr": 0.5,
+  "mal": 1.0,
+  "utan_wick": true,
+  "alla": {
+   "n": 14289,
+   "per_ar": 1428.9,
+   "E": -0.34,
+   "traff": 45.4,
+   "osakerhet": 0.023
+  },
+  "test": {
+   "n": 6548,
+   "per_ar": 1336.3,
+   "E": -0.335,
+   "traff": 44.4,
+   "osakerhet": 0.033
+  },
+  "lage": {
+   "upp": {
+    "n": 8272,
+    "per_ar": 827.2,
+    "E": -0.397,
+    "traff": 43.9,
+    "osakerhet": 0.03
+   },
+   "sidled": {
+    "n": 2807,
+    "per_ar": 280.7,
+    "E": -0.286,
+    "traff": 48.2,
+    "osakerhet": 0.053
+   },
+   "ned": {
+    "n": 2353,
+    "per_ar": 235.3,
+    "E": -0.246,
+    "traff": 46.9,
+    "osakerhet": 0.055
+   }
+  }
+ },
+ {
+  "sida": "lang",
+  "stop_atr": 0.5,
+  "mal": 1.0,
+  "utan_wick": false,
+  "alla": {
+   "n": 39213,
+   "per_ar": 3921.3,
+   "E": -0.244,
+   "traff": 48.2,
+   "osakerhet": 0.013
+  },
+  "test": {
+   "n": 18584,
+   "per_ar": 3792.7,
+   "E": -0.235,
+   "traff": 47.2,
+   "osakerhet": 0.02
+  },
+  "lage": {
+   "upp": {
+    "n": 22052,
+    "per_ar": 2205.2,
+    "E": -0.295,
+    "traff": 47.3,
+    "osakerhet": 0.018
+   },
+   "sidled": {
+    "n": 7668,
+    "per_ar": 766.8,
+    "E": -0.181,
+    "traff": 50.5,
+    "osakerhet": 0.031
+   },
+   "ned": {
+    "n": 7231,
+    "per_ar": 723.1,
+    "E": -0.158,
+    "traff": 48.8,
+    "osakerhet": 0.031
+   }
+  }
+ },
+ {
+  "sida": "lang",
+  "stop_atr": 0.5,
+  "mal": 2.0,
+  "utan_wick": true,
+  "alla": {
+   "n": 13838,
+   "per_ar": 1383.8,
+   "E": -0.253,
+   "traff": 36.7,
+   "osakerhet": 0.028
+  },
+  "test": {
+   "n": 6349,
+   "per_ar": 1295.7,
+   "E": -0.256,
+   "traff": 35.7,
+   "osakerhet": 0.041
+  },
+  "lage": {
+   "upp": {
+    "n": 8017,
+    "per_ar": 801.7,
+    "E": -0.317,
+    "traff": 35.3,
+    "osakerhet": 0.036
+   },
+   "sidled": {
+    "n": 2704,
+    "per_ar": 270.4,
+    "E": -0.19,
+    "traff": 38.9,
+    "osakerhet": 0.065
+   },
+   "ned": {
+    "n": 2303,
+    "per_ar": 230.3,
+    "E": -0.147,
+    "traff": 38.3,
+    "osakerhet": 0.068
+   }
+  }
+ },
+ {
+  "sida": "lang",
+  "stop_atr": 0.5,
+  "mal": 2.0,
+  "utan_wick": false,
+  "alla": {
+   "n": 36153,
+   "per_ar": 3615.3,
+   "E": -0.126,
+   "traff": 39.8,
+   "osakerhet": 0.017
+  },
+  "test": {
+   "n": 17183,
+   "per_ar": 3506.7,
+   "E": -0.132,
+   "traff": 38.6,
+   "osakerhet": 0.025
+  },
+  "lage": {
+   "upp": {
+    "n": 20416,
+    "per_ar": 2041.6,
+    "E": -0.184,
+    "traff": 38.8,
+    "osakerhet": 0.023
+   },
+   "sidled": {
+    "n": 6994,
+    "per_ar": 699.4,
+    "E": -0.058,
+    "traff": 42.0,
+    "osakerhet": 0.04
+   },
+   "ned": {
+    "n": 6652,
+    "per_ar": 665.2,
+    "E": -0.014,
+    "traff": 40.8,
+    "osakerhet": 0.039
+   }
+  }
+ },
+ {
+  "sida": "lang",
+  "stop_atr": 0.5,
+  "mal": "topp",
+  "utan_wick": true,
+  "alla": {
+   "n": 13973,
+   "per_ar": 1397.3,
+   "E": -0.277,
+   "traff": 39.2,
+   "osakerhet": 0.027
+  },
+  "test": {
+   "n": 6415,
+   "per_ar": 1309.2,
+   "E": -0.285,
+   "traff": 38.2,
+   "osakerhet": 0.039
+  },
+  "lage": {
+   "upp": {
+    "n": 8079,
+    "per_ar": 807.9,
+    "E": -0.338,
+    "traff": 37.7,
+    "osakerhet": 0.035
+   },
+   "sidled": {
+    "n": 2738,
+    "per_ar": 273.8,
+    "E": -0.228,
+    "traff": 41.5,
+    "osakerhet": 0.063
+   },
+   "ned": {
+    "n": 2322,
+    "per_ar": 232.2,
+    "E": -0.172,
+    "traff": 41.0,
+    "osakerhet": 0.065
+   }
+  }
+ },
+ {
+  "sida": "lang",
+  "stop_atr": 0.5,
+  "mal": "topp",
+  "utan_wick": false,
+  "alla": {
+   "n": 38387,
+   "per_ar": 3838.7,
+   "E": -0.221,
+   "traff": 45.2,
+   "osakerhet": 0.014
+  },
+  "test": {
+   "n": 18198,
+   "per_ar": 3713.9,
+   "E": -0.213,
+   "traff": 44.5,
+   "osakerhet": 0.021
+  },
+  "lage": {
+   "upp": {
+    "n": 21573,
+    "per_ar": 2157.3,
+    "E": -0.267,
+    "traff": 44.0,
+    "osakerhet": 0.02
+   },
+   "sidled": {
+    "n": 7530,
+    "per_ar": 753.0,
+    "E": -0.164,
+    "traff": 47.5,
+    "osakerhet": 0.033
+   },
+   "ned": {
+    "n": 7058,
+    "per_ar": 705.8,
+    "E": -0.134,
+    "traff": 46.5,
+    "osakerhet": 0.033
+   }
+  }
+ },
+ {
+  "sida": "lang",
+  "stop_atr": 1.0,
+  "mal": 1.0,
+  "utan_wick": true,
+  "alla": {
+   "n": 12862,
+   "per_ar": 1286.2,
+   "E": -0.088,
+   "traff": 53.3,
+   "osakerhet": 0.019
+  },
+  "test": {
+   "n": 5901,
+   "per_ar": 1204.3,
+   "E": -0.113,
+   "traff": 51.4,
+   "osakerhet": 0.029
+  },
+  "lage": {
+   "upp": {
+    "n": 7466,
+    "per_ar": 746.6,
+    "E": -0.132,
+    "traff": 51.7,
+    "osakerhet": 0.025
+   },
+   "sidled": {
+    "n": 2496,
+    "per_ar": 249.6,
+    "E": -0.034,
+    "traff": 55.6,
+    "osakerhet": 0.044
+   },
+   "ned": {
+    "n": 2134,
+    "per_ar": 213.4,
+    "E": -0.032,
+    "traff": 55.1,
+    "osakerhet": 0.046
+   }
+  }
+ },
+ {
+  "sida": "lang",
+  "stop_atr": 1.0,
+  "mal": 1.0,
+  "utan_wick": false,
+  "alla": {
+   "n": 30889,
+   "per_ar": 3088.9,
+   "E": 0.003,
+   "traff": 56.8,
+   "osakerhet": 0.012
+  },
+  "test": {
+   "n": 14630,
+   "per_ar": 2985.7,
+   "E": -0.014,
+   "traff": 55.1,
+   "osakerhet": 0.018
+  },
+  "lage": {
+   "upp": {
+    "n": 17431,
+    "per_ar": 1743.1,
+    "E": -0.037,
+    "traff": 55.7,
+    "osakerhet": 0.016
+   },
+   "sidled": {
+    "n": 6021,
+    "per_ar": 602.1,
+    "E": 0.057,
+    "traff": 58.5,
+    "osakerhet": 0.028
+   },
+   "ned": {
+    "n": 5639,
+    "per_ar": 563.9,
+    "E": 0.066,
+    "traff": 58.4,
+    "osakerhet": 0.028
+   }
+  }
+ },
+ {
+  "sida": "lang",
+  "stop_atr": 1.0,
+  "mal": 2.0,
+  "utan_wick": true,
+  "alla": {
+   "n": 11673,
+   "per_ar": 1167.3,
+   "E": -0.029,
+   "traff": 40.8,
+   "osakerhet": 0.027
+  },
+  "test": {
+   "n": 5379,
+   "per_ar": 1097.8,
+   "E": -0.075,
+   "traff": 38.7,
+   "osakerhet": 0.039
+  },
+  "lage": {
+   "upp": {
+    "n": 6795,
+    "per_ar": 679.5,
+    "E": -0.094,
+    "traff": 38.6,
+    "osakerhet": 0.035
+   },
+   "sidled": {
+    "n": 2241,
+    "per_ar": 224.1,
+    "E": 0.05,
+    "traff": 43.4,
+    "osakerhet": 0.062
+   },
+   "ned": {
+    "n": 1948,
+    "per_ar": 194.8,
+    "E": 0.071,
+    "traff": 44.2,
+    "osakerhet": 0.065
+   }
+  }
+ },
+ {
+  "sida": "lang",
+  "stop_atr": 1.0,
+  "mal": 2.0,
+  "utan_wick": false,
+  "alla": {
+   "n": 24946,
+   "per_ar": 2494.6,
+   "E": 0.094,
+   "traff": 44.7,
+   "osakerhet": 0.018
+  },
+  "test": {
+   "n": 11804,
+   "per_ar": 2409.0,
+   "E": 0.068,
+   "traff": 43.1,
+   "osakerhet": 0.027
+  },
+  "lage": {
+   "upp": {
+    "n": 14048,
+    "per_ar": 1404.8,
+    "E": 0.044,
+    "traff": 43.3,
+    "osakerhet": 0.025
+   },
+   "sidled": {
+    "n": 4896,
+    "per_ar": 489.6,
+    "E": 0.149,
+    "traff": 46.2,
+    "osakerhet": 0.041
+   },
+   "ned": {
+    "n": 4531,
+    "per_ar": 453.1,
+    "E": 0.205,
+    "traff": 47.9,
+    "osakerhet": 0.042
+   }
+  }
+ },
+ {
+  "sida": "lang",
+  "stop_atr": 1.0,
+  "mal": "topp",
+  "utan_wick": true,
+  "alla": {
+   "n": 13112,
+   "per_ar": 1311.2,
+   "E": -0.101,
+   "traff": 56.5,
+   "osakerhet": 0.018
+  },
+  "test": {
+   "n": 6017,
+   "per_ar": 1228.0,
+   "E": -0.123,
+   "traff": 54.7,
+   "osakerhet": 0.027
+  },
+  "lage": {
+   "upp": {
+    "n": 7596,
+    "per_ar": 759.6,
+    "E": -0.139,
+    "traff": 54.8,
+    "osakerhet": 0.024
+   },
+   "sidled": {
+    "n": 2549,
+    "per_ar": 254.9,
+    "E": -0.053,
+    "traff": 59.1,
+    "osakerhet": 0.042
+   },
+   "ned": {
+    "n": 2177,
+    "per_ar": 217.7,
+    "E": -0.052,
+    "traff": 58.0,
+    "osakerhet": 0.044
+   }
+  }
+ },
+ {
+  "sida": "lang",
+  "stop_atr": 1.0,
+  "mal": "topp",
+  "utan_wick": false,
+  "alla": {
+   "n": 34239,
+   "per_ar": 3423.9,
+   "E": -0.059,
+   "traff": 62.9,
+   "osakerhet": 0.01
+  },
+  "test": {
+   "n": 16165,
+   "per_ar": 3299.0,
+   "E": -0.063,
+   "traff": 62.0,
+   "osakerhet": 0.015
+  },
+  "lage": {
+   "upp": {
+    "n": 19265,
+    "per_ar": 1926.5,
+    "E": -0.094,
+    "traff": 61.3,
+    "osakerhet": 0.013
+   },
+   "sidled": {
+    "n": 6741,
+    "per_ar": 674.1,
+    "E": -0.014,
+    "traff": 64.5,
+    "osakerhet": 0.022
+   },
+   "ned": {
+    "n": 6226,
+    "per_ar": 622.6,
+    "E": 0.003,
+    "traff": 65.7,
+    "osakerhet": 0.022
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 0.5,
+  "mal": 1.0,
+  "utan_wick": true,
+  "alla": {
+   "n": 15903,
+   "per_ar": 1590.3,
+   "E": -0.391,
+   "traff": 43.4,
+   "osakerhet": 0.021
+  },
+  "test": {
+   "n": 6627,
+   "per_ar": 1352.4,
+   "E": -0.374,
+   "traff": 42.9,
+   "osakerhet": 0.032
+  },
+  "lage": {
+   "upp": {
+    "n": 8798,
+    "per_ar": 879.8,
+    "E": -0.388,
+    "traff": 44.0,
+    "osakerhet": 0.028
+   },
+   "sidled": {
+    "n": 3075,
+    "per_ar": 307.5,
+    "E": -0.412,
+    "traff": 43.8,
+    "osakerhet": 0.047
+   },
+   "ned": {
+    "n": 2842,
+    "per_ar": 284.2,
+    "E": -0.439,
+    "traff": 39.1,
+    "osakerhet": 0.048
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 0.5,
+  "mal": 1.0,
+  "utan_wick": false,
+  "alla": {
+   "n": 39384,
+   "per_ar": 3938.4,
+   "E": -0.345,
+   "traff": 44.1,
+   "osakerhet": 0.013
+  },
+  "test": {
+   "n": 18671,
+   "per_ar": 3810.4,
+   "E": -0.286,
+   "traff": 45.2,
+   "osakerhet": 0.02
+  },
+  "lage": {
+   "upp": {
+    "n": 22000,
+    "per_ar": 2200.0,
+    "E": -0.343,
+    "traff": 45.0,
+    "osakerhet": 0.018
+   },
+   "sidled": {
+    "n": 7676,
+    "per_ar": 767.6,
+    "E": -0.356,
+    "traff": 43.7,
+    "osakerhet": 0.03
+   },
+   "ned": {
+    "n": 7507,
+    "per_ar": 750.7,
+    "E": -0.342,
+    "traff": 41.9,
+    "osakerhet": 0.029
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 0.5,
+  "mal": 2.0,
+  "utan_wick": true,
+  "alla": {
+   "n": 15287,
+   "per_ar": 1528.7,
+   "E": -0.367,
+   "traff": 33.1,
+   "osakerhet": 0.026
+  },
+  "test": {
+   "n": 6404,
+   "per_ar": 1306.9,
+   "E": -0.339,
+   "traff": 33.2,
+   "osakerhet": 0.04
+  },
+  "lage": {
+   "upp": {
+    "n": 8458,
+    "per_ar": 845.8,
+    "E": -0.343,
+    "traff": 34.3,
+    "osakerhet": 0.035
+   },
+   "sidled": {
+    "n": 2939,
+    "per_ar": 293.9,
+    "E": -0.426,
+    "traff": 32.1,
+    "osakerhet": 0.058
+   },
+   "ned": {
+    "n": 2767,
+    "per_ar": 276.7,
+    "E": -0.438,
+    "traff": 29.1,
+    "osakerhet": 0.058
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 0.5,
+  "mal": 2.0,
+  "utan_wick": false,
+  "alla": {
+   "n": 36496,
+   "per_ar": 3649.6,
+   "E": -0.297,
+   "traff": 34.3,
+   "osakerhet": 0.017
+  },
+  "test": {
+   "n": 17280,
+   "per_ar": 3526.5,
+   "E": -0.222,
+   "traff": 35.8,
+   "osakerhet": 0.025
+  },
+  "lage": {
+   "upp": {
+    "n": 20380,
+    "per_ar": 2038.0,
+    "E": -0.286,
+    "traff": 35.3,
+    "osakerhet": 0.023
+   },
+   "sidled": {
+    "n": 7098,
+    "per_ar": 709.8,
+    "E": -0.332,
+    "traff": 33.5,
+    "osakerhet": 0.037
+   },
+   "ned": {
+    "n": 6953,
+    "per_ar": 695.3,
+    "E": -0.295,
+    "traff": 32.5,
+    "osakerhet": 0.037
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 0.5,
+  "mal": "topp",
+  "utan_wick": true,
+  "alla": {
+   "n": 15396,
+   "per_ar": 1539.6,
+   "E": -0.374,
+   "traff": 35.6,
+   "osakerhet": 0.025
+  },
+  "test": {
+   "n": 6429,
+   "per_ar": 1312.0,
+   "E": -0.348,
+   "traff": 35.4,
+   "osakerhet": 0.039
+  },
+  "lage": {
+   "upp": {
+    "n": 8505,
+    "per_ar": 850.5,
+    "E": -0.354,
+    "traff": 36.6,
+    "osakerhet": 0.034
+   },
+   "sidled": {
+    "n": 2976,
+    "per_ar": 297.6,
+    "E": -0.423,
+    "traff": 35.2,
+    "osakerhet": 0.055
+   },
+   "ned": {
+    "n": 2771,
+    "per_ar": 277.1,
+    "E": -0.45,
+    "traff": 31.4,
+    "osakerhet": 0.056
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 0.5,
+  "mal": "topp",
+  "utan_wick": false,
+  "alla": {
+   "n": 38407,
+   "per_ar": 3840.7,
+   "E": -0.341,
+   "traff": 40.5,
+   "osakerhet": 0.014
+  },
+  "test": {
+   "n": 18200,
+   "per_ar": 3714.3,
+   "E": -0.283,
+   "traff": 41.9,
+   "osakerhet": 0.021
+  },
+  "lage": {
+   "upp": {
+    "n": 21431,
+    "per_ar": 2143.1,
+    "E": -0.336,
+    "traff": 41.3,
+    "osakerhet": 0.02
+   },
+   "sidled": {
+    "n": 7511,
+    "per_ar": 751.1,
+    "E": -0.36,
+    "traff": 39.9,
+    "osakerhet": 0.032
+   },
+   "ned": {
+    "n": 7313,
+    "per_ar": 731.3,
+    "E": -0.338,
+    "traff": 38.8,
+    "osakerhet": 0.031
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 1.0,
+  "mal": 1.0,
+  "utan_wick": true,
+  "alla": {
+   "n": 14034,
+   "per_ar": 1403.4,
+   "E": -0.197,
+   "traff": 47.7,
+   "osakerhet": 0.018
+  },
+  "test": {
+   "n": 5936,
+   "per_ar": 1211.4,
+   "E": -0.171,
+   "traff": 48.4,
+   "osakerhet": 0.028
+  },
+  "lage": {
+   "upp": {
+    "n": 7750,
+    "per_ar": 775.0,
+    "E": -0.181,
+    "traff": 49.1,
+    "osakerhet": 0.025
+   },
+   "sidled": {
+    "n": 2719,
+    "per_ar": 271.9,
+    "E": -0.218,
+    "traff": 47.5,
+    "osakerhet": 0.041
+   },
+   "ned": {
+    "n": 2551,
+    "per_ar": 255.1,
+    "E": -0.273,
+    "traff": 42.6,
+    "osakerhet": 0.042
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 1.0,
+  "mal": 1.0,
+  "utan_wick": false,
+  "alla": {
+   "n": 30733,
+   "per_ar": 3073.3,
+   "E": -0.147,
+   "traff": 49.5,
+   "osakerhet": 0.012
+  },
+  "test": {
+   "n": 14523,
+   "per_ar": 2963.9,
+   "E": -0.09,
+   "traff": 51.5,
+   "osakerhet": 0.018
+  },
+  "lage": {
+   "upp": {
+    "n": 17186,
+    "per_ar": 1718.6,
+    "E": -0.131,
+    "traff": 50.9,
+    "osakerhet": 0.017
+   },
+   "sidled": {
+    "n": 5957,
+    "per_ar": 595.7,
+    "E": -0.167,
+    "traff": 48.4,
+    "osakerhet": 0.028
+   },
+   "ned": {
+    "n": 5848,
+    "per_ar": 584.8,
+    "E": -0.17,
+    "traff": 47.1,
+    "osakerhet": 0.028
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 1.0,
+  "mal": 2.0,
+  "utan_wick": true,
+  "alla": {
+   "n": 12734,
+   "per_ar": 1273.4,
+   "E": -0.203,
+   "traff": 34.7,
+   "osakerhet": 0.025
+  },
+  "test": {
+   "n": 5425,
+   "per_ar": 1107.1,
+   "E": -0.144,
+   "traff": 36.1,
+   "osakerhet": 0.038
+  },
+  "lage": {
+   "upp": {
+    "n": 7049,
+    "per_ar": 704.9,
+    "E": -0.162,
+    "traff": 36.2,
+    "osakerhet": 0.034
+   },
+   "sidled": {
+    "n": 2451,
+    "per_ar": 245.1,
+    "E": -0.237,
+    "traff": 34.1,
+    "osakerhet": 0.055
+   },
+   "ned": {
+    "n": 2329,
+    "per_ar": 232.9,
+    "E": -0.327,
+    "traff": 30.0,
+    "osakerhet": 0.054
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 1.0,
+  "mal": 2.0,
+  "utan_wick": false,
+  "alla": {
+   "n": 25463,
+   "per_ar": 2546.3,
+   "E": -0.14,
+   "traff": 36.3,
+   "osakerhet": 0.018
+  },
+  "test": {
+   "n": 11985,
+   "per_ar": 2445.9,
+   "E": -0.067,
+   "traff": 38.5,
+   "osakerhet": 0.026
+  },
+  "lage": {
+   "upp": {
+    "n": 14184,
+    "per_ar": 1418.4,
+    "E": -0.113,
+    "traff": 37.6,
+    "osakerhet": 0.024
+   },
+   "sidled": {
+    "n": 4928,
+    "per_ar": 492.8,
+    "E": -0.16,
+    "traff": 35.2,
+    "osakerhet": 0.04
+   },
+   "ned": {
+    "n": 4879,
+    "per_ar": 487.9,
+    "E": -0.202,
+    "traff": 33.7,
+    "osakerhet": 0.039
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 1.0,
+  "mal": "topp",
+  "utan_wick": true,
+  "alla": {
+   "n": 14253,
+   "per_ar": 1425.3,
+   "E": -0.19,
+   "traff": 51.1,
+   "osakerhet": 0.018
+  },
+  "test": {
+   "n": 5985,
+   "per_ar": 1221.4,
+   "E": -0.168,
+   "traff": 51.4,
+   "osakerhet": 0.027
+  },
+  "lage": {
+   "upp": {
+    "n": 7854,
+    "per_ar": 785.4,
+    "E": -0.174,
+    "traff": 52.3,
+    "osakerhet": 0.024
+   },
+   "sidled": {
+    "n": 2781,
+    "per_ar": 278.1,
+    "E": -0.218,
+    "traff": 50.7,
+    "osakerhet": 0.039
+   },
+   "ned": {
+    "n": 2566,
+    "per_ar": 256.6,
+    "E": -0.263,
+    "traff": 46.0,
+    "osakerhet": 0.041
+   }
+  }
+ },
+ {
+  "sida": "kort",
+  "stop_atr": 1.0,
+  "mal": "topp",
+  "utan_wick": false,
+  "alla": {
+   "n": 33674,
+   "per_ar": 3367.4,
+   "E": -0.163,
+   "traff": 57.1,
+   "osakerhet": 0.01
+  },
+  "test": {
+   "n": 15935,
+   "per_ar": 3252.0,
+   "E": -0.12,
+   "traff": 59.0,
+   "osakerhet": 0.015
+  },
+  "lage": {
+   "upp": {
+    "n": 18802,
+    "per_ar": 1880.2,
+    "E": -0.155,
+    "traff": 58.0,
+    "osakerhet": 0.014
+   },
+   "sidled": {
+    "n": 6560,
+    "per_ar": 656.0,
+    "E": -0.175,
+    "traff": 56.1,
+    "osakerhet": 0.023
+   },
+   "ned": {
+    "n": 6416,
+    "per_ar": 641.6,
+    "E": -0.172,
+    "traff": 56.1,
+    "osakerhet": 0.023
+   }
+  }
+ }
+]

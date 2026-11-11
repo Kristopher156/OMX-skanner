@@ -1,0 +1,662 @@
+{
+ "tid": "2026-11-11T19:00",
+ "bolag_med_data": 93,
+ "saknas": [
+  "Fortnox",
+  "Nyfosa"
+ ],
+ "marknad": "upp",
+ "rader": [
+  {
+   "Bolag": "Loomis",
+   "Status": "1. MACD vänder upp (tidigt)",
+   "Kurs": 525.0,
+   "RSI": 43.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "SSAB B",
+   "Status": "1. MACD vänder upp (tidigt)",
+   "Kurs": 96.06,
+   "RSI": 46.0,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Nolato B",
+   "Status": "1. MACD vänder upp (tidigt)",
+   "Kurs": 53.1,
+   "RSI": 46.5,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Alfa Laval",
+   "Status": "1. MACD vänder upp (tidigt)",
+   "Kurs": 546.4,
+   "RSI": 47.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Alleima",
+   "Status": "2. MACD-korsning",
+   "Kurs": 96.1,
+   "RSI": 39.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Lifco B",
+   "Status": "2. MACD-korsning",
+   "Kurs": 288.2,
+   "RSI": 42.7,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "ABB",
+   "Status": "2. MACD-korsning",
+   "Kurs": 846.8,
+   "RSI": 43.7,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Lundin Mining",
+   "Status": "2. MACD-korsning",
+   "Kurs": 216.9,
+   "RSI": 46.5,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Mycronic",
+   "Status": "2. MACD-korsning",
+   "Kurs": 302.4,
+   "RSI": 49.3,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Epiroc A",
+   "Status": "2. MACD-korsning",
+   "Kurs": 252.0,
+   "RSI": 50.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Hexpol B",
+   "Status": "2. MACD-korsning",
+   "Kurs": 95.1,
+   "RSI": 52.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "SKF B",
+   "Status": "2. MACD-korsning",
+   "Kurs": 279.1,
+   "RSI": 56.3,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Trelleborg B",
+   "Status": "2. MACD-korsning",
+   "Kurs": 472.6,
+   "RSI": 61.5,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Lagercrantz B",
+   "Status": "2. MACD-korsning",
+   "Kurs": 240.6,
+   "RSI": 62.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Holmen B",
+   "Status": "",
+   "Kurs": 299.2,
+   "RSI": 36.7,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Volvo Car B",
+   "Status": "",
+   "Kurs": 11.98,
+   "RSI": 38.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "SCA B",
+   "Status": "",
+   "Kurs": 119.0,
+   "RSI": 40.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "AAK",
+   "Status": "",
+   "Kurs": 177.4,
+   "RSI": 40.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Stora Enso R",
+   "Status": "",
+   "Kurs": 105.1,
+   "RSI": 40.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Sinch",
+   "Status": "",
+   "Kurs": 42.85,
+   "RSI": 42.2,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Medicover B",
+   "Status": "",
+   "Kurs": 263.0,
+   "RSI": 44.5,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Husqvarna B",
+   "Status": "",
+   "Kurs": 33.21,
+   "RSI": 47.7,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Truecaller B",
+   "Status": "",
+   "Kurs": 23.1,
+   "RSI": 48.3,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Nibe B",
+   "Status": "",
+   "Kurs": 44.74,
+   "RSI": 48.9,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Hemnet",
+   "Status": "",
+   "Kurs": 72.95,
+   "RSI": 49.2,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Sectra B",
+   "Status": "",
+   "Kurs": 321.0,
+   "RSI": 50.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Lindab",
+   "Status": "",
+   "Kurs": 129.4,
+   "RSI": 51.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Bure",
+   "Status": "",
+   "Kurs": 305.4,
+   "RSI": 51.5,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Saab B",
+   "Status": "",
+   "Kurs": 641.4,
+   "RSI": 51.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Munters",
+   "Status": "",
+   "Kurs": 136.75,
+   "RSI": 51.7,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Atlas Copco B",
+   "Status": "",
+   "Kurs": 169.2,
+   "RSI": 52.8,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Atlas Copco A",
+   "Status": "",
+   "Kurs": 194.65,
+   "RSI": 52.9,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Boliden",
+   "Status": "",
+   "Kurs": 521.8,
+   "RSI": 53.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Fabege",
+   "Status": "",
+   "Kurs": 66.65,
+   "RSI": 53.8,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "H&M B",
+   "Status": "",
+   "Kurs": 176.25,
+   "RSI": 54.5,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Bravida",
+   "Status": "",
+   "Kurs": 152.0,
+   "RSI": 54.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Tele2 B",
+   "Status": "",
+   "Kurs": 162.85,
+   "RSI": 56.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Dometic",
+   "Status": "",
+   "Kurs": 23.08,
+   "RSI": 56.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Indutrade",
+   "Status": "",
+   "Kurs": 268.2,
+   "RSI": 56.5,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Addnode B",
+   "Status": "",
+   "Kurs": 61.6,
+   "RSI": 57.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Ericsson B",
+   "Status": "",
+   "Kurs": 106.4,
+   "RSI": 57.5,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Volvo B",
+   "Status": "",
+   "Kurs": 323.1,
+   "RSI": 57.7,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "SEB A",
+   "Status": "",
+   "Kurs": 222.2,
+   "RSI": 58.0,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Sweco B",
+   "Status": "",
+   "Kurs": 141.5,
+   "RSI": 58.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Axfood",
+   "Status": "",
+   "Kurs": 279.7,
+   "RSI": 58.3,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Sandvik",
+   "Status": "",
+   "Kurs": 373.7,
+   "RSI": 58.9,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Securitas B",
+   "Status": "",
+   "Kurs": 161.7,
+   "RSI": 59.7,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Nordea",
+   "Status": "",
+   "Kurs": 187.45,
+   "RSI": 60.0,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Avanza",
+   "Status": "",
+   "Kurs": 378.6,
+   "RSI": 60.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "SOBI",
+   "Status": "",
+   "Kurs": 485.6,
+   "RSI": 60.2,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "EQT",
+   "Status": "",
+   "Kurs": 316.4,
+   "RSI": 60.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Billerud",
+   "Status": "",
+   "Kurs": 87.55,
+   "RSI": 60.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "JM",
+   "Status": "",
+   "Kurs": 129.2,
+   "RSI": 60.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Instalco",
+   "Status": "",
+   "Kurs": 43.48,
+   "RSI": 61.0,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Wihlborgs",
+   "Status": "",
+   "Kurs": 73.4,
+   "RSI": 61.0,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Addtech B",
+   "Status": "",
+   "Kurs": 334.8,
+   "RSI": 61.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Bilia A",
+   "Status": "",
+   "Kurs": 149.2,
+   "RSI": 61.5,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Telia",
+   "Status": "",
+   "Kurs": 48.98,
+   "RSI": 61.9,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Wallenstam B",
+   "Status": "",
+   "Kurs": 39.28,
+   "RSI": 62.2,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Systemair",
+   "Status": "",
+   "Kurs": 88.1,
+   "RSI": 62.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Essity B",
+   "Status": "",
+   "Kurs": 286.5,
+   "RSI": 63.0,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Hexagon B",
+   "Status": "",
+   "Kurs": 109.25,
+   "RSI": 63.0,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Getinge B",
+   "Status": "",
+   "Kurs": 277.3,
+   "RSI": 63.3,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Nordnet",
+   "Status": "",
+   "Kurs": 354.2,
+   "RSI": 63.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Hufvudstaden A",
+   "Status": "",
+   "Kurs": 116.1,
+   "RSI": 63.7,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Kinnevik B",
+   "Status": "",
+   "Kurs": 72.12,
+   "RSI": 63.9,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Assa Abloy B",
+   "Status": "",
+   "Kurs": 392.5,
+   "RSI": 64.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Evolution",
+   "Status": "",
+   "Kurs": 862.2,
+   "RSI": 64.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Investor B",
+   "Status": "",
+   "Kurs": 435.25,
+   "RSI": 65.0,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Beijer Ref B",
+   "Status": "",
+   "Kurs": 161.3,
+   "RSI": 65.3,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Peab B",
+   "Status": "",
+   "Kurs": 99.15,
+   "RSI": 65.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Castellum",
+   "Status": "",
+   "Kurs": 135.65,
+   "RSI": 65.8,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Electrolux Professional B",
+   "Status": "",
+   "Kurs": 52.9,
+   "RSI": 66.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Elekta B",
+   "Status": "",
+   "Kurs": 61.95,
+   "RSI": 66.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "NCC B",
+   "Status": "",
+   "Kurs": 193.2,
+   "RSI": 66.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Thule",
+   "Status": "",
+   "Kurs": 216.0,
+   "RSI": 66.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Swedbank A",
+   "Status": "",
+   "Kurs": 419.3,
+   "RSI": 66.7,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Handelsbanken A",
+   "Status": "",
+   "Kurs": 162.95,
+   "RSI": 66.8,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Pandox B",
+   "Status": "",
+   "Kurs": 175.4,
+   "RSI": 67.0,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Balder B",
+   "Status": "",
+   "Kurs": 53.0,
+   "RSI": 67.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Industrivärden C",
+   "Status": "",
+   "Kurs": 546.4,
+   "RSI": 67.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Electrolux B",
+   "Status": "",
+   "Kurs": 31.49,
+   "RSI": 67.7,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "AstraZeneca",
+   "Status": "",
+   "Kurs": 1840.0,
+   "RSI": 68.9,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Latour B",
+   "Status": "",
+   "Kurs": 231.5,
+   "RSI": 70.5,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Sagax B",
+   "Status": "",
+   "Kurs": 186.7,
+   "RSI": 70.6,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "AFRY",
+   "Status": "",
+   "Kurs": 130.5,
+   "RSI": 70.8,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Lundbergföretagen B",
+   "Status": "",
+   "Kurs": 610.0,
+   "RSI": 70.9,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Embracer B",
+   "Status": "",
+   "Kurs": 101.0,
+   "RSI": 71.4,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Camurus",
+   "Status": "",
+   "Kurs": 737.0,
+   "RSI": 72.2,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Ratos B",
+   "Status": "",
+   "Kurs": 42.78,
+   "RSI": 74.7,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Vitrolife",
+   "Status": "",
+   "Kurs": 118.3,
+   "RSI": 75.2,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Skanska B",
+   "Status": "",
+   "Kurs": 305.0,
+   "RSI": 77.1,
+   "Datum": "2026-11-11"
+  },
+  {
+   "Bolag": "Arjo B",
+   "Status": "",
+   "Kurs": 36.26,
+   "RSI": 80.1,
+   "Datum": "2026-11-11"
+  }
+ ]
+}

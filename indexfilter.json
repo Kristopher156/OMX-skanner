@@ -1,0 +1,538 @@
+{
+ "period": "2015-12-09 – 2026-11-10",
+ "per_metod": {
+  "bas": [
+   {
+    "namn": "Inget indexfilter",
+    "n": 361,
+    "E": 0.092,
+    "traff": 51.0,
+    "E_test": -0.073
+   },
+   {
+    "namn": "Bara när S&P 500 > EMA 200",
+    "n": 330,
+    "E": 0.046,
+    "traff": 48.5,
+    "E_test": -0.072
+   },
+   {
+    "namn": "Bara när OMXS30 > EMA 200",
+    "n": 291,
+    "E": 0.037,
+    "traff": 49.5,
+    "E_test": -0.081
+   },
+   {
+    "namn": "Bara när båda > EMA 200",
+    "n": 285,
+    "E": 0.019,
+    "traff": 48.4,
+    "E_test": -0.088
+   },
+   {
+    "namn": "Bara när S&P 500 UNDER EMA 200 (kontroll)",
+    "n": 31,
+    "E": 0.577,
+    "traff": 77.4,
+    "E_test": -0.15
+   }
+  ],
+  "darvas": [
+   {
+    "namn": "Inget indexfilter",
+    "n": 923,
+    "E": 0.053,
+    "traff": 51.1,
+    "E_test": 0.104
+   },
+   {
+    "namn": "Bara när S&P 500 > EMA 200",
+    "n": 892,
+    "E": 0.048,
+    "traff": 50.9,
+    "E_test": 0.106
+   },
+   {
+    "namn": "Bara när OMXS30 > EMA 200",
+    "n": 849,
+    "E": 0.048,
+    "traff": 51.2,
+    "E_test": 0.107
+   },
+   {
+    "namn": "Bara när båda > EMA 200",
+    "n": 832,
+    "E": 0.043,
+    "traff": 50.8,
+    "E_test": 0.11
+   },
+   {
+    "namn": "Bara när S&P 500 UNDER EMA 200 (kontroll)",
+    "n": 31,
+    "E": 0.181,
+    "traff": 58.1,
+    "E_test": -0.08
+   }
+  ],
+  "dipp": [
+   {
+    "namn": "Inget indexfilter",
+    "n": 2200,
+    "E": 0.007,
+    "traff": 43.3,
+    "E_test": 0.107
+   },
+   {
+    "namn": "Bara när S&P 500 > EMA 200",
+    "n": 1371,
+    "E": -0.092,
+    "traff": 39.9,
+    "E_test": -0.082
+   },
+   {
+    "namn": "Bara när OMXS30 > EMA 200",
+    "n": 1037,
+    "E": -0.052,
+    "traff": 41.5,
+    "E_test": -0.015
+   },
+   {
+    "namn": "Bara när båda > EMA 200",
+    "n": 940,
+    "E": -0.114,
+    "traff": 39.6,
+    "E_test": -0.144
+   },
+   {
+    "namn": "Bara när S&P 500 UNDER EMA 200 (kontroll)",
+    "n": 829,
+    "E": 0.172,
+    "traff": 49.0,
+    "E_test": 0.667
+   }
+  ],
+  "engulfing": [
+   {
+    "namn": "Inget indexfilter",
+    "n": 374,
+    "E": -0.104,
+    "traff": 38.2,
+    "E_test": 0.061
+   },
+   {
+    "namn": "Bara när S&P 500 > EMA 200",
+    "n": 246,
+    "E": -0.214,
+    "traff": 34.1,
+    "E_test": -0.116
+   },
+   {
+    "namn": "Bara när OMXS30 > EMA 200",
+    "n": 200,
+    "E": -0.1,
+    "traff": 38.0,
+    "E_test": 0.058
+   },
+   {
+    "namn": "Bara när båda > EMA 200",
+    "n": 183,
+    "E": -0.213,
+    "traff": 33.9,
+    "E_test": -0.12
+   },
+   {
+    "namn": "Bara när S&P 500 UNDER EMA 200 (kontroll)",
+    "n": 128,
+    "E": 0.107,
+    "traff": 46.1,
+    "E_test": 1.069
+   }
+  ],
+  "macd_vecka": [
+   {
+    "namn": "Inget indexfilter",
+    "n": 618,
+    "E": 0.029,
+    "traff": 33.8,
+    "E_test": -0.245
+   },
+   {
+    "namn": "Bara när S&P 500 > EMA 200",
+    "n": 511,
+    "E": -0.07,
+    "traff": 30.5,
+    "E_test": -0.274
+   },
+   {
+    "namn": "Bara när OMXS30 > EMA 200",
+    "n": 400,
+    "E": -0.154,
+    "traff": 26.8,
+    "E_test": -0.299
+   },
+   {
+    "namn": "Bara när båda > EMA 200",
+    "n": 386,
+    "E": -0.169,
+    "traff": 26.4,
+    "E_test": -0.332
+   },
+   {
+    "namn": "Bara när S&P 500 UNDER EMA 200 (kontroll)",
+    "n": 107,
+    "E": 0.503,
+    "traff": 49.5,
+    "E_test": 0.455
+   }
+  ],
+  "price_action": [
+   {
+    "namn": "Inget indexfilter",
+    "n": 1000,
+    "E": 0.015,
+    "traff": 42.5,
+    "E_test": 0.061
+   },
+   {
+    "namn": "Bara när S&P 500 > EMA 200",
+    "n": 721,
+    "E": 0.025,
+    "traff": 42.9,
+    "E_test": 0.059
+   },
+   {
+    "namn": "Bara när OMXS30 > EMA 200",
+    "n": 583,
+    "E": -0.059,
+    "traff": 40.0,
+    "E_test": -0.051
+   },
+   {
+    "namn": "Bara när båda > EMA 200",
+    "n": 538,
+    "E": -0.045,
+    "traff": 40.5,
+    "E_test": -0.039
+   },
+   {
+    "namn": "Bara när S&P 500 UNDER EMA 200 (kontroll)",
+    "n": 279,
+    "E": -0.011,
+    "traff": 41.6,
+    "E_test": 0.071
+   }
+  ],
+  "rekyl": [
+   {
+    "namn": "Inget indexfilter",
+    "n": 3722,
+    "E": -0.024,
+    "traff": 42.5,
+    "E_test": -0.028
+   },
+   {
+    "namn": "Bara när S&P 500 > EMA 200",
+    "n": 3341,
+    "E": -0.032,
+    "traff": 42.3,
+    "E_test": -0.036
+   },
+   {
+    "namn": "Bara när OMXS30 > EMA 200",
+    "n": 2964,
+    "E": -0.049,
+    "traff": 41.3,
+    "E_test": -0.06
+   },
+   {
+    "namn": "Bara när båda > EMA 200",
+    "n": 2814,
+    "E": -0.062,
+    "traff": 40.9,
+    "E_test": -0.065
+   },
+   {
+    "namn": "Bara när S&P 500 UNDER EMA 200 (kontroll)",
+    "n": 381,
+    "E": 0.043,
+    "traff": 44.6,
+    "E_test": 0.076
+   }
+  ]
+ },
+ "kravna": [
+  {
+   "namn": "Inget indexfilter · alla signaler",
+   "n": 9198,
+   "E": 0.0,
+   "traff": 43.2,
+   "E_test": 0.008
+  },
+  {
+   "namn": "Inget indexfilter · kräsna",
+   "n": 712,
+   "E": 0.113,
+   "traff": 50.1,
+   "E_test": 0.198
+  },
+  {
+   "namn": "Bara när S&P 500 > EMA 200 · alla signaler",
+   "n": 7412,
+   "E": -0.033,
+   "traff": 42.1,
+   "E_test": -0.045
+  },
+  {
+   "namn": "Bara när S&P 500 > EMA 200 · kräsna",
+   "n": 531,
+   "E": 0.072,
+   "traff": 50.7,
+   "E_test": 0.234
+  },
+  {
+   "namn": "Bara när OMXS30 > EMA 200 · alla signaler",
+   "n": 6324,
+   "E": -0.042,
+   "traff": 41.9,
+   "E_test": -0.049
+  },
+  {
+   "namn": "Bara när OMXS30 > EMA 200 · kräsna",
+   "n": 495,
+   "E": 0.06,
+   "traff": 50.9,
+   "E_test": 0.177
+  },
+  {
+   "namn": "Bara när båda > EMA 200 · alla signaler",
+   "n": 5978,
+   "E": -0.062,
+   "traff": 41.2,
+   "E_test": -0.083
+  },
+  {
+   "namn": "Bara när båda > EMA 200 · kräsna",
+   "n": 486,
+   "E": 0.06,
+   "traff": 50.8,
+   "E_test": 0.186
+  },
+  {
+   "namn": "Bara när S&P 500 UNDER EMA 200 (kontroll) · alla signaler",
+   "n": 1786,
+   "E": 0.138,
+   "traff": 47.4,
+   "E_test": 0.414
+  },
+  {
+   "namn": "Bara när S&P 500 UNDER EMA 200 (kontroll) · kräsna",
+   "n": 181,
+   "E": 0.234,
+   "traff": 48.6,
+   "E_test": -0.276
+  }
+ ],
+ "handelbar": [
+  {
+   "namn": "Inget indexfilter · max 2 samtidigt",
+   "trades_per_ar": 17.4,
+   "E": 0.188,
+   "procent_per_ar": 6.5,
+   "bast": 19.0,
+   "samst": -12.5,
+   "per_ar": {
+    "2016": -3.0,
+    "2017": 19.0,
+    "2018": 12.6,
+    "2019": 11.2,
+    "2020": 11.7,
+    "2021": 5.1,
+    "2022": -12.5,
+    "2023": 8.1,
+    "2024": 6.8,
+    "2025": 10.0,
+    "2026": 2.5
+   }
+  },
+  {
+   "namn": "Inget indexfilter · max 4 samtidigt",
+   "trades_per_ar": 27.3,
+   "E": 0.119,
+   "procent_per_ar": 6.5,
+   "bast": 19.1,
+   "samst": -11.2,
+   "per_ar": {
+    "2016": -4.4,
+    "2017": 18.9,
+    "2018": 13.8,
+    "2019": 19.1,
+    "2020": 2.4,
+    "2021": 3.0,
+    "2022": -11.2,
+    "2023": 4.4,
+    "2024": 9.3,
+    "2025": 13.3,
+    "2026": 2.3
+   }
+  },
+  {
+   "namn": "Bara när S&P 500 > EMA 200 · max 2 samtidigt",
+   "trades_per_ar": 13.0,
+   "E": 0.158,
+   "procent_per_ar": 4.1,
+   "bast": 19.0,
+   "samst": -12.0,
+   "per_ar": {
+    "2016": -3.0,
+    "2017": 19.0,
+    "2018": 15.2,
+    "2019": 4.3,
+    "2020": -0.0,
+    "2021": 5.1,
+    "2022": -12.0,
+    "2023": -0.9,
+    "2024": 6.8,
+    "2025": 7.7,
+    "2026": 2.5
+   }
+  },
+  {
+   "namn": "Bara när S&P 500 > EMA 200 · max 4 samtidigt",
+   "trades_per_ar": 22.0,
+   "E": 0.116,
+   "procent_per_ar": 5.1,
+   "bast": 18.9,
+   "samst": -12.0,
+   "per_ar": {
+    "2016": -4.4,
+    "2017": 18.9,
+    "2018": 18.6,
+    "2019": 12.2,
+    "2020": -9.3,
+    "2021": 3.0,
+    "2022": -12.0,
+    "2023": 0.7,
+    "2024": 9.3,
+    "2025": 16.3,
+    "2026": 2.3
+   }
+  },
+  {
+   "namn": "Bara när OMXS30 > EMA 200 · max 2 samtidigt",
+   "trades_per_ar": 11.4,
+   "E": 0.155,
+   "procent_per_ar": 3.5,
+   "bast": 18.4,
+   "samst": -3.9,
+   "per_ar": {
+    "2016": -3.0,
+    "2017": 18.4,
+    "2018": 4.9,
+    "2019": 8.1,
+    "2020": -0.0,
+    "2021": 5.1,
+    "2022": -3.9,
+    "2023": -2.9,
+    "2024": 6.8,
+    "2025": 2.4,
+    "2026": 2.5
+   }
+  },
+  {
+   "namn": "Bara när OMXS30 > EMA 200 · max 4 samtidigt",
+   "trades_per_ar": 19.8,
+   "E": 0.075,
+   "procent_per_ar": 3.0,
+   "bast": 20.7,
+   "samst": -9.3,
+   "per_ar": {
+    "2016": -4.4,
+    "2017": 20.7,
+    "2018": -3.5,
+    "2019": 13.2,
+    "2020": -9.3,
+    "2021": 3.0,
+    "2022": -6.2,
+    "2023": -1.8,
+    "2024": 9.3,
+    "2025": 8.9,
+    "2026": 2.3
+   }
+  },
+  {
+   "namn": "Bara när båda > EMA 200 · max 2 samtidigt",
+   "trades_per_ar": 11.1,
+   "E": 0.143,
+   "procent_per_ar": 3.2,
+   "bast": 18.4,
+   "samst": -7.7,
+   "per_ar": {
+    "2016": -3.0,
+    "2017": 18.4,
+    "2018": 4.9,
+    "2019": 8.1,
+    "2020": -0.0,
+    "2021": 5.1,
+    "2022": -7.7,
+    "2023": -3.0,
+    "2024": 6.8,
+    "2025": 2.4,
+    "2026": 2.5
+   }
+  },
+  {
+   "namn": "Bara när båda > EMA 200 · max 4 samtidigt",
+   "trades_per_ar": 19.3,
+   "E": 0.085,
+   "procent_per_ar": 3.3,
+   "bast": 20.7,
+   "samst": -9.3,
+   "per_ar": {
+    "2016": -4.4,
+    "2017": 20.7,
+    "2018": -3.5,
+    "2019": 13.2,
+    "2020": -9.3,
+    "2021": 3.0,
+    "2022": -7.7,
+    "2023": 0.9,
+    "2024": 9.3,
+    "2025": 11.1,
+    "2026": 2.3
+   }
+  },
+  {
+   "namn": "Bara när S&P 500 UNDER EMA 200 (kontroll) · max 2 samtidigt",
+   "trades_per_ar": 4.9,
+   "E": 0.17,
+   "procent_per_ar": 1.6,
+   "bast": 11.7,
+   "samst": -4.9,
+   "per_ar": {
+    "2018": -2.6,
+    "2019": 6.9,
+    "2020": 11.7,
+    "2022": -4.9,
+    "2023": 6.8,
+    "2025": 0.2
+   }
+  },
+  {
+   "namn": "Bara när S&P 500 UNDER EMA 200 (kontroll) · max 4 samtidigt",
+   "trades_per_ar": 5.8,
+   "E": 0.148,
+   "procent_per_ar": 1.7,
+   "bast": 11.7,
+   "samst": -5.1,
+   "per_ar": {
+    "2018": -4.8,
+    "2019": 6.9,
+    "2020": 11.7,
+    "2022": -1.3,
+    "2023": 11.3,
+    "2025": -5.1
+   }
+  }
+ ]
+}

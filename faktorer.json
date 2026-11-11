@@ -1,0 +1,1431 @@
+{
+ "period": "2005-11-30 – 2026-11-05",
+ "test_fran": "2018-01-01",
+ "antal": 38476,
+ "antal_slump": 22722,
+ "slump_E_tran": 0.03,
+ "slump_E_test": 0.015,
+ "faktorer": [
+  {
+   "faktor": "Index utveckling 20 dagar %",
+   "grupper": [
+    {
+     "grupp": "lägst (–-2.8)",
+     "n": 1765,
+     "E_tran": 0.107,
+     "n_test": 2411,
+     "E_test": 0.198,
+     "traff": 47.8
+    },
+    {
+     "grupp": "låg (-2.8–-0.3)",
+     "n": 1765,
+     "E_tran": 0.21,
+     "n_test": 2081,
+     "E_test": 0.027,
+     "traff": 52.9
+    },
+    {
+     "grupp": "mitten (-0.3–1.7)",
+     "n": 1761,
+     "E_tran": -0.038,
+     "n_test": 2065,
+     "E_test": -0.071,
+     "traff": 42.6
+    },
+    {
+     "grupp": "hög (1.7–3.9)",
+     "n": 1765,
+     "E_tran": -0.082,
+     "n_test": 1997,
+     "E_test": -0.116,
+     "traff": 41.4
+    },
+    {
+     "grupp": "högst (3.9–)",
+     "n": 1763,
+     "E_tran": 0.161,
+     "n_test": 2390,
+     "E_test": 0.003,
+     "traff": 49.5
+    }
+   ],
+   "spann_tran": 0.292,
+   "spann_test": 0.143,
+   "haller": true,
+   "bast": "låg (-2.8–-0.3)",
+   "samst": "hög (1.7–3.9)"
+  },
+  {
+   "faktor": "RSI",
+   "grupper": [
+    {
+     "grupp": "lägst (–39.4)",
+     "n": 2352,
+     "E_tran": 0.013,
+     "n_test": 2563,
+     "E_test": 0.083,
+     "traff": 45.1
+    },
+    {
+     "grupp": "låg (39.4–47.4)",
+     "n": 2352,
+     "E_tran": 0.023,
+     "n_test": 2210,
+     "E_test": 0.0,
+     "traff": 45.9
+    },
+    {
+     "grupp": "mitten (47.4–54.8)",
+     "n": 2351,
+     "E_tran": 0.022,
+     "n_test": 2034,
+     "E_test": 0.056,
+     "traff": 45.2
+    },
+    {
+     "grupp": "hög (54.8–63.6)",
+     "n": 2352,
+     "E_tran": 0.081,
+     "n_test": 2073,
+     "E_test": 0.013,
+     "traff": 46.8
+    },
+    {
+     "grupp": "högst (63.6–)",
+     "n": 2352,
+     "E_tran": 0.006,
+     "n_test": 2067,
+     "E_test": -0.092,
+     "traff": 44.1
+    }
+   ],
+   "spann_tran": 0.075,
+   "spann_test": 0.105,
+   "haller": true,
+   "bast": "hög (54.8–63.6)",
+   "samst": "högst (63.6–)"
+  },
+  {
+   "faktor": "Kurs mot 20-dagars %",
+   "grupper": [
+    {
+     "grupp": "lägst (–-4.0)",
+     "n": 2344,
+     "E_tran": 0.017,
+     "n_test": 2667,
+     "E_test": 0.052,
+     "traff": 45.3
+    },
+    {
+     "grupp": "låg (-4.0–-1.3)",
+     "n": 2343,
+     "E_tran": 0.031,
+     "n_test": 2074,
+     "E_test": 0.036,
+     "traff": 46.2
+    },
+    {
+     "grupp": "mitten (-1.3–1.1)",
+     "n": 2343,
+     "E_tran": 0.009,
+     "n_test": 1950,
+     "E_test": 0.025,
+     "traff": 44.8
+    },
+    {
+     "grupp": "hög (1.1–4.1)",
+     "n": 2343,
+     "E_tran": 0.065,
+     "n_test": 1941,
+     "E_test": 0.021,
+     "traff": 46.6
+    },
+    {
+     "grupp": "högst (4.1–)",
+     "n": 2343,
+     "E_tran": 0.006,
+     "n_test": 2312,
+     "E_test": -0.061,
+     "traff": 43.7
+    }
+   ],
+   "spann_tran": 0.059,
+   "spann_test": 0.082,
+   "haller": true,
+   "bast": "hög (1.1–4.1)",
+   "samst": "högst (4.1–)"
+  },
+  {
+   "faktor": "Index-läge",
+   "grupper": [
+    {
+     "grupp": "ned",
+     "n": 1461,
+     "E_tran": 0.059,
+     "n_test": 2445,
+     "E_test": 0.139,
+     "traff": 47.0
+    },
+    {
+     "grupp": "sidled",
+     "n": 1512,
+     "E_tran": 0.092,
+     "n_test": 2231,
+     "E_test": 0.023,
+     "traff": 48.0
+    },
+    {
+     "grupp": "upp",
+     "n": 5242,
+     "E_tran": 0.034,
+     "n_test": 6272,
+     "E_test": -0.036,
+     "traff": 45.3
+    }
+   ],
+   "spann_tran": 0.058,
+   "spann_test": 0.059,
+   "haller": true,
+   "bast": "sidled",
+   "samst": "upp"
+  },
+  {
+   "faktor": "Utveckling 5 dagar %",
+   "grupper": [
+    {
+     "grupp": "lägst (–-3.7)",
+     "n": 2355,
+     "E_tran": 0.013,
+     "n_test": 2507,
+     "E_test": 0.045,
+     "traff": 45.2
+    },
+    {
+     "grupp": "låg (-3.7–-1.1)",
+     "n": 2355,
+     "E_tran": 0.035,
+     "n_test": 2143,
+     "E_test": 0.062,
+     "traff": 45.3
+    },
+    {
+     "grupp": "mitten (-1.1–0.9)",
+     "n": 2354,
+     "E_tran": 0.009,
+     "n_test": 1941,
+     "E_test": -0.027,
+     "traff": 45.5
+    },
+    {
+     "grupp": "hög (0.9–3.5)",
+     "n": 2355,
+     "E_tran": 0.087,
+     "n_test": 2125,
+     "E_test": 0.023,
+     "traff": 46.9
+    },
+    {
+     "grupp": "högst (3.5–)",
+     "n": 2355,
+     "E_tran": 0.006,
+     "n_test": 2232,
+     "E_test": -0.034,
+     "traff": 44.5
+    }
+   ],
+   "spann_tran": 0.081,
+   "spann_test": 0.057,
+   "haller": true,
+   "bast": "hög (0.9–3.5)",
+   "samst": "högst (3.5–)"
+  },
+  {
+   "faktor": "Under årshögsta %",
+   "grupper": [
+    {
+     "grupp": "lägst (–3.7)",
+     "n": 2252,
+     "E_tran": -0.012,
+     "n_test": 1813,
+     "E_test": -0.06,
+     "traff": 43.1
+    },
+    {
+     "grupp": "låg (3.7–7.9)",
+     "n": 2251,
+     "E_tran": 0.033,
+     "n_test": 1705,
+     "E_test": 0.032,
+     "traff": 44.9
+    },
+    {
+     "grupp": "mitten (7.9–13.7)",
+     "n": 2251,
+     "E_tran": 0.044,
+     "n_test": 2047,
+     "E_test": -0.004,
+     "traff": 47.5
+    },
+    {
+     "grupp": "hög (13.7–24.0)",
+     "n": 2251,
+     "E_tran": -0.007,
+     "n_test": 2606,
+     "E_test": 0.017,
+     "traff": 44.2
+    },
+    {
+     "grupp": "högst (24.0–)",
+     "n": 2252,
+     "E_tran": 0.026,
+     "n_test": 2725,
+     "E_test": 0.066,
+     "traff": 44.8
+    }
+   ],
+   "spann_tran": 0.056,
+   "spann_test": 0.056,
+   "haller": true,
+   "bast": "mitten (7.9–13.7)",
+   "samst": "lägst (–3.7)"
+  },
+  {
+   "faktor": "MACD-histogram",
+   "grupper": [
+    {
+     "grupp": "lägst (–-0.6)",
+     "n": 2355,
+     "E_tran": -0.015,
+     "n_test": 2616,
+     "E_test": 0.027,
+     "traff": 44.0
+    },
+    {
+     "grupp": "låg (-0.6–-0.3)",
+     "n": 2355,
+     "E_tran": 0.05,
+     "n_test": 2028,
+     "E_test": 0.087,
+     "traff": 46.9
+    },
+    {
+     "grupp": "mitten (-0.3–0.1)",
+     "n": 2354,
+     "E_tran": 0.026,
+     "n_test": 1923,
+     "E_test": 0.048,
+     "traff": 45.2
+    },
+    {
+     "grupp": "hög (0.1–0.5)",
+     "n": 2355,
+     "E_tran": 0.069,
+     "n_test": 1922,
+     "E_test": -0.038,
+     "traff": 46.7
+    },
+    {
+     "grupp": "högst (0.5–)",
+     "n": 2355,
+     "E_tran": 0.021,
+     "n_test": 2459,
+     "E_test": -0.042,
+     "traff": 44.5
+    }
+   ],
+   "spann_tran": 0.084,
+   "spann_test": -0.065,
+   "haller": false,
+   "bast": "hög (0.1–0.5)",
+   "samst": "lägst (–-0.6)"
+  },
+  {
+   "faktor": "MACD-histogram stiger",
+   "grupper": [
+    {
+     "grupp": "nej",
+     "n": 5916,
+     "E_tran": 0.034,
+     "n_test": 5522,
+     "E_test": -0.013,
+     "traff": 45.2
+    },
+    {
+     "grupp": "ja",
+     "n": 5858,
+     "E_tran": 0.026,
+     "n_test": 5426,
+     "E_test": 0.044,
+     "traff": 45.8
+    }
+   ],
+   "spann_tran": 0.008,
+   "spann_test": -0.057,
+   "haller": false,
+   "bast": "nej",
+   "samst": "ja"
+  },
+  {
+   "faktor": "MACD över nollan",
+   "grupper": [
+    {
+     "grupp": "nej",
+     "n": 5136,
+     "E_tran": 0.002,
+     "n_test": 5090,
+     "E_test": 0.057,
+     "traff": 44.9
+    },
+    {
+     "grupp": "ja",
+     "n": 6638,
+     "E_tran": 0.052,
+     "n_test": 5858,
+     "E_test": -0.021,
+     "traff": 45.9
+    }
+   ],
+   "spann_tran": 0.05,
+   "spann_test": -0.078,
+   "haller": false,
+   "bast": "ja",
+   "samst": "nej"
+  },
+  {
+   "faktor": "Kurs mot 50-dagars %",
+   "grupper": [
+    {
+     "grupp": "lägst (–-5.1)",
+     "n": 2316,
+     "E_tran": -0.001,
+     "n_test": 2583,
+     "E_test": 0.078,
+     "traff": 44.4
+    },
+    {
+     "grupp": "låg (-5.1–-0.8)",
+     "n": 2315,
+     "E_tran": -0.005,
+     "n_test": 2145,
+     "E_test": 0.017,
+     "traff": 45.1
+    },
+    {
+     "grupp": "mitten (-0.8–2.7)",
+     "n": 2316,
+     "E_tran": 0.094,
+     "n_test": 1950,
+     "E_test": 0.029,
+     "traff": 48.2
+    },
+    {
+     "grupp": "hög (2.7–7.0)",
+     "n": 2315,
+     "E_tran": 0.054,
+     "n_test": 2022,
+     "E_test": -0.005,
+     "traff": 45.9
+    },
+    {
+     "grupp": "högst (7.0–)",
+     "n": 2316,
+     "E_tran": 0.018,
+     "n_test": 2231,
+     "E_test": -0.057,
+     "traff": 43.2
+    }
+   ],
+   "spann_tran": 0.099,
+   "spann_test": 0.012,
+   "haller": false,
+   "bast": "mitten (-0.8–2.7)",
+   "samst": "låg (-5.1–-0.8)"
+  },
+  {
+   "faktor": "Kurs mot 200-dagars %",
+   "grupper": [
+    {
+     "grupp": "lägst (–-7.0)",
+     "n": 2177,
+     "E_tran": -0.026,
+     "n_test": 2627,
+     "E_test": 0.073,
+     "traff": 42.9
+    },
+    {
+     "grupp": "låg (-7.0–2.4)",
+     "n": 2176,
+     "E_tran": 0.045,
+     "n_test": 2495,
+     "E_test": 0.015,
+     "traff": 46.7
+    },
+    {
+     "grupp": "mitten (2.4–9.2)",
+     "n": 2176,
+     "E_tran": 0.077,
+     "n_test": 1944,
+     "E_test": -0.025,
+     "traff": 47.6
+    },
+    {
+     "grupp": "hög (9.2–17.1)",
+     "n": 2176,
+     "E_tran": 0.053,
+     "n_test": 1841,
+     "E_test": 0.057,
+     "traff": 46.2
+    },
+    {
+     "grupp": "högst (17.1–)",
+     "n": 2177,
+     "E_tran": -0.018,
+     "n_test": 1944,
+     "E_test": -0.058,
+     "traff": 42.1
+    }
+   ],
+   "spann_tran": 0.103,
+   "spann_test": -0.098,
+   "haller": false,
+   "bast": "mitten (2.4–9.2)",
+   "samst": "lägst (–-7.0)"
+  },
+  {
+   "faktor": "50-dagars över 200-dagars",
+   "grupper": [
+    {
+     "grupp": "nej",
+     "n": 4357,
+     "E_tran": 0.028,
+     "n_test": 4284,
+     "E_test": 0.022,
+     "traff": 45.5
+    },
+    {
+     "grupp": "ja",
+     "n": 7417,
+     "E_tran": 0.031,
+     "n_test": 6664,
+     "E_test": 0.011,
+     "traff": 45.4
+    }
+   ],
+   "spann_tran": 0.003,
+   "spann_test": -0.011,
+   "haller": false,
+   "bast": "ja",
+   "samst": "nej"
+  },
+  {
+   "faktor": "Fas 2 (kurs>20>50)",
+   "grupper": [
+    {
+     "grupp": "nej",
+     "n": 7659,
+     "E_tran": 0.012,
+     "n_test": 7379,
+     "E_test": 0.038,
+     "traff": 45.4
+    },
+    {
+     "grupp": "ja",
+     "n": 4115,
+     "E_tran": 0.064,
+     "n_test": 3569,
+     "E_test": -0.032,
+     "traff": 45.5
+    }
+   ],
+   "spann_tran": 0.052,
+   "spann_test": -0.07,
+   "haller": false,
+   "bast": "ja",
+   "samst": "nej"
+  },
+  {
+   "faktor": "Utveckling 20 dagar %",
+   "grupper": [
+    {
+     "grupp": "lägst (–-6.0)",
+     "n": 2341,
+     "E_tran": -0.008,
+     "n_test": 2584,
+     "E_test": 0.1,
+     "traff": 44.8
+    },
+    {
+     "grupp": "låg (-6.0–-1.5)",
+     "n": 2341,
+     "E_tran": 0.063,
+     "n_test": 2054,
+     "E_test": 0.011,
+     "traff": 47.2
+    },
+    {
+     "grupp": "mitten (-1.5–2.6)",
+     "n": 2341,
+     "E_tran": 0.025,
+     "n_test": 1991,
+     "E_test": 0.046,
+     "traff": 45.5
+    },
+    {
+     "grupp": "hög (2.6–7.4)",
+     "n": 2341,
+     "E_tran": 0.055,
+     "n_test": 1980,
+     "E_test": -0.059,
+     "traff": 45.9
+    },
+    {
+     "grupp": "högst (7.4–)",
+     "n": 2341,
+     "E_tran": -0.005,
+     "n_test": 2335,
+     "E_test": -0.042,
+     "traff": 43.1
+    }
+   ],
+   "spann_tran": 0.071,
+   "spann_test": -0.089,
+   "haller": false,
+   "bast": "låg (-6.0–-1.5)",
+   "samst": "lägst (–-6.0)"
+  },
+  {
+   "faktor": "Utveckling 60 dagar %",
+   "grupper": [
+    {
+     "grupp": "lägst (–-7.7)",
+     "n": 2304,
+     "E_tran": -0.013,
+     "n_test": 2625,
+     "E_test": 0.109,
+     "traff": 44.3
+    },
+    {
+     "grupp": "låg (-7.7–0.5)",
+     "n": 2303,
+     "E_tran": -0.02,
+     "n_test": 2401,
+     "E_test": -0.002,
+     "traff": 44.2
+    },
+    {
+     "grupp": "mitten (0.5–6.9)",
+     "n": 2304,
+     "E_tran": 0.086,
+     "n_test": 1879,
+     "E_test": -0.058,
+     "traff": 47.5
+    },
+    {
+     "grupp": "hög (6.9–15.0)",
+     "n": 2303,
+     "E_tran": 0.03,
+     "n_test": 1870,
+     "E_test": -0.017,
+     "traff": 45.2
+    },
+    {
+     "grupp": "högst (15.0–)",
+     "n": 2304,
+     "E_tran": 0.059,
+     "n_test": 2153,
+     "E_test": 0.01,
+     "traff": 45.1
+    }
+   ],
+   "spann_tran": 0.106,
+   "spann_test": -0.056,
+   "haller": false,
+   "bast": "mitten (0.5–6.9)",
+   "samst": "låg (-7.7–0.5)"
+  },
+  {
+   "faktor": "Volym mot snitt",
+   "grupper": [
+    {
+     "grupp": "lägst (–0.5)",
+     "n": 2314,
+     "E_tran": 0.046,
+     "n_test": 1329,
+     "E_test": 0.131,
+     "traff": 44.4
+    },
+    {
+     "grupp": "låg (0.5–0.8)",
+     "n": 2313,
+     "E_tran": 0.005,
+     "n_test": 2605,
+     "E_test": 0.03,
+     "traff": 43.9
+    },
+    {
+     "grupp": "mitten (0.8–1.0)",
+     "n": 2313,
+     "E_tran": 0.031,
+     "n_test": 2580,
+     "E_test": 0.014,
+     "traff": 46.0
+    },
+    {
+     "grupp": "hög (1.0–1.4)",
+     "n": 2313,
+     "E_tran": 0.021,
+     "n_test": 2309,
+     "E_test": -0.023,
+     "traff": 46.0
+    },
+    {
+     "grupp": "högst (1.4–)",
+     "n": 2313,
+     "E_tran": 0.058,
+     "n_test": 2107,
+     "E_test": -0.036,
+     "traff": 46.6
+    }
+   ],
+   "spann_tran": 0.053,
+   "spann_test": -0.066,
+   "haller": false,
+   "bast": "högst (1.4–)",
+   "samst": "låg (0.5–0.8)"
+  },
+  {
+   "faktor": "Rörlighet (ATR %)",
+   "grupper": [
+    {
+     "grupp": "lägst (–1.8)",
+     "n": 2355,
+     "E_tran": -0.0,
+     "n_test": 1485,
+     "E_test": -0.031,
+     "traff": 44.7
+    },
+    {
+     "grupp": "låg (1.8–2.3)",
+     "n": 2355,
+     "E_tran": 0.097,
+     "n_test": 1956,
+     "E_test": 0.011,
+     "traff": 47.0
+    },
+    {
+     "grupp": "mitten (2.3–2.7)",
+     "n": 2354,
+     "E_tran": 0.015,
+     "n_test": 2387,
+     "E_test": -0.031,
+     "traff": 44.8
+    },
+    {
+     "grupp": "hög (2.7–3.5)",
+     "n": 2355,
+     "E_tran": 0.031,
+     "n_test": 2623,
+     "E_test": 0.033,
+     "traff": 45.2
+    },
+    {
+     "grupp": "högst (3.5–)",
+     "n": 2355,
+     "E_tran": 0.007,
+     "n_test": 2497,
+     "E_test": 0.071,
+     "traff": 45.7
+    }
+   ],
+   "spann_tran": 0.097,
+   "spann_test": 0.042,
+   "haller": false,
+   "bast": "låg (1.8–2.3)",
+   "samst": "lägst (–1.8)"
+  },
+  {
+   "faktor": "Grön candle",
+   "grupper": [
+    {
+     "grupp": "nej",
+     "n": 6196,
+     "E_tran": 0.053,
+     "n_test": 5511,
+     "E_test": 0.005,
+     "traff": 46.1
+    },
+    {
+     "grupp": "ja",
+     "n": 5578,
+     "E_tran": 0.005,
+     "n_test": 5437,
+     "E_test": 0.026,
+     "traff": 44.8
+    }
+   ],
+   "spann_tran": 0.048,
+   "spann_test": -0.021,
+   "haller": false,
+   "bast": "nej",
+   "samst": "ja"
+  },
+  {
+   "faktor": "Stängning i dagens spann (0=botten,1=topp)",
+   "grupper": [
+    {
+     "grupp": "lägst (–0.2)",
+     "n": 2334,
+     "E_tran": 0.069,
+     "n_test": 2133,
+     "E_test": -0.022,
+     "traff": 46.7
+    },
+    {
+     "grupp": "låg (0.2–0.4)",
+     "n": 2334,
+     "E_tran": 0.028,
+     "n_test": 2338,
+     "E_test": -0.001,
+     "traff": 44.8
+    },
+    {
+     "grupp": "mitten (0.4–0.7)",
+     "n": 2334,
+     "E_tran": 0.016,
+     "n_test": 2310,
+     "E_test": 0.052,
+     "traff": 45.1
+    },
+    {
+     "grupp": "hög (0.7–0.9)",
+     "n": 2334,
+     "E_tran": -0.0,
+     "n_test": 2311,
+     "E_test": 0.016,
+     "traff": 44.9
+    },
+    {
+     "grupp": "högst (0.9–)",
+     "n": 2334,
+     "E_tran": 0.031,
+     "n_test": 1852,
+     "E_test": 0.034,
+     "traff": 45.8
+    }
+   ],
+   "spann_tran": 0.069,
+   "spann_test": -0.038,
+   "haller": false,
+   "bast": "lägst (–0.2)",
+   "samst": "hög (0.7–0.9)"
+  },
+  {
+   "faktor": "Index mot 200-dagars %",
+   "grupper": [
+    {
+     "grupp": "lägst (–-2.0)",
+     "n": 1615,
+     "E_tran": 0.059,
+     "n_test": 2462,
+     "E_test": 0.177,
+     "traff": 46.6
+    },
+    {
+     "grupp": "låg (-2.0–3.2)",
+     "n": 1615,
+     "E_tran": 0.187,
+     "n_test": 2687,
+     "E_test": -0.009,
+     "traff": 52.1
+    },
+    {
+     "grupp": "mitten (3.2–5.7)",
+     "n": 1616,
+     "E_tran": 0.017,
+     "n_test": 1626,
+     "E_test": 0.02,
+     "traff": 44.5
+    },
+    {
+     "grupp": "hög (5.7–8.3)",
+     "n": 1613,
+     "E_tran": 0.016,
+     "n_test": 1547,
+     "E_test": -0.138,
+     "traff": 44.9
+    },
+    {
+     "grupp": "högst (8.3–)",
+     "n": 1615,
+     "E_tran": -0.046,
+     "n_test": 2529,
+     "E_test": -0.023,
+     "traff": 42.0
+    }
+   ],
+   "spann_tran": 0.233,
+   "spann_test": 0.014,
+   "haller": false,
+   "bast": "låg (-2.0–3.2)",
+   "samst": "högst (8.3–)"
+  },
+  {
+   "faktor": "Aktie starkare än index 60 dagar %",
+   "grupper": [
+    {
+     "grupp": "lägst (–-5.9)",
+     "n": 1733,
+     "E_tran": 0.129,
+     "n_test": 3295,
+     "E_test": 0.019,
+     "traff": 48.4
+    },
+    {
+     "grupp": "låg (-5.9–-0.1)",
+     "n": 1733,
+     "E_tran": 0.103,
+     "n_test": 2038,
+     "E_test": 0.042,
+     "traff": 48.2
+    },
+    {
+     "grupp": "mitten (-0.1–4.8)",
+     "n": 1732,
+     "E_tran": 0.092,
+     "n_test": 1737,
+     "E_test": -0.008,
+     "traff": 48.4
+    },
+    {
+     "grupp": "hög (4.8–11.1)",
+     "n": 1733,
+     "E_tran": 0.022,
+     "n_test": 1659,
+     "E_test": 0.03,
+     "traff": 45.5
+    },
+    {
+     "grupp": "högst (11.1–)",
+     "n": 1733,
+     "E_tran": 0.035,
+     "n_test": 2199,
+     "E_test": -0.011,
+     "traff": 44.5
+    }
+   ],
+   "spann_tran": 0.107,
+   "spann_test": -0.011,
+   "haller": false,
+   "bast": "lägst (–-5.9)",
+   "samst": "hög (4.8–11.1)"
+  },
+  {
+   "faktor": "Aktiens trend",
+   "grupper": [
+    {
+     "grupp": "ned",
+     "n": 2825,
+     "E_tran": -0.015,
+     "n_test": 3390,
+     "E_test": 0.047,
+     "traff": 43.3
+    },
+    {
+     "grupp": "sidled",
+     "n": 2012,
+     "E_tran": 0.033,
+     "n_test": 2293,
+     "E_test": 0.0,
+     "traff": 46.1
+    },
+    {
+     "grupp": "upp",
+     "n": 6045,
+     "E_tran": 0.043,
+     "n_test": 5168,
+     "E_test": 0.003,
+     "traff": 45.6
+    }
+   ],
+   "spann_tran": 0.058,
+   "spann_test": -0.044,
+   "haller": false,
+   "bast": "upp",
+   "samst": "ned"
+  },
+  {
+   "faktor": "Sektor",
+   "grupper": [
+    {
+     "grupp": "Banker",
+     "n": 645,
+     "E_tran": -0.05,
+     "n_test": 478,
+     "E_test": 0.069,
+     "traff": 43.4
+    },
+    {
+     "grupp": "Bygg",
+     "n": 717,
+     "E_tran": -0.014,
+     "n_test": 729,
+     "E_test": 0.042,
+     "traff": 43.0
+    },
+    {
+     "grupp": "Fastigheter",
+     "n": 1082,
+     "E_tran": 0.077,
+     "n_test": 931,
+     "E_test": 0.016,
+     "traff": 47.4
+    },
+    {
+     "grupp": "Försvar",
+     "n": 168,
+     "E_tran": 0.102,
+     "n_test": 129,
+     "E_test": -0.078,
+     "traff": 46.4
+    },
+    {
+     "grupp": "Hälsa",
+     "n": 1026,
+     "E_tran": -0.007,
+     "n_test": 1083,
+     "E_test": 0.053,
+     "traff": 44.5
+    },
+    {
+     "grupp": "Industri",
+     "n": 3834,
+     "E_tran": 0.066,
+     "n_test": 3312,
+     "E_test": 0.015,
+     "traff": 46.7
+    },
+    {
+     "grupp": "Investmentbolag & finans",
+     "n": 1367,
+     "E_tran": 0.015,
+     "n_test": 1154,
+     "E_test": 0.077,
+     "traff": 44.1
+    },
+    {
+     "grupp": "Konsument",
+     "n": 932,
+     "E_tran": 0.056,
+     "n_test": 1302,
+     "E_test": -0.023,
+     "traff": 47.5
+    },
+    {
+     "grupp": "Råvaror & skog",
+     "n": 995,
+     "E_tran": -0.008,
+     "n_test": 858,
+     "E_test": -0.056,
+     "traff": 43.0
+    },
+    {
+     "grupp": "Teknik & telekom",
+     "n": 1008,
+     "E_tran": -0.012,
+     "n_test": 972,
+     "E_test": -0.019,
+     "traff": 44.9
+    }
+   ],
+   "spann_tran": 0.152,
+   "spann_test": -0.147,
+   "haller": false,
+   "bast": "Försvar",
+   "samst": "Banker"
+  },
+  {
+   "faktor": "R/R mot motstånd",
+   "grupper": [
+    {
+     "grupp": "lägst (–0.2)",
+     "n": 2200,
+     "E_tran": 0.078,
+     "n_test": 2073,
+     "E_test": 0.024,
+     "traff": 47.7
+    },
+    {
+     "grupp": "låg (0.2–0.3)",
+     "n": 2051,
+     "E_tran": 0.024,
+     "n_test": 1929,
+     "E_test": -0.022,
+     "traff": 45.5
+    },
+    {
+     "grupp": "mitten (0.3–0.5)",
+     "n": 1984,
+     "E_tran": 0.013,
+     "n_test": 1772,
+     "E_test": 0.023,
+     "traff": 44.8
+    },
+    {
+     "grupp": "hög (0.5–0.9)",
+     "n": 2036,
+     "E_tran": 0.056,
+     "n_test": 1913,
+     "E_test": 0.055,
+     "traff": 46.6
+    },
+    {
+     "grupp": "högst (0.9–)",
+     "n": 2046,
+     "E_tran": 0.019,
+     "n_test": 2135,
+     "E_test": 0.03,
+     "traff": 44.1
+    }
+   ],
+   "spann_tran": 0.065,
+   "spann_test": 0.001,
+   "haller": false,
+   "bast": "lägst (–0.2)",
+   "samst": "mitten (0.3–0.5)"
+  }
+ ],
+ "facit": [
+  {
+   "faktor": "Index utveckling 20 dagar %",
+   "vinnare": 0.07,
+   "forlorare": 0.54,
+   "skillnad_i_sd": -0.1
+  },
+  {
+   "faktor": "Index mot 200-dagars %",
+   "vinnare": 2.95,
+   "forlorare": 3.55,
+   "skillnad_i_sd": -0.08
+  },
+  {
+   "faktor": "Rörlighet (ATR %)",
+   "vinnare": 2.68,
+   "forlorare": 2.74,
+   "skillnad_i_sd": -0.05
+  },
+  {
+   "faktor": "Kurs mot 200-dagars %",
+   "vinnare": 4.47,
+   "forlorare": 4.94,
+   "skillnad_i_sd": -0.03
+  },
+  {
+   "faktor": "Under årshögsta %",
+   "vinnare": 15.67,
+   "forlorare": 15.3,
+   "skillnad_i_sd": 0.03
+  },
+  {
+   "faktor": "Aktie starkare än index 60 dagar %",
+   "vinnare": 1.95,
+   "forlorare": 2.36,
+   "skillnad_i_sd": -0.03
+  },
+  {
+   "faktor": "MACD-histogram stiger",
+   "vinnare": 0.5,
+   "forlorare": 0.49,
+   "skillnad_i_sd": 0.02
+  },
+  {
+   "faktor": "MACD över nollan",
+   "vinnare": 0.57,
+   "forlorare": 0.56,
+   "skillnad_i_sd": 0.02
+  },
+  {
+   "faktor": "Utveckling 5 dagar %",
+   "vinnare": -0.17,
+   "forlorare": -0.05,
+   "skillnad_i_sd": -0.02
+  },
+  {
+   "faktor": "Volym mot snitt",
+   "vinnare": 1.07,
+   "forlorare": 1.1,
+   "skillnad_i_sd": -0.02
+  },
+  {
+   "faktor": "RSI",
+   "vinnare": 51.09,
+   "forlorare": 51.29,
+   "skillnad_i_sd": -0.01
+  },
+  {
+   "faktor": "Kurs mot 20-dagars %",
+   "vinnare": -0.04,
+   "forlorare": -0.0,
+   "skillnad_i_sd": -0.01
+  },
+  {
+   "faktor": "Kurs mot 50-dagars %",
+   "vinnare": 0.86,
+   "forlorare": 0.98,
+   "skillnad_i_sd": -0.01
+  },
+  {
+   "faktor": "50-dagars över 200-dagars",
+   "vinnare": 0.62,
+   "forlorare": 0.62,
+   "skillnad_i_sd": -0.01
+  },
+  {
+   "faktor": "Fas 2 (kurs>20>50)",
+   "vinnare": 0.35,
+   "forlorare": 0.35,
+   "skillnad_i_sd": 0.01
+  },
+  {
+   "faktor": "Utveckling 20 dagar %",
+   "vinnare": 0.78,
+   "forlorare": 0.88,
+   "skillnad_i_sd": -0.01
+  },
+  {
+   "faktor": "Utveckling 60 dagar %",
+   "vinnare": 3.91,
+   "forlorare": 4.01,
+   "skillnad_i_sd": -0.01
+  },
+  {
+   "faktor": "Grön candle",
+   "vinnare": 0.48,
+   "forlorare": 0.49,
+   "skillnad_i_sd": -0.01
+  },
+  {
+   "faktor": "MACD-histogram",
+   "vinnare": -0.1,
+   "forlorare": -0.1,
+   "skillnad_i_sd": -0.0
+  },
+  {
+   "faktor": "Stängning i dagens spann (0=botten,1=topp)",
+   "vinnare": 0.52,
+   "forlorare": 0.52,
+   "skillnad_i_sd": 0.0
+  },
+  {
+   "faktor": "R/R mot motstånd",
+   "vinnare": 0.7,
+   "forlorare": 0.7,
+   "skillnad_i_sd": 0.0
+  }
+ ],
+ "kombinationer": [
+  {
+   "villkor": [
+    "Index utveckling 20 dagar % under -0.3",
+    "Index-läge = sidled",
+    "Utveckling 5 dagar % över 0.9"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 135,
+   "E_tran": 0.3,
+   "n_test": 225,
+   "E_test": 0.096,
+   "per_ar_test": 25.4,
+   "traff_test": 50.7,
+   "handelbar_test": {
+    "trades_per_ar": 4.1,
+    "E": -0.014,
+    "R_per_ar": -0.1,
+    "procent_per_ar_2pct": -0.1
+   }
+  },
+  {
+   "villkor": [
+    "RSI över 54.8",
+    "Index-läge = sidled",
+    "Under årshögsta % mellan 3.7 och 24.0"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 119,
+   "E_tran": 0.294,
+   "n_test": 142,
+   "E_test": 0.079,
+   "per_ar_test": 16.1,
+   "traff_test": 43.7,
+   "handelbar_test": {
+    "trades_per_ar": 4.9,
+    "E": -0.186,
+    "R_per_ar": -0.9,
+    "procent_per_ar_2pct": -1.8
+   }
+  },
+  {
+   "villkor": [
+    "Index-läge = sidled",
+    "Utveckling 5 dagar % över 0.9",
+    "Under årshögsta % mellan 3.7 och 24.0"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 234,
+   "E_tran": 0.282,
+   "n_test": 298,
+   "E_test": 0.069,
+   "per_ar_test": 33.7,
+   "traff_test": 48.3,
+   "handelbar_test": {
+    "trades_per_ar": 7.2,
+    "E": -0.179,
+    "R_per_ar": -1.3,
+    "procent_per_ar_2pct": -2.6
+   }
+  },
+  {
+   "villkor": [
+    "Index utveckling 20 dagar % under -0.3",
+    "Kurs mot 20-dagars % över 1.1",
+    "Under årshögsta % mellan 3.7 och 24.0"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 191,
+   "E_tran": 0.274,
+   "n_test": 246,
+   "E_test": 0.015,
+   "per_ar_test": 27.8,
+   "traff_test": 44.7,
+   "handelbar_test": {
+    "trades_per_ar": 9.5,
+    "E": 0.057,
+    "R_per_ar": 0.5,
+    "procent_per_ar_2pct": 1.1
+   }
+  },
+  {
+   "villkor": [
+    "Index utveckling 20 dagar % under -0.3",
+    "RSI över 54.8",
+    "Under årshögsta % mellan 3.7 och 24.0"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 127,
+   "E_tran": 0.257,
+   "n_test": 181,
+   "E_test": 0.041,
+   "per_ar_test": 20.5,
+   "traff_test": 46.4,
+   "handelbar_test": {
+    "trades_per_ar": 8.1,
+    "E": -0.05,
+    "R_per_ar": -0.4,
+    "procent_per_ar_2pct": -0.8
+   }
+  },
+  {
+   "villkor": [
+    "Index utveckling 20 dagar % under -0.3",
+    "Utveckling 5 dagar % över 0.9",
+    "Under årshögsta % mellan 3.7 och 24.0"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 512,
+   "E_tran": 0.252,
+   "n_test": 595,
+   "E_test": 0.086,
+   "per_ar_test": 67.3,
+   "traff_test": 46.2,
+   "handelbar_test": {
+    "trades_per_ar": 14.5,
+    "E": 0.091,
+    "R_per_ar": 1.3,
+    "procent_per_ar_2pct": 2.6
+   }
+  },
+  {
+   "villkor": [
+    "Index utveckling 20 dagar % under -0.3",
+    "Kurs mot 20-dagars % över 1.1"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 342,
+   "E_tran": 0.242,
+   "n_test": 415,
+   "E_test": 0.038,
+   "per_ar_test": 46.9,
+   "traff_test": 44.1
+  },
+  {
+   "villkor": [
+    "Index utveckling 20 dagar % under -0.3",
+    "RSI över 54.8",
+    "Kurs mot 20-dagars % över 1.1"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 259,
+   "E_tran": 0.236,
+   "n_test": 317,
+   "E_test": 0.047,
+   "per_ar_test": 35.8,
+   "traff_test": 45.1
+  },
+  {
+   "villkor": [
+    "Kurs mot 20-dagars % över 1.1",
+    "Index-läge = sidled",
+    "Under årshögsta % mellan 3.7 och 24.0"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 141,
+   "E_tran": 0.233,
+   "n_test": 188,
+   "E_test": 0.018,
+   "per_ar_test": 21.3,
+   "traff_test": 42.0
+  },
+  {
+   "villkor": [
+    "Index utveckling 20 dagar % under -0.3",
+    "RSI över 54.8",
+    "Utveckling 5 dagar % över 0.9"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 256,
+   "E_tran": 0.229,
+   "n_test": 313,
+   "E_test": 0.043,
+   "per_ar_test": 35.4,
+   "traff_test": 45.4
+  },
+  {
+   "villkor": [
+    "Index utveckling 20 dagar % under -0.3",
+    "Kurs mot 20-dagars % över 1.1",
+    "Utveckling 5 dagar % över 0.9"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 308,
+   "E_tran": 0.227,
+   "n_test": 372,
+   "E_test": 0.061,
+   "per_ar_test": 42.1,
+   "traff_test": 45.4
+  },
+  {
+   "villkor": [
+    "Index utveckling 20 dagar % under -0.3",
+    "RSI över 54.8"
+   ],
+   "urval": "alla metoders signaler",
+   "n_tran": 268,
+   "E_tran": 0.226,
+   "n_test": 331,
+   "E_test": 0.052,
+   "per_ar_test": 37.4,
+   "traff_test": 45.3
+  }
+ ],
+ "krav_40": "40 % per år med 2 % risk = 20R per år, t.ex. 40 trades à +0,5R eller 80 trades à +0,25R."
+}

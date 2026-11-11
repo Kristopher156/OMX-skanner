@@ -1,0 +1,3916 @@
+{
+ "datum": "2026-11-11",
+ "period": "2016–2026",
+ "antal_bolag": 93,
+ "marknad": {
+  "lage": "upp",
+  "kurs": 3360.010986328125,
+  "over_200": 6.018528455517624,
+  "manad": 2.539083018137478,
+  "andel_upp": 50,
+  "antal": 93,
+  "r2": 23.986666666666668,
+  "beta": 0.849247311827957
+ },
+ "stat": {
+  "dipp": {
+   "alla": {
+    "n": 2200,
+    "per_ar": 220.0,
+    "traff": 43.3,
+    "vinst_R": 1.49,
+    "forlust_R": -1.13,
+    "E": 0.007,
+    "osakerhet": 0.062,
+    "summa_R": 15.7,
+    "dagar": 8.0,
+    "forlust_i_rad": 42
+   },
+   "trana": {
+    "n": 1621,
+    "per_ar": null,
+    "traff": 41.5,
+    "vinst_R": 1.51,
+    "forlust_R": -1.12,
+    "E": -0.028,
+    "osakerhet": 0.07,
+    "summa_R": -46.0,
+    "dagar": 8.0,
+    "forlust_i_rad": 42
+   },
+   "test": {
+    "n": 579,
+    "per_ar": 202.4,
+    "traff": 48.5,
+    "vinst_R": 1.45,
+    "forlust_R": -1.16,
+    "E": 0.107,
+    "osakerhet": 0.13,
+    "summa_R": 61.7,
+    "dagar": 10.0,
+    "forlust_i_rad": 18
+   },
+   "lage": {
+    "upp": {
+     "n": 983,
+     "per_ar": null,
+     "traff": 40.2,
+     "vinst_R": 1.51,
+     "forlust_R": -1.15,
+     "E": -0.082,
+     "osakerhet": 0.098,
+     "summa_R": -80.9,
+     "dagar": 8.0,
+     "forlust_i_rad": 39
+    },
+    "sidled": {
+     "n": 553,
+     "per_ar": null,
+     "traff": 51.4,
+     "vinst_R": 1.5,
+     "forlust_R": -1.11,
+     "E": 0.228,
+     "osakerhet": 0.12,
+     "summa_R": 126.3,
+     "dagar": 9.0,
+     "forlust_i_rad": 11
+    },
+    "ned": {
+     "n": 481,
+     "per_ar": null,
+     "traff": 44.5,
+     "vinst_R": 1.52,
+     "forlust_R": -1.09,
+     "E": 0.07,
+     "osakerhet": 0.124,
+     "summa_R": 33.8,
+     "dagar": 7.0,
+     "forlust_i_rad": 19
+    }
+   },
+   "aktie_trend": {
+    "upp": {
+     "n": 350,
+     "per_ar": null,
+     "traff": 39.7,
+     "vinst_R": 1.38,
+     "forlust_R": -1.09,
+     "E": -0.111,
+     "osakerhet": 0.162,
+     "summa_R": -38.8,
+     "dagar": 10.0,
+     "forlust_i_rad": 23
+    },
+    "sidled": {
+     "n": 753,
+     "per_ar": null,
+     "traff": 46.7,
+     "vinst_R": 1.56,
+     "forlust_R": -1.13,
+     "E": 0.128,
+     "osakerhet": 0.103,
+     "summa_R": 96.7,
+     "dagar": 8.0,
+     "forlust_i_rad": 15
+    },
+    "ned": {
+     "n": 889,
+     "per_ar": null,
+     "traff": 44.1,
+     "vinst_R": 1.51,
+     "forlust_R": -1.14,
+     "E": 0.026,
+     "osakerhet": 0.1,
+     "summa_R": 23.3,
+     "dagar": 8.0,
+     "forlust_i_rad": 23
+    }
+   },
+   "fas2": {
+    "ja": {
+     "n": 1,
+     "per_ar": null,
+     "traff": 0.0,
+     "vinst_R": 0.0,
+     "forlust_R": -0.2,
+     "E": -0.199,
+     "osakerhet": null,
+     "summa_R": -0.2,
+     "dagar": 21.0,
+     "forlust_i_rad": 1
+    },
+    "nej": {
+     "n": 2199,
+     "per_ar": null,
+     "traff": 43.3,
+     "vinst_R": 1.49,
+     "forlust_R": -1.13,
+     "E": 0.007,
+     "osakerhet": 0.062,
+     "summa_R": 15.9,
+     "dagar": 8.0,
+     "forlust_i_rad": 42
+    },
+    "plus": {
+     "n": 1,
+     "per_ar": null,
+     "traff": 0.0,
+     "vinst_R": 0.0,
+     "forlust_R": -0.2,
+     "E": -0.199,
+     "osakerhet": null,
+     "summa_R": -0.2,
+     "dagar": 21.0,
+     "forlust_i_rad": 1
+    }
+   },
+   "index_upp": {
+    "n": 1165,
+    "per_ar": null,
+    "traff": 68.5,
+    "vinst_R": 1.51,
+    "forlust_R": -1.05,
+    "E": 0.703,
+    "osakerhet": 0.08,
+    "summa_R": 819.6,
+    "dagar": 13.0,
+    "forlust_i_rad": 8
+   },
+   "index_ner": {
+    "n": 1035,
+    "per_ar": null,
+    "traff": 15.0,
+    "vinst_R": 1.4,
+    "forlust_R": -1.16,
+    "E": -0.777,
+    "osakerhet": 0.069,
+    "summa_R": -803.8,
+    "dagar": 5.0,
+    "forlust_i_rad": 59
+   },
+   "orsaker": {
+    "mål": 28,
+    "stop": 50,
+    "tid": 22
+   }
+  },
+  "macd_vecka": {
+   "alla": {
+    "n": 618,
+    "per_ar": 61.8,
+    "traff": 33.8,
+    "vinst_R": 1.62,
+    "forlust_R": -0.79,
+    "E": 0.029,
+    "osakerhet": 0.118,
+    "summa_R": 18.0,
+    "dagar": 46.0,
+    "forlust_i_rad": 17
+   },
+   "trana": {
+    "n": 419,
+    "per_ar": null,
+    "traff": 39.6,
+    "vinst_R": 1.55,
+    "forlust_R": -0.75,
+    "E": 0.159,
+    "osakerhet": 0.144,
+    "summa_R": 66.8,
+    "dagar": 56.0,
+    "forlust_i_rad": 14
+   },
+   "test": {
+    "n": 199,
+    "per_ar": 69.6,
+    "traff": 21.6,
+    "vinst_R": 1.91,
+    "forlust_R": -0.84,
+    "E": -0.245,
+    "osakerhet": 0.198,
+    "summa_R": -48.8,
+    "dagar": 36.0,
+    "forlust_i_rad": 17
+   },
+   "lage": {
+    "upp": {
+     "n": 264,
+     "per_ar": null,
+     "traff": 25.0,
+     "vinst_R": 1.44,
+     "forlust_R": -0.82,
+     "E": -0.255,
+     "osakerhet": 0.146,
+     "summa_R": -67.3,
+     "dagar": 36.0,
+     "forlust_i_rad": 17
+    },
+    "sidled": {
+     "n": 115,
+     "per_ar": null,
+     "traff": 29.6,
+     "vinst_R": 1.76,
+     "forlust_R": -0.71,
+     "E": 0.023,
+     "osakerhet": 0.265,
+     "summa_R": 2.6,
+     "dagar": 50.0,
+     "forlust_i_rad": 13
+    },
+    "ned": {
+     "n": 186,
+     "per_ar": null,
+     "traff": 44.1,
+     "vinst_R": 1.79,
+     "forlust_R": -0.78,
+     "E": 0.354,
+     "osakerhet": 0.262,
+     "summa_R": 65.9,
+     "dagar": 68.0,
+     "forlust_i_rad": 14
+    }
+   },
+   "aktie_trend": {
+    "upp": {
+     "n": 4,
+     "per_ar": null,
+     "traff": 75.0,
+     "vinst_R": 0.89,
+     "forlust_R": -0.39,
+     "E": 0.566,
+     "osakerhet": 0.638,
+     "summa_R": 2.3,
+     "dagar": 85.0,
+     "forlust_i_rad": 1
+    },
+    "sidled": {
+     "n": 118,
+     "per_ar": null,
+     "traff": 32.2,
+     "vinst_R": 1.28,
+     "forlust_R": -0.62,
+     "E": -0.006,
+     "osakerhet": 0.204,
+     "summa_R": -0.7,
+     "dagar": 46.0,
+     "forlust_i_rad": 9
+    },
+    "ned": {
+     "n": 438,
+     "per_ar": null,
+     "traff": 31.7,
+     "vinst_R": 1.79,
+     "forlust_R": -0.84,
+     "E": -0.003,
+     "osakerhet": 0.15,
+     "summa_R": -1.4,
+     "dagar": 45.0,
+     "forlust_i_rad": 15
+    }
+   },
+   "fas2": {
+    "ja": {
+     "n": 234,
+     "per_ar": null,
+     "traff": 33.8,
+     "vinst_R": 1.64,
+     "forlust_R": -0.7,
+     "E": 0.088,
+     "osakerhet": 0.177,
+     "summa_R": 20.5,
+     "dagar": 41.0,
+     "forlust_i_rad": 13
+    },
+    "nej": {
+     "n": 384,
+     "per_ar": null,
+     "traff": 33.9,
+     "vinst_R": 1.61,
+     "forlust_R": -0.84,
+     "E": -0.007,
+     "osakerhet": 0.155,
+     "summa_R": -2.6,
+     "dagar": 50.0,
+     "forlust_i_rad": 18
+    },
+    "plus": {
+     "n": 1,
+     "per_ar": null,
+     "traff": 100.0,
+     "vinst_R": 1.04,
+     "forlust_R": 0.0,
+     "E": 1.04,
+     "osakerhet": null,
+     "summa_R": 1.0,
+     "dagar": 108.0,
+     "forlust_i_rad": 0
+    }
+   },
+   "index_upp": {
+    "n": 341,
+    "per_ar": null,
+    "traff": 49.3,
+    "vinst_R": 1.66,
+    "forlust_R": -0.75,
+    "E": 0.441,
+    "osakerhet": 0.177,
+    "summa_R": 150.3,
+    "dagar": 76.0,
+    "forlust_i_rad": 21
+   },
+   "index_ner": {
+    "n": 277,
+    "per_ar": null,
+    "traff": 14.8,
+    "vinst_R": 1.45,
+    "forlust_R": -0.81,
+    "E": -0.478,
+    "osakerhet": 0.123,
+    "summa_R": -132.3,
+    "dagar": 28.0,
+    "forlust_i_rad": 43
+   },
+   "orsaker": {
+    "stop": 28,
+    "sälj-signal": 72
+   }
+  },
+  "darvas": {
+   "alla": {
+    "n": 923,
+    "per_ar": 92.3,
+    "traff": 51.1,
+    "vinst_R": 0.83,
+    "forlust_R": -0.76,
+    "E": 0.053,
+    "osakerhet": 0.061,
+    "summa_R": 48.5,
+    "dagar": 31.0,
+    "forlust_i_rad": 31
+   },
+   "trana": {
+    "n": 691,
+    "per_ar": null,
+    "traff": 49.9,
+    "vinst_R": 0.84,
+    "forlust_R": -0.77,
+    "E": 0.035,
+    "osakerhet": 0.071,
+    "summa_R": 24.5,
+    "dagar": 31.0,
+    "forlust_i_rad": 31
+   },
+   "test": {
+    "n": 232,
+    "per_ar": 81.1,
+    "traff": 54.7,
+    "vinst_R": 0.8,
+    "forlust_R": -0.74,
+    "E": 0.104,
+    "osakerhet": 0.122,
+    "summa_R": 24.1,
+    "dagar": 31.0,
+    "forlust_i_rad": 10
+   },
+   "lage": {
+    "upp": {
+     "n": 647,
+     "per_ar": null,
+     "traff": 51.2,
+     "vinst_R": 0.87,
+     "forlust_R": -0.77,
+     "E": 0.064,
+     "osakerhet": 0.075,
+     "summa_R": 41.5,
+     "dagar": 31.0,
+     "forlust_i_rad": 31
+    },
+    "sidled": {
+     "n": 200,
+     "per_ar": null,
+     "traff": 48.5,
+     "vinst_R": 0.67,
+     "forlust_R": -0.7,
+     "E": -0.032,
+     "osakerhet": 0.114,
+     "summa_R": -6.3,
+     "dagar": 31.0,
+     "forlust_i_rad": 9
+    },
+    "ned": {
+     "n": 76,
+     "per_ar": null,
+     "traff": 57.9,
+     "vinst_R": 0.94,
+     "forlust_R": -0.87,
+     "E": 0.176,
+     "osakerhet": 0.232,
+     "summa_R": 13.4,
+     "dagar": 31.0,
+     "forlust_i_rad": 5
+    }
+   },
+   "aktie_trend": {
+    "upp": {
+     "n": 849,
+     "per_ar": null,
+     "traff": 51.0,
+     "vinst_R": 0.85,
+     "forlust_R": -0.77,
+     "E": 0.056,
+     "osakerhet": 0.065,
+     "summa_R": 47.8,
+     "dagar": 31.0,
+     "forlust_i_rad": 29
+    },
+    "sidled": {
+     "n": 74,
+     "per_ar": null,
+     "traff": 52.7,
+     "vinst_R": 0.63,
+     "forlust_R": -0.69,
+     "E": 0.009,
+     "osakerhet": 0.182,
+     "summa_R": 0.7,
+     "dagar": 31.0,
+     "forlust_i_rad": 6
+    },
+    "ned": {
+     "n": 0
+    }
+   },
+   "fas2": {
+    "ja": {
+     "n": 693,
+     "per_ar": null,
+     "traff": 49.6,
+     "vinst_R": 0.84,
+     "forlust_R": -0.77,
+     "E": 0.032,
+     "osakerhet": 0.071,
+     "summa_R": 22.1,
+     "dagar": 31.0,
+     "forlust_i_rad": 22
+    },
+    "nej": {
+     "n": 230,
+     "per_ar": null,
+     "traff": 55.7,
+     "vinst_R": 0.81,
+     "forlust_R": -0.75,
+     "E": 0.115,
+     "osakerhet": 0.121,
+     "summa_R": 26.5,
+     "dagar": 31.0,
+     "forlust_i_rad": 11
+    },
+    "plus": {
+     "n": 693,
+     "per_ar": null,
+     "traff": 49.6,
+     "vinst_R": 0.84,
+     "forlust_R": -0.77,
+     "E": 0.032,
+     "osakerhet": 0.071,
+     "summa_R": 22.1,
+     "dagar": 31.0,
+     "forlust_i_rad": 22
+    }
+   },
+   "index_upp": {
+    "n": 538,
+    "per_ar": null,
+    "traff": 66.0,
+    "vinst_R": 0.88,
+    "forlust_R": -0.61,
+    "E": 0.37,
+    "osakerhet": 0.075,
+    "summa_R": 199.1,
+    "dagar": 31.0,
+    "forlust_i_rad": 7
+   },
+   "index_ner": {
+    "n": 385,
+    "per_ar": null,
+    "traff": 30.4,
+    "vinst_R": 0.7,
+    "forlust_R": -0.87,
+    "E": -0.391,
+    "osakerhet": 0.085,
+    "summa_R": -150.6,
+    "dagar": 31.0,
+    "forlust_i_rad": 28
+   },
+   "orsaker": {
+    "mål": 7,
+    "stop": 27,
+    "tid": 66
+   }
+  },
+  "bas": {
+   "alla": {
+    "n": 361,
+    "per_ar": 36.1,
+    "traff": 51.0,
+    "vinst_R": 0.83,
+    "forlust_R": -0.68,
+    "E": 0.092,
+    "osakerhet": 0.094,
+    "summa_R": 33.1,
+    "dagar": 31.0,
+    "forlust_i_rad": 10
+   },
+   "trana": {
+    "n": 246,
+    "per_ar": null,
+    "traff": 55.3,
+    "vinst_R": 0.87,
+    "forlust_R": -0.7,
+    "E": 0.169,
+    "osakerhet": 0.117,
+    "summa_R": 41.5,
+    "dagar": 31.0,
+    "forlust_i_rad": 10
+   },
+   "test": {
+    "n": 115,
+    "per_ar": 40.2,
+    "traff": 41.7,
+    "vinst_R": 0.72,
+    "forlust_R": -0.64,
+    "E": -0.073,
+    "osakerhet": 0.154,
+    "summa_R": -8.4,
+    "dagar": 31.0,
+    "forlust_i_rad": 10
+   },
+   "lage": {
+    "upp": {
+     "n": 220,
+     "per_ar": null,
+     "traff": 45.9,
+     "vinst_R": 0.75,
+     "forlust_R": -0.67,
+     "E": -0.019,
+     "osakerhet": 0.114,
+     "summa_R": -4.2,
+     "dagar": 31.0,
+     "forlust_i_rad": 10
+    },
+    "sidled": {
+     "n": 75,
+     "per_ar": null,
+     "traff": 61.3,
+     "vinst_R": 0.97,
+     "forlust_R": -0.7,
+     "E": 0.32,
+     "osakerhet": 0.23,
+     "summa_R": 24.0,
+     "dagar": 31.0,
+     "forlust_i_rad": 5
+    },
+    "ned": {
+     "n": 58,
+     "per_ar": null,
+     "traff": 62.1,
+     "vinst_R": 0.89,
+     "forlust_R": -0.61,
+     "E": 0.325,
+     "osakerhet": 0.226,
+     "summa_R": 18.9,
+     "dagar": 31.0,
+     "forlust_i_rad": 4
+    }
+   },
+   "aktie_trend": {
+    "upp": {
+     "n": 98,
+     "per_ar": null,
+     "traff": 54.1,
+     "vinst_R": 0.82,
+     "forlust_R": -0.69,
+     "E": 0.127,
+     "osakerhet": 0.181,
+     "summa_R": 12.5,
+     "dagar": 31.0,
+     "forlust_i_rad": 6
+    },
+    "sidled": {
+     "n": 90,
+     "per_ar": null,
+     "traff": 44.4,
+     "vinst_R": 0.72,
+     "forlust_R": -0.58,
+     "E": -0.004,
+     "osakerhet": 0.169,
+     "summa_R": -0.3,
+     "dagar": 31.0,
+     "forlust_i_rad": 7
+    },
+    "ned": {
+     "n": 161,
+     "per_ar": null,
+     "traff": 54.7,
+     "vinst_R": 0.89,
+     "forlust_R": -0.71,
+     "E": 0.162,
+     "osakerhet": 0.148,
+     "summa_R": 26.0,
+     "dagar": 31.0,
+     "forlust_i_rad": 6
+    }
+   },
+   "fas2": {
+    "ja": {
+     "n": 62,
+     "per_ar": null,
+     "traff": 50.0,
+     "vinst_R": 0.63,
+     "forlust_R": -0.77,
+     "E": -0.068,
+     "osakerhet": 0.206,
+     "summa_R": -4.2,
+     "dagar": 31.0,
+     "forlust_i_rad": 5
+    },
+    "nej": {
+     "n": 299,
+     "per_ar": null,
+     "traff": 51.2,
+     "vinst_R": 0.87,
+     "forlust_R": -0.66,
+     "E": 0.125,
+     "osakerhet": 0.105,
+     "summa_R": 37.3,
+     "dagar": 31.0,
+     "forlust_i_rad": 10
+    },
+    "plus": {
+     "n": 10,
+     "per_ar": null,
+     "traff": 50.0,
+     "vinst_R": 0.51,
+     "forlust_R": -0.51,
+     "E": 0.0,
+     "osakerhet": 0.438,
+     "summa_R": 0.0,
+     "dagar": 31.0,
+     "forlust_i_rad": 2
+    }
+   },
+   "index_upp": {
+    "n": 228,
+    "per_ar": null,
+    "traff": 62.7,
+    "vinst_R": 0.87,
+    "forlust_R": -0.55,
+    "E": 0.34,
+    "osakerhet": 0.113,
+    "summa_R": 77.6,
+    "dagar": 31.0,
+    "forlust_i_rad": 5
+   },
+   "index_ner": {
+    "n": 133,
+    "per_ar": null,
+    "traff": 30.8,
+    "vinst_R": 0.69,
+    "forlust_R": -0.79,
+    "E": -0.335,
+    "osakerhet": 0.14,
+    "summa_R": -44.5,
+    "dagar": 31.0,
+    "forlust_i_rad": 16
+   },
+   "orsaker": {
+    "mål": 7,
+    "stop": 21,
+    "tid": 72
+   }
+  },
+  "rekyl": {
+   "alla": {
+    "n": 3722,
+    "per_ar": 372.2,
+    "traff": 42.5,
+    "vinst_R": 1.38,
+    "forlust_R": -1.06,
+    "E": -0.024,
+    "osakerhet": 0.043,
+    "summa_R": -89.8,
+    "dagar": 11.0,
+    "forlust_i_rad": 35
+   },
+   "trana": {
+    "n": 2619,
+    "per_ar": null,
+    "traff": 42.4,
+    "vinst_R": 1.38,
+    "forlust_R": -1.06,
+    "E": -0.023,
+    "osakerhet": 0.051,
+    "summa_R": -59.3,
+    "dagar": 11.0,
+    "forlust_i_rad": 29
+   },
+   "test": {
+    "n": 1103,
+    "per_ar": 385.5,
+    "traff": 42.8,
+    "vinst_R": 1.37,
+    "forlust_R": -1.08,
+    "E": -0.028,
+    "osakerhet": 0.078,
+    "summa_R": -30.5,
+    "dagar": 11.0,
+    "forlust_i_rad": 35
+   },
+   "lage": {
+    "upp": {
+     "n": 2645,
+     "per_ar": null,
+     "traff": 41.6,
+     "vinst_R": 1.4,
+     "forlust_R": -1.06,
+     "E": -0.039,
+     "osakerhet": 0.051,
+     "summa_R": -104.1,
+     "dagar": 11.0,
+     "forlust_i_rad": 38
+    },
+    "sidled": {
+     "n": 675,
+     "per_ar": null,
+     "traff": 45.8,
+     "vinst_R": 1.31,
+     "forlust_R": -1.06,
+     "E": 0.025,
+     "osakerhet": 0.098,
+     "summa_R": 16.5,
+     "dagar": 13.0,
+     "forlust_i_rad": 16
+    },
+    "ned": {
+     "n": 402,
+     "per_ar": null,
+     "traff": 43.3,
+     "vinst_R": 1.36,
+     "forlust_R": -1.05,
+     "E": -0.006,
+     "osakerhet": 0.129,
+     "summa_R": -2.2,
+     "dagar": 13.0,
+     "forlust_i_rad": 10
+    }
+   },
+   "aktie_trend": {
+    "upp": {
+     "n": 3722,
+     "per_ar": null,
+     "traff": 42.5,
+     "vinst_R": 1.38,
+     "forlust_R": -1.06,
+     "E": -0.024,
+     "osakerhet": 0.043,
+     "summa_R": -89.8,
+     "dagar": 11.0,
+     "forlust_i_rad": 35
+    },
+    "sidled": {
+     "n": 0
+    },
+    "ned": {
+     "n": 0
+    }
+   },
+   "fas2": {
+    "ja": {
+     "n": 402,
+     "per_ar": null,
+     "traff": 40.8,
+     "vinst_R": 1.37,
+     "forlust_R": -1.06,
+     "E": -0.071,
+     "osakerhet": 0.126,
+     "summa_R": -28.7,
+     "dagar": 11.0,
+     "forlust_i_rad": 14
+    },
+    "nej": {
+     "n": 3320,
+     "per_ar": null,
+     "traff": 42.7,
+     "vinst_R": 1.38,
+     "forlust_R": -1.06,
+     "E": -0.018,
+     "osakerhet": 0.045,
+     "summa_R": -61.1,
+     "dagar": 11.0,
+     "forlust_i_rad": 33
+    },
+    "plus": {
+     "n": 402,
+     "per_ar": null,
+     "traff": 40.8,
+     "vinst_R": 1.37,
+     "forlust_R": -1.06,
+     "E": -0.071,
+     "osakerhet": 0.126,
+     "summa_R": -28.7,
+     "dagar": 11.0,
+     "forlust_i_rad": 14
+    }
+   },
+   "index_upp": {
+    "n": 1957,
+    "per_ar": null,
+    "traff": 63.4,
+    "vinst_R": 1.42,
+    "forlust_R": -0.97,
+    "E": 0.542,
+    "osakerhet": 0.059,
+    "summa_R": 1060.8,
+    "dagar": 15.0,
+    "forlust_i_rad": 11
+   },
+   "index_ner": {
+    "n": 1765,
+    "per_ar": null,
+    "traff": 19.4,
+    "vinst_R": 1.24,
+    "forlust_R": -1.11,
+    "E": -0.652,
+    "osakerhet": 0.047,
+    "summa_R": -1150.6,
+    "dagar": 8.0,
+    "forlust_i_rad": 57
+   },
+   "orsaker": {
+    "mål": 24,
+    "stop": 49,
+    "tid": 27
+   }
+  },
+  "engulfing": {
+   "alla": {
+    "n": 374,
+    "per_ar": 37.4,
+    "traff": 38.2,
+    "vinst_R": 1.42,
+    "forlust_R": -1.05,
+    "E": -0.104,
+    "osakerhet": 0.131,
+    "summa_R": -39.0,
+    "dagar": 7.0,
+    "forlust_i_rad": 16
+   },
+   "trana": {
+    "n": 287,
+    "per_ar": null,
+    "traff": 36.9,
+    "vinst_R": 1.35,
+    "forlust_R": -1.04,
+    "E": -0.154,
+    "osakerhet": 0.145,
+    "summa_R": -44.3,
+    "dagar": 6.0,
+    "forlust_i_rad": 16
+   },
+   "test": {
+    "n": 87,
+    "per_ar": 30.4,
+    "traff": 42.5,
+    "vinst_R": 1.6,
+    "forlust_R": -1.08,
+    "E": 0.061,
+    "osakerhet": 0.3,
+    "summa_R": 5.3,
+    "dagar": 8.0,
+    "forlust_i_rad": 6
+   },
+   "lage": {
+    "upp": {
+     "n": 171,
+     "per_ar": null,
+     "traff": 38.0,
+     "vinst_R": 1.51,
+     "forlust_R": -1.05,
+     "E": -0.076,
+     "osakerhet": 0.201,
+     "summa_R": -13.0,
+     "dagar": 7.0,
+     "forlust_i_rad": 13
+    },
+    "sidled": {
+     "n": 85,
+     "per_ar": null,
+     "traff": 29.4,
+     "vinst_R": 1.05,
+     "forlust_R": -1.07,
+     "E": -0.445,
+     "osakerhet": 0.229,
+     "summa_R": -37.8,
+     "dagar": 5.0,
+     "forlust_i_rad": 10
+    },
+    "ned": {
+     "n": 81,
+     "per_ar": null,
+     "traff": 49.4,
+     "vinst_R": 1.52,
+     "forlust_R": -0.99,
+     "E": 0.252,
+     "osakerhet": 0.293,
+     "summa_R": 20.4,
+     "dagar": 7.0,
+     "forlust_i_rad": 6
+    }
+   },
+   "aktie_trend": {
+    "upp": {
+     "n": 99,
+     "per_ar": null,
+     "traff": 33.3,
+     "vinst_R": 1.32,
+     "forlust_R": -1.0,
+     "E": -0.224,
+     "osakerhet": 0.237,
+     "summa_R": -22.2,
+     "dagar": 7.0,
+     "forlust_i_rad": 12
+    },
+    "sidled": {
+     "n": 82,
+     "per_ar": null,
+     "traff": 35.4,
+     "vinst_R": 1.46,
+     "forlust_R": -1.09,
+     "E": -0.189,
+     "osakerhet": 0.282,
+     "summa_R": -15.5,
+     "dagar": 6.0,
+     "forlust_i_rad": 10
+    },
+    "ned": {
+     "n": 149,
+     "per_ar": null,
+     "traff": 45.0,
+     "vinst_R": 1.48,
+     "forlust_R": -1.07,
+     "E": 0.073,
+     "osakerhet": 0.221,
+     "summa_R": 10.9,
+     "dagar": 7.0,
+     "forlust_i_rad": 8
+    }
+   },
+   "fas2": {
+    "ja": {
+     "n": 1,
+     "per_ar": null,
+     "traff": 0.0,
+     "vinst_R": 0.0,
+     "forlust_R": -1.03,
+     "E": -1.035,
+     "osakerhet": null,
+     "summa_R": -1.0,
+     "dagar": 7.0,
+     "forlust_i_rad": 1
+    },
+    "nej": {
+     "n": 373,
+     "per_ar": null,
+     "traff": 38.3,
+     "vinst_R": 1.42,
+     "forlust_R": -1.05,
+     "E": -0.102,
+     "osakerhet": 0.131,
+     "summa_R": -38.0,
+     "dagar": 7.0,
+     "forlust_i_rad": 16
+    },
+    "plus": {
+     "n": 1,
+     "per_ar": null,
+     "traff": 0.0,
+     "vinst_R": 0.0,
+     "forlust_R": -1.03,
+     "E": -1.035,
+     "osakerhet": null,
+     "summa_R": -1.0,
+     "dagar": 7.0,
+     "forlust_i_rad": 1
+    }
+   },
+   "index_upp": {
+    "n": 171,
+    "per_ar": null,
+    "traff": 66.1,
+    "vinst_R": 1.48,
+    "forlust_R": -0.97,
+    "E": 0.648,
+    "osakerhet": 0.196,
+    "summa_R": 110.8,
+    "dagar": 11.0,
+    "forlust_i_rad": 5
+   },
+   "index_ner": {
+    "n": 203,
+    "per_ar": null,
+    "traff": 14.8,
+    "vinst_R": 1.18,
+    "forlust_R": -1.07,
+    "E": -0.738,
+    "osakerhet": 0.121,
+    "summa_R": -149.8,
+    "dagar": 4.0,
+    "forlust_i_rad": 18
+   },
+   "orsaker": {
+    "mål": 23,
+    "stop": 55,
+    "tid": 22
+   }
+  },
+  "price_action": {
+   "alla": {
+    "n": 1000,
+    "per_ar": 100.0,
+    "traff": 42.5,
+    "vinst_R": 1.61,
+    "forlust_R": -1.16,
+    "E": 0.015,
+    "osakerhet": 0.089,
+    "summa_R": 15.0,
+    "dagar": 7.0,
+    "forlust_i_rad": 22
+   },
+   "trana": {
+    "n": 715,
+    "per_ar": null,
+    "traff": 41.8,
+    "vinst_R": 1.59,
+    "forlust_R": -1.15,
+    "E": -0.003,
+    "osakerhet": 0.104,
+    "summa_R": -2.4,
+    "dagar": 7.0,
+    "forlust_i_rad": 15
+   },
+   "test": {
+    "n": 285,
+    "per_ar": 99.6,
+    "traff": 44.2,
+    "vinst_R": 1.64,
+    "forlust_R": -1.19,
+    "E": 0.061,
+    "osakerhet": 0.173,
+    "summa_R": 17.4,
+    "dagar": 7.0,
+    "forlust_i_rad": 22
+   },
+   "lage": {
+    "upp": {
+     "n": 497,
+     "per_ar": null,
+     "traff": 41.4,
+     "vinst_R": 1.58,
+     "forlust_R": -1.16,
+     "E": -0.024,
+     "osakerhet": 0.126,
+     "summa_R": -11.8,
+     "dagar": 7.0,
+     "forlust_i_rad": 19
+    },
+    "sidled": {
+     "n": 245,
+     "per_ar": null,
+     "traff": 39.2,
+     "vinst_R": 1.64,
+     "forlust_R": -1.19,
+     "E": -0.08,
+     "osakerhet": 0.182,
+     "summa_R": -19.5,
+     "dagar": 7.0,
+     "forlust_i_rad": 16
+    },
+    "ned": {
+     "n": 233,
+     "per_ar": null,
+     "traff": 45.9,
+     "vinst_R": 1.62,
+     "forlust_R": -1.13,
+     "E": 0.133,
+     "osakerhet": 0.183,
+     "summa_R": 31.0,
+     "dagar": 6.0,
+     "forlust_i_rad": 11
+    }
+   },
+   "aktie_trend": {
+    "upp": {
+     "n": 217,
+     "per_ar": null,
+     "traff": 45.6,
+     "vinst_R": 1.52,
+     "forlust_R": -1.17,
+     "E": 0.055,
+     "osakerhet": 0.192,
+     "summa_R": 12.0,
+     "dagar": 7.0,
+     "forlust_i_rad": 13
+    },
+    "sidled": {
+     "n": 309,
+     "per_ar": null,
+     "traff": 41.1,
+     "vinst_R": 1.59,
+     "forlust_R": -1.18,
+     "E": -0.046,
+     "osakerhet": 0.162,
+     "summa_R": -14.3,
+     "dagar": 7.0,
+     "forlust_i_rad": 9
+    },
+    "ned": {
+     "n": 440,
+     "per_ar": null,
+     "traff": 41.4,
+     "vinst_R": 1.66,
+     "forlust_R": -1.14,
+     "E": 0.018,
+     "osakerhet": 0.133,
+     "summa_R": 8.0,
+     "dagar": 6.0,
+     "forlust_i_rad": 15
+    }
+   },
+   "fas2": {
+    "ja": {
+     "n": 0
+    },
+    "nej": {
+     "n": 1000,
+     "per_ar": null,
+     "traff": 42.5,
+     "vinst_R": 1.61,
+     "forlust_R": -1.16,
+     "E": 0.015,
+     "osakerhet": 0.089,
+     "summa_R": 15.0,
+     "dagar": 7.0,
+     "forlust_i_rad": 22
+    },
+    "plus": {
+     "n": 0
+    }
+   },
+   "index_upp": {
+    "n": 525,
+    "per_ar": null,
+    "traff": 66.5,
+    "vinst_R": 1.64,
+    "forlust_R": -1.09,
+    "E": 0.725,
+    "osakerhet": 0.118,
+    "summa_R": 380.6,
+    "dagar": 9.0,
+    "forlust_i_rad": 7
+   },
+   "index_ner": {
+    "n": 475,
+    "per_ar": null,
+    "traff": 16.0,
+    "vinst_R": 1.45,
+    "forlust_R": -1.19,
+    "E": -0.77,
+    "osakerhet": 0.093,
+    "summa_R": -365.6,
+    "dagar": 5.0,
+    "forlust_i_rad": 23
+   },
+   "orsaker": {
+    "mål": 34,
+    "stop": 53,
+    "tid": 13
+   }
+  },
+  "slump": {
+   "alla": {
+    "n": 7239,
+    "per_ar": 723.9,
+    "traff": 42.9,
+    "vinst_R": 1.32,
+    "forlust_R": -1.02,
+    "E": -0.013,
+    "osakerhet": 0.03,
+    "summa_R": -91.4,
+    "dagar": 14.0,
+    "forlust_i_rad": 67
+   },
+   "trana": {
+    "n": 5289,
+    "per_ar": null,
+    "traff": 43.4,
+    "vinst_R": 1.33,
+    "forlust_R": -1.02,
+    "E": 0.001,
+    "osakerhet": 0.035,
+    "summa_R": 6.6,
+    "dagar": 14.0,
+    "forlust_i_rad": 67
+   },
+   "test": {
+    "n": 1950,
+    "per_ar": 681.6,
+    "traff": 41.6,
+    "vinst_R": 1.3,
+    "forlust_R": -1.02,
+    "E": -0.05,
+    "osakerhet": 0.057,
+    "summa_R": -98.0,
+    "dagar": 13.0,
+    "forlust_i_rad": 49
+   },
+   "lage": {
+    "upp": {
+     "n": 4070,
+     "per_ar": null,
+     "traff": 40.9,
+     "vinst_R": 1.35,
+     "forlust_R": -1.03,
+     "E": -0.06,
+     "osakerhet": 0.04,
+     "summa_R": -245.6,
+     "dagar": 13.0,
+     "forlust_i_rad": 50
+    },
+    "sidled": {
+     "n": 1414,
+     "per_ar": null,
+     "traff": 46.2,
+     "vinst_R": 1.28,
+     "forlust_R": -1.01,
+     "E": 0.051,
+     "osakerhet": 0.067,
+     "summa_R": 72.3,
+     "dagar": 15.0,
+     "forlust_i_rad": 24
+    },
+    "ned": {
+     "n": 1322,
+     "per_ar": null,
+     "traff": 46.8,
+     "vinst_R": 1.33,
+     "forlust_R": -0.98,
+     "E": 0.101,
+     "osakerhet": 0.068,
+     "summa_R": 133.5,
+     "dagar": 14.0,
+     "forlust_i_rad": 25
+    }
+   },
+   "aktie_trend": {
+    "upp": {
+     "n": 3386,
+     "per_ar": null,
+     "traff": 42.9,
+     "vinst_R": 1.33,
+     "forlust_R": -1.03,
+     "E": -0.02,
+     "osakerhet": 0.043,
+     "summa_R": -67.6,
+     "dagar": 13.0,
+     "forlust_i_rad": 41
+    },
+    "sidled": {
+     "n": 1351,
+     "per_ar": null,
+     "traff": 42.8,
+     "vinst_R": 1.29,
+     "forlust_R": -1.01,
+     "E": -0.03,
+     "osakerhet": 0.068,
+     "summa_R": -40.2,
+     "dagar": 14.0,
+     "forlust_i_rad": 24
+    },
+    "ned": {
+     "n": 1992,
+     "per_ar": null,
+     "traff": 43.9,
+     "vinst_R": 1.37,
+     "forlust_R": -1.01,
+     "E": 0.036,
+     "osakerhet": 0.057,
+     "summa_R": 71.4,
+     "dagar": 13.0,
+     "forlust_i_rad": 36
+    }
+   },
+   "fas2": {
+    "ja": {
+     "n": 2549,
+     "per_ar": null,
+     "traff": 40.8,
+     "vinst_R": 1.3,
+     "forlust_R": -1.02,
+     "E": -0.074,
+     "osakerhet": 0.049,
+     "summa_R": -188.6,
+     "dagar": 13.0,
+     "forlust_i_rad": 28
+    },
+    "nej": {
+     "n": 4690,
+     "per_ar": null,
+     "traff": 44.1,
+     "vinst_R": 1.34,
+     "forlust_R": -1.02,
+     "E": 0.021,
+     "osakerhet": 0.037,
+     "summa_R": 97.2,
+     "dagar": 14.0,
+     "forlust_i_rad": 68
+    },
+    "plus": {
+     "n": 1738,
+     "per_ar": null,
+     "traff": 41.2,
+     "vinst_R": 1.3,
+     "forlust_R": -1.03,
+     "E": -0.07,
+     "osakerhet": 0.059,
+     "summa_R": -121.1,
+     "dagar": 13.0,
+     "forlust_i_rad": 21
+    }
+   },
+   "index_upp": {
+    "n": 3764,
+    "per_ar": null,
+    "traff": 64.4,
+    "vinst_R": 1.37,
+    "forlust_R": -0.92,
+    "E": 0.553,
+    "osakerhet": 0.04,
+    "summa_R": 2082.5,
+    "dagar": 18.0,
+    "forlust_i_rad": 12
+   },
+   "index_ner": {
+    "n": 3475,
+    "per_ar": null,
+    "traff": 19.7,
+    "vinst_R": 1.17,
+    "forlust_R": -1.07,
+    "E": -0.626,
+    "osakerhet": 0.033,
+    "summa_R": -2173.9,
+    "dagar": 9.0,
+    "forlust_i_rad": 67
+   },
+   "orsaker": {
+    "mål": 21,
+    "stop": 47,
+    "tid": 31
+   }
+  }
+ },
+ "idag": {
+  "signaler": {
+   "dipp": [],
+   "macd_vecka": [
+    {
+     "metod": "macd_vecka",
+     "bolag": "EQT",
+     "kurs": 316.4,
+     "stop": 271.85,
+     "risk_pct": 14.1,
+     "mal": 405.49,
+     "motstand": 319.9,
+     "rr_mot": 0.1,
+     "taggar": [
+      [
+       "varn",
+       "Aktien: Sidled"
+      ],
+      [
+       "",
+       "Volym 0,7× snittet"
+      ],
+      [
+       "",
+       "Rapportdatum okänt – kolla"
+      ],
+      [
+       "varn",
+       "Utdelning (x-dag) 30/11"
+      ]
+     ],
+     "vol_x": 0.6515917438591504,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,1 (under 2,0)",
+      "låg volym (0,7×)"
+     ],
+     "krasen": false
+    },
+    {
+     "metod": "macd_vecka",
+     "bolag": "Tele2 B",
+     "kurs": 162.85,
+     "stop": 148.55,
+     "risk_pct": 8.8,
+     "mal": 191.45,
+     "motstand": 164.0,
+     "rr_mot": 0.1,
+     "taggar": [
+      [
+       "dalig",
+       "Aktien: Nedtrend"
+      ],
+      [
+       "",
+       "Volym 0,4× snittet"
+      ],
+      [
+       "",
+       "Rapportdatum okänt – kolla"
+      ]
+     ],
+     "vol_x": 0.3935690677004701,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,1 (under 2,0)",
+      "låg volym (0,4×)"
+     ],
+     "krasen": false
+    },
+    {
+     "metod": "macd_vecka",
+     "bolag": "Hufvudstaden A",
+     "kurs": 116.1,
+     "stop": 104.25,
+     "risk_pct": 10.2,
+     "mal": 139.81,
+     "motstand": 117.4,
+     "rr_mot": 0.1,
+     "taggar": [
+      [
+       "dalig",
+       "Aktien: Nedtrend"
+      ],
+      [
+       "",
+       "Volym 0,5× snittet"
+      ],
+      [
+       "",
+       "Rapportdatum okänt – kolla"
+      ]
+     ],
+     "vol_x": 0.5045424992713721,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,1 (under 2,0)",
+      "låg volym (0,5×)"
+     ],
+     "krasen": false
+    },
+    {
+     "metod": "macd_vecka",
+     "bolag": "Wihlborgs",
+     "kurs": 73.4,
+     "stop": 65.69,
+     "risk_pct": 10.5,
+     "mal": 88.83,
+     "motstand": 76.55,
+     "rr_mot": 0.4,
+     "taggar": [
+      [
+       "dalig",
+       "Aktien: Nedtrend"
+      ],
+      [
+       "",
+       "Volym 0,8× snittet"
+      ],
+      [
+       "",
+       "Rapportdatum okänt – kolla"
+      ]
+     ],
+     "vol_x": 0.79924531011934,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,4 (under 2,0)",
+      "låg volym (0,8×)"
+     ],
+     "krasen": false
+    }
+   ],
+   "darvas": [],
+   "bas": [],
+   "rekyl": [
+    {
+     "metod": "rekyl",
+     "bolag": "Atlas Copco A",
+     "kurs": 194.65,
+     "stop": 178.79,
+     "risk_pct": 8.1,
+     "mal": 226.36,
+     "motstand": 196.43,
+     "rr_mot": 0.1,
+     "taggar": [
+      [
+       "bra",
+       "Aktien: Upptrend"
+      ],
+      [
+       "",
+       "Volym 0,7× snittet"
+      ],
+      [
+       "varn",
+       "Följer index starkt (83 %)"
+      ],
+      [
+       "",
+       "Rapportdatum okänt – kolla"
+      ]
+     ],
+     "vol_x": 0.7103958378327142,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,1 (under 2,0)",
+      "låg volym (0,7×)"
+     ],
+     "krasen": false
+    },
+    {
+     "metod": "rekyl",
+     "bolag": "Atlas Copco B",
+     "kurs": 169.2,
+     "stop": 155.63,
+     "risk_pct": 8.0,
+     "mal": 196.34,
+     "motstand": 171.48,
+     "rr_mot": 0.2,
+     "taggar": [
+      [
+       "bra",
+       "Aktien: Upptrend"
+      ],
+      [
+       "",
+       "Volym 0,9× snittet"
+      ],
+      [
+       "varn",
+       "Följer index starkt (82 %)"
+      ],
+      [
+       "",
+       "Rapportdatum okänt – kolla"
+      ]
+     ],
+     "vol_x": 0.8631958764763741,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,2 (under 2,0)",
+      "låg volym (0,9×)"
+     ],
+     "krasen": false
+    },
+    {
+     "metod": "rekyl",
+     "bolag": "Alleima",
+     "kurs": 96.1,
+     "stop": 88.01,
+     "risk_pct": 8.4,
+     "mal": 112.28,
+     "motstand": 98.85,
+     "rr_mot": 0.3,
+     "taggar": [
+      [
+       "bra",
+       "Aktien: Upptrend"
+      ],
+      [
+       "",
+       "Volym 1,2× snittet"
+      ],
+      [
+       "",
+       "Rapport om 77 dagar (27/01)"
+      ]
+     ],
+     "vol_x": 1.24116657407891,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,3 (under 2,0)"
+     ],
+     "krasen": false
+    },
+    {
+     "metod": "rekyl",
+     "bolag": "Bravida",
+     "kurs": 152.0,
+     "stop": 139.09,
+     "risk_pct": 8.5,
+     "mal": 177.81,
+     "motstand": 152.8,
+     "rr_mot": 0.1,
+     "taggar": [
+      [
+       "bra",
+       "Aktien: Upptrend"
+      ],
+      [
+       "",
+       "Volym 1,4× snittet"
+      ],
+      [
+       "",
+       "Rapportdatum okänt – kolla"
+      ]
+     ],
+     "vol_x": 1.3966142171358085,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,1 (under 2,0)"
+     ],
+     "krasen": false
+    },
+    {
+     "metod": "rekyl",
+     "bolag": "Loomis",
+     "kurs": 525.0,
+     "stop": 498.96,
+     "risk_pct": 5.0,
+     "mal": 577.08,
+     "motstand": 532.5,
+     "rr_mot": 0.3,
+     "taggar": [
+      [
+       "bra",
+       "Aktien: Upptrend"
+      ],
+      [
+       "",
+       "Volym 1,2× snittet"
+      ],
+      [
+       "",
+       "Rapportdatum okänt – kolla"
+      ]
+     ],
+     "vol_x": 1.1916517286115769,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,3 (under 2,0)"
+     ],
+     "krasen": false
+    },
+    {
+     "metod": "rekyl",
+     "bolag": "Mycronic",
+     "kurs": 302.4,
+     "stop": 267.89,
+     "risk_pct": 11.4,
+     "mal": 371.41,
+     "motstand": 309.2,
+     "rr_mot": 0.2,
+     "taggar": [
+      [
+       "bra",
+       "Aktien: Upptrend"
+      ],
+      [
+       "",
+       "Volym 1,0× snittet"
+      ],
+      [
+       "",
+       "Rapportdatum okänt – kolla"
+      ]
+     ],
+     "vol_x": 0.9692625627202744,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,2 (under 2,0)",
+      "låg volym (1,0×)"
+     ],
+     "krasen": false
+    },
+    {
+     "metod": "rekyl",
+     "bolag": "Sinch",
+     "kurs": 42.85,
+     "stop": 40.71,
+     "risk_pct": 5.0,
+     "mal": 47.13,
+     "motstand": 44.02,
+     "rr_mot": 0.5,
+     "taggar": [
+      [
+       "bra",
+       "Aktien: Upptrend"
+      ],
+      [
+       "",
+       "Volym 0,7× snittet"
+      ],
+      [
+       "",
+       "Rapportdatum okänt – kolla"
+      ]
+     ],
+     "vol_x": 0.6887770219997966,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,5 (under 2,0)",
+      "låg volym (0,7×)"
+     ],
+     "krasen": false
+    },
+    {
+     "metod": "rekyl",
+     "bolag": "SSAB B",
+     "kurs": 96.06,
+     "stop": 89.95,
+     "risk_pct": 6.4,
+     "mal": 108.28,
+     "motstand": 99.76,
+     "rr_mot": 0.6,
+     "taggar": [
+      [
+       "bra",
+       "Aktien: Upptrend"
+      ],
+      [
+       "",
+       "Volym 0,7× snittet"
+      ],
+      [
+       "varn",
+       "Doji (osäkert)"
+      ],
+      [
+       "",
+       "Rapportdatum okänt – kolla"
+      ]
+     ],
+     "vol_x": 0.7108812766057028,
+     "fel": [
+      "fel metod när index är i upptrend",
+      "R/R mot motstånd 0,6 (under 2,0)",
+      "låg volym (0,7×)"
+     ],
+     "krasen": false
+    }
+   ],
+   "engulfing": [],
+   "price_action": [],
+   "slump": []
+  },
+  "bolag": [
+   {
+    "bolag": "Alleima",
+    "sektor": "Industri",
+    "kurs": 96.1,
+    "trend": "upp",
+    "rsi": 39.388207126927654,
+    "vol_x": 1.24116657407891,
+    "candle": [],
+    "beta": 0.94,
+    "korr": 0.41,
+    "rapport": "2027-01-27",
+    "metoder": [
+     "rekyl"
+    ],
+    "manad": -16.069870328278522,
+    "kvartal": -18.765852920497327
+   },
+   {
+    "bolag": "Atlas Copco A",
+    "sektor": "Industri",
+    "kurs": 194.65,
+    "trend": "upp",
+    "rsi": 53.432080394154795,
+    "vol_x": 0.7103958378327142,
+    "candle": [],
+    "beta": 1.62,
+    "korr": 0.83,
+    "rapport": null,
+    "metoder": [
+     "rekyl"
+    ],
+    "manad": -6.882823555380946,
+    "kvartal": -5.899818122590805
+   },
+   {
+    "bolag": "Atlas Copco B",
+    "sektor": "Industri",
+    "kurs": 169.2,
+    "trend": "upp",
+    "rsi": 53.462196141807375,
+    "vol_x": 0.8631958764763741,
+    "candle": [],
+    "beta": 1.5,
+    "korr": 0.82,
+    "rapport": null,
+    "metoder": [
+     "rekyl"
+    ],
+    "manad": -6.851631826128502,
+    "kvartal": -5.797509719336036
+   },
+   {
+    "bolag": "Bravida",
+    "sektor": "Bygg",
+    "kurs": 152.0,
+    "trend": "upp",
+    "rsi": 54.62450631659577,
+    "vol_x": 1.3966142171358085,
+    "candle": [],
+    "beta": 0.81,
+    "korr": 0.4,
+    "rapport": null,
+    "metoder": [
+     "rekyl"
+    ],
+    "manad": 1.8766776870170698,
+    "kvartal": 14.890397954514967
+   },
+   {
+    "bolag": "EQT",
+    "sektor": "Investmentbolag & finans",
+    "kurs": 316.4,
+    "trend": "sidled",
+    "rsi": 60.36992284252842,
+    "vol_x": 0.6515917438591504,
+    "candle": [],
+    "beta": 1.01,
+    "korr": 0.46,
+    "rapport": null,
+    "metoder": [
+     "macd_vecka"
+    ],
+    "manad": 9.291880447835709,
+    "kvartal": -7.835710705794352
+   },
+   {
+    "bolag": "Hufvudstaden A",
+    "sektor": "Fastigheter",
+    "kurs": 116.1,
+    "trend": "ned",
+    "rsi": 63.7412891752659,
+    "vol_x": 0.5045424992713721,
+    "candle": [],
+    "beta": 0.39,
+    "korr": 0.38,
+    "rapport": null,
+    "metoder": [
+     "macd_vecka"
+    ],
+    "manad": 9.528300447284055,
+    "kvartal": -4.049588037916452
+   },
+   {
+    "bolag": "Loomis",
+    "sektor": "Industri",
+    "kurs": 525.0,
+    "trend": "upp",
+    "rsi": 43.57674248008078,
+    "vol_x": 1.1916517286115769,
+    "candle": [],
+    "beta": 0.57,
+    "korr": 0.33,
+    "rapport": null,
+    "metoder": [
+     "rekyl"
+    ],
+    "manad": -8.456843940714908,
+    "kvartal": 1.3513513513513598
+   },
+   {
+    "bolag": "Mycronic",
+    "sektor": "Teknik & telekom",
+    "kurs": 302.4,
+    "trend": "upp",
+    "rsi": 49.290837266992504,
+    "vol_x": 0.9692625627202744,
+    "candle": [],
+    "beta": 1.07,
+    "korr": 0.41,
+    "rapport": null,
+    "metoder": [
+     "rekyl"
+    ],
+    "manad": -8.64048522764822,
+    "kvartal": -8.474576427738223
+   },
+   {
+    "bolag": "SSAB B",
+    "sektor": "Råvaror & skog",
+    "kurs": 96.06,
+    "trend": "upp",
+    "rsi": 45.95982297797623,
+    "vol_x": 0.7108812766057028,
+    "candle": [
+     "Doji (osäkert)"
+    ],
+    "beta": 1.24,
+    "korr": 0.54,
+    "rapport": null,
+    "metoder": [
+     "rekyl"
+    ],
+    "manad": -6.007827370834418,
+    "kvartal": -10.931850794931986
+   },
+   {
+    "bolag": "Sinch",
+    "sektor": "Teknik & telekom",
+    "kurs": 42.85,
+    "trend": "upp",
+    "rsi": 42.214902673634505,
+    "vol_x": 0.6887770219997966,
+    "candle": [],
+    "beta": 0.41,
+    "korr": 0.13,
+    "rapport": null,
+    "metoder": [
+     "rekyl"
+    ],
+    "manad": -8.401026951105983,
+    "kvartal": -3.2731394760982524
+   },
+   {
+    "bolag": "Tele2 B",
+    "sektor": "Teknik & telekom",
+    "kurs": 162.85,
+    "trend": "ned",
+    "rsi": 59.346032013669365,
+    "vol_x": 0.3935690677004701,
+    "candle": [],
+    "beta": 0.17,
+    "korr": 0.12,
+    "rapport": null,
+    "metoder": [
+     "macd_vecka"
+    ],
+    "manad": 6.716906677609802,
+    "kvartal": 2.1611175357438173
+   },
+   {
+    "bolag": "Wihlborgs",
+    "sektor": "Fastigheter",
+    "kurs": 73.4,
+    "trend": "ned",
+    "rsi": 60.978209700840395,
+    "vol_x": 0.79924531011934,
+    "candle": [],
+    "beta": 0.58,
+    "korr": 0.39,
+    "rapport": null,
+    "metoder": [
+     "macd_vecka"
+    ],
+    "manad": 8.90207694979983,
+    "kvartal": -8.421709134741008
+   },
+   {
+    "bolag": "AAK",
+    "sektor": "Konsument",
+    "kurs": 177.4,
+    "trend": "ned",
+    "rsi": 40.62516575275438,
+    "vol_x": 0.9842435935242718,
+    "candle": [],
+    "beta": 0.24,
+    "korr": 0.14,
+    "rapport": null,
+    "metoder": [],
+    "manad": -5.788639924916705,
+    "kvartal": -8.320416590964152
+   },
+   {
+    "bolag": "ABB",
+    "sektor": "Industri",
+    "kurs": 846.8,
+    "trend": "sidled",
+    "rsi": 43.69625725308225,
+    "vol_x": 1.1800595784143335,
+    "candle": [],
+    "beta": 1.24,
+    "korr": 0.66,
+    "rapport": null,
+    "metoder": [],
+    "manad": -11.329844210160346,
+    "kvartal": -12.844791161888025
+   },
+   {
+    "bolag": "AFRY",
+    "sektor": "Industri",
+    "kurs": 130.5,
+    "trend": "sidled",
+    "rsi": 70.75854876487138,
+    "vol_x": 0.8125474894219459,
+    "candle": [],
+    "beta": 0.58,
+    "korr": 0.29,
+    "rapport": null,
+    "metoder": [],
+    "manad": 24.99999817303773,
+    "kvartal": 28.318587921310257
+   },
+   {
+    "bolag": "Addnode B",
+    "sektor": "Teknik & telekom",
+    "kurs": 61.6,
+    "trend": "sidled",
+    "rsi": 57.05885385402391,
+    "vol_x": 0.7481654564583267,
+    "candle": [
+     "Doji (osäkert)"
+    ],
+    "beta": 0.78,
+    "korr": 0.25,
+    "rapport": null,
+    "metoder": [],
+    "manad": 13.653132116266619,
+    "kvartal": 54.19273416201224
+   },
+   {
+    "bolag": "Addtech B",
+    "sektor": "Industri",
+    "kurs": 334.8,
+    "trend": "upp",
+    "rsi": 61.1457364184413,
+    "vol_x": 0.7785994503823107,
+    "candle": [],
+    "beta": 1.28,
+    "korr": 0.72,
+    "rapport": null,
+    "metoder": [],
+    "manad": 3.9751514884996064,
+    "kvartal": -1.5836537409192886
+   },
+   {
+    "bolag": "Alfa Laval",
+    "sektor": "Industri",
+    "kurs": 546.4,
+    "trend": "upp",
+    "rsi": 47.14972200866593,
+    "vol_x": 1.2178521072045647,
+    "candle": [],
+    "beta": 1.05,
+    "korr": 0.73,
+    "rapport": null,
+    "metoder": [],
+    "manad": -7.389826370497876,
+    "kvartal": -1.9382605090388916
+   },
+   {
+    "bolag": "Arjo B",
+    "sektor": "Hälsa",
+    "kurs": 36.26,
+    "trend": "upp",
+    "rsi": 80.14734576569938,
+    "vol_x": 0.7070516776182638,
+    "candle": [],
+    "beta": 0.25,
+    "korr": 0.13,
+    "rapport": null,
+    "metoder": [],
+    "manad": 30.90251741092509,
+    "kvartal": 30.90251741092509
+   },
+   {
+    "bolag": "Assa Abloy B",
+    "sektor": "Industri",
+    "kurs": 392.5,
+    "trend": "upp",
+    "rsi": 68.20639861756814,
+    "vol_x": 0.6913154658384959,
+    "candle": [],
+    "beta": 0.93,
+    "korr": 0.68,
+    "rapport": null,
+    "metoder": [],
+    "manad": 13.192837966224612,
+    "kvartal": 10.877598801483558
+   },
+   {
+    "bolag": "AstraZeneca",
+    "sektor": "Hälsa",
+    "kurs": 1840.0,
+    "trend": "sidled",
+    "rsi": 68.89828433218283,
+    "vol_x": 0.729921086570357,
+    "candle": [],
+    "beta": 0.26,
+    "korr": 0.15,
+    "rapport": null,
+    "metoder": [],
+    "manad": 16.75126903553299,
+    "kvartal": 24.32432432432432
+   },
+   {
+    "bolag": "Avanza",
+    "sektor": "Investmentbolag & finans",
+    "kurs": 378.6,
+    "trend": "upp",
+    "rsi": 60.09181037537036,
+    "vol_x": 0.746638004630418,
+    "candle": [],
+    "beta": 0.69,
+    "korr": 0.42,
+    "rapport": "2027-01-22",
+    "metoder": [],
+    "manad": -0.4208327333362516,
+    "kvartal": -5.27896058521673
+   },
+   {
+    "bolag": "Axfood",
+    "sektor": "Konsument",
+    "kurs": 279.7,
+    "trend": "sidled",
+    "rsi": 58.60493009689365,
+    "vol_x": 0.858704729316551,
+    "candle": [],
+    "beta": 0.11,
+    "korr": 0.07,
+    "rapport": null,
+    "metoder": [],
+    "manad": 7.576927771935105,
+    "kvartal": 20.05700513954032
+   },
+   {
+    "bolag": "Balder B",
+    "sektor": "Fastigheter",
+    "kurs": 53.0,
+    "trend": "ned",
+    "rsi": 67.12325147107461,
+    "vol_x": 0.7443744104038641,
+    "candle": [],
+    "beta": 0.75,
+    "korr": 0.43,
+    "rapport": null,
+    "metoder": [],
+    "manad": 20.04529596433555,
+    "kvartal": -0.6374206067027766
+   },
+   {
+    "bolag": "Beijer Ref B",
+    "sektor": "Industri",
+    "kurs": 161.3,
+    "trend": "upp",
+    "rsi": 65.98549498729088,
+    "vol_x": 0.8016418257209436,
+    "candle": [],
+    "beta": 1.04,
+    "korr": 0.57,
+    "rapport": null,
+    "metoder": [],
+    "manad": 10.945207474993923,
+    "kvartal": 23.828082674060227
+   },
+   {
+    "bolag": "Bilia A",
+    "sektor": "Konsument",
+    "kurs": 149.2,
+    "trend": "upp",
+    "rsi": 62.083605908663124,
+    "vol_x": 0.6411361167826056,
+    "candle": [],
+    "beta": 0.79,
+    "korr": 0.5,
+    "rapport": null,
+    "metoder": [],
+    "manad": 6.495353639030443,
+    "kvartal": 2.3598420777036777
+   },
+   {
+    "bolag": "Billerud",
+    "sektor": "Råvaror & skog",
+    "kurs": 87.55,
+    "trend": "sidled",
+    "rsi": 60.39993377902289,
+    "vol_x": 0.6383628336206219,
+    "candle": [
+     "Doji (osäkert)"
+    ],
+    "beta": 0.83,
+    "korr": 0.38,
+    "rapport": null,
+    "metoder": [],
+    "manad": 5.35499959006922,
+    "kvartal": 15.653905655528288
+   },
+   {
+    "bolag": "Boliden",
+    "sektor": "Råvaror & skog",
+    "kurs": 521.8,
+    "trend": "ned",
+    "rsi": 53.07375794525919,
+    "vol_x": 0.9807637923720188,
+    "candle": [],
+    "beta": 1.98,
+    "korr": 0.66,
+    "rapport": null,
+    "metoder": [],
+    "manad": -4.746257864070314,
+    "kvartal": -0.6095261346726222
+   },
+   {
+    "bolag": "Bure",
+    "sektor": "Investmentbolag & finans",
+    "kurs": 305.4,
+    "trend": "upp",
+    "rsi": 51.45775421540391,
+    "vol_x": 0.8603026326315267,
+    "candle": [],
+    "beta": 1.0,
+    "korr": 0.49,
+    "rapport": null,
+    "metoder": [],
+    "manad": -2.8007695635442587,
+    "kvartal": 10.252705377792193
+   },
+   {
+    "bolag": "Camurus",
+    "sektor": "Hälsa",
+    "kurs": 737.0,
+    "trend": "upp",
+    "rsi": 72.1690386649336,
+    "vol_x": 0.9923002063106693,
+    "candle": [
+     "Stor grön candle"
+    ],
+    "beta": 0.67,
+    "korr": 0.22,
+    "rapport": null,
+    "metoder": [],
+    "manad": 17.356687898089174,
+    "kvartal": 19.35222672064778
+   },
+   {
+    "bolag": "Castellum",
+    "sektor": "Fastigheter",
+    "kurs": 135.65,
+    "trend": "upp",
+    "rsi": 65.82157508764486,
+    "vol_x": 0.9160568783923807,
+    "candle": [],
+    "beta": 0.66,
+    "korr": 0.44,
+    "rapport": null,
+    "metoder": [],
+    "manad": 12.29303846818941,
+    "kvartal": -0.40382016452380487
+   },
+   {
+    "bolag": "Dometic",
+    "sektor": "Konsument",
+    "kurs": 23.08,
+    "trend": "ned",
+    "rsi": 56.397351810901284,
+    "vol_x": 0.7395048851420842,
+    "candle": [],
+    "beta": 1.44,
+    "korr": 0.44,
+    "rapport": null,
+    "metoder": [],
+    "manad": 18.23770175438939,
+    "kvartal": -4.391050094213855
+   },
+   {
+    "bolag": "Electrolux B",
+    "sektor": "Konsument",
+    "kurs": 31.49,
+    "trend": "ned",
+    "rsi": 67.65500146289658,
+    "vol_x": 0.9073074067188709,
+    "candle": [],
+    "beta": 1.4,
+    "korr": 0.29,
+    "rapport": null,
+    "metoder": [],
+    "manad": 19.68833299248507,
+    "kvartal": 7.401091742429355
+   },
+   {
+    "bolag": "Electrolux Professional B",
+    "sektor": "Industri",
+    "kurs": 52.9,
+    "trend": "sidled",
+    "rsi": 66.10263386396387,
+    "vol_x": 1.5001441154408177,
+    "candle": [
+     "Doji (osäkert)"
+    ],
+    "beta": 1.02,
+    "korr": 0.52,
+    "rapport": "2027-01-28",
+    "metoder": [],
+    "manad": 10.669461025564608,
+    "kvartal": 10.669461025564608
+   },
+   {
+    "bolag": "Elekta B",
+    "sektor": "Hälsa",
+    "kurs": 61.95,
+    "trend": "upp",
+    "rsi": 66.53751783098032,
+    "vol_x": 2.0368429830162667,
+    "candle": [],
+    "beta": 0.74,
+    "korr": 0.27,
+    "rapport": "2026-11-25",
+    "metoder": [],
+    "manad": 11.823102990350742,
+    "kvartal": 17.81623888405317
+   },
+   {
+    "bolag": "Embracer B",
+    "sektor": "Konsument",
+    "kurs": 101.0,
+    "trend": "upp",
+    "rsi": 71.4087548413783,
+    "vol_x": 4.7513335508053665,
+    "candle": [],
+    "beta": 0.43,
+    "korr": 0.12,
+    "rapport": "2026-11-11",
+    "metoder": [],
+    "manad": 8.719050959180773,
+    "kvartal": 32.58072931923828
+   },
+   {
+    "bolag": "Epiroc A",
+    "sektor": "Industri",
+    "kurs": 252.0,
+    "trend": "sidled",
+    "rsi": 50.87893095135018,
+    "vol_x": 0.4192021606908459,
+    "candle": [],
+    "beta": 1.5,
+    "korr": 0.73,
+    "rapport": "2027-01-26",
+    "metoder": [],
+    "manad": -5.6651500423091194,
+    "kvartal": 2.2372495569738415
+   },
+   {
+    "bolag": "Ericsson B",
+    "sektor": "Teknik & telekom",
+    "kurs": 106.4,
+    "trend": "sidled",
+    "rsi": 57.871075408061074,
+    "vol_x": 0.8368891969963828,
+    "candle": [],
+    "beta": 0.67,
+    "korr": 0.33,
+    "rapport": "2027-01-22",
+    "metoder": [],
+    "manad": 12.023581559614293,
+    "kvartal": 10.743370157103072
+   },
+   {
+    "bolag": "Essity B",
+    "sektor": "Konsument",
+    "kurs": 286.5,
+    "trend": "upp",
+    "rsi": 63.00627289937874,
+    "vol_x": 0.9015609416425612,
+    "candle": [],
+    "beta": 0.36,
+    "korr": 0.28,
+    "rapport": "2027-01-21",
+    "metoder": [],
+    "manad": 7.585434897854926,
+    "kvartal": 2.983460614226008
+   },
+   {
+    "bolag": "Evolution",
+    "sektor": "Konsument",
+    "kurs": 862.2,
+    "trend": "upp",
+    "rsi": 64.59204224685074,
+    "vol_x": 0.8165788407304806,
+    "candle": [],
+    "beta": 0.28,
+    "korr": 0.16,
+    "rapport": null,
+    "metoder": [],
+    "manad": 7.775001525878911,
+    "kvartal": 14.562854129215786
+   },
+   {
+    "bolag": "Fabege",
+    "sektor": "Fastigheter",
+    "kurs": 66.65,
+    "trend": "ned",
+    "rsi": 54.52808061808694,
+    "vol_x": 0.535001210458455,
+    "candle": [],
+    "beta": 0.55,
+    "korr": 0.44,
+    "rapport": null,
+    "metoder": [],
+    "manad": 5.12618284192532,
+    "kvartal": -12.863935582772212
+   },
+   {
+    "bolag": "Getinge B",
+    "sektor": "Hälsa",
+    "kurs": 277.3,
+    "trend": "upp",
+    "rsi": 63.29530967309291,
+    "vol_x": 0.6860226025871489,
+    "candle": [
+     "Möjlig bullish engulfing",
+     "Stor grön candle"
+    ],
+    "beta": 0.6,
+    "korr": 0.39,
+    "rapport": null,
+    "metoder": [],
+    "manad": 9.044429597010172,
+    "kvartal": 15.49353633644428
+   },
+   {
+    "bolag": "H&M B",
+    "sektor": "Konsument",
+    "kurs": 176.25,
+    "trend": "sidled",
+    "rsi": 58.86686001733168,
+    "vol_x": 0.8300710103343913,
+    "candle": [],
+    "beta": 0.65,
+    "korr": 0.42,
+    "rapport": null,
+    "metoder": [],
+    "manad": 7.6940103206387,
+    "kvartal": 2.7121611977109827
+   },
+   {
+    "bolag": "Handelsbanken A",
+    "sektor": "Banker",
+    "kurs": 162.95,
+    "trend": "upp",
+    "rsi": 66.82699471693232,
+    "vol_x": 0.8104853261197806,
+    "candle": [],
+    "beta": 0.59,
+    "korr": 0.53,
+    "rapport": null,
+    "metoder": [],
+    "manad": 6.364229891789086,
+    "kvartal": 9.878620091040325
+   },
+   {
+    "bolag": "Hemnet",
+    "sektor": "Teknik & telekom",
+    "kurs": 72.95,
+    "trend": "ned",
+    "rsi": 49.19736333024886,
+    "vol_x": 0.6777839002000396,
+    "candle": [],
+    "beta": 0.17,
+    "korr": 0.04,
+    "rapport": null,
+    "metoder": [],
+    "manad": 4.6628409502132095,
+    "kvartal": -29.584943993541824
+   },
+   {
+    "bolag": "Hexagon B",
+    "sektor": "Teknik & telekom",
+    "kurs": 109.25,
+    "trend": "upp",
+    "rsi": 62.9890305836114,
+    "vol_x": 0.6066434930796141,
+    "candle": [
+     "Stor grön candle"
+    ],
+    "beta": 1.0,
+    "korr": 0.4,
+    "rapport": null,
+    "metoder": [],
+    "manad": 4.6455923402633825,
+    "kvartal": 14.758407040072118
+   },
+   {
+    "bolag": "Hexpol B",
+    "sektor": "Industri",
+    "kurs": 95.1,
+    "trend": "upp",
+    "rsi": 52.072215593702104,
+    "vol_x": 0.6266256018191457,
+    "candle": [],
+    "beta": 0.79,
+    "korr": 0.43,
+    "rapport": null,
+    "metoder": [],
+    "manad": -1.6037279123506165,
+    "kvartal": 5.549389661128701
+   },
+   {
+    "bolag": "Holmen B",
+    "sektor": "Råvaror & skog",
+    "kurs": 299.2,
+    "trend": "ned",
+    "rsi": 36.70195895134108,
+    "vol_x": 0.5579062525788949,
+    "candle": [],
+    "beta": 0.61,
+    "korr": 0.45,
+    "rapport": null,
+    "metoder": [],
+    "manad": -7.196024233456444,
+    "kvartal": -6.324352559630864
+   },
+   {
+    "bolag": "Husqvarna B",
+    "sektor": "Industri",
+    "kurs": 33.21,
+    "trend": "ned",
+    "rsi": 48.90756043533045,
+    "vol_x": 0.7191365953449721,
+    "candle": [],
+    "beta": 1.06,
+    "korr": 0.46,
+    "rapport": null,
+    "metoder": [],
+    "manad": 0.3919943347460819,
+    "kvartal": -12.049635602826282
+   },
+   {
+    "bolag": "Industrivärden C",
+    "sektor": "Investmentbolag & finans",
+    "kurs": 546.4,
+    "trend": "upp",
+    "rsi": 67.10933150578968,
+    "vol_x": 0.9723141449675285,
+    "candle": [],
+    "beta": 1.14,
+    "korr": 0.86,
+    "rapport": null,
+    "metoder": [],
+    "manad": 7.432170243201575,
+    "kvartal": 5.3199763435823
+   },
+   {
+    "bolag": "Indutrade",
+    "sektor": "Industri",
+    "kurs": 268.2,
+    "trend": "upp",
+    "rsi": 56.475065549512344,
+    "vol_x": 1.042267444899826,
+    "candle": [
+     "Möjlig bullish engulfing"
+    ],
+    "beta": 1.21,
+    "korr": 0.52,
+    "rapport": null,
+    "metoder": [],
+    "manad": 1.7450705603205607,
+    "kvartal": 12.030083143193359
+   },
+   {
+    "bolag": "Instalco",
+    "sektor": "Bygg",
+    "kurs": 43.48,
+    "trend": "upp",
+    "rsi": 61.03745150439558,
+    "vol_x": 0.5334299315094942,
+    "candle": [],
+    "beta": 0.99,
+    "korr": 0.34,
+    "rapport": null,
+    "metoder": [],
+    "manad": 2.5471650412518088,
+    "kvartal": 18.087995390038802
+   },
+   {
+    "bolag": "Investor B",
+    "sektor": "Investmentbolag & finans",
+    "kurs": 435.25,
+    "trend": "upp",
+    "rsi": 66.923434759171,
+    "vol_x": 1.0898072776201186,
+    "candle": [],
+    "beta": 0.96,
+    "korr": 0.87,
+    "rapport": "2027-01-22",
+    "metoder": [],
+    "manad": 4.97679285747461,
+    "kvartal": 5.867180567722907
+   },
+   {
+    "bolag": "JM",
+    "sektor": "Bygg",
+    "kurs": 129.2,
+    "trend": "sidled",
+    "rsi": 60.602085591315536,
+    "vol_x": 0.4470648788034797,
+    "candle": [],
+    "beta": 0.94,
+    "korr": 0.43,
+    "rapport": null,
+    "metoder": [],
+    "manad": 16.501348215124167,
+    "kvartal": 0.0774522385741605
+   },
+   {
+    "bolag": "Kinnevik B",
+    "sektor": "Investmentbolag & finans",
+    "kurs": 72.12,
+    "trend": "sidled",
+    "rsi": 63.9322492432976,
+    "vol_x": 0.5713048366015714,
+    "candle": [],
+    "beta": 0.96,
+    "korr": 0.39,
+    "rapport": null,
+    "metoder": [],
+    "manad": 3.0285753522600434,
+    "kvartal": 24.38772562260063
+   },
+   {
+    "bolag": "Lagercrantz B",
+    "sektor": "Industri",
+    "kurs": 240.6,
+    "trend": "upp",
+    "rsi": 62.454719241691585,
+    "vol_x": 0.9289214160495327,
+    "candle": [],
+    "beta": 1.29,
+    "korr": 0.63,
+    "rapport": null,
+    "metoder": [],
+    "manad": 5.897891432774127,
+    "kvartal": 6.504216274866925
+   },
+   {
+    "bolag": "Latour B",
+    "sektor": "Investmentbolag & finans",
+    "kurs": 231.5,
+    "trend": "sidled",
+    "rsi": 70.48594992905981,
+    "vol_x": 0.6567887153054338,
+    "candle": [
+     "Doji (osäkert)"
+    ],
+    "beta": 1.0,
+    "korr": 0.61,
+    "rapport": null,
+    "metoder": [],
+    "manad": 13.202933985330079,
+    "kvartal": 19.545575675952943
+   },
+   {
+    "bolag": "Lifco B",
+    "sektor": "Industri",
+    "kurs": 288.2,
+    "trend": "sidled",
+    "rsi": 42.66868677618379,
+    "vol_x": 0.7233995017200602,
+    "candle": [],
+    "beta": 1.02,
+    "korr": 0.58,
+    "rapport": null,
+    "metoder": [],
+    "manad": -9.711779077218075,
+    "kvartal": -9.598487063245864
+   },
+   {
+    "bolag": "Lindab",
+    "sektor": "Industri",
+    "kurs": 129.4,
+    "trend": "ned",
+    "rsi": 55.844496786352956,
+    "vol_x": 0.6737699306913482,
+    "candle": [],
+    "beta": 0.98,
+    "korr": 0.49,
+    "rapport": null,
+    "metoder": [],
+    "manad": 4.67483634909831,
+    "kvartal": 4.097896010100999
+   },
+   {
+    "bolag": "Lundbergföretagen B",
+    "sektor": "Investmentbolag & finans",
+    "kurs": 610.0,
+    "trend": "upp",
+    "rsi": 70.8748992118311,
+    "vol_x": 0.9193719255216516,
+    "candle": [],
+    "beta": 0.95,
+    "korr": 0.79,
+    "rapport": "2026-11-24",
+    "metoder": [],
+    "manad": 7.299912049252422,
+    "kvartal": 10.30741410488245
+   },
+   {
+    "bolag": "Lundin Mining",
+    "sektor": "Råvaror & skog",
+    "kurs": 216.9,
+    "trend": "ned",
+    "rsi": 46.469579036541745,
+    "vol_x": 0.7215815884731495,
+    "candle": [],
+    "beta": 1.96,
+    "korr": 0.57,
+    "rapport": null,
+    "metoder": [],
+    "manad": -9.88782856398438,
+    "kvartal": -10.064728557569957
+   },
+   {
+    "bolag": "Medicover B",
+    "sektor": "Hälsa",
+    "kurs": 263.0,
+    "trend": "upp",
+    "rsi": 44.512359213643485,
+    "vol_x": 0.8169528402114652,
+    "candle": [],
+    "beta": 0.43,
+    "korr": 0.23,
+    "rapport": null,
+    "metoder": [],
+    "manad": 0.0,
+    "kvartal": 11.440677966101687
+   },
+   {
+    "bolag": "Munters",
+    "sektor": "Industri",
+    "kurs": 136.75,
+    "trend": "ned",
+    "rsi": 52.335620466145876,
+    "vol_x": 1.5779373125992422,
+    "candle": [],
+    "beta": 1.35,
+    "korr": 0.43,
+    "rapport": null,
+    "metoder": [],
+    "manad": 5.415693421470191,
+    "kvartal": -25.947887985088524
+   },
+   {
+    "bolag": "NCC B",
+    "sektor": "Bygg",
+    "kurs": 193.2,
+    "trend": "sidled",
+    "rsi": 73.0769143567569,
+    "vol_x": 0.8667071405221127,
+    "candle": [
+     "Möjlig bullish engulfing"
+    ],
+    "beta": 0.97,
+    "korr": 0.54,
+    "rapport": "2027-02-03",
+    "metoder": [],
+    "manad": 12.828967213309038,
+    "kvartal": 11.368598598317735
+   },
+   {
+    "bolag": "Nibe B",
+    "sektor": "Industri",
+    "kurs": 44.74,
+    "trend": "upp",
+    "rsi": 48.932880579648696,
+    "vol_x": 1.7073273149776071,
+    "candle": [
+     "Stor grön candle"
+    ],
+    "beta": 0.84,
+    "korr": 0.34,
+    "rapport": "2026-11-17",
+    "metoder": [],
+    "manad": 1.7280630835400546,
+    "kvartal": 16.875661194283296
+   },
+   {
+    "bolag": "Nolato B",
+    "sektor": "Industri",
+    "kurs": 53.1,
+    "trend": "sidled",
+    "rsi": 46.46189847239978,
+    "vol_x": 1.448690902502604,
+    "candle": [],
+    "beta": 0.87,
+    "korr": 0.49,
+    "rapport": null,
+    "metoder": [],
+    "manad": -6.51408593774293,
+    "kvartal": 2.7079259004290313
+   },
+   {
+    "bolag": "Nordea",
+    "sektor": "Banker",
+    "kurs": 187.45,
+    "trend": "upp",
+    "rsi": 60.05260976640778,
+    "vol_x": 0.9152513051106852,
+    "candle": [],
+    "beta": 0.72,
+    "korr": 0.56,
+    "rapport": null,
+    "metoder": [],
+    "manad": -0.9772879417280333,
+    "kvartal": -2.395212720864115
+   },
+   {
+    "bolag": "Nordnet",
+    "sektor": "Investmentbolag & finans",
+    "kurs": 354.2,
+    "trend": "upp",
+    "rsi": 63.40750944653163,
+    "vol_x": 0.509966043342724,
+    "candle": [],
+    "beta": 0.77,
+    "korr": 0.48,
+    "rapport": null,
+    "metoder": [],
+    "manad": 3.2051280911273405,
+    "kvartal": -2.7991168661629096
+   },
+   {
+    "bolag": "Pandox B",
+    "sektor": "Fastigheter",
+    "kurs": 175.4,
+    "trend": "sidled",
+    "rsi": 66.96189582408324,
+    "vol_x": 0.542058984040731,
+    "candle": [],
+    "beta": 0.76,
+    "korr": 0.51,
+    "rapport": null,
+    "metoder": [],
+    "manad": 14.790569629158501,
+    "kvartal": 0.9205931050818794
+   },
+   {
+    "bolag": "Peab B",
+    "sektor": "Bygg",
+    "kurs": 99.15,
+    "trend": "upp",
+    "rsi": 69.56149903087079,
+    "vol_x": 0.8643860759202129,
+    "candle": [],
+    "beta": 0.9,
+    "korr": 0.58,
+    "rapport": null,
+    "metoder": [],
+    "manad": 10.07976338395904,
+    "kvartal": 5.138811616037109
+   },
+   {
+    "bolag": "Ratos B",
+    "sektor": "Investmentbolag & finans",
+    "kurs": 42.78,
+    "trend": "upp",
+    "rsi": 74.65229703689988,
+    "vol_x": 0.868522995450041,
+    "candle": [],
+    "beta": 0.84,
+    "korr": 0.49,
+    "rapport": null,
+    "metoder": [],
+    "manad": 15.30997449807938,
+    "kvartal": 15.684151727574092
+   },
+   {
+    "bolag": "SCA B",
+    "sektor": "Råvaror & skog",
+    "kurs": 119.0,
+    "trend": "upp",
+    "rsi": 40.11643192507389,
+    "vol_x": 0.6343691889252774,
+    "candle": [],
+    "beta": 0.58,
+    "korr": 0.43,
+    "rapport": null,
+    "metoder": [],
+    "manad": -4.417670682730924,
+    "kvartal": 9.626896964028187
+   },
+   {
+    "bolag": "SEB A",
+    "sektor": "Banker",
+    "kurs": 222.2,
+    "trend": "upp",
+    "rsi": 58.041732670283814,
+    "vol_x": 0.5473445837059266,
+    "candle": [],
+    "beta": 0.85,
+    "korr": 0.62,
+    "rapport": null,
+    "metoder": [],
+    "manad": -3.767863654488668,
+    "kvartal": -0.31404081086124913
+   },
+   {
+    "bolag": "SKF B",
+    "sektor": "Industri",
+    "kurs": 279.1,
+    "trend": "upp",
+    "rsi": 57.30134811483023,
+    "vol_x": 0.8097629916903283,
+    "candle": [],
+    "beta": 1.34,
+    "korr": 0.73,
+    "rapport": "2027-02-04",
+    "metoder": [],
+    "manad": 2.9699386360775515,
+    "kvartal": 8.000521961346529
+   },
+   {
+    "bolag": "SOBI",
+    "sektor": "Hälsa",
+    "kurs": 485.6,
+    "trend": "upp",
+    "rsi": 60.18930065270696,
+    "vol_x": 1.333634913357449,
+    "candle": [],
+    "beta": 0.53,
+    "korr": 0.3,
+    "rapport": null,
+    "metoder": [],
+    "manad": 13.670410165667878,
+    "kvartal": 10.263399825944465
+   },
+   {
+    "bolag": "Saab B",
+    "sektor": "Försvar",
+    "kurs": 641.4,
+    "trend": "sidled",
+    "rsi": 51.67524269814054,
+    "vol_x": 0.8640387794782483,
+    "candle": [],
+    "beta": 0.71,
+    "korr": 0.27,
+    "rapport": null,
+    "metoder": [],
+    "manad": 7.239600500853638,
+    "kvartal": -7.224070417444528
+   },
+   {
+    "bolag": "Sagax B",
+    "sektor": "Fastigheter",
+    "kurs": 186.7,
+    "trend": "sidled",
+    "rsi": 70.56154806532459,
+    "vol_x": 0.6209431926004403,
+    "candle": [],
+    "beta": 0.75,
+    "korr": 0.42,
+    "rapport": null,
+    "metoder": [],
+    "manad": 15.747051094806274,
+    "kvartal": 13.633593110420051
+   },
+   {
+    "bolag": "Sandvik",
+    "sektor": "Industri",
+    "kurs": 373.7,
+    "trend": "sidled",
+    "rsi": 58.94255109653056,
+    "vol_x": 0.5324250581853384,
+    "candle": [],
+    "beta": 1.69,
+    "korr": 0.8,
+    "rapport": null,
+    "metoder": [],
+    "manad": 2.4958875346074327,
+    "kvartal": 4.036748192436779
+   },
+   {
+    "bolag": "Sectra B",
+    "sektor": "Hälsa",
+    "kurs": 321.0,
+    "trend": "upp",
+    "rsi": 50.507953073492,
+    "vol_x": 0.36425272551956134,
+    "candle": [],
+    "beta": 0.46,
+    "korr": 0.21,
+    "rapport": "2026-11-25",
+    "metoder": [],
+    "manad": 3.6821684986248826,
+    "kvartal": 14.25171328234951
+   },
+   {
+    "bolag": "Securitas B",
+    "sektor": "Industri",
+    "kurs": 161.7,
+    "trend": "upp",
+    "rsi": 59.714395960760314,
+    "vol_x": 0.760571253770744,
+    "candle": [],
+    "beta": 0.48,
+    "korr": 0.32,
+    "rapport": null,
+    "metoder": [],
+    "manad": 0.747661649995135,
+    "kvartal": 9.25675469475824
+   },
+   {
+    "bolag": "Skanska B",
+    "sektor": "Bygg",
+    "kurs": 305.0,
+    "trend": "upp",
+    "rsi": 77.14821717375081,
+    "vol_x": 1.0342511549788784,
+    "candle": [],
+    "beta": 1.09,
+    "korr": 0.73,
+    "rapport": "2027-01-29",
+    "metoder": [],
+    "manad": 14.14670137203462,
+    "kvartal": 14.232209737827706
+   },
+   {
+    "bolag": "Stora Enso R",
+    "sektor": "Råvaror & skog",
+    "kurs": 105.1,
+    "trend": "sidled",
+    "rsi": 40.57076479001184,
+    "vol_x": 0.542707289074462,
+    "candle": [],
+    "beta": 0.91,
+    "korr": 0.5,
+    "rapport": null,
+    "metoder": [],
+    "manad": -6.57777913411458,
+    "kvartal": -0.280092599295223
+   },
+   {
+    "bolag": "Sweco B",
+    "sektor": "Industri",
+    "kurs": 141.5,
+    "trend": "sidled",
+    "rsi": 58.07263360791473,
+    "vol_x": 1.0812814611906827,
+    "candle": [],
+    "beta": 0.78,
+    "korr": 0.49,
+    "rapport": null,
+    "metoder": [],
+    "manad": 8.762485289519372,
+    "kvartal": 12.65923703745504
+   },
+   {
+    "bolag": "Swedbank A",
+    "sektor": "Banker",
+    "kurs": 419.3,
+    "trend": "upp",
+    "rsi": 66.67332738219216,
+    "vol_x": 0.6796879911272844,
+    "candle": [],
+    "beta": 0.72,
+    "korr": 0.61,
+    "rapport": null,
+    "metoder": [],
+    "manad": 2.643815861191867,
+    "kvartal": 10.197105858861688
+   },
+   {
+    "bolag": "Systemair",
+    "sektor": "Industri",
+    "kurs": 88.1,
+    "trend": "upp",
+    "rsi": 62.74936612552921,
+    "vol_x": 2.1621348702629812,
+    "candle": [
+     "Stor grön candle"
+    ],
+    "beta": 1.07,
+    "korr": 0.55,
+    "rapport": "2026-12-10",
+    "metoder": [],
+    "manad": 1.2643660622081443,
+    "kvartal": 10.45126126924072
+   },
+   {
+    "bolag": "Telia",
+    "sektor": "Teknik & telekom",
+    "kurs": 48.98,
+    "trend": "upp",
+    "rsi": 63.276489245346255,
+    "vol_x": 0.6047970833374112,
+    "candle": [
+     "Möjlig bullish engulfing"
+    ],
+    "beta": 0.05,
+    "korr": 0.03,
+    "rapport": null,
+    "metoder": [],
+    "manad": 13.626854770817754,
+    "kvartal": 12.644414391849468
+   },
+   {
+    "bolag": "Thule",
+    "sektor": "Konsument",
+    "kurs": 216.0,
+    "trend": "sidled",
+    "rsi": 67.13486127268033,
+    "vol_x": 0.5170375473053673,
+    "candle": [],
+    "beta": 1.1,
+    "korr": 0.49,
+    "rapport": null,
+    "metoder": [],
+    "manad": 13.029823705498188,
+    "kvartal": 3.986928997606265
+   },
+   {
+    "bolag": "Trelleborg B",
+    "sektor": "Industri",
+    "kurs": 472.6,
+    "trend": "upp",
+    "rsi": 61.53313200081393,
+    "vol_x": 0.7747470976417747,
+    "candle": [],
+    "beta": 1.18,
+    "korr": 0.73,
+    "rapport": null,
+    "metoder": [],
+    "manad": 3.323133452089899,
+    "kvartal": 8.793741423517186
+   },
+   {
+    "bolag": "Truecaller B",
+    "sektor": "Teknik & telekom",
+    "kurs": 23.1,
+    "trend": "upp",
+    "rsi": 48.332081145518295,
+    "vol_x": 0.7918615238897913,
+    "candle": [],
+    "beta": 0.19,
+    "korr": 0.04,
+    "rapport": null,
+    "metoder": [],
+    "manad": -2.5727487412785632,
+    "kvartal": 12.135922105364717
+   },
+   {
+    "bolag": "Vitrolife",
+    "sektor": "Hälsa",
+    "kurs": 118.3,
+    "trend": "sidled",
+    "rsi": 75.22633034897592,
+    "vol_x": 0.7942306927277671,
+    "candle": [
+     "Doji (osäkert)"
+    ],
+    "beta": 0.37,
+    "korr": 0.14,
+    "rapport": null,
+    "metoder": [],
+    "manad": 19.979720976169446,
+    "kvartal": 30.07147555934495
+   },
+   {
+    "bolag": "Volvo B",
+    "sektor": "Industri",
+    "kurs": 323.1,
+    "trend": "ned",
+    "rsi": 57.72405359775417,
+    "vol_x": 0.8840333114950067,
+    "candle": [
+     "Doji (osäkert)"
+    ],
+    "beta": 1.2,
+    "korr": 0.77,
+    "rapport": null,
+    "metoder": [],
+    "manad": 2.376425809554661,
+    "kvartal": -5.026456640192389
+   },
+   {
+    "bolag": "Volvo Car B",
+    "sektor": "Konsument",
+    "kurs": 11.98,
+    "trend": "ned",
+    "rsi": 38.61701112701048,
+    "vol_x": 0.6576944123117517,
+    "candle": [],
+    "beta": 1.11,
+    "korr": 0.32,
+    "rapport": null,
+    "metoder": [],
+    "manad": -16.159499176551094,
+    "kvartal": -38.66428303412495
+   },
+   {
+    "bolag": "Wallenstam B",
+    "sektor": "Fastigheter",
+    "kurs": 39.28,
+    "trend": "ned",
+    "rsi": 63.413293016501676,
+    "vol_x": 0.5685595814673919,
+    "candle": [],
+    "beta": 0.67,
+    "korr": 0.46,
+    "rapport": null,
+    "metoder": [],
+    "manad": 14.671580635645064,
+    "kvartal": -5.0917894709287985
+   }
+  ],
+  "sektorer": [
+   {
+    "sektor": "Hälsa",
+    "antal": 9,
+    "upptrend": 7,
+    "rel_1m": 11.15095104545923,
+    "rel_3m": 16.713218421647717
+   },
+   {
+    "sektor": "Bygg",
+    "antal": 6,
+    "upptrend": 4,
+    "rel_1m": 7.124354133978479,
+    "rel_3m": 8.021783754184437
+   },
+   {
+    "sektor": "Investmentbolag & finans",
+    "antal": 10,
+    "upptrend": 7,
+    "rel_1m": 3.5134935046305875,
+    "rel_3m": 4.934300291259377
+   },
+   {
+    "sektor": "Teknik & telekom",
+    "antal": 9,
+    "upptrend": 5,
+    "rel_1m": 1.42921114794611,
+    "rel_3m": 4.645128997717929
+   },
+   {
+    "sektor": "Banker",
+    "antal": 4,
+    "upptrend": 4,
+    "rel_1m": -1.473359478946415,
+    "rel_3m": 1.7308242695101868
+   },
+   {
+    "sektor": "Konsument",
+    "antal": 11,
+    "upptrend": 4,
+    "rel_1m": 4.265780478719223,
+    "rel_3m": 0.5954173920903627
+   },
+   {
+    "sektor": "Industri",
+    "antal": 28,
+    "upptrend": 16,
+    "rel_1m": -1.6426358558681864,
+    "rel_3m": 0.20325668739021108
+   },
+   {
+    "sektor": "Råvaror & skog",
+    "antal": 7,
+    "upptrend": 2,
+    "rel_1m": -7.32170991229774,
+    "rel_3m": -3.029329267397429
+   },
+   {
+    "sektor": "Fastigheter",
+    "antal": 8,
+    "upptrend": 1,
+    "rel_1m": 10.09892898575552,
+    "rel_3m": -4.725053432794366
+   },
+   {
+    "sektor": "Försvar",
+    "antal": 1,
+    "upptrend": 0,
+    "rel_1m": 4.70051748271616,
+    "rel_3m": -9.834864252478503
+   }
+  ]
+ },
+ "parametrar": {
+  "dipp": {
+   "rsi_max": 30,
+   "rsi_dagar": 5,
+   "vander_dagar": 2,
+   "botten_dagar": 20,
+   "stop_marginal": 1.0,
+   "mal_R": 2.0,
+   "max_dagar": 20
+  },
+  "macd_vecka": {
+   "under_noll": 1,
+   "stop_veckor": 8,
+   "stop_marginal": 1.0,
+   "max_dagar": 250
+  },
+  "darvas": {
+   "krav_upptrend": 1,
+   "nara_topp": 10,
+   "box_dagar": 15,
+   "box_max": 10,
+   "vol_faktor": 1.5,
+   "stop_marginal": 1.0,
+   "mal_R": 2.0,
+   "max_dagar": 30
+  },
+  "bas": {
+   "fall_min": 15,
+   "fall_dagar": 60,
+   "bas_dagar": 20,
+   "bas_max": 12,
+   "vol_faktor": 1.3,
+   "stop_marginal": 1.0,
+   "mal_R": 2.0,
+   "max_dagar": 30
+  },
+  "rekyl": {
+   "rekyl_dagar": 3,
+   "narhet": 2,
+   "rsi_max": 55,
+   "stop_marginal": 1.0,
+   "mal_R": 2.0,
+   "max_dagar": 20
+  },
+  "engulfing": {
+   "fall_min": 5,
+   "fall_dagar": 5,
+   "rsi_max": 40,
+   "vol_faktor": 1.0,
+   "stop_marginal": 1.0,
+   "mal_R": 2.0,
+   "max_dagar": 15
+  },
+  "price_action": {
+   "fall_min": 5,
+   "fall_dagar": 10,
+   "rsi_max": 40,
+   "stod_dagar": 60,
+   "stod_narhet": 3,
+   "vol_faktor": 1.0,
+   "stop_marginal": 1.0,
+   "mal_R": 2.0,
+   "max_dagar": 20
+  },
+  "slump": {
+   "var_n": 20,
+   "atr_ggr": 2.0,
+   "mal_R": 2.0,
+   "max_dagar": 20
+  }
+ },
+ "tratt": [
+  {
+   "namn": "Alla signaler från alla metoder",
+   "alla": {
+    "n": 9198,
+    "per_ar": 919.7,
+    "traff": 43.2,
+    "vinst_R": 1.35,
+    "forlust_R": -1.03,
+    "E": 0.0,
+    "osakerhet": 0.027,
+    "summa_R": 1.5,
+    "dagar": 12.0,
+    "forlust_i_rad": 64
+   },
+   "trana": {
+    "n": 6598,
+    "per_ar": null,
+    "traff": 43.0,
+    "vinst_R": 1.35,
+    "forlust_R": -1.02,
+    "E": -0.003,
+    "osakerhet": 0.032,
+    "summa_R": -19.3,
+    "dagar": 12.0,
+    "forlust_i_rad": 64
+   },
+   "test": {
+    "n": 2600,
+    "per_ar": 908.8,
+    "traff": 43.6,
+    "vinst_R": 1.36,
+    "forlust_R": -1.04,
+    "E": 0.008,
+    "osakerhet": 0.053,
+    "summa_R": 20.8,
+    "dagar": 13.0,
+    "forlust_i_rad": 32
+   },
+   "handelbar": false
+  },
+  {
+   "namn": "+ bara metoden som passar marknadsläget",
+   "alla": {
+    "n": 2420,
+    "per_ar": 242.0,
+    "traff": 49.2,
+    "vinst_R": 1.18,
+    "forlust_R": -0.9,
+    "E": 0.124,
+    "osakerhet": 0.05,
+    "summa_R": 299.8,
+    "dagar": 21.0,
+    "forlust_i_rad": 35
+   },
+   "trana": {
+    "n": 1893,
+    "per_ar": null,
+    "traff": 48.1,
+    "vinst_R": 1.22,
+    "forlust_R": -0.92,
+    "E": 0.111,
+    "osakerhet": 0.057,
+    "summa_R": 210.0,
+    "dagar": 21.0,
+    "forlust_i_rad": 35
+   },
+   "test": {
+    "n": 527,
+    "per_ar": 184.2,
+    "traff": 53.3,
+    "vinst_R": 1.03,
+    "forlust_R": -0.81,
+    "E": 0.17,
+    "osakerhet": 0.097,
+    "summa_R": 89.8,
+    "dagar": 28.0,
+    "forlust_i_rad": 15
+   },
+   "handelbar": false
+  },
+  {
+   "namn": "+ R/R mot motstånd minst 2,0",
+   "alla": {
+    "n": 903,
+    "per_ar": 90.3,
+    "traff": 48.2,
+    "vinst_R": 1.21,
+    "forlust_R": -0.96,
+    "E": 0.087,
+    "osakerhet": 0.081,
+    "summa_R": 78.2,
+    "dagar": 20.0,
+    "forlust_i_rad": 24
+   },
+   "trana": {
+    "n": 726,
+    "per_ar": null,
+    "traff": 46.1,
+    "vinst_R": 1.28,
+    "forlust_R": -0.96,
+    "E": 0.071,
+    "osakerhet": 0.092,
+    "summa_R": 51.6,
+    "dagar": 16.0,
+    "forlust_i_rad": 24
+   },
+   "test": {
+    "n": 177,
+    "per_ar": 61.9,
+    "traff": 56.5,
+    "vinst_R": 0.98,
+    "forlust_R": -0.92,
+    "E": 0.15,
+    "osakerhet": 0.169,
+    "summa_R": 26.6,
+    "dagar": 31.0,
+    "forlust_i_rad": 18
+   },
+   "handelbar": false
+  },
+  {
+   "namn": "+ volym minst 1,0× snittet",
+   "alla": {
+    "n": 712,
+    "per_ar": 71.2,
+    "traff": 50.1,
+    "vinst_R": 1.08,
+    "forlust_R": -0.86,
+    "E": 0.113,
+    "osakerhet": 0.083,
+    "summa_R": 80.5,
+    "dagar": 27.0,
+    "forlust_i_rad": 24
+   },
+   "trana": {
+    "n": 558,
+    "per_ar": null,
+    "traff": 47.8,
+    "vinst_R": 1.13,
+    "forlust_R": -0.87,
+    "E": 0.09,
+    "osakerhet": 0.095,
+    "summa_R": 50.1,
+    "dagar": 22.0,
+    "forlust_i_rad": 24
+   },
+   "test": {
+    "n": 154,
+    "per_ar": 53.8,
+    "traff": 58.4,
+    "vinst_R": 0.92,
+    "forlust_R": -0.82,
+    "E": 0.198,
+    "osakerhet": 0.168,
+    "summa_R": 30.5,
+    "dagar": 31.0,
+    "forlust_i_rad": 13
+   },
+   "handelbar": false
+  },
+  {
+   "namn": "+ max 2 öppna, 1 ny per vecka (det du hinner handla)",
+   "alla": {
+    "n": 169,
+    "per_ar": 16.9,
+    "traff": 48.5,
+    "vinst_R": 1.19,
+    "forlust_R": -0.88,
+    "E": 0.122,
+    "osakerhet": 0.179,
+    "summa_R": 20.6,
+    "dagar": 24.0,
+    "forlust_i_rad": 7
+   },
+   "trana": {
+    "n": 125,
+    "per_ar": null,
+    "traff": 46.4,
+    "vinst_R": 1.26,
+    "forlust_R": -0.9,
+    "E": 0.105,
+    "osakerhet": 0.213,
+    "summa_R": 13.2,
+    "dagar": 22.0,
+    "forlust_i_rad": 7
+   },
+   "test": {
+    "n": 44,
+    "per_ar": 15.4,
+    "traff": 54.5,
+    "vinst_R": 1.0,
+    "forlust_R": -0.83,
+    "E": 0.17,
+    "osakerhet": 0.329,
+    "summa_R": 7.5,
+    "dagar": 31.0,
+    "forlust_i_rad": 4
+   },
+   "handelbar": true,
+   "R_per_ar": 2.1,
+   "procent_per_ar": 4.1,
+   "test_R_per_ar": 2.6,
+   "per_kalenderar": {
+    "2016": -0.3,
+    "2017": 6.4,
+    "2018": 1.4,
+    "2019": 9.3,
+    "2020": -0.8,
+    "2021": 2.8,
+    "2022": -3.2,
+    "2023": -2.5,
+    "2024": 2.7,
+    "2025": 3.8,
+    "2026": 1.0
+   }
+  }
+ ],
+ "takt": [
+  {
+   "namn": "Max 1 ny trade per vecka",
+   "alla": {
+    "n": 169,
+    "per_ar": 16.9,
+    "traff": 48.5,
+    "vinst_R": 1.19,
+    "forlust_R": -0.88,
+    "E": 0.122,
+    "osakerhet": 0.179,
+    "summa_R": 20.6,
+    "dagar": 24.0,
+    "forlust_i_rad": 7
+   },
+   "trana": {
+    "n": 125,
+    "per_ar": null,
+    "traff": 46.4,
+    "vinst_R": 1.26,
+    "forlust_R": -0.9,
+    "E": 0.105,
+    "osakerhet": 0.213,
+    "summa_R": 13.2,
+    "dagar": 22.0,
+    "forlust_i_rad": 7
+   },
+   "test": {
+    "n": 44,
+    "per_ar": 15.4,
+    "traff": 54.5,
+    "vinst_R": 1.0,
+    "forlust_R": -0.83,
+    "E": 0.17,
+    "osakerhet": 0.329,
+    "summa_R": 7.5,
+    "dagar": 31.0,
+    "forlust_i_rad": 4
+   },
+   "handelbar": true,
+   "R_per_ar": 2.1,
+   "procent_per_ar": 4.1,
+   "test_R_per_ar": 2.6,
+   "per_kalenderar": {
+    "2016": -0.3,
+    "2017": 6.4,
+    "2018": 1.4,
+    "2019": 9.3,
+    "2020": -0.8,
+    "2021": 2.8,
+    "2022": -3.2,
+    "2023": -2.5,
+    "2024": 2.7,
+    "2025": 3.8,
+    "2026": 1.0
+   }
+  },
+  {
+   "namn": "Max 2 nya per vecka",
+   "alla": {
+    "n": 190,
+    "per_ar": 19.0,
+    "traff": 49.5,
+    "vinst_R": 1.27,
+    "forlust_R": -0.87,
+    "E": 0.188,
+    "osakerhet": 0.174,
+    "summa_R": 35.7,
+    "dagar": 21.0,
+    "forlust_i_rad": 9
+   },
+   "trana": {
+    "n": 143,
+    "per_ar": null,
+    "traff": 48.3,
+    "vinst_R": 1.34,
+    "forlust_R": -0.9,
+    "E": 0.181,
+    "osakerhet": 0.205,
+    "summa_R": 25.8,
+    "dagar": 21.0,
+    "forlust_i_rad": 9
+   },
+   "test": {
+    "n": 47,
+    "per_ar": 16.4,
+    "traff": 53.2,
+    "vinst_R": 1.1,
+    "forlust_R": -0.8,
+    "E": 0.211,
+    "osakerhet": 0.327,
+    "summa_R": 9.9,
+    "dagar": 31.0,
+    "forlust_i_rad": 5
+   },
+   "handelbar": true,
+   "R_per_ar": 3.6,
+   "procent_per_ar": 7.1,
+   "test_R_per_ar": 3.5,
+   "per_kalenderar": {
+    "2016": -1.2,
+    "2017": 11.0,
+    "2018": 4.6,
+    "2019": 7.4,
+    "2020": 3.0,
+    "2021": 2.8,
+    "2022": -3.1,
+    "2023": 1.4,
+    "2024": 3.7,
+    "2025": 3.7,
+    "2026": 2.6
+   }
+  },
+  {
+   "namn": "Ingen veckogräns (bara max 2 öppna)",
+   "alla": {
+    "n": 211,
+    "per_ar": 21.1,
+    "traff": 48.3,
+    "vinst_R": 1.3,
+    "forlust_R": -0.92,
+    "E": 0.154,
+    "osakerhet": 0.169,
+    "summa_R": 32.4,
+    "dagar": 20.0,
+    "forlust_i_rad": 10
+   },
+   "trana": {
+    "n": 162,
+    "per_ar": null,
+    "traff": 46.3,
+    "vinst_R": 1.35,
+    "forlust_R": -0.95,
+    "E": 0.115,
+    "osakerhet": 0.197,
+    "summa_R": 18.6,
+    "dagar": 15.0,
+    "forlust_i_rad": 10
+   },
+   "test": {
+    "n": 49,
+    "per_ar": 17.1,
+    "traff": 55.1,
+    "vinst_R": 1.17,
+    "forlust_R": -0.8,
+    "E": 0.282,
+    "osakerhet": 0.328,
+    "summa_R": 13.8,
+    "dagar": 31.0,
+    "forlust_i_rad": 5
+   },
+   "handelbar": true,
+   "R_per_ar": 3.2,
+   "procent_per_ar": 6.5,
+   "test_R_per_ar": 4.8,
+   "per_kalenderar": {
+    "2016": -1.2,
+    "2017": 11.0,
+    "2018": 4.8,
+    "2019": 7.4,
+    "2020": 1.9,
+    "2021": 2.8,
+    "2022": -9.5,
+    "2023": 1.4,
+    "2024": 3.7,
+    "2025": 7.6,
+    "2026": 2.6
+   }
+  },
+  {
+   "namn": "Jämförelse: alla signaler, max 1 per vecka, inga krav",
+   "alla": {
+    "n": 333,
+    "per_ar": 33.3,
+    "traff": 45.6,
+    "vinst_R": 1.37,
+    "forlust_R": -1.3,
+    "E": -0.083,
+    "osakerhet": 0.185,
+    "summa_R": -27.5,
+    "dagar": 6.0,
+    "forlust_i_rad": 11
+   },
+   "trana": {
+    "n": 238,
+    "per_ar": null,
+    "traff": 45.0,
+    "vinst_R": 1.38,
+    "forlust_R": -1.21,
+    "E": -0.048,
+    "osakerhet": 0.184,
+    "summa_R": -11.3,
+    "dagar": 6.0,
+    "forlust_i_rad": 11
+   },
+   "test": {
+    "n": 95,
+    "per_ar": 33.2,
+    "traff": 47.4,
+    "vinst_R": 1.33,
+    "forlust_R": -1.52,
+    "E": -0.17,
+    "osakerhet": 0.458,
+    "summa_R": -16.2,
+    "dagar": 6.0,
+    "forlust_i_rad": 6
+   },
+   "handelbar": true,
+   "R_per_ar": -2.7,
+   "procent_per_ar": -5.5,
+   "test_R_per_ar": -5.7,
+   "per_kalenderar": {
+    "2015": 3.6,
+    "2016": -4.0,
+    "2017": -13.2,
+    "2018": 0.6,
+    "2019": 11.1,
+    "2020": -5.2,
+    "2021": 1.2,
+    "2022": -9.3,
+    "2023": 3.9,
+    "2024": 2.6,
+    "2025": -27.7,
+    "2026": 8.9
+   }
+  },
+  {
+   "namn": "Jämförelse: slumpköp, max 1 per vecka",
+   "alla": {
+    "n": 372,
+    "per_ar": 37.2,
+    "traff": 40.9,
+    "vinst_R": 1.35,
+    "forlust_R": -1.02,
+    "E": -0.054,
+    "osakerhet": 0.131,
+    "summa_R": -20.2,
+    "dagar": 13.0,
+    "forlust_i_rad": 12
+   },
+   "trana": {
+    "n": 276,
+    "per_ar": null,
+    "traff": 39.9,
+    "vinst_R": 1.35,
+    "forlust_R": -1.03,
+    "E": -0.077,
+    "osakerhet": 0.152,
+    "summa_R": -21.3,
+    "dagar": 13.0,
+    "forlust_i_rad": 12
+   },
+   "test": {
+    "n": 96,
+    "per_ar": 33.6,
+    "traff": 43.8,
+    "vinst_R": 1.33,
+    "forlust_R": -1.01,
+    "E": 0.012,
+    "osakerhet": 0.26,
+    "summa_R": 1.1,
+    "dagar": 13.0,
+    "forlust_i_rad": 7
+   },
+   "handelbar": true,
+   "R_per_ar": -2.0,
+   "procent_per_ar": -4.0,
+   "test_R_per_ar": 0.4,
+   "per_kalenderar": {
+    "2015": -4.6,
+    "2016": -12.2,
+    "2017": 5.9,
+    "2018": -20.5,
+    "2019": 1.5,
+    "2020": 3.5,
+    "2021": 1.1,
+    "2022": 5.4,
+    "2023": -1.3,
+    "2024": -14.1,
+    "2025": 2.3,
+    "2026": 13.0
+   }
+  }
+ ],
+ "krasna_idag": []
+}

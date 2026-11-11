@@ -1,0 +1,1050 @@
+{
+ "idag": {
+  "namn": "Dagens jättar 2014–2026",
+  "resultat": {
+   "Meta": {
+    "månadssparande": {
+     "insatt": 155000,
+     "varde": 558842,
+     "ganger": 3.61,
+     "arlig": 18.3,
+     "kassa_kvar": 0,
+     "storsta_fall": 72.6,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 10 %": {
+     "insatt": 155000,
+     "varde": 539191,
+     "ganger": 3.48,
+     "arlig": 17.8,
+     "kassa_kvar": 0,
+     "storsta_fall": 72.5,
+     "vantade_manader": 93,
+     "ar": 12.9
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 155000,
+     "varde": 549017,
+     "ganger": 3.54,
+     "arlig": 18.1,
+     "kassa_kvar": 0,
+     "storsta_fall": 72.6,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 20 %": {
+     "insatt": 155000,
+     "varde": 440574,
+     "ganger": 2.84,
+     "arlig": 15.1,
+     "kassa_kvar": 0,
+     "storsta_fall": 69.1,
+     "vantade_manader": 122,
+     "ar": 12.9
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 155000,
+     "varde": 499708,
+     "ganger": 3.22,
+     "arlig": 16.8,
+     "kassa_kvar": 0,
+     "storsta_fall": 71.2,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 30 %": {
+     "insatt": 155000,
+     "varde": 451482,
+     "ganger": 2.91,
+     "arlig": 15.4,
+     "kassa_kvar": 45000,
+     "storsta_fall": 67.2,
+     "vantade_manader": 140,
+     "ar": 12.9
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 155000,
+     "varde": 505162,
+     "ganger": 3.26,
+     "arlig": 16.9,
+     "kassa_kvar": 22500,
+     "storsta_fall": 70.4,
+     "vantade_manader": 0,
+     "ar": 12.9
+    }
+   },
+   "Alphabet": {
+    "månadssparande": {
+     "insatt": 155000,
+     "varde": 694473,
+     "ganger": 4.48,
+     "arlig": 21.3,
+     "kassa_kvar": 0,
+     "storsta_fall": 35.3,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 10 %": {
+     "insatt": 155000,
+     "varde": 695746,
+     "ganger": 4.49,
+     "arlig": 21.3,
+     "kassa_kvar": 0,
+     "storsta_fall": 35.0,
+     "vantade_manader": 103,
+     "ar": 12.9
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 155000,
+     "varde": 695110,
+     "ganger": 4.48,
+     "arlig": 21.3,
+     "kassa_kvar": 0,
+     "storsta_fall": 35.2,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 20 %": {
+     "insatt": 155000,
+     "varde": 542023,
+     "ganger": 3.5,
+     "arlig": 17.9,
+     "kassa_kvar": 0,
+     "storsta_fall": 32.6,
+     "vantade_manader": 139,
+     "ar": 12.9
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 155000,
+     "varde": 618248,
+     "ganger": 3.99,
+     "arlig": 19.7,
+     "kassa_kvar": 0,
+     "storsta_fall": 34.2,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 30 %": {
+     "insatt": 155000,
+     "varde": 361643,
+     "ganger": 2.33,
+     "arlig": 12.3,
+     "kassa_kvar": 0,
+     "storsta_fall": 24.1,
+     "vantade_manader": 148,
+     "ar": 12.9
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 155000,
+     "varde": 528058,
+     "ganger": 3.41,
+     "arlig": 17.5,
+     "kassa_kvar": 0,
+     "storsta_fall": 26.4,
+     "vantade_manader": 0,
+     "ar": 12.9
+    }
+   },
+   "Microsoft": {
+    "månadssparande": {
+     "insatt": 155000,
+     "varde": 811366,
+     "ganger": 5.23,
+     "arlig": 23.4,
+     "kassa_kvar": 0,
+     "storsta_fall": 29.6,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 10 %": {
+     "insatt": 155000,
+     "varde": 745153,
+     "ganger": 4.81,
+     "arlig": 22.2,
+     "kassa_kvar": 4000,
+     "storsta_fall": 29.2,
+     "vantade_manader": 117,
+     "ar": 12.9
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 155000,
+     "varde": 778260,
+     "ganger": 5.02,
+     "arlig": 22.8,
+     "kassa_kvar": 2000,
+     "storsta_fall": 29.4,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 20 %": {
+     "insatt": 155000,
+     "varde": 268323,
+     "ganger": 1.73,
+     "arlig": 8.1,
+     "kassa_kvar": 4000,
+     "storsta_fall": 24.5,
+     "vantade_manader": 142,
+     "ar": 12.9
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 155000,
+     "varde": 539844,
+     "ganger": 3.48,
+     "arlig": 17.8,
+     "kassa_kvar": 2000,
+     "storsta_fall": 27.4,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 30 %": {
+     "insatt": 155000,
+     "varde": 309253,
+     "ganger": 2.0,
+     "arlig": 10.1,
+     "kassa_kvar": 7000,
+     "storsta_fall": 23.0,
+     "vantade_manader": 153,
+     "ar": 12.9
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 155000,
+     "varde": 560309,
+     "ganger": 3.61,
+     "arlig": 18.3,
+     "kassa_kvar": 3500,
+     "storsta_fall": 26.9,
+     "vantade_manader": 0,
+     "ar": 12.9
+    }
+   },
+   "Apple": {
+    "månadssparande": {
+     "insatt": 155000,
+     "varde": 1010192,
+     "ganger": 6.52,
+     "arlig": 26.3,
+     "kassa_kvar": 0,
+     "storsta_fall": 28.8,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 10 %": {
+     "insatt": 155000,
+     "varde": 936641,
+     "ganger": 6.04,
+     "arlig": 25.3,
+     "kassa_kvar": 3000,
+     "storsta_fall": 28.5,
+     "vantade_manader": 102,
+     "ar": 12.9
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 155000,
+     "varde": 973417,
+     "ganger": 6.28,
+     "arlig": 25.8,
+     "kassa_kvar": 1500,
+     "storsta_fall": 28.7,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 20 %": {
+     "insatt": 155000,
+     "varde": 965425,
+     "ganger": 6.23,
+     "arlig": 25.7,
+     "kassa_kvar": 15000,
+     "storsta_fall": 27.4,
+     "vantade_manader": 139,
+     "ar": 12.9
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 155000,
+     "varde": 987809,
+     "ganger": 6.37,
+     "arlig": 26.0,
+     "kassa_kvar": 7500,
+     "storsta_fall": 28.1,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 30 %": {
+     "insatt": 155000,
+     "varde": 729421,
+     "ganger": 4.71,
+     "arlig": 21.9,
+     "kassa_kvar": 46000,
+     "storsta_fall": 23.8,
+     "vantade_manader": 153,
+     "ar": 12.9
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 155000,
+     "varde": 869807,
+     "ganger": 5.61,
+     "arlig": 24.3,
+     "kassa_kvar": 23000,
+     "storsta_fall": 26.8,
+     "vantade_manader": 0,
+     "ar": 12.9
+    }
+   },
+   "Amazon": {
+    "månadssparande": {
+     "insatt": 155000,
+     "varde": 661210,
+     "ganger": 4.27,
+     "arlig": 20.6,
+     "kassa_kvar": 0,
+     "storsta_fall": 48.0,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 10 %": {
+     "insatt": 155000,
+     "varde": 626247,
+     "ganger": 4.04,
+     "arlig": 19.9,
+     "kassa_kvar": 0,
+     "storsta_fall": 47.8,
+     "vantade_manader": 87,
+     "ar": 12.9
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 155000,
+     "varde": 643729,
+     "ganger": 4.15,
+     "arlig": 20.2,
+     "kassa_kvar": 0,
+     "storsta_fall": 47.9,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 20 %": {
+     "insatt": 155000,
+     "varde": 516303,
+     "ganger": 3.33,
+     "arlig": 17.2,
+     "kassa_kvar": 18000,
+     "storsta_fall": 44.5,
+     "vantade_manader": 132,
+     "ar": 12.9
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 155000,
+     "varde": 588757,
+     "ganger": 3.8,
+     "arlig": 19.0,
+     "kassa_kvar": 9000,
+     "storsta_fall": 46.5,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 30 %": {
+     "insatt": 155000,
+     "varde": 267861,
+     "ganger": 1.73,
+     "arlig": 8.1,
+     "kassa_kvar": 43000,
+     "storsta_fall": 32.9,
+     "vantade_manader": 144,
+     "ar": 12.9
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 155000,
+     "varde": 464536,
+     "ganger": 3.0,
+     "arlig": 15.8,
+     "kassa_kvar": 21500,
+     "storsta_fall": 42.6,
+     "vantade_manader": 0,
+     "ar": 12.9
+    }
+   },
+   "Nvidia": {
+    "månadssparande": {
+     "insatt": 155000,
+     "varde": 14716799,
+     "ganger": 94.95,
+     "arlig": 64.0,
+     "kassa_kvar": 0,
+     "storsta_fall": 59.9,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 10 %": {
+     "insatt": 155000,
+     "varde": 12900256,
+     "ganger": 83.23,
+     "arlig": 62.0,
+     "kassa_kvar": 0,
+     "storsta_fall": 59.8,
+     "vantade_manader": 100,
+     "ar": 12.9
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 155000,
+     "varde": 13808528,
+     "ganger": 89.09,
+     "arlig": 63.0,
+     "kassa_kvar": 0,
+     "storsta_fall": 59.8,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 20 %": {
+     "insatt": 155000,
+     "varde": 3378114,
+     "ganger": 21.79,
+     "arlig": 42.8,
+     "kassa_kvar": 18000,
+     "storsta_fall": 58.3,
+     "vantade_manader": 124,
+     "ar": 12.9
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 155000,
+     "varde": 9047456,
+     "ganger": 58.37,
+     "arlig": 56.8,
+     "kassa_kvar": 9000,
+     "storsta_fall": 59.6,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 30 %": {
+     "insatt": 155000,
+     "varde": 3872760,
+     "ganger": 24.99,
+     "arlig": 44.7,
+     "kassa_kvar": 46000,
+     "storsta_fall": 57.7,
+     "vantade_manader": 135,
+     "ar": 12.9
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 155000,
+     "varde": 9294780,
+     "ganger": 59.97,
+     "arlig": 57.2,
+     "kassa_kvar": 23000,
+     "storsta_fall": 59.4,
+     "vantade_manader": 0,
+     "ar": 12.9
+    }
+   },
+   "S&P 500 (indexfond)": {
+    "månadssparande": {
+     "insatt": 155000,
+     "varde": 420931,
+     "ganger": 2.72,
+     "arlig": 14.4,
+     "kassa_kvar": 0,
+     "storsta_fall": 22.0,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 10 %": {
+     "insatt": 155000,
+     "varde": 368984,
+     "ganger": 2.38,
+     "arlig": 12.6,
+     "kassa_kvar": 44000,
+     "storsta_fall": 18.2,
+     "vantade_manader": 142,
+     "ar": 12.9
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 155000,
+     "varde": 394957,
+     "ganger": 2.55,
+     "arlig": 13.5,
+     "kassa_kvar": 22000,
+     "storsta_fall": 20.2,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 20 %": {
+     "insatt": 155000,
+     "varde": 367716,
+     "ganger": 2.37,
+     "arlig": 12.6,
+     "kassa_kvar": 49000,
+     "storsta_fall": 14.4,
+     "vantade_manader": 153,
+     "ar": 12.9
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 155000,
+     "varde": 394324,
+     "ganger": 2.54,
+     "arlig": 13.5,
+     "kassa_kvar": 24500,
+     "storsta_fall": 16.5,
+     "vantade_manader": 0,
+     "ar": 12.9
+    },
+    "bara dippar 30 %": {
+     "insatt": 155000,
+     "varde": 155000,
+     "ganger": 1.0,
+     "arlig": -0.0,
+     "kassa_kvar": 155000,
+     "storsta_fall": 0.0,
+     "vantade_manader": 155,
+     "ar": 12.9
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 155000,
+     "varde": 287965,
+     "ganger": 1.86,
+     "arlig": 9.1,
+     "kassa_kvar": 77500,
+     "storsta_fall": 12.1,
+     "vantade_manader": 0,
+     "ar": 12.9
+    }
+   },
+   "Korg (lika i alla)": {
+    "månadssparande": {
+     "insatt": 155000,
+     "varde": 3075480,
+     "ganger": 19.84,
+     "arlig_snitt_bolag": 29.0,
+     "storsta_fall_snitt": 45.7
+    },
+    "bara dippar 10 %": {
+     "insatt": 155000,
+     "varde": 2740539,
+     "ganger": 17.68,
+     "arlig_snitt_bolag": 28.1,
+     "storsta_fall_snitt": 45.5
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 155000,
+     "varde": 2908010,
+     "ganger": 18.76,
+     "arlig_snitt_bolag": 28.5,
+     "storsta_fall_snitt": 45.6
+    },
+    "bara dippar 20 %": {
+     "insatt": 155000,
+     "varde": 1018460,
+     "ganger": 6.57,
+     "arlig_snitt_bolag": 21.1,
+     "storsta_fall_snitt": 42.7
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 155000,
+     "varde": 2046970,
+     "ganger": 13.21,
+     "arlig_snitt_bolag": 26.0,
+     "storsta_fall_snitt": 44.5
+    },
+    "bara dippar 30 %": {
+     "insatt": 155000,
+     "varde": 998737,
+     "ganger": 6.44,
+     "arlig_snitt_bolag": 18.8,
+     "storsta_fall_snitt": 38.1
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 155000,
+     "varde": 2037109,
+     "ganger": 13.14,
+     "arlig_snitt_bolag": 25.0,
+     "storsta_fall_snitt": 42.1
+    }
+   }
+  }
+ },
+ "ar2000": {
+  "namn": "Jättarna år 2000, 2000–2012",
+  "resultat": {
+   "Microsoft": {
+    "månadssparande": {
+     "insatt": 156000,
+     "varde": 177282,
+     "ganger": 1.14,
+     "arlig": 1.9,
+     "kassa_kvar": 0,
+     "storsta_fall": 48.6,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 10 %": {
+     "insatt": 156000,
+     "varde": 181129,
+     "ganger": 1.16,
+     "arlig": 2.3,
+     "kassa_kvar": 0,
+     "storsta_fall": 48.4,
+     "vantade_manader": 68,
+     "ar": 13.0
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 156000,
+     "varde": 179205,
+     "ganger": 1.15,
+     "arlig": 2.1,
+     "kassa_kvar": 0,
+     "storsta_fall": 48.5,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 20 %": {
+     "insatt": 156000,
+     "varde": 178039,
+     "ganger": 1.14,
+     "arlig": 2.0,
+     "kassa_kvar": 26000,
+     "storsta_fall": 39.1,
+     "vantade_manader": 112,
+     "ar": 13.0
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 156000,
+     "varde": 177660,
+     "ganger": 1.14,
+     "arlig": 2.0,
+     "kassa_kvar": 13000,
+     "storsta_fall": 44.3,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 30 %": {
+     "insatt": 156000,
+     "varde": 180396,
+     "ganger": 1.16,
+     "arlig": 2.2,
+     "kassa_kvar": 43000,
+     "storsta_fall": 36.6,
+     "vantade_manader": 132,
+     "ar": 13.0
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 156000,
+     "varde": 178839,
+     "ganger": 1.15,
+     "arlig": 2.1,
+     "kassa_kvar": 21500,
+     "storsta_fall": 42.9,
+     "vantade_manader": 0,
+     "ar": 13.0
+    }
+   },
+   "Cisco": {
+    "månadssparande": {
+     "insatt": 156000,
+     "varde": 150651,
+     "ganger": 0.97,
+     "arlig": -0.5,
+     "kassa_kvar": 0,
+     "storsta_fall": 49.0,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 10 %": {
+     "insatt": 156000,
+     "varde": 151440,
+     "ganger": 0.97,
+     "arlig": -0.5,
+     "kassa_kvar": 1000,
+     "storsta_fall": 48.4,
+     "vantade_manader": 48,
+     "ar": 13.0
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 156000,
+     "varde": 151045,
+     "ganger": 0.97,
+     "arlig": -0.5,
+     "kassa_kvar": 500,
+     "storsta_fall": 48.7,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 20 %": {
+     "insatt": 156000,
+     "varde": 154586,
+     "ganger": 0.99,
+     "arlig": -0.1,
+     "kassa_kvar": 4000,
+     "storsta_fall": 47.8,
+     "vantade_manader": 73,
+     "ar": 13.0
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 156000,
+     "varde": 152618,
+     "ganger": 0.98,
+     "arlig": -0.3,
+     "kassa_kvar": 2000,
+     "storsta_fall": 48.4,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 30 %": {
+     "insatt": 156000,
+     "varde": 153429,
+     "ganger": 0.98,
+     "arlig": -0.3,
+     "kassa_kvar": 14000,
+     "storsta_fall": 45.9,
+     "vantade_manader": 106,
+     "ar": 13.0
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 156000,
+     "varde": 152040,
+     "ganger": 0.97,
+     "arlig": -0.4,
+     "kassa_kvar": 7000,
+     "storsta_fall": 46.3,
+     "vantade_manader": 0,
+     "ar": 13.0
+    }
+   },
+   "Intel": {
+    "månadssparande": {
+     "insatt": 156000,
+     "varde": 155145,
+     "ganger": 0.99,
+     "arlig": -0.1,
+     "kassa_kvar": 0,
+     "storsta_fall": 43.6,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 10 %": {
+     "insatt": 156000,
+     "varde": 156459,
+     "ganger": 1.0,
+     "arlig": 0.0,
+     "kassa_kvar": 0,
+     "storsta_fall": 42.7,
+     "vantade_manader": 53,
+     "ar": 13.0
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 156000,
+     "varde": 155802,
+     "ganger": 1.0,
+     "arlig": -0.0,
+     "kassa_kvar": 0,
+     "storsta_fall": 43.2,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 20 %": {
+     "insatt": 156000,
+     "varde": 161872,
+     "ganger": 1.04,
+     "arlig": 0.6,
+     "kassa_kvar": 0,
+     "storsta_fall": 42.5,
+     "vantade_manader": 87,
+     "ar": 13.0
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 156000,
+     "varde": 158508,
+     "ganger": 1.02,
+     "arlig": 0.2,
+     "kassa_kvar": 0,
+     "storsta_fall": 43.0,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 30 %": {
+     "insatt": 156000,
+     "varde": 174324,
+     "ganger": 1.12,
+     "arlig": 1.7,
+     "kassa_kvar": 0,
+     "storsta_fall": 40.8,
+     "vantade_manader": 111,
+     "ar": 13.0
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 156000,
+     "varde": 164734,
+     "ganger": 1.06,
+     "arlig": 0.8,
+     "kassa_kvar": 0,
+     "storsta_fall": 42.2,
+     "vantade_manader": 0,
+     "ar": 13.0
+    }
+   },
+   "General Electric": {
+    "månadssparande": {
+     "insatt": 156000,
+     "varde": 153040,
+     "ganger": 0.98,
+     "arlig": -0.3,
+     "kassa_kvar": 0,
+     "storsta_fall": 75.3,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 10 %": {
+     "insatt": 156000,
+     "varde": 152852,
+     "ganger": 0.98,
+     "arlig": -0.3,
+     "kassa_kvar": 11000,
+     "storsta_fall": 74.8,
+     "vantade_manader": 83,
+     "ar": 13.0
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 156000,
+     "varde": 152946,
+     "ganger": 0.98,
+     "arlig": -0.3,
+     "kassa_kvar": 5500,
+     "storsta_fall": 74.9,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 20 %": {
+     "insatt": 156000,
+     "varde": 159070,
+     "ganger": 1.02,
+     "arlig": 0.3,
+     "kassa_kvar": 12000,
+     "storsta_fall": 71.4,
+     "vantade_manader": 107,
+     "ar": 13.0
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 156000,
+     "varde": 156055,
+     "ganger": 1.0,
+     "arlig": 0.0,
+     "kassa_kvar": 6000,
+     "storsta_fall": 73.2,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 30 %": {
+     "insatt": 156000,
+     "varde": 165500,
+     "ganger": 1.06,
+     "arlig": 0.9,
+     "kassa_kvar": 14000,
+     "storsta_fall": 69.8,
+     "vantade_manader": 125,
+     "ar": 13.0
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 156000,
+     "varde": 159270,
+     "ganger": 1.02,
+     "arlig": 0.3,
+     "kassa_kvar": 7000,
+     "storsta_fall": 72.4,
+     "vantade_manader": 0,
+     "ar": 13.0
+    }
+   },
+   "IBM": {
+    "månadssparande": {
+     "insatt": 156000,
+     "varde": 315351,
+     "ganger": 2.02,
+     "arlig": 10.2,
+     "kassa_kvar": 0,
+     "storsta_fall": 36.5,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 10 %": {
+     "insatt": 156000,
+     "varde": 307660,
+     "ganger": 1.97,
+     "arlig": 9.9,
+     "kassa_kvar": 41000,
+     "storsta_fall": 36.1,
+     "vantade_manader": 90,
+     "ar": 13.0
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 156000,
+     "varde": 311506,
+     "ganger": 2.0,
+     "arlig": 10.1,
+     "kassa_kvar": 20500,
+     "storsta_fall": 36.3,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 20 %": {
+     "insatt": 156000,
+     "varde": 318264,
+     "ganger": 2.04,
+     "arlig": 10.4,
+     "kassa_kvar": 44000,
+     "storsta_fall": 30.6,
+     "vantade_manader": 124,
+     "ar": 13.0
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 156000,
+     "varde": 316807,
+     "ganger": 2.03,
+     "arlig": 10.3,
+     "kassa_kvar": 22000,
+     "storsta_fall": 33.6,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 30 %": {
+     "insatt": 156000,
+     "varde": 339460,
+     "ganger": 2.18,
+     "arlig": 11.3,
+     "kassa_kvar": 45000,
+     "storsta_fall": 18.5,
+     "vantade_manader": 144,
+     "ar": 13.0
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 156000,
+     "varde": 327405,
+     "ganger": 2.1,
+     "arlig": 10.8,
+     "kassa_kvar": 22500,
+     "storsta_fall": 26.7,
+     "vantade_manader": 0,
+     "ar": 13.0
+    }
+   },
+   "S&P 500 (indexfond)": {
+    "månadssparande": {
+     "insatt": 156000,
+     "varde": 213208,
+     "ganger": 1.37,
+     "arlig": 4.7,
+     "kassa_kvar": 0,
+     "storsta_fall": 44.8,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 10 %": {
+     "insatt": 156000,
+     "varde": 203074,
+     "ganger": 1.3,
+     "arlig": 3.9,
+     "kassa_kvar": 14000,
+     "storsta_fall": 43.1,
+     "vantade_manader": 103,
+     "ar": 13.0
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 156000,
+     "varde": 208141,
+     "ganger": 1.33,
+     "arlig": 4.3,
+     "kassa_kvar": 7000,
+     "storsta_fall": 43.3,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 20 %": {
+     "insatt": 156000,
+     "varde": 212584,
+     "ganger": 1.36,
+     "arlig": 4.6,
+     "kassa_kvar": 40000,
+     "storsta_fall": 37.9,
+     "vantade_manader": 132,
+     "ar": 13.0
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 156000,
+     "varde": 212896,
+     "ganger": 1.36,
+     "arlig": 4.6,
+     "kassa_kvar": 20000,
+     "storsta_fall": 41.0,
+     "vantade_manader": 0,
+     "ar": 13.0
+    },
+    "bara dippar 30 %": {
+     "insatt": 156000,
+     "varde": 224602,
+     "ganger": 1.44,
+     "arlig": 5.4,
+     "kassa_kvar": 42000,
+     "storsta_fall": 23.5,
+     "vantade_manader": 148,
+     "ar": 13.0
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 156000,
+     "varde": 218905,
+     "ganger": 1.4,
+     "arlig": 5.0,
+     "kassa_kvar": 21000,
+     "storsta_fall": 32.7,
+     "vantade_manader": 0,
+     "ar": 13.0
+    }
+   },
+   "Korg (lika i alla)": {
+    "månadssparande": {
+     "insatt": 156000,
+     "varde": 190294,
+     "ganger": 1.22,
+     "arlig_snitt_bolag": 2.2,
+     "storsta_fall_snitt": 50.6
+    },
+    "bara dippar 10 %": {
+     "insatt": 156000,
+     "varde": 189908,
+     "ganger": 1.22,
+     "arlig_snitt_bolag": 2.3,
+     "storsta_fall_snitt": 50.1
+    },
+    "månad + extra vid 10 %": {
+     "insatt": 156000,
+     "varde": 190101,
+     "ganger": 1.22,
+     "arlig_snitt_bolag": 2.3,
+     "storsta_fall_snitt": 50.3
+    },
+    "bara dippar 20 %": {
+     "insatt": 156000,
+     "varde": 194366,
+     "ganger": 1.25,
+     "arlig_snitt_bolag": 2.6,
+     "storsta_fall_snitt": 46.3
+    },
+    "månad + extra vid 20 %": {
+     "insatt": 156000,
+     "varde": 192330,
+     "ganger": 1.23,
+     "arlig_snitt_bolag": 2.4,
+     "storsta_fall_snitt": 48.5
+    },
+    "bara dippar 30 %": {
+     "insatt": 156000,
+     "varde": 202622,
+     "ganger": 1.3,
+     "arlig_snitt_bolag": 3.2,
+     "storsta_fall_snitt": 42.3
+    },
+    "månad + extra vid 30 %": {
+     "insatt": 156000,
+     "varde": 196458,
+     "ganger": 1.26,
+     "arlig_snitt_bolag": 2.7,
+     "storsta_fall_snitt": 46.1
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,2703 @@
+{
+ "period": "2015-12-09 – 2026-11-11",
+ "tran_till": "2022-01-01",
+ "bolag": 93,
+ "exits": {
+  "null": "Fast mål 2R (standard)",
+  "trail": "Släpande stop 3 × ATR under högsta stängning",
+  "halv_trail": "Sälj halva vid 2R, resten med släpande stop",
+  "macd_ner": "Sälj när MACD vänder ner (histogrammet under noll)",
+  "under_ma20": "Sälj när kursen stänger under 20-dagars",
+  "candle_ner": "Sälj vid säljcandle (bearish engulfing, stjärna, gravsten)",
+  "be_trail": "Stop till köpkurs vid +1R, sedan släpande stop"
+ },
+ "utstopp": {
+  "andel_stoppade": 45.3,
+  "median_dagar_till_stop": 6.0,
+  "andel_inom_5_dagar": 45.7,
+  "andel_var_plus_1R_forst": 15.2,
+  "andel_var_plus_halv_R_forst": 37.4,
+  "andel_nadde_2R_inom_20_dagar_efter_stop": 19.9,
+  "per_metod": {
+   "dipp": 49.6,
+   "macd_vecka": 28.5,
+   "darvas": 27.3,
+   "bas": 21.1,
+   "rekyl": 49.3,
+   "engulfing": 54.5,
+   "price_action": 53.3
+  }
+ },
+ "exit_tabell": {
+  "dipp": {
+   "None": {
+    "alla": {
+     "n": 2200,
+     "E": 0.007,
+     "traff": 43.3,
+     "osakerhet": 0.062
+    },
+    "tran": {
+     "n": 1081,
+     "E": 0.017,
+     "traff": 43.5,
+     "osakerhet": 0.088
+    },
+    "test": {
+     "n": 1119,
+     "E": -0.002,
+     "traff": 43.2,
+     "osakerhet": 0.087
+    },
+    "dagar": 8.0,
+    "per_lage": {
+     "upp": {
+      "n": 983,
+      "E": -0.082,
+      "traff": 40.2,
+      "osakerhet": 0.098
+     },
+     "sidled": {
+      "n": 553,
+      "E": 0.228,
+      "traff": 51.4,
+      "osakerhet": 0.12
+     },
+     "ned": {
+      "n": 481,
+      "E": 0.07,
+      "traff": 44.5,
+      "osakerhet": 0.124
+     }
+    }
+   },
+   "trail": {
+    "alla": {
+     "n": 2130,
+     "E": 0.073,
+     "traff": 32.3,
+     "osakerhet": 0.113
+    },
+    "tran": {
+     "n": 1053,
+     "E": 0.256,
+     "traff": 33.0,
+     "osakerhet": 0.186
+    },
+    "test": {
+     "n": 1077,
+     "E": -0.105,
+     "traff": 31.5,
+     "osakerhet": 0.13
+    },
+    "dagar": 14.0,
+    "per_lage": {
+     "upp": {
+      "n": 943,
+      "E": -0.096,
+      "traff": 30.0,
+      "osakerhet": 0.141
+     },
+     "sidled": {
+      "n": 542,
+      "E": 0.411,
+      "traff": 39.3,
+      "osakerhet": 0.279
+     },
+     "ned": {
+      "n": 466,
+      "E": 0.228,
+      "traff": 33.3,
+      "osakerhet": 0.266
+     }
+    }
+   },
+   "halv_trail": {
+    "alla": {
+     "n": 2134,
+     "E": 0.031,
+     "traff": 38.4,
+     "osakerhet": 0.078
+    },
+    "tran": {
+     "n": 1056,
+     "E": 0.11,
+     "traff": 37.7,
+     "osakerhet": 0.122
+    },
+    "test": {
+     "n": 1078,
+     "E": -0.046,
+     "traff": 39.1,
+     "osakerhet": 0.099
+    },
+    "dagar": 13.0,
+    "per_lage": {
+     "upp": {
+      "n": 946,
+      "E": -0.091,
+      "traff": 36.6,
+      "osakerhet": 0.109
+     },
+     "sidled": {
+      "n": 542,
+      "E": 0.316,
+      "traff": 46.1,
+      "osakerhet": 0.178
+     },
+     "ned": {
+      "n": 467,
+      "E": 0.131,
+      "traff": 39.0,
+      "osakerhet": 0.173
+     }
+    }
+   },
+   "macd_ner": {
+    "alla": {
+     "n": 2127,
+     "E": 0.08,
+     "traff": 33.6,
+     "osakerhet": 0.107
+    },
+    "tran": {
+     "n": 1054,
+     "E": 0.225,
+     "traff": 34.8,
+     "osakerhet": 0.162
+    },
+    "test": {
+     "n": 1073,
+     "E": -0.062,
+     "traff": 32.3,
+     "osakerhet": 0.141
+    },
+    "dagar": 14.0,
+    "per_lage": {
+     "upp": {
+      "n": 939,
+      "E": -0.079,
+      "traff": 31.1,
+      "osakerhet": 0.142
+     },
+     "sidled": {
+      "n": 542,
+      "E": 0.336,
+      "traff": 40.4,
+      "osakerhet": 0.236
+     },
+     "ned": {
+      "n": 466,
+      "E": 0.305,
+      "traff": 35.2,
+      "osakerhet": 0.269
+     }
+    }
+   },
+   "under_ma20": {
+    "alla": {
+     "n": 2829,
+     "E": -0.138,
+     "traff": 39.0,
+     "osakerhet": 0.035
+    },
+    "tran": {
+     "n": 1409,
+     "E": -0.134,
+     "traff": 37.8,
+     "osakerhet": 0.057
+    },
+    "test": {
+     "n": 1420,
+     "E": -0.143,
+     "traff": 40.1,
+     "osakerhet": 0.042
+    },
+    "dagar": 2.0,
+    "per_lage": {
+     "upp": {
+      "n": 1277,
+      "E": -0.148,
+      "traff": 36.9,
+      "osakerhet": 0.047
+     },
+     "sidled": {
+      "n": 728,
+      "E": -0.125,
+      "traff": 44.2,
+      "osakerhet": 0.097
+     },
+     "ned": {
+      "n": 597,
+      "E": -0.121,
+      "traff": 40.7,
+      "osakerhet": 0.056
+     }
+    }
+   },
+   "candle_ner": {
+    "alla": {
+     "n": 2342,
+     "E": -0.039,
+     "traff": 39.2,
+     "osakerhet": 0.062
+    },
+    "tran": {
+     "n": 1162,
+     "E": -0.021,
+     "traff": 38.0,
+     "osakerhet": 0.094
+    },
+    "test": {
+     "n": 1180,
+     "E": -0.056,
+     "traff": 40.4,
+     "osakerhet": 0.08
+    },
+    "dagar": 4.0,
+    "per_lage": {
+     "upp": {
+      "n": 1053,
+      "E": -0.147,
+      "traff": 36.9,
+      "osakerhet": 0.082
+     },
+     "sidled": {
+      "n": 586,
+      "E": 0.185,
+      "traff": 46.1,
+      "osakerhet": 0.151
+     },
+     "ned": {
+      "n": 508,
+      "E": 0.004,
+      "traff": 39.6,
+      "osakerhet": 0.132
+     }
+    }
+   },
+   "be_trail": {
+    "alla": {
+     "n": 2136,
+     "E": 0.069,
+     "traff": 32.1,
+     "osakerhet": 0.11
+    },
+    "tran": {
+     "n": 1058,
+     "E": 0.258,
+     "traff": 33.6,
+     "osakerhet": 0.182
+    },
+    "test": {
+     "n": 1078,
+     "E": -0.115,
+     "traff": 30.6,
+     "osakerhet": 0.122
+    },
+    "dagar": 12.0,
+    "per_lage": {
+     "upp": {
+      "n": 946,
+      "E": -0.114,
+      "traff": 29.2,
+      "osakerhet": 0.133
+     },
+     "sidled": {
+      "n": 541,
+      "E": 0.429,
+      "traff": 41.0,
+      "osakerhet": 0.275
+     },
+     "ned": {
+      "n": 470,
+      "E": 0.202,
+      "traff": 31.3,
+      "osakerhet": 0.255
+     }
+    }
+   }
+  },
+  "macd_vecka": {
+   "None": {
+    "alla": {
+     "n": 618,
+     "E": 0.029,
+     "traff": 33.8,
+     "osakerhet": 0.118
+    },
+    "tran": {
+     "n": 278,
+     "E": 0.145,
+     "traff": 41.7,
+     "osakerhet": 0.156
+    },
+    "test": {
+     "n": 340,
+     "E": -0.066,
+     "traff": 27.4,
+     "osakerhet": 0.171
+    },
+    "dagar": 46.0,
+    "per_lage": {
+     "upp": {
+      "n": 264,
+      "E": -0.255,
+      "traff": 25.0,
+      "osakerhet": 0.146
+     },
+     "sidled": {
+      "n": 115,
+      "E": 0.023,
+      "traff": 29.6,
+      "osakerhet": 0.265
+     },
+     "ned": {
+      "n": 186,
+      "E": 0.354,
+      "traff": 44.1,
+      "osakerhet": 0.262
+     }
+    }
+   },
+   "trail": {
+    "alla": {
+     "n": 620,
+     "E": -0.041,
+     "traff": 34.4,
+     "osakerhet": 0.07
+    },
+    "tran": {
+     "n": 270,
+     "E": 0.025,
+     "traff": 37.4,
+     "osakerhet": 0.104
+    },
+    "test": {
+     "n": 350,
+     "E": -0.092,
+     "traff": 32.0,
+     "osakerhet": 0.094
+    },
+    "dagar": 17.0,
+    "per_lage": {
+     "upp": {
+      "n": 269,
+      "E": -0.186,
+      "traff": 27.1,
+      "osakerhet": 0.089
+     },
+     "sidled": {
+      "n": 114,
+      "E": -0.02,
+      "traff": 37.7,
+      "osakerhet": 0.141
+     },
+     "ned": {
+      "n": 184,
+      "E": 0.179,
+      "traff": 43.5,
+      "osakerhet": 0.158
+     }
+    }
+   },
+   "halv_trail": {
+    "alla": {
+     "n": 620,
+     "E": -0.035,
+     "traff": 34.4,
+     "osakerhet": 0.067
+    },
+    "tran": {
+     "n": 270,
+     "E": 0.027,
+     "traff": 37.4,
+     "osakerhet": 0.101
+    },
+    "test": {
+     "n": 350,
+     "E": -0.083,
+     "traff": 32.0,
+     "osakerhet": 0.09
+    },
+    "dagar": 17.0,
+    "per_lage": {
+     "upp": {
+      "n": 269,
+      "E": -0.166,
+      "traff": 27.1,
+      "osakerhet": 0.093
+     },
+     "sidled": {
+      "n": 114,
+      "E": -0.019,
+      "traff": 37.7,
+      "osakerhet": 0.137
+     },
+     "ned": {
+      "n": 184,
+      "E": 0.174,
+      "traff": 43.5,
+      "osakerhet": 0.146
+     }
+    }
+   },
+   "macd_ner": {
+    "alla": {
+     "n": 627,
+     "E": -0.049,
+     "traff": 33.2,
+     "osakerhet": 0.054
+    },
+    "tran": {
+     "n": 272,
+     "E": -0.056,
+     "traff": 33.5,
+     "osakerhet": 0.074
+    },
+    "test": {
+     "n": 355,
+     "E": -0.044,
+     "traff": 33.0,
+     "osakerhet": 0.077
+    },
+    "dagar": 11.0,
+    "per_lage": {
+     "upp": {
+      "n": 276,
+      "E": -0.134,
+      "traff": 26.1,
+      "osakerhet": 0.072
+     },
+     "sidled": {
+      "n": 114,
+      "E": -0.029,
+      "traff": 37.7,
+      "osakerhet": 0.124
+     },
+     "ned": {
+      "n": 185,
+      "E": 0.116,
+      "traff": 43.8,
+      "osakerhet": 0.121
+     }
+    }
+   },
+   "under_ma20": {
+    "alla": {
+     "n": 634,
+     "E": -0.061,
+     "traff": 28.7,
+     "osakerhet": 0.049
+    },
+    "tran": {
+     "n": 278,
+     "E": -0.079,
+     "traff": 28.1,
+     "osakerhet": 0.067
+    },
+    "test": {
+     "n": 356,
+     "E": -0.047,
+     "traff": 29.2,
+     "osakerhet": 0.07
+    },
+    "dagar": 9.0,
+    "per_lage": {
+     "upp": {
+      "n": 280,
+      "E": -0.13,
+      "traff": 22.1,
+      "osakerhet": 0.067
+     },
+     "sidled": {
+      "n": 115,
+      "E": -0.035,
+      "traff": 32.2,
+      "osakerhet": 0.11
+     },
+     "ned": {
+      "n": 186,
+      "E": 0.072,
+      "traff": 37.1,
+      "osakerhet": 0.106
+     }
+    }
+   },
+   "candle_ner": {
+    "alla": {
+     "n": 633,
+     "E": -0.032,
+     "traff": 39.2,
+     "osakerhet": 0.04
+    },
+    "tran": {
+     "n": 276,
+     "E": -0.034,
+     "traff": 37.7,
+     "osakerhet": 0.054
+    },
+    "test": {
+     "n": 357,
+     "E": -0.031,
+     "traff": 40.3,
+     "osakerhet": 0.056
+    },
+    "dagar": 6.0,
+    "per_lage": {
+     "upp": {
+      "n": 281,
+      "E": -0.058,
+      "traff": 37.0,
+      "osakerhet": 0.06
+     },
+     "sidled": {
+      "n": 114,
+      "E": 0.021,
+      "traff": 42.1,
+      "osakerhet": 0.101
+     },
+     "ned": {
+      "n": 185,
+      "E": 0.005,
+      "traff": 42.7,
+      "osakerhet": 0.072
+     }
+    }
+   },
+   "be_trail": {
+    "alla": {
+     "n": 542,
+     "E": 0.116,
+     "traff": 51.7,
+     "osakerhet": 0.108
+    },
+    "tran": {
+     "n": 236,
+     "E": 0.307,
+     "traff": 59.7,
+     "osakerhet": 0.16
+    },
+    "test": {
+     "n": 306,
+     "E": -0.032,
+     "traff": 45.4,
+     "osakerhet": 0.144
+    },
+    "dagar": 44.0,
+    "per_lage": {
+     "upp": {
+      "n": 226,
+      "E": -0.112,
+      "traff": 45.6,
+      "osakerhet": 0.151
+     },
+     "sidled": {
+      "n": 101,
+      "E": 0.112,
+      "traff": 52.5,
+      "osakerhet": 0.252
+     },
+     "ned": {
+      "n": 168,
+      "E": 0.356,
+      "traff": 56.5,
+      "osakerhet": 0.214
+     }
+    }
+   }
+  },
+  "darvas": {
+   "None": {
+    "alla": {
+     "n": 923,
+     "E": 0.053,
+     "traff": 51.1,
+     "osakerhet": 0.061
+    },
+    "tran": {
+     "n": 592,
+     "E": 0.077,
+     "traff": 51.9,
+     "osakerhet": 0.076
+    },
+    "test": {
+     "n": 331,
+     "E": 0.008,
+     "traff": 49.8,
+     "osakerhet": 0.103
+    },
+    "dagar": 31.0,
+    "per_lage": {
+     "upp": {
+      "n": 647,
+      "E": 0.064,
+      "traff": 51.2,
+      "osakerhet": 0.075
+     },
+     "sidled": {
+      "n": 200,
+      "E": -0.032,
+      "traff": 48.5,
+      "osakerhet": 0.114
+     },
+     "ned": {
+      "n": 76,
+      "E": 0.176,
+      "traff": 57.9,
+      "osakerhet": 0.232
+     }
+    }
+   },
+   "trail": {
+    "alla": {
+     "n": 902,
+     "E": 0.042,
+     "traff": 38.7,
+     "osakerhet": 0.064
+    },
+    "tran": {
+     "n": 578,
+     "E": 0.097,
+     "traff": 40.8,
+     "osakerhet": 0.081
+    },
+    "test": {
+     "n": 324,
+     "E": -0.056,
+     "traff": 34.9,
+     "osakerhet": 0.103
+    },
+    "dagar": 19.0,
+    "per_lage": {
+     "upp": {
+      "n": 627,
+      "E": 0.052,
+      "traff": 38.1,
+      "osakerhet": 0.078
+     },
+     "sidled": {
+      "n": 200,
+      "E": -0.017,
+      "traff": 37.0,
+      "osakerhet": 0.119
+     },
+     "ned": {
+      "n": 75,
+      "E": 0.117,
+      "traff": 48.0,
+      "osakerhet": 0.247
+     }
+    }
+   },
+   "halv_trail": {
+    "alla": {
+     "n": 902,
+     "E": 0.032,
+     "traff": 38.8,
+     "osakerhet": 0.057
+    },
+    "tran": {
+     "n": 578,
+     "E": 0.084,
+     "traff": 41.0,
+     "osakerhet": 0.072
+    },
+    "test": {
+     "n": 324,
+     "E": -0.063,
+     "traff": 34.9,
+     "osakerhet": 0.092
+    },
+    "dagar": 19.0,
+    "per_lage": {
+     "upp": {
+      "n": 627,
+      "E": 0.04,
+      "traff": 38.3,
+      "osakerhet": 0.07
+     },
+     "sidled": {
+      "n": 200,
+      "E": -0.023,
+      "traff": 37.0,
+      "osakerhet": 0.103
+     },
+     "ned": {
+      "n": 75,
+      "E": 0.107,
+      "traff": 48.0,
+      "osakerhet": 0.229
+     }
+    }
+   },
+   "macd_ner": {
+    "alla": {
+     "n": 1063,
+     "E": -0.003,
+     "traff": 40.2,
+     "osakerhet": 0.038
+    },
+    "tran": {
+     "n": 687,
+     "E": 0.029,
+     "traff": 42.1,
+     "osakerhet": 0.047
+    },
+    "test": {
+     "n": 376,
+     "E": -0.062,
+     "traff": 36.7,
+     "osakerhet": 0.065
+    },
+    "dagar": 12.0,
+    "per_lage": {
+     "upp": {
+      "n": 763,
+      "E": -0.012,
+      "traff": 38.7,
+      "osakerhet": 0.045
+     },
+     "sidled": {
+      "n": 213,
+      "E": 0.023,
+      "traff": 45.1,
+      "osakerhet": 0.072
+     },
+     "ned": {
+      "n": 87,
+      "E": 0.013,
+      "traff": 41.4,
+      "osakerhet": 0.179
+     }
+    }
+   },
+   "under_ma20": {
+    "alla": {
+     "n": 993,
+     "E": -0.011,
+     "traff": 37.2,
+     "osakerhet": 0.045
+    },
+    "tran": {
+     "n": 646,
+     "E": 0.009,
+     "traff": 38.4,
+     "osakerhet": 0.056
+    },
+    "test": {
+     "n": 347,
+     "E": -0.049,
+     "traff": 34.9,
+     "osakerhet": 0.076
+    },
+    "dagar": 15.0,
+    "per_lage": {
+     "upp": {
+      "n": 697,
+      "E": -0.015,
+      "traff": 36.0,
+      "osakerhet": 0.054
+     },
+     "sidled": {
+      "n": 210,
+      "E": -0.029,
+      "traff": 39.0,
+      "osakerhet": 0.075
+     },
+     "ned": {
+      "n": 86,
+      "E": 0.057,
+      "traff": 41.9,
+      "osakerhet": 0.209
+     }
+    }
+   },
+   "candle_ner": {
+    "alla": {
+     "n": 1128,
+     "E": -0.015,
+     "traff": 42.7,
+     "osakerhet": 0.028
+    },
+    "tran": {
+     "n": 721,
+     "E": 0.011,
+     "traff": 45.4,
+     "osakerhet": 0.037
+    },
+    "test": {
+     "n": 407,
+     "E": -0.063,
+     "traff": 38.1,
+     "osakerhet": 0.043
+    },
+    "dagar": 6.0,
+    "per_lage": {
+     "upp": {
+      "n": 806,
+      "E": -0.011,
+      "traff": 41.9,
+      "osakerhet": 0.034
+     },
+     "sidled": {
+      "n": 230,
+      "E": -0.008,
+      "traff": 46.1,
+      "osakerhet": 0.054
+     },
+     "ned": {
+      "n": 92,
+      "E": -0.075,
+      "traff": 41.3,
+      "osakerhet": 0.114
+     }
+    }
+   },
+   "be_trail": {
+    "alla": {
+     "n": 736,
+     "E": 0.145,
+     "traff": 55.2,
+     "osakerhet": 0.093
+    },
+    "tran": {
+     "n": 471,
+     "E": 0.229,
+     "traff": 59.2,
+     "osakerhet": 0.116
+    },
+    "test": {
+     "n": 265,
+     "E": -0.003,
+     "traff": 47.9,
+     "osakerhet": 0.155
+    },
+    "dagar": 41.0,
+    "per_lage": {
+     "upp": {
+      "n": 502,
+      "E": 0.128,
+      "traff": 53.2,
+      "osakerhet": 0.114
+     },
+     "sidled": {
+      "n": 169,
+      "E": 0.129,
+      "traff": 57.4,
+      "osakerhet": 0.189
+     },
+     "ned": {
+      "n": 65,
+      "E": 0.318,
+      "traff": 64.6,
+      "osakerhet": 0.305
+     }
+    }
+   }
+  },
+  "bas": {
+   "None": {
+    "alla": {
+     "n": 361,
+     "E": 0.092,
+     "traff": 51.0,
+     "osakerhet": 0.094
+    },
+    "tran": {
+     "n": 190,
+     "E": 0.18,
+     "traff": 53.7,
+     "osakerhet": 0.134
+    },
+    "test": {
+     "n": 171,
+     "E": -0.007,
+     "traff": 48.0,
+     "osakerhet": 0.131
+    },
+    "dagar": 31.0,
+    "per_lage": {
+     "upp": {
+      "n": 220,
+      "E": -0.019,
+      "traff": 45.9,
+      "osakerhet": 0.114
+     },
+     "sidled": {
+      "n": 75,
+      "E": 0.32,
+      "traff": 61.3,
+      "osakerhet": 0.23
+     },
+     "ned": {
+      "n": 58,
+      "E": 0.325,
+      "traff": 62.1,
+      "osakerhet": 0.226
+     }
+    }
+   },
+   "trail": {
+    "alla": {
+     "n": 369,
+     "E": 0.024,
+     "traff": 36.6,
+     "osakerhet": 0.089
+    },
+    "tran": {
+     "n": 193,
+     "E": 0.083,
+     "traff": 40.4,
+     "osakerhet": 0.125
+    },
+    "test": {
+     "n": 176,
+     "E": -0.041,
+     "traff": 32.4,
+     "osakerhet": 0.126
+    },
+    "dagar": 20.0,
+    "per_lage": {
+     "upp": {
+      "n": 225,
+      "E": -0.058,
+      "traff": 30.2,
+      "osakerhet": 0.104
+     },
+     "sidled": {
+      "n": 77,
+      "E": 0.238,
+      "traff": 49.4,
+      "osakerhet": 0.243
+     },
+     "ned": {
+      "n": 59,
+      "E": 0.133,
+      "traff": 49.2,
+      "osakerhet": 0.208
+     }
+    }
+   },
+   "halv_trail": {
+    "alla": {
+     "n": 369,
+     "E": 0.02,
+     "traff": 36.6,
+     "osakerhet": 0.083
+    },
+    "tran": {
+     "n": 193,
+     "E": 0.089,
+     "traff": 40.4,
+     "osakerhet": 0.119
+    },
+    "test": {
+     "n": 176,
+     "E": -0.057,
+     "traff": 32.4,
+     "osakerhet": 0.115
+    },
+    "dagar": 20.0,
+    "per_lage": {
+     "upp": {
+      "n": 225,
+      "E": -0.066,
+      "traff": 30.2,
+      "osakerhet": 0.098
+     },
+     "sidled": {
+      "n": 77,
+      "E": 0.231,
+      "traff": 49.4,
+      "osakerhet": 0.216
+     },
+     "ned": {
+      "n": 59,
+      "E": 0.148,
+      "traff": 49.2,
+      "osakerhet": 0.21
+     }
+    }
+   },
+   "macd_ner": {
+    "alla": {
+     "n": 370,
+     "E": 0.024,
+     "traff": 40.8,
+     "osakerhet": 0.073
+    },
+    "tran": {
+     "n": 193,
+     "E": 0.093,
+     "traff": 47.2,
+     "osakerhet": 0.105
+    },
+    "test": {
+     "n": 177,
+     "E": -0.051,
+     "traff": 33.9,
+     "osakerhet": 0.1
+    },
+    "dagar": 15.0,
+    "per_lage": {
+     "upp": {
+      "n": 225,
+      "E": -0.048,
+      "traff": 37.8,
+      "osakerhet": 0.084
+     },
+     "sidled": {
+      "n": 77,
+      "E": 0.189,
+      "traff": 48.1,
+      "osakerhet": 0.187
+     },
+     "ned": {
+      "n": 60,
+      "E": 0.163,
+      "traff": 48.3,
+      "osakerhet": 0.2
+     }
+    }
+   },
+   "under_ma20": {
+    "alla": {
+     "n": 372,
+     "E": 0.016,
+     "traff": 36.6,
+     "osakerhet": 0.079
+    },
+    "tran": {
+     "n": 194,
+     "E": 0.061,
+     "traff": 40.7,
+     "osakerhet": 0.103
+    },
+    "test": {
+     "n": 178,
+     "E": -0.032,
+     "traff": 32.0,
+     "osakerhet": 0.122
+    },
+    "dagar": 16.0,
+    "per_lage": {
+     "upp": {
+      "n": 227,
+      "E": -0.053,
+      "traff": 30.8,
+      "osakerhet": 0.091
+     },
+     "sidled": {
+      "n": 77,
+      "E": 0.237,
+      "traff": 50.6,
+      "osakerhet": 0.219
+     },
+     "ned": {
+      "n": 60,
+      "E": 0.072,
+      "traff": 45.0,
+      "osakerhet": 0.195
+     }
+    }
+   },
+   "candle_ner": {
+    "alla": {
+     "n": 385,
+     "E": -0.007,
+     "traff": 44.9,
+     "osakerhet": 0.05
+    },
+    "tran": {
+     "n": 200,
+     "E": 0.026,
+     "traff": 48.0,
+     "osakerhet": 0.069
+    },
+    "test": {
+     "n": 185,
+     "E": -0.042,
+     "traff": 41.6,
+     "osakerhet": 0.071
+    },
+    "dagar": 6.0,
+    "per_lage": {
+     "upp": {
+      "n": 235,
+      "E": -0.041,
+      "traff": 44.7,
+      "osakerhet": 0.053
+     },
+     "sidled": {
+      "n": 79,
+      "E": 0.097,
+      "traff": 53.2,
+      "osakerhet": 0.147
+     },
+     "ned": {
+      "n": 63,
+      "E": 0.05,
+      "traff": 39.7,
+      "osakerhet": 0.122
+     }
+    }
+   },
+   "be_trail": {
+    "alla": {
+     "n": 349,
+     "E": 0.23,
+     "traff": 56.7,
+     "osakerhet": 0.137
+    },
+    "tran": {
+     "n": 184,
+     "E": 0.382,
+     "traff": 63.0,
+     "osakerhet": 0.191
+    },
+    "test": {
+     "n": 165,
+     "E": 0.061,
+     "traff": 49.7,
+     "osakerhet": 0.193
+    },
+    "dagar": 46.0,
+    "per_lage": {
+     "upp": {
+      "n": 211,
+      "E": 0.14,
+      "traff": 51.7,
+      "osakerhet": 0.179
+     },
+     "sidled": {
+      "n": 73,
+      "E": 0.434,
+      "traff": 67.1,
+      "osakerhet": 0.306
+     },
+     "ned": {
+      "n": 57,
+      "E": 0.414,
+      "traff": 66.7,
+      "osakerhet": 0.304
+     }
+    }
+   }
+  },
+  "rekyl": {
+   "None": {
+    "alla": {
+     "n": 3722,
+     "E": -0.024,
+     "traff": 42.5,
+     "osakerhet": 0.043
+    },
+    "tran": {
+     "n": 2087,
+     "E": 0.021,
+     "traff": 43.7,
+     "osakerhet": 0.058
+    },
+    "test": {
+     "n": 1635,
+     "E": -0.082,
+     "traff": 41.1,
+     "osakerhet": 0.063
+    },
+    "dagar": 11.0,
+    "per_lage": {
+     "upp": {
+      "n": 2645,
+      "E": -0.039,
+      "traff": 41.6,
+      "osakerhet": 0.051
+     },
+     "sidled": {
+      "n": 675,
+      "E": 0.025,
+      "traff": 45.8,
+      "osakerhet": 0.098
+     },
+     "ned": {
+      "n": 402,
+      "E": -0.006,
+      "traff": 43.3,
+      "osakerhet": 0.129
+     }
+    }
+   },
+   "trail": {
+    "alla": {
+     "n": 3511,
+     "E": 0.083,
+     "traff": 34.4,
+     "osakerhet": 0.068
+    },
+    "tran": {
+     "n": 1973,
+     "E": 0.266,
+     "traff": 37.1,
+     "osakerhet": 0.103
+    },
+    "test": {
+     "n": 1538,
+     "E": -0.152,
+     "traff": 30.9,
+     "osakerhet": 0.078
+    },
+    "dagar": 15.0,
+    "per_lage": {
+     "upp": {
+      "n": 2459,
+      "E": 0.069,
+      "traff": 34.4,
+      "osakerhet": 0.081
+     },
+     "sidled": {
+      "n": 665,
+      "E": 0.072,
+      "traff": 34.6,
+      "osakerhet": 0.149
+     },
+     "ned": {
+      "n": 387,
+      "E": 0.189,
+      "traff": 33.9,
+      "osakerhet": 0.214
+     }
+    }
+   },
+   "halv_trail": {
+    "alla": {
+     "n": 3527,
+     "E": 0.041,
+     "traff": 37.1,
+     "osakerhet": 0.052
+    },
+    "tran": {
+     "n": 1981,
+     "E": 0.168,
+     "traff": 39.0,
+     "osakerhet": 0.075
+    },
+    "test": {
+     "n": 1546,
+     "E": -0.121,
+     "traff": 34.5,
+     "osakerhet": 0.068
+    },
+    "dagar": 15.0,
+    "per_lage": {
+     "upp": {
+      "n": 2467,
+      "E": 0.031,
+      "traff": 36.9,
+      "osakerhet": 0.062
+     },
+     "sidled": {
+      "n": 669,
+      "E": 0.045,
+      "traff": 37.5,
+      "osakerhet": 0.115
+     },
+     "ned": {
+      "n": 391,
+      "E": 0.1,
+      "traff": 37.1,
+      "osakerhet": 0.162
+     }
+    }
+   },
+   "macd_ner": {
+    "alla": {
+     "n": 3943,
+     "E": 0.011,
+     "traff": 36.1,
+     "osakerhet": 0.052
+    },
+    "tran": {
+     "n": 2214,
+     "E": 0.108,
+     "traff": 38.0,
+     "osakerhet": 0.074
+    },
+    "test": {
+     "n": 1729,
+     "E": -0.113,
+     "traff": 33.7,
+     "osakerhet": 0.071
+    },
+    "dagar": 12.0,
+    "per_lage": {
+     "upp": {
+      "n": 2780,
+      "E": -0.005,
+      "traff": 35.7,
+      "osakerhet": 0.063
+     },
+     "sidled": {
+      "n": 722,
+      "E": 0.026,
+      "traff": 38.5,
+      "osakerhet": 0.115
+     },
+     "ned": {
+      "n": 441,
+      "E": 0.087,
+      "traff": 34.7,
+      "osakerhet": 0.157
+     }
+    }
+   },
+   "under_ma20": {
+    "alla": {
+     "n": 6024,
+     "E": -0.088,
+     "traff": 28.2,
+     "osakerhet": 0.024
+    },
+    "tran": {
+     "n": 3381,
+     "E": -0.054,
+     "traff": 28.3,
+     "osakerhet": 0.034
+    },
+    "test": {
+     "n": 2643,
+     "E": -0.131,
+     "traff": 28.1,
+     "osakerhet": 0.033
+    },
+    "dagar": 2.0,
+    "per_lage": {
+     "upp": {
+      "n": 4271,
+      "E": -0.089,
+      "traff": 27.9,
+      "osakerhet": 0.029
+     },
+     "sidled": {
+      "n": 1073,
+      "E": -0.086,
+      "traff": 30.1,
+      "osakerhet": 0.052
+     },
+     "ned": {
+      "n": 680,
+      "E": -0.082,
+      "traff": 26.8,
+      "osakerhet": 0.076
+     }
+    }
+   },
+   "candle_ner": {
+    "alla": {
+     "n": 5051,
+     "E": -0.037,
+     "traff": 38.5,
+     "osakerhet": 0.03
+    },
+    "tran": {
+     "n": 2807,
+     "E": 0.009,
+     "traff": 39.7,
+     "osakerhet": 0.043
+    },
+    "test": {
+     "n": 2244,
+     "E": -0.095,
+     "traff": 37.1,
+     "osakerhet": 0.04
+    },
+    "dagar": 4.0,
+    "per_lage": {
+     "upp": {
+      "n": 3592,
+      "E": -0.044,
+      "traff": 37.7,
+      "osakerhet": 0.035
+     },
+     "sidled": {
+      "n": 896,
+      "E": -0.025,
+      "traff": 40.4,
+      "osakerhet": 0.07
+     },
+     "ned": {
+      "n": 563,
+      "E": -0.009,
+      "traff": 40.5,
+      "osakerhet": 0.103
+     }
+    }
+   },
+   "be_trail": {
+    "alla": {
+     "n": 3301,
+     "E": 0.105,
+     "traff": 36.0,
+     "osakerhet": 0.071
+    },
+    "tran": {
+     "n": 1853,
+     "E": 0.298,
+     "traff": 39.6,
+     "osakerhet": 0.109
+    },
+    "test": {
+     "n": 1448,
+     "E": -0.142,
+     "traff": 31.4,
+     "osakerhet": 0.082
+    },
+    "dagar": 15.0,
+    "per_lage": {
+     "upp": {
+      "n": 2349,
+      "E": 0.088,
+      "traff": 35.7,
+      "osakerhet": 0.085
+     },
+     "sidled": {
+      "n": 618,
+      "E": 0.064,
+      "traff": 35.4,
+      "osakerhet": 0.156
+     },
+     "ned": {
+      "n": 334,
+      "E": 0.297,
+      "traff": 39.5,
+      "osakerhet": 0.237
+     }
+    }
+   }
+  },
+  "engulfing": {
+   "None": {
+    "alla": {
+     "n": 374,
+     "E": -0.104,
+     "traff": 38.2,
+     "osakerhet": 0.131
+    },
+    "tran": {
+     "n": 180,
+     "E": -0.24,
+     "traff": 35.0,
+     "osakerhet": 0.177
+    },
+    "test": {
+     "n": 194,
+     "E": 0.022,
+     "traff": 41.2,
+     "osakerhet": 0.191
+    },
+    "dagar": 7.0,
+    "per_lage": {
+     "upp": {
+      "n": 171,
+      "E": -0.076,
+      "traff": 38.0,
+      "osakerhet": 0.201
+     },
+     "sidled": {
+      "n": 85,
+      "E": -0.445,
+      "traff": 29.4,
+      "osakerhet": 0.229
+     },
+     "ned": {
+      "n": 81,
+      "E": 0.252,
+      "traff": 49.4,
+      "osakerhet": 0.293
+     }
+    }
+   },
+   "trail": {
+    "alla": {
+     "n": 371,
+     "E": 0.038,
+     "traff": 25.9,
+     "osakerhet": 0.243
+    },
+    "tran": {
+     "n": 180,
+     "E": -0.073,
+     "traff": 23.9,
+     "osakerhet": 0.341
+    },
+    "test": {
+     "n": 191,
+     "E": 0.142,
+     "traff": 27.7,
+     "osakerhet": 0.347
+    },
+    "dagar": 10.0,
+    "per_lage": {
+     "upp": {
+      "n": 168,
+      "E": 0.082,
+      "traff": 28.0,
+      "osakerhet": 0.368
+     },
+     "sidled": {
+      "n": 85,
+      "E": -0.625,
+      "traff": 16.5,
+      "osakerhet": 0.212
+     },
+     "ned": {
+      "n": 81,
+      "E": 0.702,
+      "traff": 32.1,
+      "osakerhet": 0.69
+     }
+    }
+   },
+   "halv_trail": {
+    "alla": {
+     "n": 372,
+     "E": -0.047,
+     "traff": 32.0,
+     "osakerhet": 0.172
+    },
+    "tran": {
+     "n": 180,
+     "E": -0.163,
+     "traff": 28.3,
+     "osakerhet": 0.245
+    },
+    "test": {
+     "n": 192,
+     "E": 0.061,
+     "traff": 35.4,
+     "osakerhet": 0.242
+    },
+    "dagar": 10.0,
+    "per_lage": {
+     "upp": {
+      "n": 169,
+      "E": -0.002,
+      "traff": 33.1,
+      "osakerhet": 0.267
+     },
+     "sidled": {
+      "n": 85,
+      "E": -0.554,
+      "traff": 20.0,
+      "osakerhet": 0.216
+     },
+     "ned": {
+      "n": 81,
+      "E": 0.44,
+      "traff": 43.2,
+      "osakerhet": 0.433
+     }
+    }
+   },
+   "macd_ner": {
+    "alla": {
+     "n": 370,
+     "E": 0.05,
+     "traff": 29.7,
+     "osakerhet": 0.219
+    },
+    "tran": {
+     "n": 180,
+     "E": -0.142,
+     "traff": 26.7,
+     "osakerhet": 0.286
+    },
+    "test": {
+     "n": 190,
+     "E": 0.233,
+     "traff": 32.6,
+     "osakerhet": 0.328
+    },
+    "dagar": 9.0,
+    "per_lage": {
+     "upp": {
+      "n": 168,
+      "E": 0.079,
+      "traff": 30.4,
+      "osakerhet": 0.335
+     },
+     "sidled": {
+      "n": 84,
+      "E": -0.529,
+      "traff": 21.4,
+      "osakerhet": 0.253
+     },
+     "ned": {
+      "n": 81,
+      "E": 0.696,
+      "traff": 39.5,
+      "osakerhet": 0.586
+     }
+    }
+   },
+   "under_ma20": {
+    "alla": {
+     "n": 377,
+     "E": -0.119,
+     "traff": 37.1,
+     "osakerhet": 0.078
+    },
+    "tran": {
+     "n": 182,
+     "E": -0.132,
+     "traff": 34.1,
+     "osakerhet": 0.116
+    },
+    "test": {
+     "n": 195,
+     "E": -0.106,
+     "traff": 40.0,
+     "osakerhet": 0.106
+    },
+    "dagar": 2.0,
+    "per_lage": {
+     "upp": {
+      "n": 174,
+      "E": -0.089,
+      "traff": 39.1,
+      "osakerhet": 0.134
+     },
+     "sidled": {
+      "n": 85,
+      "E": -0.301,
+      "traff": 25.9,
+      "osakerhet": 0.105
+     },
+     "ned": {
+      "n": 81,
+      "E": -0.004,
+      "traff": 43.2,
+      "osakerhet": 0.153
+     }
+    }
+   },
+   "candle_ner": {
+    "alla": {
+     "n": 377,
+     "E": -0.172,
+     "traff": 32.1,
+     "osakerhet": 0.111
+    },
+    "tran": {
+     "n": 182,
+     "E": -0.172,
+     "traff": 29.1,
+     "osakerhet": 0.173
+    },
+    "test": {
+     "n": 195,
+     "E": -0.172,
+     "traff": 34.9,
+     "osakerhet": 0.142
+    },
+    "dagar": 4.0,
+    "per_lage": {
+     "upp": {
+      "n": 174,
+      "E": -0.085,
+      "traff": 32.8,
+      "osakerhet": 0.183
+     },
+     "sidled": {
+      "n": 85,
+      "E": -0.403,
+      "traff": 27.1,
+      "osakerhet": 0.167
+     },
+     "ned": {
+      "n": 81,
+      "E": -0.084,
+      "traff": 39.5,
+      "osakerhet": 0.206
+     }
+    }
+   },
+   "be_trail": {
+    "alla": {
+     "n": 372,
+     "E": -0.004,
+     "traff": 25.8,
+     "osakerhet": 0.221
+    },
+    "tran": {
+     "n": 180,
+     "E": -0.111,
+     "traff": 23.9,
+     "osakerhet": 0.307
+    },
+    "test": {
+     "n": 192,
+     "E": 0.096,
+     "traff": 27.6,
+     "osakerhet": 0.316
+    },
+    "dagar": 9.5,
+    "per_lage": {
+     "upp": {
+      "n": 169,
+      "E": 0.032,
+      "traff": 27.8,
+      "osakerhet": 0.334
+     },
+     "sidled": {
+      "n": 85,
+      "E": -0.62,
+      "traff": 17.6,
+      "osakerhet": 0.219
+     },
+     "ned": {
+      "n": 81,
+      "E": 0.6,
+      "traff": 32.1,
+      "osakerhet": 0.606
+     }
+    }
+   }
+  },
+  "price_action": {
+   "None": {
+    "alla": {
+     "n": 1000,
+     "E": 0.015,
+     "traff": 42.5,
+     "osakerhet": 0.089
+    },
+    "tran": {
+     "n": 463,
+     "E": 0.064,
+     "traff": 45.1,
+     "osakerhet": 0.131
+    },
+    "test": {
+     "n": 537,
+     "E": -0.027,
+     "traff": 40.2,
+     "osakerhet": 0.122
+    },
+    "dagar": 7.0,
+    "per_lage": {
+     "upp": {
+      "n": 497,
+      "E": -0.024,
+      "traff": 41.4,
+      "osakerhet": 0.126
+     },
+     "sidled": {
+      "n": 245,
+      "E": -0.08,
+      "traff": 39.2,
+      "osakerhet": 0.182
+     },
+     "ned": {
+      "n": 233,
+      "E": 0.133,
+      "traff": 45.9,
+      "osakerhet": 0.183
+     }
+    }
+   },
+   "trail": {
+    "alla": {
+     "n": 991,
+     "E": 0.118,
+     "traff": 32.0,
+     "osakerhet": 0.149
+    },
+    "tran": {
+     "n": 458,
+     "E": 0.326,
+     "traff": 34.9,
+     "osakerhet": 0.245
+    },
+    "test": {
+     "n": 533,
+     "E": -0.062,
+     "traff": 29.5,
+     "osakerhet": 0.179
+    },
+    "dagar": 12.0,
+    "per_lage": {
+     "upp": {
+      "n": 488,
+      "E": 0.057,
+      "traff": 29.5,
+      "osakerhet": 0.219
+     },
+     "sidled": {
+      "n": 245,
+      "E": -0.162,
+      "traff": 29.8,
+      "osakerhet": 0.232
+     },
+     "ned": {
+      "n": 235,
+      "E": 0.523,
+      "traff": 39.1,
+      "osakerhet": 0.345
+     }
+    }
+   },
+   "halv_trail": {
+    "alla": {
+     "n": 993,
+     "E": 0.061,
+     "traff": 39.3,
+     "osakerhet": 0.107
+    },
+    "tran": {
+     "n": 460,
+     "E": 0.218,
+     "traff": 42.2,
+     "osakerhet": 0.171
+    },
+    "test": {
+     "n": 533,
+     "E": -0.074,
+     "traff": 36.8,
+     "osakerhet": 0.134
+    },
+    "dagar": 11.0,
+    "per_lage": {
+     "upp": {
+      "n": 489,
+      "E": 0.016,
+      "traff": 38.9,
+      "osakerhet": 0.152
+     },
+     "sidled": {
+      "n": 245,
+      "E": -0.129,
+      "traff": 35.5,
+      "osakerhet": 0.19
+     },
+     "ned": {
+      "n": 235,
+      "E": 0.322,
+      "traff": 42.6,
+      "osakerhet": 0.246
+     }
+    }
+   },
+   "macd_ner": {
+    "alla": {
+     "n": 993,
+     "E": 0.127,
+     "traff": 32.6,
+     "osakerhet": 0.147
+    },
+    "tran": {
+     "n": 462,
+     "E": 0.275,
+     "traff": 35.7,
+     "osakerhet": 0.235
+    },
+    "test": {
+     "n": 531,
+     "E": -0.001,
+     "traff": 29.9,
+     "osakerhet": 0.184
+    },
+    "dagar": 11.0,
+    "per_lage": {
+     "upp": {
+      "n": 489,
+      "E": 0.045,
+      "traff": 30.9,
+      "osakerhet": 0.221
+     },
+     "sidled": {
+      "n": 246,
+      "E": -0.097,
+      "traff": 31.7,
+      "osakerhet": 0.222
+     },
+     "ned": {
+      "n": 234,
+      "E": 0.55,
+      "traff": 36.8,
+      "osakerhet": 0.339
+     }
+    }
+   },
+   "under_ma20": {
+    "alla": {
+     "n": 1105,
+     "E": -0.131,
+     "traff": 39.3,
+     "osakerhet": 0.042
+    },
+    "tran": {
+     "n": 514,
+     "E": -0.109,
+     "traff": 41.1,
+     "osakerhet": 0.062
+    },
+    "test": {
+     "n": 591,
+     "E": -0.15,
+     "traff": 37.7,
+     "osakerhet": 0.056
+    },
+    "dagar": 2.0,
+    "per_lage": {
+     "upp": {
+      "n": 561,
+      "E": -0.143,
+      "traff": 35.7,
+      "osakerhet": 0.061
+     },
+     "sidled": {
+      "n": 266,
+      "E": -0.121,
+      "traff": 45.1,
+      "osakerhet": 0.084
+     },
+     "ned": {
+      "n": 250,
+      "E": -0.126,
+      "traff": 40.8,
+      "osakerhet": 0.083
+     }
+    }
+   },
+   "candle_ner": {
+    "alla": {
+     "n": 1046,
+     "E": -0.03,
+     "traff": 38.0,
+     "osakerhet": 0.088
+    },
+    "tran": {
+     "n": 484,
+     "E": 0.058,
+     "traff": 38.6,
+     "osakerhet": 0.148
+    },
+    "test": {
+     "n": 562,
+     "E": -0.105,
+     "traff": 37.4,
+     "osakerhet": 0.103
+    },
+    "dagar": 4.0,
+    "per_lage": {
+     "upp": {
+      "n": 528,
+      "E": -0.026,
+      "traff": 34.7,
+      "osakerhet": 0.137
+     },
+     "sidled": {
+      "n": 257,
+      "E": -0.057,
+      "traff": 42.4,
+      "osakerhet": 0.146
+     },
+     "ned": {
+      "n": 238,
+      "E": 0.01,
+      "traff": 40.3,
+      "osakerhet": 0.177
+     }
+    }
+   },
+   "be_trail": {
+    "alla": {
+     "n": 991,
+     "E": 0.111,
+     "traff": 29.9,
+     "osakerhet": 0.136
+    },
+    "tran": {
+     "n": 461,
+     "E": 0.331,
+     "traff": 33.6,
+     "osakerhet": 0.228
+    },
+    "test": {
+     "n": 530,
+     "E": -0.081,
+     "traff": 26.6,
+     "osakerhet": 0.157
+    },
+    "dagar": 10.0,
+    "per_lage": {
+     "upp": {
+      "n": 488,
+      "E": 0.062,
+      "traff": 27.5,
+      "osakerhet": 0.202
+     },
+     "sidled": {
+      "n": 244,
+      "E": -0.126,
+      "traff": 28.7,
+      "osakerhet": 0.224
+     },
+     "ned": {
+      "n": 235,
+      "E": 0.43,
+      "traff": 35.7,
+      "osakerhet": 0.299
+     }
+    }
+   }
+  }
+ },
+ "bast_exit": {
+  "dipp": "be_trail",
+  "macd_vecka": "be_trail",
+  "darvas": "be_trail",
+  "bas": "be_trail",
+  "rekyl": "be_trail",
+  "engulfing": "trail",
+  "price_action": "be_trail"
+ },
+ "system": [
+  {
+   "namn": "Dynamiskt (metoden som fungerat senast i läget), bästa exit per metod · max 4 samtidigt",
+   "trades_per_ar": 12.4,
+   "n": 136,
+   "E": 0.123,
+   "traff": 38.2,
+   "osakerhet": 0.355,
+   "procent_per_ar": 3.1,
+   "procent_per_ar_tran": -2.4,
+   "procent_per_ar_test": 9.9,
+   "per_ar": {
+    "2017": -14.6,
+    "2018": -0.4,
+    "2019": -2.6,
+    "2020": 1.0,
+    "2021": 2.2,
+    "2022": -22.6,
+    "2023": 10.9,
+    "2024": 50.2,
+    "2025": 11.7,
+    "2026": -2.4
+   },
+   "bast_ar": 50.2,
+   "samst_ar": -22.6,
+   "storsta_fall": 38.3
+  },
+  {
+   "namn": "Dynamiskt (metoden som fungerat senast i läget), bästa exit per metod · max 4 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 12.4,
+   "n": 135,
+   "E": 0.087,
+   "traff": 37.8,
+   "osakerhet": 0.351,
+   "procent_per_ar": 2.2,
+   "procent_per_ar_tran": -4.0,
+   "procent_per_ar_test": 9.9,
+   "per_ar": {
+    "2017": -14.6,
+    "2018": -0.4,
+    "2019": -2.6,
+    "2020": -8.7,
+    "2021": 2.2,
+    "2022": -22.6,
+    "2023": 10.9,
+    "2024": 50.2,
+    "2025": 11.7,
+    "2026": -2.4
+   },
+   "bast_ar": 50.2,
+   "samst_ar": -22.6,
+   "storsta_fall": 48.1
+  },
+  {
+   "namn": "Dynamiskt (metoden som fungerat senast i läget), bästa exit per metod · max 2 samtidigt",
+   "trades_per_ar": 8.2,
+   "n": 90,
+   "E": 0.204,
+   "traff": 36.7,
+   "osakerhet": 0.48,
+   "procent_per_ar": 3.4,
+   "procent_per_ar_tran": 1.3,
+   "procent_per_ar_test": 5.9,
+   "per_ar": {
+    "2017": -12.1,
+    "2018": 4.1,
+    "2019": 6.0,
+    "2020": 2.9,
+    "2021": 5.0,
+    "2022": -16.2,
+    "2023": 4.4,
+    "2024": 40.6,
+    "2025": 4.4,
+    "2026": -2.4
+   },
+   "bast_ar": 40.6,
+   "samst_ar": -16.2,
+   "storsta_fall": 18.4
+  },
+  {
+   "namn": "Dynamiskt (metoden som fungerat senast i läget), bästa exit per metod · max 2 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 8.2,
+   "n": 90,
+   "E": 0.204,
+   "traff": 36.7,
+   "osakerhet": 0.48,
+   "procent_per_ar": 3.4,
+   "procent_per_ar_tran": 1.3,
+   "procent_per_ar_test": 5.9,
+   "per_ar": {
+    "2017": -12.1,
+    "2018": 4.1,
+    "2019": 6.0,
+    "2020": 2.9,
+    "2021": 5.0,
+    "2022": -16.2,
+    "2023": 4.4,
+    "2024": 40.6,
+    "2025": 4.4,
+    "2026": -2.4
+   },
+   "bast_ar": 40.6,
+   "samst_ar": -16.2,
+   "storsta_fall": 18.4
+  },
+  {
+   "namn": "Fast schema läge→metod, standard-exit (2R) · max 4 samtidigt",
+   "trades_per_ar": 27.3,
+   "n": 298,
+   "E": 0.119,
+   "traff": 48.7,
+   "osakerhet": 0.13,
+   "procent_per_ar": 6.5,
+   "procent_per_ar_tran": 8.5,
+   "procent_per_ar_test": 4.0,
+   "per_ar": {
+    "2016": -4.4,
+    "2017": 18.9,
+    "2018": 13.8,
+    "2019": 19.1,
+    "2020": 2.4,
+    "2021": 3.0,
+    "2022": -11.2,
+    "2023": 4.4,
+    "2024": 9.3,
+    "2025": 13.3,
+    "2026": 2.3
+   },
+   "bast_ar": 19.1,
+   "samst_ar": -11.2,
+   "storsta_fall": 29.8
+  },
+  {
+   "namn": "Fast schema läge→metod, standard-exit (2R) · max 2 samtidigt",
+   "trades_per_ar": 17.4,
+   "n": 190,
+   "E": 0.188,
+   "traff": 49.5,
+   "osakerhet": 0.174,
+   "procent_per_ar": 6.5,
+   "procent_per_ar_tran": 9.1,
+   "procent_per_ar_test": 3.4,
+   "per_ar": {
+    "2016": -3.0,
+    "2017": 19.0,
+    "2018": 12.6,
+    "2019": 11.2,
+    "2020": 11.7,
+    "2021": 5.1,
+    "2022": -12.5,
+    "2023": 8.1,
+    "2024": 6.8,
+    "2025": 10.0,
+    "2026": 2.5
+   },
+   "bast_ar": 19.0,
+   "samst_ar": -12.5,
+   "storsta_fall": 24.8
+  },
+  {
+   "namn": "Fast schema läge→metod, standard-exit (2R) · max 4 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 26.4,
+   "n": 288,
+   "E": 0.114,
+   "traff": 48.6,
+   "osakerhet": 0.131,
+   "procent_per_ar": 6.0,
+   "procent_per_ar_tran": 8.5,
+   "procent_per_ar_test": 3.0,
+   "per_ar": {
+    "2016": -4.4,
+    "2017": 18.9,
+    "2018": 13.8,
+    "2019": 19.1,
+    "2020": 2.4,
+    "2021": 3.0,
+    "2022": -16.3,
+    "2023": 4.4,
+    "2024": 9.3,
+    "2025": 13.3,
+    "2026": 2.3
+   },
+   "bast_ar": 19.1,
+   "samst_ar": -16.3,
+   "storsta_fall": 31.2
+  },
+  {
+   "namn": "Fast schema läge→metod, bästa exit per metod · max 4 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 17.5,
+   "n": 191,
+   "E": 0.603,
+   "traff": 47.6,
+   "osakerhet": 0.56,
+   "procent_per_ar": 21.1,
+   "procent_per_ar_tran": 35.5,
+   "procent_per_ar_test": 3.0,
+   "per_ar": {
+    "2016": -6.4,
+    "2017": -2.9,
+    "2018": 60.1,
+    "2019": 25.5,
+    "2020": 111.0,
+    "2021": 31.0,
+    "2022": -41.2,
+    "2023": -4.8,
+    "2024": 52.9,
+    "2025": 2.0,
+    "2026": 2.9
+   },
+   "bast_ar": 111.0,
+   "samst_ar": -41.2,
+   "storsta_fall": 46.0
+  },
+  {
+   "namn": "Fast schema läge→metod, standard-exit (2R) · max 2 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 16.8,
+   "n": 183,
+   "E": 0.179,
+   "traff": 49.2,
+   "osakerhet": 0.176,
+   "procent_per_ar": 6.0,
+   "procent_per_ar_tran": 9.1,
+   "procent_per_ar_test": 2.2,
+   "per_ar": {
+    "2016": -3.0,
+    "2017": 19.0,
+    "2018": 12.6,
+    "2019": 11.2,
+    "2020": 11.7,
+    "2021": 5.1,
+    "2022": -18.4,
+    "2023": 8.1,
+    "2024": 6.8,
+    "2025": 10.0,
+    "2026": 2.5
+   },
+   "bast_ar": 19.0,
+   "samst_ar": -18.4,
+   "storsta_fall": 24.8
+  },
+  {
+   "namn": "Fast schema läge→metod, bästa exit per metod · max 4 samtidigt",
+   "trades_per_ar": 17.9,
+   "n": 195,
+   "E": 0.58,
+   "traff": 46.7,
+   "osakerhet": 0.549,
+   "procent_per_ar": 20.7,
+   "procent_per_ar_tran": 35.5,
+   "procent_per_ar_test": 2.2,
+   "per_ar": {
+    "2016": -6.4,
+    "2017": -2.9,
+    "2018": 60.1,
+    "2019": 25.5,
+    "2020": 111.0,
+    "2021": 31.0,
+    "2022": -45.2,
+    "2023": -4.8,
+    "2024": 52.9,
+    "2025": 2.0,
+    "2026": 2.9
+   },
+   "bast_ar": 111.0,
+   "samst_ar": -45.2,
+   "storsta_fall": 50.0
+  },
+  {
+   "namn": "Fast schema läge→metod, bästa exit per metod · max 2 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 10.4,
+   "n": 114,
+   "E": 0.929,
+   "traff": 43.9,
+   "osakerhet": 0.909,
+   "procent_per_ar": 19.4,
+   "procent_per_ar_tran": 34.0,
+   "procent_per_ar_test": 1.2,
+   "per_ar": {
+    "2016": -0.8,
+    "2017": 3.4,
+    "2018": 65.4,
+    "2019": 18.8,
+    "2020": 101.3,
+    "2021": 18.8,
+    "2022": -37.0,
+    "2023": -8.8,
+    "2024": 50.3,
+    "2025": 1.9,
+    "2026": -1.4
+   },
+   "bast_ar": 101.3,
+   "samst_ar": -37.0,
+   "storsta_fall": 47.8
+  },
+  {
+   "namn": "Fast schema läge→metod, bästa exit per metod · max 2 samtidigt",
+   "trades_per_ar": 10.8,
+   "n": 118,
+   "E": 0.872,
+   "traff": 42.4,
+   "osakerhet": 0.88,
+   "procent_per_ar": 18.8,
+   "procent_per_ar_tran": 34.0,
+   "procent_per_ar_test": -0.1,
+   "per_ar": {
+    "2016": -0.8,
+    "2017": 3.4,
+    "2018": 65.4,
+    "2019": 18.8,
+    "2020": 101.3,
+    "2021": 18.8,
+    "2022": -43.0,
+    "2023": -8.8,
+    "2024": 50.3,
+    "2025": 1.9,
+    "2026": -1.4
+   },
+   "bast_ar": 101.3,
+   "samst_ar": -43.0,
+   "storsta_fall": 53.9
+  },
+  {
+   "namn": "Dynamiskt (metoden som fungerat senast i läget), standard-exit (2R) · max 2 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 9.0,
+   "n": 98,
+   "E": -0.056,
+   "traff": 38.8,
+   "osakerhet": 0.253,
+   "procent_per_ar": -1.0,
+   "procent_per_ar_tran": 0.3,
+   "procent_per_ar_test": -2.6,
+   "per_ar": {
+    "2017": -2.4,
+    "2018": -2.3,
+    "2019": 12.6,
+    "2020": 5.3,
+    "2021": -9.4,
+    "2022": -16.4,
+    "2023": -3.5,
+    "2024": 4.8,
+    "2025": 2.7,
+    "2026": -2.4
+   },
+   "bast_ar": 12.6,
+   "samst_ar": -16.4,
+   "storsta_fall": 36.2
+  },
+  {
+   "namn": "Dynamiskt (metoden som fungerat senast i läget), standard-exit (2R) · max 2 samtidigt",
+   "trades_per_ar": 9.1,
+   "n": 99,
+   "E": -0.068,
+   "traff": 38.4,
+   "osakerhet": 0.251,
+   "procent_per_ar": -1.2,
+   "procent_per_ar_tran": 0.3,
+   "procent_per_ar_test": -3.1,
+   "per_ar": {
+    "2017": -2.4,
+    "2018": -2.3,
+    "2019": 12.6,
+    "2020": 5.3,
+    "2021": -9.4,
+    "2022": -18.8,
+    "2023": -3.5,
+    "2024": 4.8,
+    "2025": 2.7,
+    "2026": -2.4
+   },
+   "bast_ar": 12.6,
+   "samst_ar": -18.8,
+   "storsta_fall": 38.6
+  },
+  {
+   "namn": "Dynamiskt (metoden som fungerat senast i läget), standard-exit (2R) · max 4 samtidigt",
+   "trades_per_ar": 13.5,
+   "n": 148,
+   "E": -0.048,
+   "traff": 41.2,
+   "osakerhet": 0.201,
+   "procent_per_ar": -1.3,
+   "procent_per_ar_tran": 0.8,
+   "procent_per_ar_test": -3.9,
+   "per_ar": {
+    "2017": 6.8,
+    "2018": -1.4,
+    "2019": 13.3,
+    "2020": 4.7,
+    "2021": -17.0,
+    "2022": -16.5,
+    "2023": -3.5,
+    "2024": 3.6,
+    "2025": -1.7,
+    "2026": -2.4
+   },
+   "bast_ar": 13.3,
+   "samst_ar": -17.0,
+   "storsta_fall": 50.5
+  },
+  {
+   "namn": "Dynamiskt (metoden som fungerat senast i läget), standard-exit (2R) · max 4 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 12.9,
+   "n": 141,
+   "E": -0.055,
+   "traff": 41.1,
+   "osakerhet": 0.206,
+   "procent_per_ar": -1.4,
+   "procent_per_ar_tran": 0.6,
+   "procent_per_ar_test": -3.9,
+   "per_ar": {
+    "2017": 6.8,
+    "2018": -1.4,
+    "2019": 13.3,
+    "2020": 4.7,
+    "2021": -17.6,
+    "2022": -17.2,
+    "2023": -3.5,
+    "2024": 3.6,
+    "2025": -1.7,
+    "2026": -2.4
+   },
+   "bast_ar": 13.3,
+   "samst_ar": -17.6,
+   "storsta_fall": 51.8
+  },
+  {
+   "namn": "Dynamiskt utan R/R-krav, bästa exit per metod · max 2 samtidigt",
+   "trades_per_ar": 12.7,
+   "n": 139,
+   "E": 0.246,
+   "traff": 38.8,
+   "osakerhet": 0.508,
+   "procent_per_ar": 6.3,
+   "procent_per_ar_tran": 14.7,
+   "procent_per_ar_test": -4.3,
+   "per_ar": {
+    "2017": 1.9,
+    "2018": 3.9,
+    "2019": 6.5,
+    "2020": -3.6,
+    "2021": 76.0,
+    "2022": -15.2,
+    "2023": -13.4,
+    "2024": 15.5,
+    "2025": 3.9,
+    "2026": -7.0
+   },
+   "bast_ar": 76.0,
+   "samst_ar": -15.2,
+   "storsta_fall": 38.6
+  },
+  {
+   "namn": "Dynamiskt utan R/R-krav, bästa exit per metod · max 2 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 12.1,
+   "n": 132,
+   "E": 0.228,
+   "traff": 40.2,
+   "osakerhet": 0.52,
+   "procent_per_ar": 5.5,
+   "procent_per_ar_tran": 14.7,
+   "procent_per_ar_test": -6.0,
+   "per_ar": {
+    "2017": 1.9,
+    "2018": 3.9,
+    "2019": 6.5,
+    "2020": -3.6,
+    "2021": 76.0,
+    "2022": -15.2,
+    "2023": -6.6,
+    "2024": 0.5,
+    "2025": 3.9,
+    "2026": -7.0
+   },
+   "bast_ar": 76.0,
+   "samst_ar": -15.2,
+   "storsta_fall": 29.9
+  },
+  {
+   "namn": "Dynamiskt utan R/R-krav, standard-exit (2R) · max 2 samtidigt",
+   "trades_per_ar": 18.0,
+   "n": 197,
+   "E": -0.128,
+   "traff": 38.1,
+   "osakerhet": 0.175,
+   "procent_per_ar": -4.6,
+   "procent_per_ar_tran": -1.8,
+   "procent_per_ar_test": -8.1,
+   "per_ar": {
+    "2016": 7.0,
+    "2017": -3.8,
+    "2018": -14.4,
+    "2019": 0.3,
+    "2020": 12.1,
+    "2021": -8.0,
+    "2022": -33.6,
+    "2023": -18.4,
+    "2024": 9.3,
+    "2025": 0.8,
+    "2026": -1.5
+   },
+   "bast_ar": 12.1,
+   "samst_ar": -33.6,
+   "storsta_fall": 73.1
+  },
+  {
+   "namn": "Dynamiskt utan R/R-krav, standard-exit (2R) · max 2 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 17.9,
+   "n": 195,
+   "E": -0.137,
+   "traff": 37.4,
+   "osakerhet": 0.176,
+   "procent_per_ar": -4.9,
+   "procent_per_ar_tran": -2.3,
+   "procent_per_ar_test": -8.1,
+   "per_ar": {
+    "2016": 7.0,
+    "2017": -3.8,
+    "2018": -17.4,
+    "2019": 0.3,
+    "2020": 12.1,
+    "2021": -8.0,
+    "2022": -33.6,
+    "2023": -18.4,
+    "2024": 9.3,
+    "2025": 0.8,
+    "2026": -1.5
+   },
+   "bast_ar": 12.1,
+   "samst_ar": -33.6,
+   "storsta_fall": 76.1
+  },
+  {
+   "namn": "Dynamiskt utan R/R-krav, standard-exit (2R) · max 4 samtidigt",
+   "trades_per_ar": 28.4,
+   "n": 310,
+   "E": -0.068,
+   "traff": 40.6,
+   "osakerhet": 0.138,
+   "procent_per_ar": -3.9,
+   "procent_per_ar_tran": 3.0,
+   "procent_per_ar_test": -12.4,
+   "per_ar": {
+    "2016": 7.0,
+    "2017": 1.4,
+    "2018": -15.6,
+    "2019": 9.0,
+    "2020": 9.3,
+    "2021": 9.3,
+    "2022": -44.1,
+    "2023": -21.3,
+    "2024": 8.3,
+    "2025": 0.5,
+    "2026": -6.2
+   },
+   "bast_ar": 9.3,
+   "samst_ar": -44.1,
+   "storsta_fall": 80.6
+  },
+  {
+   "namn": "Dynamiskt utan R/R-krav, standard-exit (2R) · max 4 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 27.2,
+   "n": 297,
+   "E": -0.101,
+   "traff": 39.7,
+   "osakerhet": 0.14,
+   "procent_per_ar": -5.5,
+   "procent_per_ar_tran": 0.1,
+   "procent_per_ar_test": -12.4,
+   "per_ar": {
+    "2016": 7.0,
+    "2017": 1.4,
+    "2018": -16.6,
+    "2019": 9.7,
+    "2020": 9.3,
+    "2021": -5.3,
+    "2022": -46.8,
+    "2023": -21.3,
+    "2024": 8.3,
+    "2025": 0.5,
+    "2026": -6.2
+   },
+   "bast_ar": 9.7,
+   "samst_ar": -46.8,
+   "storsta_fall": 97.9
+  },
+  {
+   "namn": "Dynamiskt utan R/R-krav, bästa exit per metod · max 4 samtidigt",
+   "trades_per_ar": 23.1,
+   "n": 252,
+   "E": 0.08,
+   "traff": 36.1,
+   "osakerhet": 0.317,
+   "procent_per_ar": 3.7,
+   "procent_per_ar_tran": 16.7,
+   "procent_per_ar_test": -12.6,
+   "per_ar": {
+    "2017": -14.3,
+    "2018": 8.7,
+    "2019": 16.8,
+    "2020": -3.8,
+    "2021": 96.2,
+    "2022": -44.5,
+    "2023": -4.7,
+    "2024": -6.5,
+    "2025": 3.8,
+    "2026": -11.7
+   },
+   "bast_ar": 96.2,
+   "samst_ar": -44.5,
+   "storsta_fall": 76.4
+  },
+  {
+   "namn": "Dynamiskt utan R/R-krav, bästa exit per metod · max 4 samtidigt · nödbroms −20 %",
+   "trades_per_ar": 22.3,
+   "n": 244,
+   "E": 0.056,
+   "traff": 36.5,
+   "osakerhet": 0.317,
+   "procent_per_ar": 2.5,
+   "procent_per_ar_tran": 14.5,
+   "procent_per_ar_test": -12.6,
+   "per_ar": {
+    "2017": -14.3,
+    "2018": 8.7,
+    "2019": 16.8,
+    "2020": -4.1,
+    "2021": 83.6,
+    "2022": -44.5,
+    "2023": -4.7,
+    "2024": -6.5,
+    "2025": 3.8,
+    "2026": -11.7
+   },
+   "bast_ar": 83.6,
+   "samst_ar": -44.5,
+   "storsta_fall": 81.4
+  }
+ ]
+}
